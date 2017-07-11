@@ -1,0 +1,739 @@
+<html>
+<head title="Template">
+
+<link href="App_Themes/Default/adlStyle.css" rel="stylesheet" />
+<script src="script/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="script/adl_script.js"></script>
+
+<link href="App_Themes/Default/adl_2-0.css" rel="stylesheet" />
+
+<!--scroller-->
+<!--<script src="script/jquery.min.js"></script>-->
+<script src="script/perfect-scrollbar.with-mousewheel.min.js"></script>
+
+<!--font-awesome-icon-->
+<link href="App_Themes/Default/icon-font-awesome/font-awesome.css" type="text/css" rel="stylesheet" />
+<link href="App_Themes/Default/icon-font-awesome/font-awesome.min.css" type="text/css" rel="stylesheet" />
+
+<!--sliding label-->
+<script type="text/javascript" src="script/jquery-3.2.0.min.js"></script>
+<style>
+body{
+	background: url(Images/adlNewImages/header-app.jpg) left top no-repeat #fff;
+	padding-top:95px;
+	overflow:hidden
+}
+
+/*temp*/
+.adl-modal-close {
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -3px -355px no-repeat;
+}
+.circleAroBlu-icon {
+    height: 23px;
+    width: 22px;
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -101px -292px no-repeat;
+}
+.deleteGrey-icon {
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -5px -69px no-repeat;
+}
+.drop-aro span {
+	background: url(Images/adlNewImages/icon-sprite-sheet.png) -70px -324px no-repeat;
+}
+.input-icon-calendar {
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -1px -163px no-repeat #E3EBF6;
+}
+[type="checkbox"].adl-checkbox:not(:checked) + label::after, [type="checkbox"].adl-checkbox:checked + label::after {
+    content: "✔";
+    position: absolute;
+    top: 1px;
+    left: 3px;
+    font-size: 10px;
+    color: rgb(65, 163, 234);
+    line-height: 16px;
+}
+</style>
+
+</head>
+<body>
+<div class="adl-wrapper adl_2-0">
+  <div class="side-menu">
+    <nav class="navbar" role="navigation">
+      <div class="side-menu-container">
+        <div class="adl-toggle">
+          <ul class="nav navbar-nav">
+            <li class="has-sub" formodel="addCmodal" onclick="open_Model(this);"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/add_client.png"></div>
+              <span class="title">Add Client</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/add_business.png"></div>
+              <span class="title">Add Business</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/quick_note.png"></div>
+              <span class="title">Quick Note</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/quick_task.png"></div>
+              <span class="title">Quick Task</span></a> </li>
+            <li class="has-sub"> <a href="#">
+              <div class="icon"><img src="./images/adlNewImages/quick_vault.png"></div>
+              <span class="title">Quick Vault</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/email.png"></div>
+              <span class="title">Email</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/diary.png"></div>
+              <span class="title">Diary</span></a> </li>
+            
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/tutorials.png"></div>
+              <span class="title">Tutorials</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/datafeeds.png"></div>
+              <span class="title">Datafeeds</span></a> </li>     
+          </ul>
+        </div>
+      </div>
+      <!-- /.navbar-collapse --> 
+    </nav>
+  </div>
+  <!--side-menu-->
+  
+  <div style="padding-left:60px">
+    <div class="adl-container insurance">
+	<nav id="nav-flow">      
+      <div class="profileWrap">
+      <div class="pContainer">
+      <i class="fa fa-check-circle"></i>
+      <div class="profilePic link"><img src="Images/adlNewImages/pp1.jpg" alt="" ></div>
+      </div>
+      <div class="pContainer">
+      <i class="fa fa-check-circle"></i>
+      <div class="profilePic link"><img src="Images/adlNewImages/pp2.jpg" alt="" ></div>
+      </div>
+      </div><!--profileWrap-->
+      
+        <ul id="nav">
+        <li ><img src="Images/adlNewImages/adl2/existingPoliciesIcon.svg" alt="" > 
+        Existing Policies        
+        <div class="dropSection">
+        <div class="userWrap">      
+        <div class="title col-10">
+        
+        <div class="adl-floatL totalPrmm">
+            <div class="adl-floatR detailBlock col-35">     
+            <div class="col-2">
+            <label>Life</label>
+            <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>TPD</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>Trauma</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>IP</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>BE</label>
+             <div class="amnt">$100,000</div>
+            </div>        
+        </div><!--detailBlock-->            
+        </div><!--totalPrmm-->
+        
+        <div class="adl-marginT adl-floatL">        
+        <div class="adl-floatL">
+        <h4>Abhay Gupta <span class="font-normal">(<span class="text-blue">4</span> Policies)</span></h4>
+        </div>
+        </div>
+        </div><!--title-->
+        
+        <div class="card-container adl-scroll overflow-scroll-basic">
+        
+        <div class="cardWrap">
+        <div class="card">
+        <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>
+            <li><i class="fa fa-pencil"></i> Edit</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>
+            </ul>
+            </div>
+            
+        <div class="row">          
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">JBH12345</div>
+            </div>
+            <div class="amnt">
+            <label>per month</label>
+            <div class="value">$10,000</div>            
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-check-circle"></i> In Force</div>
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-calendar"></i> Jan 24, 2017</div>
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-user"></i> Personal</div>
+            </div>  
+            
+            </div><!--details-->
+        </div><!--row-->
+        
+        <div class="detailBlock col-10">      
+            <div class="col-2">
+            <label>Life</label>
+            <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>TPD</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>Trauma</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>IP</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>BE</label>
+             <div class="amnt">$100,000</div>
+            </div>        
+        </div>
+        </div><!--card-->
+        </div><!--cardWrap-->
+        <div class="cardWrap">
+        <div class="card">
+        <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>
+            <li><i class="fa fa-pencil"></i> Edit</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>
+            </ul>
+            </div>
+            
+        <div class="row">          
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">JBH12345</div>
+            </div>
+            <div class="amnt">
+            <label>per month</label>
+            <div class="value">$10,000</div>            
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-check-circle"></i> In Force</div>
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-calendar"></i> Jan 24, 2017</div>
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-user"></i> Personal</div>
+            </div>  
+            
+            </div><!--details-->
+        </div><!--row-->
+        
+        <div class="detailBlock col-10">      
+            <div class="col-2">
+            <label>Life</label>
+            <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>TPD</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>Trauma</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>IP</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>BE</label>
+             <div class="amnt">$100,000</div>
+            </div>        
+        </div>
+        </div><!--card-->
+        </div><!--cardWrap-->
+        <div class="cardWrap">
+        <div class="card">
+        <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>
+            <li><i class="fa fa-pencil"></i> Edit</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>
+            </ul>
+            </div>
+            
+        <div class="row">          
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">JBH12345</div>
+            </div>
+            <div class="amnt">
+            <label>per month</label>
+            <div class="value">$10,000</div>            
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-check-circle"></i> In Force</div>
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-calendar"></i> Jan 24, 2017</div>
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-user"></i> Personal</div>
+            </div>  
+            
+            </div><!--details-->
+        </div><!--row-->
+        
+        <div class="detailBlock col-10">      
+            <div class="col-2">
+            <label>Life</label>
+            <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>TPD</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>Trauma</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>IP</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>BE</label>
+             <div class="amnt">$100,000</div>
+            </div>        
+        </div>
+        </div><!--card-->
+        </div><!--cardWrap--><div class="cardWrap">
+        <div class="card">
+        <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>
+            <li><i class="fa fa-pencil"></i> Edit</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>
+            </ul>
+            </div>
+            
+        <div class="row">          
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">JBH12345</div>
+            </div>
+            <div class="amnt">
+            <label>per month</label>
+            <div class="value">$10,000</div>            
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-check-circle"></i> In Force</div>
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-calendar"></i> Jan 24, 2017</div>
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-user"></i> Personal</div>
+            </div>  
+            
+            </div><!--details-->
+        </div><!--row-->
+        
+        <div class="detailBlock col-10">      
+            <div class="col-2">
+            <label>Life</label>
+            <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>TPD</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>Trauma</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>IP</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>BE</label>
+             <div class="amnt">$100,000</div>
+            </div>        
+        </div>
+        </div><!--card-->
+        </div><!--cardWrap-->
+        
+        <div class="cardWrap">
+        <div class="card">
+        <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>
+            <li><i class="fa fa-pencil"></i> Edit</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>
+            </ul>
+            </div>
+            
+        <div class="row">          
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">JBH12345</div>
+            </div>
+            <div class="amnt">
+            <label>per month</label>
+            <div class="value">$10,000</div>            
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-check-circle"></i> In Force</div>
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-calendar"></i> Jan 24, 2017</div>
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-user"></i> Personal</div>
+            </div>  
+            
+            </div><!--details-->
+        </div><!--row-->
+        
+        <div class="detailBlock col-10">      
+            <div class="col-2">
+            <label>Life</label>
+            <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>TPD</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>Trauma</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>IP</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>BE</label>
+             <div class="amnt">$100,000</div>
+            </div>        
+        </div>
+        </div><!--card-->
+        </div><!--cardWrap-->
+        
+        </div><!--card-container-->
+        
+      </div>
+        </div><!--dropSection-->
+        </li>
+        <li><img src="Images/adlNewImages/adl2/needsAnalysisIcon.svg" alt="" > Needs Analysis</li>
+        <li  class="active"><img src="Images/adlNewImages/adl2/riskLogicIcon.svg" alt="" > Risk Logic (<span>4</span>)</li>
+        <li><img src="Images/adlNewImages/adl2/recommendedIcon.svg" alt="" > Recommended</li>
+        <li><img src="Images/adlNewImages/adl2/justificationIcon.svg" alt="" > Justification</li>
+        </ul>
+      
+      </nav><!--nav-flow-->
+		<div class="cMainWrap">
+		<div class="gridWrap">
+			<div class="col-10 gridBG adl-padding adl-scroll overflow-scroll-basic" id="cScrollHeight">
+				<div class="col-10 adl-no-paddingLR panelHeadWrap">
+					<span class="backIcon"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+					<h1 class="panelHeading">Comparison</h1>
+					<div class="policyResults">
+						<span>Comparing <span>4</span> Insurance Quotes</span>
+					</div>
+					<div class="col-5 headForm adl-floatR adl-no-paddingR">
+						<div class="formField col-3 adl-no-paddingR excludeTyping">
+							<div class="inputWithDrop headSelectWrap">
+								<label class="adl-no-paddingL"><i class="fa faFilter fa-sliders"></i>FILTERS:</label>
+								<input class="form-control" type="text" name="filter" Value="Terminal Illness">
+								<i class="fa faCart fa-caret-down" aria-hidden="true"></i>
+								<div class="dropBox adl-paddingTB">
+									<div class="dropSection adl-paddingLR">
+										<div class="dropList">
+												<ul class="list_content">
+													<li>
+														<input class="adl-checkbox" type="checkbox" id="checkbox1">
+														<label for="checkbox1"><span class="check_text">Terminal Illness</span></label>
+													</li>
+													<li>
+														<input class="adl-checkbox" type="checkbox" id="checkbox2">
+														<label for="checkbox2"><span class="check_text">Waiver of Premiun</span></label>
+													</li>
+													<li>
+														<input class="adl-checkbox" type="checkbox" id="checkbox3">
+														<label for="checkbox3"><span class="check_text">General Exclusion</span></label>
+													</li>
+												</ul>
+										</div>
+									</div><!--end of dropSection -->
+								</div><!-- end of dropBox -->
+							</div><!-- end of inputWithDrop -->
+						</div><!-- end of formField -->
+						<div class="formField col-3 adl-no-paddingR excludeTyping">
+							<div class="inputWithDrop headSelectWrap ">
+								<label class="adl-no-paddingL"><i class="fa faSort fa-exchange"></i>SORT BY:</label>
+								<input class="form-control sortByControl" type="text" name="sort" Value="Differences">
+								<i class="fa faCart fa-caret-down" aria-hidden="true"></i>
+								<div class="dropBox adl-paddingTB">
+									<div class="dropSection adl-paddingLR">
+										<div class="dropList">
+												<ul class="list_content">
+												<li>Differences </li>
+												<li>Similarities</li>
+										</div>
+									</div><!--end of dropSection -->
+								</div><!-- end of dropBox -->
+							</div><!-- end of inputWithDrop -->
+						</div><!-- end of formField -->
+						<div class="formField col-4 adl-no-paddingR searchIcon">
+							<i class="fa fa-search" aria-hidden="true"></i>
+							<input class="form-control" type="text" name="searchI" placeholder="Search by product or Insurer">
+						</div><!-- end of formField -->
+					</div>
+				</div><!-- end of panelHeadWrap -->
+				<div class="compareGridWrap col-10 adl-no-paddingLR">
+					<div class="col-10 calcBorder">
+						<div class="col-4 adl-no-paddingLR cLabelsColm">
+							<div  class="col-10 adl-no-paddingLR pheadHeight">Click to select one or more insurance quotes to recommend</div>
+							<div class="col-10 adl-no-paddingLR cRepeatingColm">
+								<div  class="col-10 adl-no-paddingLR cfeatureTitle">TERMINAL ILLNESS <span class="closeGrids"><i class="fa fa-caret-down" aria-hidden="true"></i></span></div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName">Is Benifit provided?</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName">The maximum terminal illness cover can be paid up to 100% of the death cover sum insured, is this true?</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName">Is the period of premium waiver greater than 12 months on the sum insured balance, or is the full benefit payable?</div>
+							</div><!-- end of cRepeatingColm -->
+							<div class="col-10 adl-no-paddingLR cRepeatingColm">
+								<div  class="col-10 adl-no-paddingLR cfeatureTitle">Waiver of Premium<span class="closeGrids"><i class="fa fa-caret-down" aria-hidden="true"></i></span></div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName">Is Benifit provided?</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName">The maximum terminal illness cover can be paid up to 100% of the death cover sum insured, is this true?</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName">Is the period of premium waiver greater than 12 months on the sum insured balance, or is the full benefit payable?</div>
+							</div><!-- end of cRepeatingColm -->
+						</div><!-- end of cLabelsColm -->
+						<div class="col-15 adl-no-paddingLR cPolicyColm">
+							<div  class="col-10 phead pheadHeight">
+								<div class="pLogoWrap">
+									<img src="./images/adlNewImages/adl2/amp.png">
+									<div class="checkPolicy cpolicyHover"><i class="fa fa-check" aria-hidden="true"></i></div>
+								</div><!-- end productLogo -->
+								<div class="pDetailsWrap">
+									<span class="logoDesc">AMP Elevate</span>
+									<span class="logoTag">Life Solutions</span><span class="pList">Death Cover, Tpd</span>
+									<span class="ctaText">Select to Recommend</span>
+									</div>
+								<span class="deselctPolicy"><i class="fa fa-times" aria-hidden="true"></i></span>
+							</div>
+							<div class="col-10 adl-no-paddingLR cRepeatingColm">
+								<div  class="col-10 adl-no-paddingLR cfeatureTitle"><span>&nbsp;</span></div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span><!-- 
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!-- <span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<!-- <span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+							</div><!-- end of cRepeatingColm -->
+							<div class="col-10 adl-no-paddingLR cRepeatingColm">
+								<div  class="col-10 adl-no-paddingLR cfeatureTitle"><span>&nbsp;</span></div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<!-- <span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!-- <span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+								<!-- 	<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+							</div><!-- end of cRepeatingColm -->
+						</div><!-- end of cPolicyColm -->
+						<div class="col-15 adl-no-paddingLR cPolicyColm">
+							<div  class="col-10 phead pheadHeight">
+								<div class="pLogoWrap">
+									<img src="./images/adlNewImages/adl2/amp.png">
+									<div class="checkPolicy cpolicyHover"><i class="fa fa-check" aria-hidden="true"></i></div>
+								</div><!-- end productLogo -->
+								<div class="pDetailsWrap">
+									<span class="logoDesc">AMP Elevate</span>
+									<span class="logoTag">Life Solutions</span><span class="pList">Death Cover, Tpd</span>
+									<span class="ctaText">Select to Recommend</span>
+									</div>
+								<span class="deselctPolicy"><i class="fa fa-times" aria-hidden="true"></i></span>
+							</div>
+							<div class="col-10 adl-no-paddingLR cRepeatingColm">
+								<div  class="col-10 adl-no-paddingLR cfeatureTitle"><span>&nbsp;</span></div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+								<!-- 	<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!-- <span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!-- <span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+							</div><!-- end of cRepeatingColm -->
+							<div class="col-10 adl-no-paddingLR cRepeatingColm">
+								<div  class="col-10 adl-no-paddingLR cfeatureTitle"><span>&nbsp;</span></div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<!-- <span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+							<!-- 		<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<!-- <span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+							</div><!-- end of cRepeatingColm -->
+						</div><!-- end of cPolicyColm -->
+						<div class="col-15 adl-no-paddingLR cPolicyColm">
+							<div  class="col-10 phead pheadHeight">
+								<div class="pLogoWrap">
+									<img src="./images/adlNewImages/adl2/amp.png">
+									<div class="checkPolicy cpolicyHover"><i class="fa fa-check" aria-hidden="true"></i></div>
+								</div><!-- end productLogo -->
+								<div class="pDetailsWrap">
+									<span class="logoDesc">AMP Elevate</span>
+									<span class="logoTag">Life Solutions</span><span class="pList">Death Cover, Tpd</span>
+									<span class="ctaText">Select to Recommend</span>
+									</div>
+								<span class="deselctPolicy"><i class="fa fa-times" aria-hidden="true"></i></span>
+							</div>
+							<div class="col-10 adl-no-paddingLR cRepeatingColm">
+								<div  class="col-10 adl-no-paddingLR cfeatureTitle"><span>&nbsp;</span></div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+								<!-- 	<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!-- <span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!-- <span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+							</div><!-- end of cRepeatingColm -->
+							<div class="col-10 adl-no-paddingLR cRepeatingColm">
+								<div  class="col-10 adl-no-paddingLR cfeatureTitle"><span>&nbsp;</span></div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<!-- <span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+							<!-- 		<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<!-- <span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+							</div><!-- end of cRepeatingColm -->
+						</div><!-- end of cPolicyColm -->
+						<div class="col-15 adl-no-paddingLR cPolicyColm">
+							<div  class="col-10 phead pheadHeight">
+								<div class="pLogoWrap">
+									<img src="./images/adlNewImages/adl2/amp.png">
+									<div class="checkPolicy cpolicyHover"><i class="fa fa-check" aria-hidden="true"></i></div>
+								</div><!-- end productLogo -->
+								<div class="pDetailsWrap">
+									<span class="logoDesc">AMP Elevate</span>
+									<span class="logoTag">Life Solutions</span><span class="pList">Death Cover, Tpd</span>
+									<span class="ctaText">Select to Recommend</span>
+									</div>
+								<span class="deselctPolicy"><i class="fa fa-times" aria-hidden="true"></i></span>
+							</div>
+							<div class="col-10 adl-no-paddingLR cRepeatingColm">
+								<div  class="col-10 adl-no-paddingLR cfeatureTitle"><span>&nbsp;</span></div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+								<!-- 	<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!-- <span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!-- <span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+							</div><!-- end of cRepeatingColm -->
+							<div class="col-10 adl-no-paddingLR cRepeatingColm">
+								<div  class="col-10 adl-no-paddingLR cfeatureTitle"><span>&nbsp;</span></div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<!-- <span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+							<!-- 		<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+								<div  class="col-10 adl-no-paddingLR cfeatureName cflagsWrap">
+									<!-- <span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+							</div><!-- end of cRepeatingColm -->
+						</div><!-- end of cPolicyColm -->
+					</div><!-- end of gridHeader -->
+				</div><!-- end of compareGridWrap -->
+			</div><!-- end of  col-10-->
+			</div><!-- end of gridWrap -->
+			<div class="slidingBox slidingBoxOpen">
+				<div class="slidingIcon "><i class="fa fa-caret-right toggleArrow" aria-hidden="true"></i></div>
+				<div class="slidingContent vCenter">
+					<div class="slidingContentBox vCenter">
+						<div class="slideIcon"><img src="./images/adlNewImages/adl2/recommendedIcon.svg"></div>
+						<div class="slideInfo">
+							<h4>Proceed To</h4>
+							<h3>Recommend</h3></div>
+					</div><!-- end of slidingContentBox-->
+				</div><!-- end of slidingContent-->
+			</div><!-- end of slidingBox -->
+		</div><!--end of cMainWrap -->
+    </div><!--container--> 
+    
+  </div>
+  
+</div>
+<script>
+$(document).ready(function(){
+	//Sliding Button
+	$(".slidingIcon").click(function(){
+		$(this).children('.toggleArrow').toggleClass('fa-caret-right fa-caret-left');
+		$(this).parent('.slidingBox').toggleClass('slidingBoxOpen slidingBoxClose');
+	});
+	
+	//Compare Policy Slide
+	$(".cPolicyColm").click(function(){
+		$(this).toggleClass("recommendPolicy");
+		$(this).children().find(".checkPolicy ").toggleClass('policyChecked');
+		$(this).children().find(".checkPolicy ").toggleClass('cpolicyHover');
+	});
+	
+	//Head DropDowns
+	$(".inputWithDrop .form-control").click(function(){
+		$(this).siblings(".dropBox").slideToggle('fast');
+		$(this).siblings(".faCart").toggleClass('fa-caret-down fa-caret-up');
+	});
+});
+</script>
+</body>
+</html>

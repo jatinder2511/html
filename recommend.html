@@ -1,0 +1,624 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="App_Themes/Default/adlStyle.css" rel="stylesheet" />
+<script src="script/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="script/adl_script.js"></script>
+
+<link href="App_Themes/Default/adl_2-0.css" rel="stylesheet" />
+
+<!--scroller-->
+<!--<script src="script/jquery.min.js"></script>-->
+<script src="script/perfect-scrollbar.with-mousewheel.min.js"></script>
+
+<!--font-awesome-icon-->
+<link href="App_Themes/Default/icon-font-awesome/font-awesome.css" type="text/css" rel="stylesheet" />
+<link href="App_Themes/Default/icon-font-awesome/font-awesome.min.css" type="text/css" rel="stylesheet" />
+
+<!--sliding label-->
+<script type="text/javascript" src="script/jquery-3.2.0.min.js"></script>
+
+<style>
+
+body{
+	background: url(Images/adlNewImages/header-app.jpg) left top no-repeat #fff;
+	padding-top:95px;
+	overflow:hidden
+}
+
+/*temp*/
+.adl-modal-close {
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -3px -355px no-repeat;
+}
+.circleAroBlu-icon {
+    height: 23px;
+    width: 22px;
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -101px -292px no-repeat;
+}
+.deleteGrey-icon {
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -5px -69px no-repeat;
+}
+.drop-aro span {
+	background: url(Images/adlNewImages/icon-sprite-sheet.png) -70px -324px no-repeat;
+}
+.input-icon-calendar {
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -1px -163px no-repeat #E3EBF6;
+}
+.profilePic{
+    background: url(Images/adlNewImages/profile-pic.jpg) center bottom no-repeat #eee;
+    background-size: 130%;
+}
+
+.adl_2-0 #nav li i{
+	background: url(Images/adlNewImages/existingPoliciesIcon.svg) 80% center center no-repeat;
+}
+
+
+</style>
+
+</head>
+<body>
+<div class="adl-wrapper adl_2-0">
+  <div class="side-menu">
+    <nav class="navbar" role="navigation">
+      <div class="side-menu-container">
+        <div class="adl-toggle">
+          <ul class="nav navbar-nav">
+            <li class="has-sub" formodel="addCmodal" onclick="open_Model(this);"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/add_client.png"></div>
+              <span class="title">Add Client</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/add_business.png"></div>
+              <span class="title">Add Business</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/quick_note.png"></div>
+              <span class="title">Quick Note</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/quick_task.png"></div>
+              <span class="title">Quick Task</span></a> </li>
+            <li class="has-sub"> <a href="#">
+              <div class="icon"><img src="./images/adlNewImages/quick_vault.png"></div>
+              <span class="title">Quick Vault</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/email.png"></div>
+              <span class="title">Email</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/diary.png"></div>
+              <span class="title">Diary</span></a> </li>
+            
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/tutorials.png"></div>
+              <span class="title">Tutorials</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/datafeeds.png"></div>
+              <span class="title">Datafeeds</span></a> </li>
+            
+            
+          </ul>
+        </div>
+      </div>
+      <!-- /.navbar-collapse --> 
+    </nav>
+  </div>
+  <!--side-menu-->
+  
+  <div style="padding-left:60px">
+  
+    <div class="adl-container insurance">
+      <nav id="nav-flow">      
+      <div class="profileWrap">
+      <div class="pContainer">
+      <i class="fa fa-check-circle"></i>
+      <div class="profilePic"><img src="Images/adlNewImages/pp1.jpg" alt="" ></div>
+      </div>
+      <div class="pContainer">
+      <i class="fa fa-check-circle"></i>
+      <div class="profilePic"><img src="Images/adlNewImages/pp2.jpg" alt="" ></div>
+      </div>
+      </div><!--profileWrap-->
+      
+        <ul id="nav">
+        <li><img src="Images/adlNewImages/adl2/existingPoliciesIcon.svg" alt="" > Existing Policies</li>
+        <li><img src="Images/adlNewImages/adl2/needsAnalysisIcon.svg" alt="" > Needs Analysis</li>
+        <li><img src="Images/adlNewImages/adl2/riskLogicIcon.svg" alt="" > Risk Logic (<span>4</span>)</li>
+        <li class="active"><img src="Images/adlNewImages/adl2/recommendedIcon.svg" alt="" > Recommended</li>
+        <li><img src="Images/adlNewImages/adl2/justificationIcon.svg" alt="" > Justification</li>
+        </ul>
+      
+      </nav><!--nav-flow-->
+      
+      <div class="adl-container-inside adl-scroll overflow-scroll-basic">      
+      
+      <div class="userWrap">
+      
+        <div class="title col-10 no-borderB">
+        
+        <div class="adl-marginT adl-floatL">        
+        <div class="adl-floatL">
+        <h3><i class="fa fa-chevron-left link"></i> Recommended</h3>
+        </div>
+        <div class="adl-floatL showScenario">
+        <div class="adl-form-group adl-selectV adl-no-margin">
+        <select class="form-control no-border">
+        <option>Scenario 1</option> 
+        <option>Scenario 2</option>  
+        <option>Scenario 3</option>        
+        </select>
+        </div>
+        </div>
+        
+        <div class="adl-floatL showResult">
+        <i class="fa fa-eye"></i> Showing 3 Results
+        </div>
+        <div class="adl-floatL viewArchvd">
+        <i class="fa fa-folder-open"></i> View 3 Archived
+        </div>        
+        </div>
+        
+        
+        
+        <div class="showSearch">
+        <div class="form-horizontal">
+            <div class="adl-form-group col-10 adl-no-paddingLR adl-no-margin">
+                <input class="form-control search" placeholder="Search" type="text">
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+        </div>
+        
+        <div class="showSort">
+        <div class="form-horizontal">
+            <div class="adl-form-group col-10 adl-no-paddingLR adl-no-margin">
+            <label class="adl-no-paddingL"><i class="fa fa-exchange"></i> Sort:</label>
+            <div class="adl-no-paddingR adl-parent adl-select">
+                <select class="form-control no-border">
+                <option>Date Added</option>
+                <option>By Name</option>
+                </select>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        </div><!--title-->
+        
+        <div class="card-container">
+        
+        <div class="cardWrap rcmndd">
+        <div class="card">
+        <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>
+            <li formodel="policyModal" onclick="open_Model(this);"><i class="fa fa-pencil"></i> Edit</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>            
+            <li formodel="policyArchiveModal" onclick="open_Model(this);"><i class="fa fa-file-archive-o"></i> Archive</li>
+            </ul>
+            </div>
+            
+        <div class="row">          
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">JBH12345</div>
+            </div>
+            <div class="amnt">
+            <label>per month</label>
+            <div class="value">$10,000</div>            
+            </div>
+            </div><!--details-->
+        </div><!--row-->
+        
+                <div class="bricksWrap">
+                 <div class="small col-10 text-grey2">Last updated 3 months ago</div>
+        <div class="detailBlock col-10">              
+
+            <div class="brick one textC vCenter">
+            <div class="full">
+             <label class="font13 font-semibold">LIFE</label>
+            <div class="amnt">$100,000</div>
+            </div>
+            </div><!--brick-->
+            
+            <div class="brick two vCenter">
+            <div class="col-5 textC adl-no-paddingLR">
+            <div class="full">
+            <label class="font13 font-semibold">TPD</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            </div>
+            <div class="col-5 adl-no-paddingLR">
+           <div class="infoRow">
+            <div class="col-10">
+            	<label>Buy Back <i class="fa fa-circle"></i></label>
+            </div>
+            </div>
+            <div class="infoRow">
+            <div class="col-10 adl-no-paddingR">
+             	<label>Occupation</label>
+               <div class="value">Wood Mach</div>
+            </div>
+            
+            </div>
+            
+            </div>
+            </div><!--brick-->
+            
+            <div class="brick three vCenter">
+            <div class="col-3 textC adl-no-paddingL">
+             <label class="font13 font-semibold">TRAUMA</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            
+            <div class="col-7 adl-no-paddingLR">
+            <div class="infoRow">
+            <div class="col-33">
+            	<label>Buy Back <i class="fa fa-circle"></i></label>
+            </div>
+            <div class="col-33">
+             	<label>Feat. Level <i class="fa fa-circle"></i></label>
+               <div class="value">All</div>
+            </div>
+            <div class="col-33">
+            	<label>Reinst. <i class="fa fa-circle"></i></label>
+                 <div class="value">All</div>
+            </div>
+            </div>
+            </div>
+            
+            </div><!--brick-->
+            
+            <div class="brick four">
+            <div class="col-3 textC adl-no-paddingL">
+             <label class="font13 font-semibold">IP</label>
+             <div class="amnt">$100,000</div>
+             </div>
+             <div class="col-7 adl-no-paddingLR">
+            
+            <div class="infoRow">
+            <div class="col-33">
+            	<label>Feat. Level <i class="fa fa-circle"></i></label>
+                <div class="value">All</div>
+            </div>
+            <div class="col-33">
+             	<label>Wait Period</label>
+                <div class="value">30 days</div>
+            </div>
+            <div class="col-33">
+            	<label>Wait Per</label>
+                <div class="value">30 days</div>
+            </div>
+            </div>
+            <div class="infoRow">
+            <div class="col-33">
+            	<label>Cover</label>
+                <div class="value">Agreed Value</div>
+            </div>
+            <div class="col-33">
+             	<label>Ownership <i class="fa fa-circle"></i></label>
+            </div>
+            <div class="col-33">
+            	<label>Inc. Claim <i class="fa fa-circle"></i></label>
+            </div>
+            </div>
+            
+             </div>             
+    
+             <div class="infoRow col-10 adl-marginT">
+            <div class="col-25 textC">
+             	<label>AIDS Exc. <i class="fa fa-circle"></i></label>
+            </div>
+            <div class="col-25 textC">
+             	<label>IP Day <i class="fa fa-circle"></i></label>
+            </div>
+            <div class="col-25 textC">
+            	<label>Accident <i class="fa fa-circle"></i></label>
+            </div>
+            <div class="col-25 textC">
+             	<label>Split <i class="fa fa-circle"></i></label>
+            </div>
+            </div>
+
+             
+            </div><!--brick-->
+            
+            <div class="brick five vCenter">
+            <div class="col-3 textC adl-no-paddingL">
+            <label class="font13 font-semibold">BE</label>
+             <div class="amnt">$100,000</div>
+             </div>
+             <div class="col-7 adl-no-paddingLR">
+            
+            <div class="infoRow">
+            <div class="col-33">
+            	<label>Wait Per</label>
+                 <div class="value">30 Days</div>
+            </div>
+            <div class="col-33">
+             	<label>Accident <i class="fa fa-circle"></i></label>
+                <div class="value">All</div>
+            </div>
+            <div class="col-33">
+            	<label>IP day <i class="fa fa-circle"></i></label>
+                 <div class="value">All</div>
+            </div>
+            </div>
+            
+             </div>
+            </div><!--brick-->
+                 
+        	</div>
+               </div><!--bricksWrap-->
+               
+            <div class="col-10 adl-no-paddingLR textC adl-marginB btnRow">
+            <div class="col-5 cell-borderR"><a href="#"><i class="fa fa-download"></i> Download(.pdf)</a></div>
+            <div class="col-5"><a href="#"><i class="fa fa-refresh"></i> Get latest quotes</a></div>
+            </div>
+            
+            <button type="button" class="adl-btn full adl-no-margin buyBtn">Buy Now</button>
+               
+               
+               
+        </div><!--card-->
+        </div><!--cardWrap-->
+        
+        <div class="cardWrap rcmndd">
+        <div class="card">
+        <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>
+            <li formodel="policyModal" onclick="open_Model(this);"><i class="fa fa-pencil"></i> Edit</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>            
+            <li formodel="policyArchiveModal" onclick="open_Model(this);"><i class="fa fa-file-archive-o"></i> Archive</li>
+            </ul>
+            </div>
+            
+        <div class="row">          
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">JBH12345</div>
+            </div>
+            <div class="amnt">
+            <label>per month</label>
+            <div class="value">$10,000</div>            
+            </div>
+            </div><!--details-->
+        </div><!--row-->
+        
+                <div class="bricksWrap">
+                
+                <div class="col-10">
+                 <div class="small adl-floatL text-grey2">Last updated 3 months ago</div>
+                 <a class="adl-floatR adl-link" href="#"><i class="fa fa-refresh"></i> Get latest quotes</a>
+                 </div>
+                 
+                 <div class="detailBlock col-10">              
+
+            <div class="brick one textC vCenter">
+            <div class="full">
+             <label class="font13 font-semibold">LIFE</label>
+            <div class="amnt">$100,000</div>
+            </div>
+            </div><!--brick-->
+            
+            <div class="brick two vCenter">
+            <div class="col-5 textC adl-no-paddingLR">
+            <div class="full">
+            <label class="font13 font-semibold">TPD</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            </div>
+            <div class="col-5 adl-no-paddingLR">
+           <div class="infoRow">
+            <div class="col-10">
+            	<label>Buy Back <i class="fa fa-circle"></i></label>
+            </div>
+            </div>
+            <div class="infoRow">
+            <div class="col-10 adl-no-paddingR">
+             	<label>Occupation</label>
+               <div class="value">Wood Mach</div>
+            </div>
+            
+            </div>
+            
+            </div>
+            </div><!--brick-->
+            
+            <div class="brick three vCenter">
+            <div class="col-3 textC adl-no-paddingL">
+             <label class="font13 font-semibold">TRAUMA</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            
+            <div class="col-7 adl-no-paddingLR">
+            <div class="infoRow">
+            <div class="col-33">
+            	<label>Buy Back <i class="fa fa-circle"></i></label>
+            </div>
+            <div class="col-33">
+             	<label>Feat. Level <i class="fa fa-circle"></i></label>
+               <div class="value">All</div>
+            </div>
+            <div class="col-33">
+            	<label>Reinst. <i class="fa fa-circle"></i></label>
+                 <div class="value">All</div>
+            </div>
+            </div>
+            </div>
+            
+            </div><!--brick-->
+
+        	</div>
+               </div><!--bricksWrap-->
+               
+            <div class="col-10 adl-no-paddingLR textC adl-marginB btnRow">
+            <div class="col-5 cell-borderR"><a href="#"><i class="fa fa-download"></i> Download(.pdf)</a></div>
+            <div class="col-5"><a href="#"><i class="fa fa-refresh"></i> Get latest quotes</a></div>
+            </div>
+
+        </div><!--card-->
+        </div><!--cardWrap-->
+        
+        
+        <div class="cardWrap rcmndd">
+        <div class="card">
+        <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>
+            <li formodel="policyModal" onclick="open_Model(this);"><i class="fa fa-pencil"></i> Edit</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>            
+            <li formodel="policyArchiveModal" onclick="open_Model(this);"><i class="fa fa-file-archive-o"></i> Archive</li>
+            </ul>
+            </div>
+            
+        <div class="row">          
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">JBH12345</div>
+            </div>
+            <div class="amnt">
+            <label>per month</label>
+            <div class="value">$10,000</div>            
+            </div>
+            </div><!--details-->
+        </div><!--row-->
+        
+                <div class="bricksWrap">
+                 
+                 <div class="col-10">
+                 <div class="small adl-floatL text-grey2">Last updated 3 months ago</div>
+                 <a class="adl-floatR adl-link" href="#"><i class="fa fa-refresh"></i> Get latest quotes</a>
+                 </div>
+        <div class="detailBlock col-10">              
+
+            <div class="brick one textC vCenter">
+            <div class="full">
+             <label class="font13 font-semibold">LIFE</label>
+            <div class="amnt">$100,000</div>
+            </div>
+            </div><!--brick-->
+            
+            <div class="brick two vCenter">
+            <div class="col-5 textC adl-no-paddingLR">
+            <div class="full">
+            <label class="font13 font-semibold">TPD</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            </div>
+            <div class="col-5 adl-no-paddingLR">
+           <div class="infoRow">
+            <div class="col-10">
+            	<label>Buy Back <i class="fa fa-circle"></i></label>
+            </div>
+            </div>
+            <div class="infoRow">
+            <div class="col-10 adl-no-paddingR">
+             	<label>Occupation</label>
+               <div class="value">Wood Mach</div>
+            </div>
+            
+            </div>
+            
+            </div>
+            </div><!--brick-->
+            
+            <div class="brick three vCenter">
+            <div class="col-3 textC adl-no-paddingL">
+             <label class="font13 font-semibold">TRAUMA</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            
+            <div class="col-7 adl-no-paddingLR">
+            <div class="infoRow">
+            <div class="col-33">
+            	<label>Buy Back <i class="fa fa-circle"></i></label>
+            </div>
+            <div class="col-33">
+             	<label>Feat. Level <i class="fa fa-circle"></i></label>
+               <div class="value">All</div>
+            </div>
+            <div class="col-33">
+            	<label>Reinst. <i class="fa fa-circle"></i></label>
+                 <div class="value">All</div>
+            </div>
+            </div>
+            </div>
+            
+            </div><!--brick--> 
+            
+        	</div>
+               </div><!--bricksWrap-->
+               
+            <div class="col-10 adl-no-paddingLR textC adl-marginB btnRow">
+            <div class="col-5 cell-borderR"><a href="#"><i class="fa fa-download"></i> Download(.pdf)</a></div>
+            <div class="col-5"><a href="#"><i class="fa fa-refresh"></i> Get latest quotes</a></div>
+            </div>
+            
+               
+               
+        </div><!--card-->
+        </div><!--cardWrap-->
+        
+        </div><!--card-container-->
+        
+      </div><!--userWrap-->
+      
+      </div><!--adl-container-inside-->
+  
+  
+
+      <div class="slidingBox slidingBoxOpen">
+    <div class="slidingIcon"><i class="fa fa-caret-right toggleArrow" aria-hidden="true"></i></div>
+    <div class="slidingContent vCenter">
+     <div class="slidingContentBox vCenter">
+      <div class="slideIcon"><img src="./images/adlNewImages/adl2/reportsIcon.svg"></div>
+      <div class="slideInfo">
+       <h3>VIEW <br> REPORTS</h3></div>
+     </div><!--slidingContentBox-->
+    </div><!--slidingCont-->
+</div><!--slidingBox-->
+
+
+</div><!--container--> 
+    
+  </div>
+  
+</div>
+
+
+<script>
+$(document).ready(function(){	
+	//slide label//
+	$(".form-control").focus(function(){
+	
+		$(this).addClass("filled")
+		});		
+	$(".form-control").blur(function(){		
+		var fieldVar = $(this).val();		
+		if(fieldVar == ''){
+			$(this).removeClass("filled");
+		}
+		else{
+			$(this).addClass("filled");
+		}
+		});
+		
+		//Sliding Button
+		$(".slidingIcon").click(function(){
+		$(this).children('.toggleArrow').toggleClass('fa-caret-right fa-caret-left');
+		$(this).parent('.slidingBox').toggleClass('slidingBoxOpen slidingBoxClose');
+ 		});
+ 
+	});
+</script>
+
+</body>
+</html>
