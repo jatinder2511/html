@@ -92,6 +92,13 @@ a.adl-link{
 }
 
 
+/*autoheight text area*/
+.form-control.autoTextarea{
+    height:0;
+	overflow:hidden
+}
+/**/
+
 .adl_2-0 .adl-scroll::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -303,22 +310,22 @@ position: absolute;
 
 
 
-.insurance .adl-container-inside {
+.insurance .adl-container-inside, .superlogic .adl-container-inside{
     height: calc(100vh - 140px);
 }
 
 
 /*nav head*/
-.insurance #nav-flow{
+.adl_2-0 #nav-flow{
 	width:100%;
 	height:44px;
 	box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
-.insurance #nav{
+.adl_2-0 #nav-flow #nav{
 	display: inline-block;
     height: 44px;
 }
-.insurance #nav > li{
+.adl_2-0 #nav-flow #nav > li{
     padding: 2px 15px 2px 30px;
     display: inline-flex;
     position: relative;
@@ -326,12 +333,12 @@ position: absolute;
     align-items: center;
 	float: left;
 }
-.insurance #nav > li > img{
+.adl_2-0 #nav-flow #nav > li > img{
 	width:22px;
 	margin-right:5px
 }
 
-.insurance #nav > li:before {
+.adl_2-0 #nav-flow #nav > li:before {
 	position: absolute;
 	left:100%;
 	top:0;
@@ -343,7 +350,7 @@ position: absolute;
 	border-bottom: 22px solid transparent;
 	border-left: 8px solid #666;
 }
-.insurance #nav > li:after {
+.adl_2-0 #nav-flow #nav > li:after {
 	position: absolute;
 	left:100%;
 	top:0;
@@ -356,7 +363,7 @@ position: absolute;
 	border-left: 8px solid #fff;
 }
 
-.insurance #nav > li.active, .insurance #nav > li:hover{
+.adl_2-0 #nav-flow #nav > li.active, .adl_2-0 #nav-flow #nav > li:hover{
 	color:#fff;
 	background: #78cdf2;
 	background: -moz-linear-gradient(left, #78cdf2 0%, #78cdf2 27%, #1a82cc 100%);
@@ -364,26 +371,26 @@ position: absolute;
 	background: linear-gradient(to right, #78cdf2 0%,#78cdf2 27%,#1a82cc 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#78cdf2', endColorstr='#1a82cc',GradientType=1 );
 }
-.insurance #nav > li.active:before, .insurance #nav > li:hover:before{
+.adl_2-0 #nav-flow #nav > li.active:before, .adl_2-0 #nav-flow #nav > li:hover:before{
 	border:none
 }
-.insurance #nav > li.active:after, .insurance #nav > li:hover:after {
+.adl_2-0 #nav-flow #nav > li.active:after, .adl_2-0 #nav-flow #nav > li:hover:after {
 	border-left: 8px solid #1A82CC;
 }
 
-.insurance #nav > li:hover{
+.adl_2-0 #nav-flow #nav > li:hover{
 	cursor:pointer
 }
-.insurance #nav > li.active:hover{
+.adl_2-0 #nav-flow #nav > li.active:hover{
 	cursor:default
 }
 
-.insurance #nav > li:hover .dropSection, .insurance #nav > li .dropSection:hover {
+.adl_2-0 #nav-flow #nav > li:hover .dropSection, .adl_2-0 #nav-flow #nav > li .dropSection:hover {
 	opacity:1;
 	left: -80px;
 	transition:all 0.3s
 }
-.insurance #nav > li .dropSection{
+.adl_2-0 #nav-flow #nav > li .dropSection{
 	opacity:0;
     position: absolute;
 	padding-right:5px;
@@ -396,10 +403,10 @@ position: absolute;
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
 	border-radius: 5px;
 }
-.insurance #nav > li .dropSection .totalPrmm{
+.adl_2-0 #nav-flow #nav > li .dropSection .totalPrmm{
 	width:100%
 }
-.insurance #nav > li .dropSection:before{
+.adl_2-0 #nav-flow #nav > li .dropSection:before{
 	position: absolute;
     width: 0px;
     height: 0px;
@@ -411,7 +418,7 @@ position: absolute;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
 }
-.insurance #nav > li .dropSection:after{
+.adl_2-0 #nav-flow #nav > li .dropSection:after{
 	position: absolute;
     width: 100%;
     height: 8px;
@@ -421,11 +428,11 @@ position: absolute;
     content: "";
 }
 
-.insurance #nav > li .dropSection .cardWrap{
+.adl_2-0 #nav-flow #nav > li .dropSection .cardWrap{
 	width:100%
 }
 
-.insurance #nav > li .dropSection .detailBlock{
+.adl_2-0 #nav-flow #nav > li .dropSection .detailBlock{
 	opacity: 1;
     position: inherit;
     background-color: transparent;
@@ -433,34 +440,35 @@ position: absolute;
     width: 100%;
     left: 0;
 }
-.insurance #nav > li .dropSection .card-container{
+.adl_2-0 #nav-flow #nav > li .dropSection .card-container{
 	max-height: calc(100vh - 270px);
 	padding: 0;
 }
 
-.insurance #nav > li .dropSection .adl-scroll::-webkit-scrollbar {
+.adl_2-0 #nav-flow #nav > li .dropSection .adl-scroll::-webkit-scrollbar {
     width: 4px;
     height: 4px;
 }
-.insurance #nav > li .dropSection .adl-scroll::-webkit-scrollbar-thumb {
+.adl_2-0 #nav-flow #nav > li .dropSection .adl-scroll::-webkit-scrollbar-thumb {
     background-color: #c3d0da;
 	border-radius:2px
 }
-.insurance #nav > li .dropSection .adl-scroll::-webkit-scrollbar-thumb:hover {
+.adl_2-0 #nav-flow #nav > li .dropSection .adl-scroll::-webkit-scrollbar-thumb:hover {
     background-color: #bbb;
 }
-.insurance #nav > li .dropSection .totalPrmm:before{
+.adl_2-0 #nav-flow #nav > li .dropSection .totalPrmm:before{
 	display:none
 }
 
-.insurance .profileWrap{
+
+.adl_2-0 #nav-flow .profileWrap{
 	padding:5px 8px 4px 5px;
 	float:left;
 	position: relative;
     z-index: 9;
 	box-shadow:10px 0 10px rgba(0,0,0,0.15)
 }
-.insurance .profileWrap:before {
+.adl_2-0 #nav-flow .profileWrap:before {
     position: absolute;
     width: 0px;
     height: 0px;
@@ -472,8 +480,7 @@ position: absolute;
     border-top: 12px solid transparent;
     border-bottom: 12px solid transparent;
 }
-
-.insurance .profilePic{
+.adl_2-0 #nav-flow .profilePic{
     background: url(/Images/adlNewImages/profile-pic.png) center bottom no-repeat #eee;
     background-size: 130%;
     height: 35px;
@@ -481,78 +488,77 @@ position: absolute;
     border: 2px solid #fff;
     box-shadow: 0 0 5px rgba(0,0,0,0.15);
 }
-.insurance .profilePic + .profilePic{
+.adl_2-0 #nav-flow .profilePic + .profilePic{
 	margin-left:5px
 }
-.insurance .pContainer i{
+.adl_2-0 #nav-flow .pContainer i{
     position: absolute;
     right: -3px;
     top: 0;
 }
-.insurance .pContainer{
+.adl_2-0 #nav-flow .pContainer{
 	position:relative;
 	float:left;
 }
-.insurance .pContainer + .pContainer{
+.adl_2-0 #nav-flow .pContainer + .pContainer{
 	margin-left:5px
 }
-.insurance .pContainer:first-child i{
+.adl_2-0 #nav-flow .pContainer:first-child i{
 	color:#1DB2DE
 }
-.insurance .pContainer:last-child i{
+.adl_2-0 #nav-flow .pContainer:last-child i{
 	color:#C47334
 }
 
 /**/
 
 
-.insurance .userWrap .title h3{
+.adl_2-0 .userWrap .title h3{
 	color: #485a65;
 }
-.insurance .userWrap .title h3 i.fa-chevron-left.link{
+.adl_2-0 .userWrap .title h3 i.fa-chevron-left.link{
 	font-size:15px;
 	color:#1db2de;
 }
-.insurance .userWrap .title h3 i.fa-chevron-left.link:hover{
+.adl_2-0 .userWrap .title h3 i.fa-chevron-left.link:hover{
 	color:#485a65;
 }
-
-.insurance .userWrap .title{
+.adl_2-0 .userWrap .title{
     margin: 10px 0;
     border-bottom: 1px solid #eee;
     padding-bottom: 3px;
 }
-.insurance .userWrap .title .fa-plus-circle{
+.adl_2-0 .userWrap .title .fa-plus-circle{
 	margin-left:10px;
 	font-size:20px;
 }
-.insurance .userWrap .title .fa-plus-circle:hover{
+.adl_2-0 .userWrap .title .fa-plus-circle:hover{
 	cursor:pointer;
 	color:#41a3ea
 }
 
-.insurance .titleSub{
+.adl_2-0 .titleSub{
 	font-size:16px;
 	font-weight:500;
 	float:left;
 	margin-right:10px
 }
-.insurance .userWrap .showResult{
+.adl_2-0 .userWrap .showResult{
 	color:#999;
 	margin-left:15px
 }
-.insurance .userWrap .viewArchvd{
+.adl_2-0 .userWrap .viewArchvd{
 	color:#1db2de;
 	margin-left:15px
 }
-.insurance .userWrap .viewArchvd:hover{
+.adl_2-0 .userWrap .viewArchvd:hover{
 	text-decoration:underline;
 	cursor:pointer
 }
-.insurance .userWrap .viewArchvd i{
+.adl_2-0 .userWrap .viewArchvd i{
 	color:#ECC129
 }
-.insurance .title .totalPrmm .detailBlock{
+.adl_2-0 .title .totalPrmm .detailBlock{
 	background-color:#1db2de;
 	padding:8px 0;
 	color:#fff;
@@ -564,25 +570,25 @@ position: absolute;
 	width:500px;
 	transition:all 0.4s ease-out
 }
-.insurance .title .totalPrmm:hover .detailBlock{
+.adl_2-0 .title .totalPrmm:hover .detailBlock{
 	left:calc(100% - 500px);
 	opacity:1
 }
 
-.insurance .detailBlock label{
+.adl_2-0 .detailBlock label{
     text-transform: uppercase;
     font-size: 10px;
     line-height:12px;
 }
-.insurance .detailBlock .amnt{
+.adl_2-0 .detailBlock .amnt{
 	font:700 15px 'Roboto Condensed', sans-serif;
     line-height: 14px;
 }
 
-.insurance .totalPrmm{
+.adl_2-0 .title .totalPrmm{
 	position:relative
 }
-.insurance .totalPrmm:before{
+.adl_2-0 .title .totalPrmm:before{
 	border-right:6px solid #1db2de;
 	border-top:6px solid transparent;
 	border-bottom:6px solid transparent;
@@ -592,36 +598,36 @@ position: absolute;
 	content:'';
 	display:block
 }
-.insurance .totalPrmm.empty:before{
+.adl_2-0 .title .totalPrmm.empty:before{
 	display:none
 }
-.insurance .totalPrmm label{
+.adl_2-0 .title .totalPrmm label{
 	font-weight:500
 }
-.insurance .totalPrmm .value{
+.adl_2-0 .title .totalPrmm .value{
     color: #1db2de;
     font-weight: 600;
     font-size: 22px;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-.insurance .userWrap.partner h4, .insurance .userWrap.partner .cardWrap .card .details .amnt .value, .insurance .userWrap.partner .totalPrmm .value{
+.adl_2-0 .userWrap.partner h4, .adl_2-0 .userWrap.partner .cardWrap .card .details .amnt .value, .adl_2-0 .userWrap.partner .totalPrmm .value{
 	color:#b65100
 }
 
 
 /*user cards*/
-.insurance .card-container{
+.adl_2-0 .card-container{
 	float:left;
 	width:100%;
 	padding:0 5px
 }
-.insurance .cardWrap{
+.adl_2-0 .cardWrap{
 	float:left;
 	width:33.33333%;
 	padding:5px
 }
-.insurance .cardWrap .card{
+.adl_2-0 .cardWrap .card{
 	border:1px solid #dde2e6;
     overflow: hidden;
     width: 100%;
@@ -632,64 +638,57 @@ position: absolute;
     -webkit-transition: all 0.15s ease 0s;
     -moz-transition: all 0.15s ease 0s;
 }
-.insurance .cardWrap .card:hover{
+.adl_2-0 .cardWrap .card:hover{
 	cursor:pointer;
 	box-shadow:0 0 12px rgba(0,0,0,0.3);
 	border:1px solid #fff
 }
-
-
-.insurance .cardWrap .card .detailBlock{
+.adl_2-0 .cardWrap .card .detailBlock{
 	background-color:#F9FAFB;
 	color:#485a65;
 	padding:15px 5px
 }
-
-.insurance .cardWrap .card .logo{
+.adl_2-0 .cardWrap .card .logo{
 	float:left;
 	width:20%;
 	height:75px;
 	padding:10px
 }
-.insurance .cardWrap .card .logo img{
+.adl_2-0 .cardWrap .card .logo img{
 	max-width:100%;
 	max-height:100%;
 }
-
-.insurance .cardWrap .card .detailBlock label{
+.adl_2-0 .cardWrap .card .detailBlock label{
 	color:#999
 }
-.insurance .cardWrap .card .detailBlock .amnt{
+.adl_2-0 .cardWrap .card .detailBlock .amnt{
 	font-weight:500
 }
-
-.insurance .cardWrap .card .details{
+.adl_2-0 .cardWrap .card .details{
 	float:left;
 	width:80%;
 	height:76px;
 	padding:10px 10px 0 0
 }
-.insurance .cardWrap .card .details .cmpny{
+.adl_2-0 .cardWrap .card .details .cmpny{
 	float:left;
 	max-width:66%;
 	padding-right:5px
 }
-
-.insurance .cardWrap .card .details .cmpny .name{
+.adl_2-0 .cardWrap .card .details .cmpny .name{
 	font-weight:500;
     line-height: 18px;
 	font-size: 14px;
 }
-.insurance .cardWrap .card .details .cmpny .code{
+.adl_2-0 .cardWrap .card .details .cmpny .code{
 	font-size:12px;
 }
-
-.insurance .cardWrap .card .details .amnt{
+.adl_2-0 .cardWrap .card .details .amnt{
 	float:right;
     padding-right: 5px;
 	margin-top:5px
 }
-.insurance .cardWrap .card .details .amnt .value{
+.adl_2-0 .cardWrap .card .details .amnt .value{
     float: right;
 	padding-right:3px;
     color: #1db2de;
@@ -697,23 +696,22 @@ position: absolute;
 	font-size:22px;
     font-family: 'Roboto Condensed', sans-serif;
 }
-.insurance .cardWrap .card .details .amnt label{
+.adl_2-0 .cardWrap .card .details .amnt label{
 	float:right;
 	width:32px;
 	font-size:11px;
 	line-height:10px;
 	color:#999
 }
-.insurance .cardWrap .card .details .infoRow{
+.adl_2-0 .cardWrap .card .details .infoRow{
 	margin-top:5px;
 	font-size: 12px;
 }
-.insurance .cardWrap .card .details .infoRow .fa-check-circle{
+.adl_2-0 .cardWrap .card .details .infoRow .fa-check-circle{
 	color:#6C3;
 	font-size:14px
 }
-
-.insurance .cardWrap .card .fa-ellipsis-v{
+.adl_2-0 .cardWrap .card .fa-ellipsis-v{
 	position:absolute;
 	right:7px;
 	top:7px;
@@ -724,7 +722,7 @@ position: absolute;
 	-moz-transition:all 0.2s ease 0s;
 	-webkit-transition:all 0.2s ease 0s;
 }
-.insurance .cardWrap .card .rightNav{
+.adl_2-0 .cardWrap .card .rightNav{
     position: absolute;
 	border-radius:3px;
 	padding:5px 10px;
@@ -740,8 +738,7 @@ position: absolute;
 	transition:all 0.2s ease 0s;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
-
-.insurance .cardWrap .card .rightNav:before {
+.adl_2-0 .cardWrap .card .rightNav:before {
     position: absolute;
     width: 0px;
     height: 0px;
@@ -753,26 +750,25 @@ position: absolute;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
 }
-.insurance .cardWrap .card .fa-ellipsis-v:hover{
+.adl_2-0 .cardWrap .card .fa-ellipsis-v:hover{
 	cursor:pointer;
 	color:#999
 }
-.insurance .cardWrap .card .fa-ellipsis-v:hover + .rightNav, .insurance .cardWrap .card .rightNav:hover{
+.adl_2-0 .cardWrap .card .fa-ellipsis-v:hover + .rightNav, .adl_2-0 .cardWrap .card .rightNav:hover{
 	opacity:1;
 	filter:alpha(opacity=100);
 	right:3px;
 }
-
-.insurance .cardWrap .card .rightNav li{
+.adl_2-0 .cardWrap .card .rightNav li{
 	line-height: 25px;
 }
-.insurance .cardWrap .card .rightNav i{
+.adl_2-0 .cardWrap .card .rightNav i{
 	margin-right:3px
 }
-.insurance .cardWrap .card .rightNav li + li{
+.adl_2-0 .cardWrap .card .rightNav li + li{
 	border-top:1px solid #eee;
 }
-.insurance .cardWrap .card .rightNav li:hover{
+.adl_2-0 .cardWrap .card .rightNav li:hover{
 	color:#41a3ea;
 	cursor:pointer
 }
@@ -780,7 +776,7 @@ position: absolute;
 /**/
 
 /*no policy box*/
-.insurance .noPolicies{
+.adl_2-0 .noPolicies{
 	border: 1px solid #dde2e6;
 	padding:0px 20px;
     overflow: hidden;
@@ -789,46 +785,44 @@ position: absolute;
     border-radius: 12px;
     position: relative;
 }
-.insurance .noPolicies .block{
+.adl_2-0 .noPolicies .block{
     float: left;
     width: 50%;
     padding-left: 30px;
     display: flex;
     align-items: center;
 }
-.insurance .noPolicies .block .icon, .insurance .noPolicies .block .info{
+.adl_2-0 .noPolicies .block .icon, .insurance .noPolicies .block .info{
 	float:left;
 	color:#999
 }
-.insurance .noPolicies .block .icon{
+.adl_2-0 .noPolicies .block .icon{
 	margin-right: 70px;
     width: 140px;
     height: 140px;
 }
-.insurance .noPolicies .block a{
+.adl_2-0 .noPolicies .block a{
 	font-weight:400;
 	font-size:14px
 }
-.insurance .noPolicies .block a:hover{
+.adl_2-0 .noPolicies .block a:hover{
 	text-decoration:underline;
 }
-.insurance .noPolicies .block:last-child a{
+.adl_2-0 .noPolicies .block:last-child a{
 	float:right;
 	margin-left:30px
 }
-
-.insurance .noPolicies .block .icon img{
+.adl_2-0 .noPolicies .block .icon img{
 	max-width:100%;
 	max-height:100%
 }
-.insurance .noPolicies .block h5{
+.adl_2-0 .noPolicies .block h5{
 	color:#999;
 	font-size:15px;
 	font-weight:400;
 	margin-bottom:15px
 }
-
-.insurance .noPolicies .sprte{
+.adl_2-0 .noPolicies .sprte{
     position: absolute;
     height: 120px;
     float: left;
@@ -838,7 +832,7 @@ position: absolute;
     margin-top: -60px;
     margin-left: -12px;
 }
-.insurance .noPolicies .sprte::before{
+.adl_2-0 .noPolicies .sprte::before{
 	content:'';
 	height:100%;
 	width:1px;
@@ -847,8 +841,7 @@ position: absolute;
 	left:12px;
 	top:0
 }
-
-.insurance .noPolicies .sprte span{
+.adl_2-0 .noPolicies .sprte span{
 	border-radius:50%;
 	border:1px solid #dde2e6;
 	background-color: #F9FAFB;
@@ -866,40 +859,35 @@ position: absolute;
 /**/
 
 /*Insurance recommended*/
-
-
-.insurance .card-container .cardWrap.rcmndd .card .details, .insurance .card-container .cardWrap.rcmndd .card .logo{
+.adl_2-0 .card-container .cardWrap.rcmndd .card .details, .adl_2-0 .card-container .cardWrap.rcmndd .card .logo{
 	height:55px;
 }
-
-.insurance .card-container .cardWrap.rcmndd .card .bricksWrap{
+.adl_2-0 .card-container .cardWrap.rcmndd .card .bricksWrap{
 	float:left;
 	width:100%;
 }
-
-.insurance .card-container .cardWrap.rcmndd .card .detailBlock{
+.adl_2-0 .card-container .cardWrap.rcmndd .card .detailBlock{
 	background-color:transparent;
 	padding:5px
 }
-
-.insurance .card-container.jstfctn{
+.adl_2-0 .card-container.jstfctn{
 	display:flex;
 	flex-flow:row wrap
 }
-.insurance .card-container .cardWrap.jstfctn .card:hover{
+.adl_2-0 .card-container .cardWrap.jstfctn .card:hover{
 	cursor:default;
 	box-shadow:none;
 	border:1px solid #dde2e6
 }
-.insurance .card-container .cardWrap.jstfctn .card .details, .insurance .card-container .cardWrap.jstfctn .card .logo{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .details, .adl_2-0 .card-container .cardWrap.jstfctn .card .logo{
 	display:flex;
 	align-items:center;
 }
-.insurance .card-container .cardWrap.jstfctn .card .details{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .details{
 	padding:0;
 	justify-content:space-between
 }
-.insurance .card-container .cardWrap.jstfctn .card .message{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .message{
 	position: absolute;
     bottom: 0;
     right: 0;
@@ -911,25 +899,23 @@ position: absolute;
     width: 100%;
     border-top: 1px solid #eee;
 }
-
-.insurance .card-container .cardWrap.jstfctn .card .catgry{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry{
 	float:left;
 	width:100%;
 	padding:10px 10px
 }
-.insurance .card-container .cardWrap.jstfctn .card .catgry:nth-child(odd){
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry:nth-child(odd){
 	background-color:#f9f9f9
 }
-.insurance .card-container .cardWrap.jstfctn .card .catgry h5{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry h5{
     color: #666;
     font-weight: 500;
 }
-
-.insurance .card-container .cardWrap.jstfctn .card .catgry .btn{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry .btn{
 	display: inline-block;
 	margin-left:10px
 }
-.insurance .card-container .cardWrap.jstfctn .card .catgry .btn label{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry .btn label{
 	border-radius: 12px;
     padding: 0 9px 0 6px;
     font-size: 9px;
@@ -937,43 +923,42 @@ position: absolute;
     color: #fff;
 	float: right;
 }
-.insurance .card-container .cardWrap.jstfctn .card .catgry .btn i{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry .btn i{
     line-height: 16px;
     float: left;
     margin-right: 2px;
 }
-.insurance .card-container .cardWrap.jstfctn .card .catgry .btn.check label{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry .btn.check label{
 	background-color: #59d44c;
 }
-.insurance .card-container .cardWrap.jstfctn .card .catgry .btn.check{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry .btn.check{
 	color: #59d44c;
 }
-.insurance .card-container .cardWrap.jstfctn .card .catgry .btn.custom label{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry .btn.custom label{
 	background-color: #777;
 }
-.insurance .card-container .cardWrap.jstfctn .card .catgry .btn.custom{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry .btn.custom{
 	color: #777;
 }
-.insurance .card-container .cardWrap.jstfctn .card .catgry .btn.cross label{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry .btn.cross label{
 	background-color: #d44c58;
 }
-.insurance .card-container .cardWrap.jstfctn .card .catgry .btn.cross{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry .btn.cross{
 	color: #d44c58;
 }
-
-.insurance .card-container .cardWrap.jstfctn .card .catgry ol{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry ol{
 	margin:0;
 	padding:0;
 }
-.insurance .card-container .cardWrap.jstfctn .card .catgry ol li{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry ol li{
 	list-style:decimal inside none
 }
-.insurance .card-container .cardWrap.jstfctn .card .catgry .more{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry .more{
 	font-size: 11px;
     font-style: italic;
     color: #999;
 }
-.insurance .card-container .cardWrap.jstfctn .card .catgry .more:hover{
+.adl_2-0 .card-container .cardWrap.jstfctn .card .catgry .more:hover{
 	color:#41a3ea;
 	cursor:pointer
 }
@@ -1282,66 +1267,61 @@ position: absolute;
     overflow: hidden;
 	font-weight:500
 }
-
-.insurance .commentRow > label {
+.commentRow > label {
     font-weight: 500;
     font-size: 14px;
     color: #333;
 }
 
 
-
-.insurance #policyModal .adl-modal-content{
-	top:9px!important
-}
-.insurance #policyModal .adl-modal-title{
+.adl_2-0 .adl-modal-title{
 	color:#485a65;
 	font-family:'Roboto', sans-serif;
 	font-weight:500
 }
-.insurance #policyModal .adl-modal-header{
+.adl_2-0 .adl-modal-header{
 	float:left;
 	width:100%;
     height: 55px;
 }
-.insurance #policyModal .adl-modal-header .cmpny .name{
+.adl_2-0 .adl-modal-header .name{
 	font-variant: normal;
 	font-size: 16px;
 }
-.insurance #policyModal .adl-modal-header .cmpny .name .text-truncate{
+.adl_2-0 .adl-modal-header .name .text-truncate{
 	max-width: 450px;
     float: left;
     line-height: 18px;
 }
-.insurance #policyModal .adl-modal-header .cmpny .code{
+.adl_2-0 .adl-modal-header .code{
 	text-transform:uppercase;
 	font-size: 15px;
 	color:#999;
 	font-weight:400;
 	float: left;
 }
-.insurance #policyModal .adl-modal-header .link{
+.adl_2-0 .adl-modal-header .link{
     font-size: 14px;
     font-weight: 400;
     padding: 0 8px;
     float: left;
     line-height: 18px;
 }
-.insurance #policyModal .adl-modal-header .link:hover, .insurance #policyModal .adl-modal-header .link.delete:hover{
+.adl_2-0 .adl-modal-header .link:hover, .adl_2-0 .adl-modal-header .link.delete:hover{
 	color:#666
 }
-.insurance #policyModal .adl-modal-header .link.default{
+.adl_2-0 .adl-modal-header .link.default{
 	border-right:1px solid #ddd
 }
-.insurance #policyModal .adl-modal-header .link.delete{
+.adl_2-0 .adl-modal-header .link.delete{
 	color: #e74c3c
 }
 
-.insurance #policyModal .adl-modal-close{
+.adl_2-0 .adl-modal-close{
 	margin-top:5px
 }
-.insurance .adl-modal-close{
-background-image: none;
+.adl_2-0 .adl-modal-close{
+	background-image: none;
     background-color: #e74c3c;
     color: #fff;
     border-radius: 50%;
@@ -1355,25 +1335,25 @@ background-image: none;
 	cursor:pointer;
 	background-color:#cf3d2e
 }
-.insurance #policyModal .adl-modal-header .chooseSelect{
+.adl_2-0 .adl-modal-header .chooseSelect{
 	float:right;
 	width:250px;
 	font-size:14px;
 }
 
-.insurance #policyModal .adl-modal-header .chooseSelect select{
+.adl_2-0 .adl-modal-header .chooseSelect select{
 	background-color:transparent;
 	font-size:14px;
 	border-bottom: 1px solid #ddd;
 }
-.insurance #policyModal .adl-modal-header .chooseSelect label{
+.adl_2-0 .adl-modal-header .chooseSelect label{
 	line-height:30px
 }
 
-.insurance #policyModal .adl-modal-header .chooseSelect .adl-select::after{
+.adl_2-0 .adl-modal-header .chooseSelect .adl-select::after{
 	right:0
 }
-.insurance #policyModal .adl-modal-header .chooseSelect .logo{
+.adl_2-0 .adl-modal-header .chooseSelect .logo{
 	border-radius:50%;
 	overflow:hidden;
 	border:1px solid #eee;
@@ -1386,65 +1366,64 @@ background-image: none;
 	padding:3px;
 	margin-top:-5px
 }
-.insurance #policyModal .adl-modal-header .chooseSelect .logo img{
+.adl_2-0 .adl-modal-header .chooseSelect .logo img{
 	max-width:100%;
 	max-height:100%
 }
-.insurance #policyModal .blockSec{
+.adl_2-0 .blockSec{
 	padding:10px;
 	width:100%;
 	float:left
 }
-.insurance #policyModal h3{
+.adl_2-0 h3{
 	color:#485a65;
 	margin-bottom:10px
 }
-.insurance #policyModal h4{
+.adl_2-0 h4{
 	font-weight:400;
-	margin-bottom:5px;
-	margin-top:10px
 }
 
-.insurance #policyModal .life, .insurance #policyModal .tpd, .insurance #policyModal .trauma, .insurance #policyModal .ip, .insurance #policyModal .be {
+.adl_2-0 #policyModal .adl-modal-content, .adl_2-0 #smsfModal .adl-modal-content{
+	top:9px!important
+}
+.adl_2-0 #policyModal .life, .adl_2-0 #policyModal .tpd, .adl_2-0 #policyModal .trauma, .adl_2-0 #policyModal .ip, .adl_2-0 #policyModal .be {
 	float:left
 }
-.insurance #policyModal .life{
+.adl_2-0 #policyModal .life{
 	width:12%;
 	border-left: solid 1px #1db2de
 }
-.insurance #policyModal .tpd, .insurance #policyModal .trauma{
+.adl_2-0 #policyModal .tpd, .adl_2-0 #policyModal .trauma{
 	width:44%
 }
-.insurance #policyModal .ip, .insurance #policyModal .be{
+.adl_2-0 #policyModal .ip, .adl_2-0 #policyModal .be{
 	width:100%
 }
-.insurance #policyModal .tpd, .insurance #policyModal .trauma{
+.adl_2-0 #policyModal .tpd, .adl_2-0 #policyModal .trauma{
 	border-left: solid 1px #1db2de
 }
-.insurance #policyModal .commentRow > label{
+.adl_2-0 #policyModal .commentRow > label{
 	font-weight:500;
 	font-size:13px;
 	color:#333
 }
-.insurance #policyModal .policyContent{
+.adl_2-0 #policyModal .policyContent{
 	height: calc(100vh - 140px);
     float: left;
+	width:100%
 }
-
-.insurance #policyDeleteModal .cardWrap, .insurance #policyArchiveModal .cardWrap{
+.adl_2-0 #policyDeleteModal .cardWrap, .adl_2-0 #policyArchiveModal .cardWrap{
 	width:100%;
 	padding:10px 0 0
 }
-.insurance #policyDeleteModal .card:hover, .insurance #policyArchiveModal .card:hover{
+.adl_2-0 #policyDeleteModal .card:hover, .adl_2-0 #policyArchiveModal .card:hover{
 	box-shadow:none;
 	border:1px solid #dde2e6;
 	cursor:default
 }
-.insurance #policyDeleteModal .card .fa-ellipsis-v, .insurance #policyArchiveModal .card .fa-ellipsis-v{
+.adl_2-0 #policyDeleteModal .card .fa-ellipsis-v, .adl_2-0 #policyArchiveModal .card .fa-ellipsis-v{
 	display:none
 }
-
-
 
 
 /*slide label*/
@@ -2154,6 +2133,7 @@ list-style: decimal inside;
 	border-right: 1px solid #e1e1e1;
 }
 .gridRow div:last-child {
+
 	border-right: 0px solid #e1e1e1;
 }
 .gridRow:hover{
@@ -2580,7 +2560,7 @@ display: block;
 .vScore {
 	position: relative;
 }
-.vScore i{
+.vScore .fa-ellipsis-v{
     position: absolute;
     right: 10px;
     top: 18px;
@@ -2598,9 +2578,9 @@ display: block;
     opacity: 0;
     filter: alpha(opacity=0);
     z-index: 1;
-    right: -100px;
+    right: -116px;
     top: 36px;
-    width: 100px;
+    width: 120px;
     font-size: 12px;
     color: #777;
     background-color: #fff;
@@ -2996,8 +2976,7 @@ display: none
 }
 .rLeftPanel .panelBodyWrap .quoteTitle h3{
 	font-size: 13px;
-    font-weight: normal;
-    color: #253238;
+    font-weight: 500;
     text-transform: uppercase;
     float: left;
     display: normal;
@@ -3088,7 +3067,7 @@ border: solid 1px #d2dade;
 .rLeftPanel .panelBodyWrap .quoteSection.adl-fade:hover .editQuote{
 	opacity: 0;
 }
-.insurance .adl-modal-close {
+..adl_2-0 .adl-modal-close {
     background-image: none;
     background-color: #e74c3c;
     color: #fff;
@@ -3099,7 +3078,7 @@ border: solid 1px #d2dade;
     height: 24px;
     font-size: 14px;
 }
-.insurance .adl-modal-close:hover {
+.adl_2-0 .adl-modal-close:hover {
     cursor: pointer;
     background-color: #cf3d2e;
 }
@@ -3345,11 +3324,305 @@ display: inline-block;
 /*End */
 
 
+/*superfunds*/
+
+.adl_2-0 .blockSec h3 .links a{
+	font-size: 16px;
+    font-weight: 500;
+    margin: 0 10px;
+}
+.adl_2-0 .blockSec h3 .links a:hover{
+	color:#666
+}
+.adl_2-0 #smsfModal .leftSec{
+	float:left;
+	width:65%
+}
+.adl_2-0 #smsfModal .rightSec{
+	float: left;
+    width: 35%;
+}
+.adl_2-0 #smsfModal .leftSec .adl-scroll{
+	height: calc(100vh - 140px);
+}
+.adl_2-0 #smsfModal h3{
+	font-size:17px
+}
+.adl_2-0 #smsfModal .rightSec .title .fa-plus-circle{
+	font-size: 18px;
+    color: #1db2de;
+}
+.adl_2-0 #smsfModal .rightSec .title .fa-plus-circle:hover {
+    cursor: pointer;
+    color: #41a3ea;
+}
+.adl_2-0 #smsfModal .rightSec .title .fa-plus-circle:active{
+	color:#666
+}
+
+.adl_2-0 #smsfModal .rightSec .card {
+    border: 1px solid #dde2e6;
+	padding:8px;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 8px;
+    float: left;
+    position: relative;
+    transition: all 0.15s ease 0s;
+    -webkit-transition: all 0.15s ease 0s;
+    -moz-transition: all 0.15s ease 0s;
+}
+.adl_2-0 #smsfModal .rightSec .card + .card{
+	margin-top:10px
+}
+.adl_2-0 #smsfModal .rightSec .card .name{
+    font-weight: 500;
+    line-height: 18px;
+    font-size: 14px;
+}
+.adl_2-0 #smsfModal .rightSec .card .code, .adl_2-0 #smsfModal .rightSec .card .name2{
+	font-size:12px;
+	color: #888;
+	float:left
+}
+.adl_2-0 #smsfModal .rightSec .card .code{
+	width:40%
+}
+.adl_2-0 #smsfModal .rightSec .card .name2{
+	width:60%
+}
+.adl_2-0 #smsfModal .rightSec .card .value{
+	float: left;
+    color: #1db2de;
+    font-weight: 600;
+    font-size: 19px;
+    margin-top: 8px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.adl_2-0 #smsfModal .rightSec .card label{
+	font-size:12px;
+	color: #888;
+}
+
+.adl_2-0 .commentBox{
+	margin:20px 0 0
+}
+.adl_2-0 .commentList{
+	padding-left:20px
+}
+.adl_2-0 .commentList li{
+    padding:10px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+	position:relative;
+	transition:all 0.2s
+}
+.adl_2-0 .commentList li:hover{
+	border-color:#0da103;
+}
+.adl_2-0 .commentList li:before {
+    content: '\f142';
+    font-family: FontAwesome;
+    position: absolute;
+    left: -15px;
+    top: 12px;
+    color: #888;
+}
+.adl_2-0 .commentList li:after {
+    content: '\f142';
+    font-family: FontAwesome;
+    position: absolute;
+    left: -11px;
+    top: 12px;
+    color: #888;
+}
+.adl_2-0 .commentList li:hover, .adl_2-0 .commentList li.expand{
+	border-color:#0da103;
+}
+.adl_2-0 .commentList li .nav{
+	opacity:0;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    background-color: #0da103;
+    padding: 5px;
+    height: 100%;
+    line-height: 32px;
+	transition:all 0.2s;
+	border-left:5px solid #fff;
+	border-top-right-radius:4px;
+	border-bottom-right-radius:4px
+}
+.adl_2-0 .commentList li .nav a{
+	padding:0 5px;
+	color:#fff;
+	font-size: 14px;
+}
+.adl_2-0 .commentList li .nav a:hover{
+	color:#FF0;
+}
+.adl_2-0 .commentList li .nav a + a{
+	border-left:1px solid rgba(255, 255, 255, 0.2)
+}
+.adl_2-0 .commentList li .nav a:hover{
+	cursor:pointer
+}
+.adl_2-0 .commentList li:hover .nav, .adl_2-0 .commentList li.expand .nav{
+	opacity:1
+}
+.adl_2-0 .commentList li .adl-form-group{
+    margin: 0;
+    height: 22px;
+    overflow: hidden;
+}
+.adl_2-0 .commentList li.expand .adl-form-group{
+	height:auto;
+	overflow:auto
+}
+.adl_2-0 .commentList li .form-control.autoTextarea{
+	padding:5px
+}
+.adl_2-0 .commentList li.expand .form-control.autoTextarea{
+	padding-right: 78px;
+}
+.adl_2-0 .commentList li.expand .form-control.autoTextarea:focus{
+	background-color:#f7f7f7;
+}
+
+
+.adl_2-0 #memberGrid .body{
+	display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+.adl_2-0 #memberGrid .body .cell:last-child{
+	line-height:14px;
+	font-size:12px
+}
+.adl_2-0 #memberGrid .fa-check, .adl_2-0 #memberGrid .fa-close{
+	-webkit-text-stroke: 1px #fff;
+	font-size: 16px;
+}
+.adl_2-0 #memberGrid .fa-check{
+	color:#58d44c;
+}
+.adl_2-0 #memberGrid .fa-close{
+	color:#F00;
+}
+
+.adl_2-0 #memberGrid{
+	position:relative;
+	overflow:hidden
+}
+.adl_2-0 #memberGrid .nav{
+	opacity:0;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    background-color: rgba(13, 161, 31, 0.92);
+    padding:10px;
+    height: 100%;
+	border-top-right-radius:4px;
+	border-bottom-right-radius:4px;
+	display: flex;
+    flex-direction: column;
+	transition:all 0.2s
+}
+.adl_2-0 #memberGrid .nav a{
+padding: 0 5px;
+    color: #fff;
+    font-size: 12px;
+    display: block;
+    line-height: 23px;
+}
+.adl_2-0 #memberGrid .nav a:hover{
+	color:#FF0;
+	cursor:pointer
+}
+.adl_2-0 #memberGrid:hover .nav{
+	opacity:1
+}
+.adl_2-0 #memberGrid:hover{
+	border-color:#0da103;
+}
+
+.adl_2-0 #smsfModal .rightSec .title .amnt{
+	float: right;
+    color: #1db2de;
+    font-weight: 600;
+    font-size: 20px;
+}
+.adl_2-0 #smsfModal .rightSec .adl-scroll{
+	height:calc(100vh - 179px);
+	padding-bottom:8px
+}
+.adl_2-0 #smsfModal .rightSec .card .detailBlock {
+    background-color: #F9FAFB;
+    color: #485a65;
+    padding: 8px 5px;
+}
+.adl_2-0 #smsfModal .rightSec .addCash{
+	padding-bottom:10px;
+	margin-bottom:10px;
+	float:left;
+	width:100%;
+	display:none;
+	transition:all 0.3s
+}
+.adl_2-0 #smsfModal .rightSec .addCash .card{
+	padding:10px 0 0
+}
+.adl_2-0 #smsfModal .rightSec .addCash .card .detailBlock{
+	margin-top:8px
+}
+.adl_2-0 #smsfModal .rightSec .addCash .card .detailBlock label{
+	text-transform:none;
+	font-size:11px
+}
+.adl_2-0 #smsfModal .rightSec .addCash.open{
+	display:block
+}
+
+.adl_2-0 #smsfModal .adl-modal-title{
+	margin-top:5px
+}
+
+
+.adl_2-0 #smsfModal .wrap1.hide{
+	display:none
+}
+.adl_2-0 #smsfModal .wrap2.open{
+	display:block
+}
+
+
+
+/*end superfunds*/
+
+/*scrollbar inside modals*/
+.adl_2-0 .adl-modal .adl-modal-content .adl-scroll::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+.adl_2-0 .adl-modal .adl-modal-content .adl-scroll::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-bottom:none;
+}
+.adl_2-0 .adl-modal .adl-modal-content .adl-scroll::-webkit-scrollbar-thumb {
+    background-color: #e8edf1
+}
+.adl_2-0 .adl-modal .adl-modal-content .adl-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #d5dce3
+}
+/**/
+
+
+
 @media only screen 
 and (min-width : 768px) 
 and (max-width : 1024px) 
 and (orientation : landscape){
-.insurance .card-container .cardWrap{
+.adl_2-0 .card-container .cardWrap{
 	width: 50%;
 }
 
@@ -3361,7 +3634,7 @@ and (orientation : landscape){
 and (min-width : 768px) 
 and (max-width : 1024px) 
 and (orientation : portrait){
-.insurance .card-container .cardWrap{
+.adl_2-0 .card-container .cardWrap{
 	width: 50%;
 }
 
