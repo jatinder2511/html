@@ -885,8 +885,8 @@ body{
     </ol><!--commentList-->
     
     <div class="col-10 newComment">
-    <div class="adl-form-group adl-no-margin  col-10">
-    <input type="text" class="form-control baseBorder" placeholder="Hit enter or click to start a new comment">
+    <div class="adl-form-group adl-no-margin col-10">
+    <textarea class="form-control baseBorder no-borderLR no-borderT autoTextarea" placeholder="Hit enter or click to start a new comment"></textarea>
     </div>
     </div><!--newComment-->
     
@@ -894,7 +894,14 @@ body{
 </div><!--wrap1-->
 
 <div class="wrap2 adlSet">
-<h5>Add Member Details</h5>
+<div class="title adlSet">
+<h5 class="adl-floatL">Add Member Details</h5>
+<div class="adl-floatR">
+<button id="cancelMemberBtn" type="button" class="adl-btn btn-sm bordered">CANCEL</button>
+<button type="button" class="adl-btn btn-sm">SAVE</button>
+</div>
+</div>
+
 <div class="adl-paddingB adl-no-paddingLR col-10">
     <div class="form-horizontal adl-marginT">
 		<div class="adl-form-group col-35 slideLabel">
@@ -937,8 +944,8 @@ body{
     </div>
     <div class="form-horizontal adl-marginT">
          <div class="adl-form-group col-10 slideLabel">
-          <input type="text" class="form-control baseBorder">
-         <label class="control-label">Notes</label>
+          <textarea class="form-control baseBorder no-borderLR no-borderT autoTextarea" ></textarea>
+          <label class="control-label">Notes</label>
          </div>             
     </div>
    
@@ -1361,17 +1368,25 @@ $(document).ready(function(){
 	});
 	//Add Cash Box
 	$('#addCashBox').click(function(){
-		$('.addCash').toggleClass('open')
+		$('.addCash').toggleClass('open');
 	});
 	$('#cancelAddCash').click(function(){
-		$(this).parent().parent().removeClass('open')
+		$(this).parent().parent().removeClass('open');
 	});
+	//member box
 	$('#addMemberBtn').click(function(){
-		$('.wrap1').addClass('hide')
-		$('.wrap2').addClass('show')
+		$('.wrap1').addClass('hide');
+		$('.wrap2').addClass('show');		
+		//auto height textarea
+	    $('.autoTextarea').each(function () { this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;'); }).on('input', function () {
+        this.style.height = 10 + 'px';
+        this.style.height = (this.scrollHeight) + 'px';
+		});	
 	});
-	
-	//
+	$('#cancelMemberBtn').click(function(){
+		$('.wrap1').removeClass('hide');
+		$('.wrap2').removeClass('show');
+	});
 	
 	});
 </script>

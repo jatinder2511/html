@@ -3591,8 +3591,20 @@ padding: 0 5px;
 .adl_2-0 #smsfModal .wrap1.hide{
 	display:none
 }
-.adl_2-0 #smsfModal .wrap2.open{
+.adl_2-0 #smsfModal .wrap2.show{
 	display:block
+}
+.adl_2-0 #smsfModal .wrap2{
+	display:none
+}
+
+.adl_2-0 #smsfModal h5{
+	color:#485a65;
+	font-size: 15px;
+}
+.adl_2-0 #smsfModal .title .adl-btn{
+	min-width: 80px;
+    margin: -10px 0 0;
 }
 
 
