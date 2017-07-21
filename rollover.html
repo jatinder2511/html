@@ -1,0 +1,354 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="App_Themes/Default/adlStyle.css" rel="stylesheet" />
+<script src="script/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="script/adl_script.js"></script>
+
+<link href="App_Themes/Default/adl_2-0.css" rel="stylesheet" />
+
+<!--scroller-->
+<!--<script src="script/jquery.min.js"></script>-->
+<script src="script/perfect-scrollbar.with-mousewheel.min.js"></script>
+
+<!--font-awesome-icon-->
+<link href="App_Themes/Default/icon-font-awesome/font-awesome.css" type="text/css" rel="stylesheet" />
+<link href="App_Themes/Default/icon-font-awesome/font-awesome.min.css" type="text/css" rel="stylesheet" />
+
+<!--sliding label-->
+<script type="text/javascript" src="script/jquery-3.2.0.min.js"></script>
+
+<style>
+
+body{
+	background: url(Images/adlNewImages/header-app.jpg) left top no-repeat #fff;
+	padding-top:95px;
+	overflow:hidden
+}
+
+/*temp*/
+.adl-modal-close {
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -3px -355px no-repeat;
+}
+.circleAroBlu-icon {
+    height: 23px;
+    width: 22px;
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -101px -292px no-repeat;
+}
+.deleteGrey-icon {
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -5px -69px no-repeat;
+}
+.drop-aro span {
+	background: url(Images/adlNewImages/icon-sprite-sheet.png) -70px -324px no-repeat;
+}
+.input-icon-calendar {
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -1px -163px no-repeat #E3EBF6;
+}
+.profilePic{
+    background: url(Images/adlNewImages/profile-pic.jpg) center bottom no-repeat #eee;
+    background-size: 130%;
+}
+
+.adl_2-0 #nav li i{
+	background: url(Images/adlNewImages/existingPoliciesIcon.svg) 80% center center no-repeat;
+}
+
+
+</style>
+
+</head>
+<body>
+<div class="adl-wrapper adl_2-0">
+  <div class="side-menu">
+    <nav class="navbar" role="navigation">
+      <div class="side-menu-container">
+        <div class="adl-toggle">
+          <ul class="nav navbar-nav">
+            <li class="has-sub" formodel="addCmodal" onclick="open_Model(this);"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/add_client.png"></div>
+              <span class="title">Add Client</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/add_business.png"></div>
+              <span class="title">Add Business</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/quick_note.png"></div>
+              <span class="title">Quick Note</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/quick_task.png"></div>
+              <span class="title">Quick Task</span></a> </li>
+            <li class="has-sub"> <a href="#">
+              <div class="icon"><img src="./images/adlNewImages/quick_vault.png"></div>
+              <span class="title">Quick Vault</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/email.png"></div>
+              <span class="title">Email</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/diary.png"></div>
+              <span class="title">Diary</span></a> </li>
+            
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/tutorials.png"></div>
+              <span class="title">Tutorials</span></a> </li>
+            <li class="has-sub"> <a href="#" >
+              <div class="icon"><img src="./images/adlNewImages/datafeeds.png"></div>
+              <span class="title">Datafeeds</span></a> </li>
+            
+            
+          </ul>
+        </div>
+      </div>
+      <!-- /.navbar-collapse --> 
+    </nav>
+  </div>
+  <!--side-menu-->
+  
+  <div style="padding-left:60px">
+  
+    <div class="adl-container superlogic">
+      <nav id="nav-flow">      
+      <div class="profileWrap">
+      <div class="pContainer">
+      <i class="fa fa-check-circle"></i>
+      <div class="profilePic"><img src="Images/adlNewImages/pp1.jpg" alt="" ></div>
+      </div>
+      <div class="pContainer">
+      <i class="fa fa-check-circle"></i>
+      <div class="profilePic"><img src="Images/adlNewImages/pp2.jpg" alt="" ></div>
+      </div>
+      </div><!--profileWrap-->
+      
+        <ul id="nav">
+        <li class="active"><img src="Images/adlNewImages/adl2/existingPoliciesIcon.svg" alt="" > Existing Policies</li>
+        <li><img src="Images/adlNewImages/adl2/needsAnalysisIcon.svg" alt="" > Needs Analysis</li>
+        <li><img src="Images/adlNewImages/adl2/riskLogicIcon.svg" alt="" > Risk Logic (<span>4</span>)</li>
+        <li><img src="Images/adlNewImages/adl2/recommendedIcon.svg" alt="" > Recommended</li>
+        <li><img src="Images/adlNewImages/adl2/justificationIcon.svg" alt="" > Justification</li>
+        </ul>
+      
+      </nav><!--nav-flow-->
+      
+      <div>
+		  <div class="rollOver">
+			<div class="panelHeadWrap col-10">
+				<div class="adl-marginT adl-floatL">
+					<span class="backIcon"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+					<h1 class="panelHeading">Rollover</h1>
+				</div>
+			</div><!-- end of panelHeadWrap -->
+
+			<div class="col-10 roSubHead">
+				<div class="adl-floatL roSubHeadInfo">
+					Rolling over <span>5</span> SuperFunds into <span>1</span> Recommended SuperFund
+				</div>
+				<div class="adl-floatR roSubHeadBtn">
+					<button class="adl-btn bordered adl-no-marginTB"><span><i class="fa fa-arrow-down" aria-hidden="true"></i></span>Download</button>
+				</div>
+			</div>
+			<div class="rollOverBody col-10 adl-no-paddingLR adl-scroll overflow-scroll-basic" >
+				<div class="roPanelLeft">
+					<div class="roCardWrap">
+						<div class="roCard">
+							<span class="roDelete">X</span>
+							<div class="col-5">
+								<div class="name">ANZ Smart choice Pension</div>
+								<div class="accumlation">
+									<img class="accumlationImg" src="Images/adlNewImages/Accumulation.svg">
+									Accumulation
+									<!-- <img class="accumlationError" src="Images/adlNewImages/Error_Insurance.svg"> -->
+								</div>
+								<div class="amount">$15,000</div>
+							</div>
+							
+							<div class="col-5">
+								<div class="rAmountTitle">Rollover Amount</div>
+								<div  class="rAmount">$10,000</div>
+								<div class="remainingamount">Remaining amount $5,000</div>
+							</div>
+							
+							<!-- <div class="col-10 roCardAlert">
+								Associated Insurance will be lost
+							</div> -->
+						</div><!-- end of roCard -->
+					</div><!-- end of roCardWrap -->
+					<div class="roCardWrap">
+						<div class="roCard">
+							<span class="roDelete">X</span>
+							<div class="col-5">
+								<div class="name">ANZ Smart choice Pension</div>
+								<div class="accumlation">
+									<img class="accumlationImg" src="Images/adlNewImages/Accumulation.svg">
+									Accumulation
+									<img class="accumlationError" src="Images/adlNewImages/Error_Insurance.svg">
+								</div>
+								<div class="amount">$15,000</div>
+							</div>
+							
+							<div class="col-5">
+								<div class="rAmountTitle">Rollover Amount</div>
+								<div  class="rAmount">$1000</div>
+								<div class="remainingamount">Remaining amount $5000</div>
+							</div>
+							
+							 <div class="col-10 roCardAlert">
+								Associated Insurance will be lost
+							</div> 
+							
+						</div><!-- end of roCard -->
+					</div><!-- end of roCardWrap -->
+					<div class="roCardWrap">
+						<div class="roCard">
+							<span class="roDelete">X</span>
+							<div class="col-5">
+								<div class="name">ANZ Smart choice Pension</div>
+								<div class="accumlation">
+									<img class="accumlationImg" src="Images/adlNewImages/Accumulation.svg">
+									Accumulation
+									<!-- <img class="accumlationError" src="Images/adlNewImages/Error_Insurance.svg"> -->
+								</div>
+								<div class="amount">$15,000</div>
+							</div>
+							
+							<div class="col-5">
+								<div class="rAmountTitle">Rollover Amount</div>
+								<div  class="rAmount">$10,000</div>
+								<div class="remainingamount">Remaining amount $5,000</div>
+							</div>
+							
+							<!-- <div class="col-10 roCardAlert">
+								Associated Insurance will be lost
+							</div> -->
+						</div><!-- end of roCard -->
+					</div><!-- end of roCardWrap -->
+					<div class="roCardWrap">
+						<div class="roCard">
+							<span class="roDelete">X</span>
+							<div class="col-5">
+								<div class="name">ANZ Smart choice Pension</div>
+								<div class="accumlation">
+									<img class="accumlationImg" src="Images/adlNewImages/Accumulation.svg">
+									Accumulation
+									<!-- <img class="accumlationError" src="Images/adlNewImages/Error_Insurance.svg"> -->
+								</div>
+								<div class="amount">$15,000</div>
+							</div>
+							
+							<div class="col-5">
+								<div class="rAmountTitle">Rollover Amount</div>
+								<div  class="rAmount">$10,000</div>
+								<div class="remainingamount">Remaining amount $5,000</div>
+							</div>
+							
+							<!-- <div class="col-10 roCardAlert">
+								Associated Insurance will be lost
+							</div> -->
+						</div><!-- end of roCard -->
+					</div><!-- end of roCardWrap -->
+				</div>
+				<div class="col-10 adl-no-paddingLR roPanelright">
+					<div class="col-10 roGraphsview">
+						<div class="roGraphsTitle">
+							ANZ Smart Choice Pension <span>$50,000</span>
+						</div>
+						<div class="col-10 adl-no-paddingLR adl-marginT">
+							<div class="col-5 adl-no-paddingL">
+								<div class="roGraphsSubDetails">
+									<div class="col-10 adl-no-paddingL adl-marginB">
+										<div class="roGraphsSubTitle">Fees Projection <span>(10years)</span></div>
+										<div class="col-10 adl-no-paddingLR"><img style="max-width: 100%" src="Images/adlNewImages/feegraph.png"></div>
+									</div>
+									<div class="col-10 adl-no-paddingL adl-marginB">
+										<div class="roGraphsSubTitle">Rate of return</div>
+										<div class="rorForm">
+											<div class="col-5 adl-no-paddingL form-horizontal">
+												<div class="adl-form-group col-5 slideLabel adl-select">
+													 <select class="form-control baseBorder">
+													 <option></option>
+													  <option value="1">Abhay</option>
+													 </select>
+													 <label class="control-label">Growth</label>
+												 </div>
+												 <div class="adl-form-group col-5 slideLabel">
+													 <input type="text" class="form-control baseBorder">
+													 <label class="control-label">Amount</label>
+												 </div>         
+											</div>
+										</div>
+									</div>
+									<div class="col-10 adl-no-paddingL">
+										<div class="roGraphsSubTitle">Allocation</div>
+										<div class="col-10 adl-no-paddingLR"><img style="max-width: 100%" src="Images/adlNewImages/allocationgraph.png"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-5">
+								<div class="roGraphsSubTitle">Underlyning Investments<span>(15)</span></div>
+								<div class="roGraphsSubDetails">
+									<div class="graphCardsWrap">
+										<div class="graphCard">
+											<div class="col-7">
+												<div class="name">Alexander Resources</div>
+												<div class="code">JFB52536</div>
+											</div>
+											<div class="col-2"><span class="amount">$300</span> <sup>11.11%</sup></div>
+										</div><!-- end of graphCard-->
+									</div><!-- end of graphCardsWrap-->
+									<div class="graphCardsWrap">
+										<div class="graphCard">
+											<div class="col-7">
+												<div class="name">Alexander Resources</div>
+												<div class="code">JFB52536</div>
+											</div>
+											<div class="col-2"><span class="amount">$300</span> <sup>11.11%</sup></div>
+										</div><!-- end of graphCard-->
+									</div><!-- end of graphCardsWrap-->
+									<div class="graphCardsWrap">
+										<div class="graphCard">
+											<div class="col-7">
+												<div class="name">Alexander Resources</div>
+												<div class="code">JFB52536</div>
+											</div>
+											<div class="col-2"><span class="amount">$300</span> <sup>11.11%</sup></div>
+										</div><!-- end of graphCard-->
+									</div><!-- end of graphCardsWrap-->
+								</div><!-- end of roGraphsSubDetails-->
+							</div>
+						</div>
+					</div><!-- end of roGraphsview-->
+				</div><!-- end of roPanelright-->
+			</div><!-- end of rollOverBody -->
+			
+		  </div><!--rollOver-->
+      </div><!--adl-container-inside-->
+  </div><!--container--> 
+</div>
+</div>
+
+
+
+
+
+<script>
+$(document).ready(function(){	
+	//slide label//
+	$(".form-control").focus(function(){
+	
+		$(this).addClass("filled")
+		});		
+	$(".form-control").blur(function(){		
+		var fieldVar = $(this).val();		
+		if(fieldVar == ''){
+			$(this).removeClass("filled");
+		}
+		else{
+			$(this).addClass("filled");
+		}
+		});
+	
+	});
+</script>
+
+</body>
+</html>
