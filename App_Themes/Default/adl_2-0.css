@@ -3630,6 +3630,195 @@ padding: 0 5px;
 
 
 
+/*Super Funds Rollover styles Begin*/
+.rollOverBody {
+	position: relative;
+    padding-left: 445px !important;
+	height: calc(100vh - 218px);
+	margin-top: 10px;
+}
+.rollOverBody .roPanelLeft{
+	padding-left: 20px;
+    position: absolute;
+    width: 430px;
+    HEIGHT: 100%;
+    left: 0px;
+}
+.roSubHead .roSubHeadInfo{
+    padding-left: 20px;
+    padding-top: 8px;
+	color: #999;
+}
+.roSubHead .roSubHeadBtn .adl-btn{
+	position: relative;
+    min-width: auto;
+    padding: 0px 14px 0px 24px;
+	font-weight: 500;
+}
+.roSubHead .roSubHeadBtn .adl-btn span{
+    position: absolute;
+    left: 6px;
+    top: 5px;
+}
+.rollOverBody .roPanelLeft .roCardWrap{
+    width: 100%;
+    float: left;
+    padding: 0px 10px;
+}.rollOverBody .roPanelLeft .roCardWrap + .roCardWrap{
+	margin-top: 8px
+}
+.rollOverBody .roPanelLeft .roCard{
+	border: 1px solid #dde2e6;
+    float: left;
+    border-radius: 4px;
+    padding: 5px 0px 0px;
+    width: 390px;
+	background: #fff;
+	transition: all 0.15s;
+	position: relative;
+}
+.rollOverBody .roPanelLeft .roCard .roDelete{
+    position: absolute;
+    right: 4px;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    top: 4px;
+    background: #e74c3c;
+    color: #fff;
+    border-radius: 50%;
+    line-height: 17px;
+    font-size: 10px;
+	display: none;
+	transition: all 0.17s;
+}
+.rollOverBody .roPanelLeft .roCard .roDelete:hover{
+    background-color: #cf3d2e;
+}
+.rollOverBody .roPanelLeft .roCard:hover{
+	cursor: pointer;
+	border: 1px solid #1982cc;
+	
+}
+.rollOverBody .roPanelLeft .roCard:hover .roDelete{
+	display: block
+}
+.rollOverBody .roPanelLeft .roCard:hover .rAmount,
+.rollOverBody .roPanelLeft .roCard:hover .rAmountTitle{
+    color: #1982cc;
+}
+
+.roCard .name{
+    font-weight: 500;
+    font-size: 14px;
+	color: #333l;
+}
+.roCard .accumlation{
+    height: 30px;
+    border-right: 1px solid #dde2e6;
+    font-size: 11px;
+    margin: 6px 0px;
+    color: #666;
+}
+.roCard .accumlation img.accumlationImg{
+	float: left;
+    margin-right: 4px;
+}
+.roCard .accumlation img.accumlationError{
+	float: right;
+	margin-right: 4px;
+}
+.roCard .amount{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+	color: #65737f;
+}
+.roCard .rAmount{
+    height: 30px;
+    border-bottom: 1px solid #dde2e6;
+    margin: 6px 22px;
+    color: #333;
+}
+.roCard .rAmountTitle{
+    font-size: 12px;
+}
+.roCard .remainingamount{
+    color: #666;
+    font-size: 11px;
+    margin-bottom: 5px;
+}
+.roCard .roCardAlert{
+    border-top: 1px solid #dde2e6;
+    margin-top: 5px;
+    color: red;
+    font-size: 11px;
+    color: #e74c3c;
+    line-height: 14px;
+}
+.rollOverBody .roPanelright{
+	height: 100%;
+}
+.rollOverBody .roPanelright .roGraphsview{
+   border: solid 2px #40eec8;
+    height: 100%;
+    border-bottom: none;
+    border-right: snow;
+    background: #f4f8f9;
+    border-radius: 4px;
+    padding: 10px;
+}
+.rollOverBody .roGraphsview .roGraphsTitle{
+    font-weight: 500;
+    font-size: 14px;
+	color: #333;
+}
+.rollOverBody .roGraphsview .roGraphsSubTitle{
+    color: #333333;
+    font-weight: 500;
+    font-size: 14px;
+	text-transform: uppercase;
+	    letter-spacing: 0.2px;
+		margin-bottom: 10px;
+}
+.rollOverBody .roGraphsview .graphCardsWrap{
+    float: left;
+    width: 100%;
+}.rollOverBody .roGraphsview .graphCardsWrap + .graphCardsWrap{
+	margin-top: 5px;
+}
+.rollOverBody .roGraphsview .graphCard{
+    float: left;
+    border-radius: 4px;
+    padding: 10px 0px 10px;
+    width: 100%;
+    background: #fff;
+    transition: all 0.15s;
+    position: relative;
+    border: 1px solid #dde2e6;
+}
+.rollOverBody .roGraphsview .graphCard .name{
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+}
+.rollOverBody .roGraphsview .graphCard .code{
+    color: #666;
+    font-size: 14px;
+}
+.rollOverBody .roGraphsview .graphCard .amount{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #65737f;
+}
+/*Super Funds Rollover styles End*/
+
+
+
+
 @media only screen 
 and (min-width : 768px) 
 and (max-width : 1024px) 
