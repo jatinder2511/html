@@ -1386,6 +1386,11 @@ $(document).ready(function(){
 	$('#cancelMemberBtn').click(function(){
 		$('.wrap1').removeClass('hide');
 		$('.wrap2').removeClass('show');
+		//auto height textarea
+	    $('.autoTextarea').each(function () { this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;'); }).on('input', function () {
+        this.style.height = 10 + 'px';
+        this.style.height = (this.scrollHeight) + 'px';
+		});	
 	});
 	
 	});
