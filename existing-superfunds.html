@@ -1,0 +1,1578 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="App_Themes/Default/adlStyle.css" rel="stylesheet" />
+<script src="script/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="script/adl_script.js"></script>
+
+<link href="App_Themes/Default/adl_2-0.css" rel="stylesheet" />
+
+<!--scroller-->
+<!--<script src="script/jquery.min.js"></script>-->
+<script src="script/perfect-scrollbar.with-mousewheel.min.js"></script>
+
+<!--font-awesome-icon-->
+<link href="App_Themes/Default/icon-font-awesome/font-awesome.css" type="text/css" rel="stylesheet" />
+<link href="App_Themes/Default/icon-font-awesome/font-awesome.min.css" type="text/css" rel="stylesheet" />
+
+<!--sliding label-->
+<script type="text/javascript" src="script/jquery-3.2.0.min.js"></script>
+
+<style>
+
+body{
+	overflow:hidden
+}
+
+/*temp*/
+.adl-modal-close {
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -3px -355px no-repeat;
+}
+.circleAroBlu-icon {
+    height: 23px;
+    width: 22px;
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -101px -292px no-repeat;
+}
+.deleteGrey-icon {
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -5px -69px no-repeat;
+}
+.drop-aro span {
+	background: url(Images/adlNewImages/icon-sprite-sheet.png) -70px -324px no-repeat;
+}
+.input-icon-calendar {
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -1px -163px no-repeat #E3EBF6;
+}
+.profilePic{
+    background: url(Images/adlNewImages/profile-pic.jpg) center bottom no-repeat #eee;
+    background-size: 130%;
+}
+
+.adl_2-0 #nav li i{
+	background: url(Images/adlNewImages/existingPoliciesIcon.svg) 80% center center no-repeat;
+}
+
+
+</style>
+
+</head>
+<body>
+<div class="adl-wrapper adl_2-0">
+
+    <div class="adl-container superlogic">
+      <nav id="nav-flow">  
+      <div class="profileWrap">
+      <div class="pContainer">
+      <i class="fa fa-check-circle"></i>
+      <div class="profilePic"><img src="Images/adlNewImages/pp1.jpg" alt="" ></div>
+      </div>
+      <div class="pContainer">
+      <i class="fa fa-check-circle"></i>
+      <div class="profilePic"><img src="Images/adlNewImages/pp2.jpg" alt="" ></div>
+      </div>
+      </div><!--profileWrap-->
+      
+        <ul id="nav">
+        <li class="active"><img src="Images/adlNewImages/adl2/existingPoliciesIcon.svg" alt="" > Existing SuperFunds</li>
+        <li><img src="Images/adlNewImages/adl2/needsAnalysisIcon.svg" alt="" > Research</li>
+        <li><img width="18" src="Images/adlNewImages/adl2/investment-portfolioIcon.svg" alt="" > Investment Portfolio</li>
+        <li><img width="18" src="Images/adlNewImages/adl2/feesIcon.svg" alt="" > Fees</li>
+        <li><img src="Images/adlNewImages/adl2/rolloverIcon.svg" alt="" > Rollover</li>
+        <li><img src="Images/adlNewImages/adl2/recommendedIcon.svg" alt="" > Recommended</li>
+        </ul>
+        
+        <div class="adl-floatR adl-marginR adl-parent">
+        <button class="adl-btn-head btn-sm font13 adl-marginT text-blue" for-drop-menu="addMenu_id">Options <i class="fa fa-caret-down"></i></button>
+        <div class="adl-menu" id="addMenu_id">
+                        <div class="menu-list">
+                        <ul>
+                        <li>Generate Reports</li> 
+                        <li>Set Defaults</li> 
+                        <li>Mapping</li>                     
+                        </ul>
+                       </div>
+        </div>
+        </div>
+      
+      </nav><!--nav-flow-->
+      
+      <div class="adl-container-inside adl-scroll overflow-scroll-basic">      
+      
+      <div class="userWrap">
+      
+        <div class="title col-10">
+        
+        <div class="adl-marginT adl-floatL col-sm2-5">
+        <div class="adl-floatL col-sm2-10">
+        <h4>Self Manged Super Funds<i id="smsfBtn" formodel="smsfModal" onclick="open_Model(this);" class="fa fa-plus-circle"></i></h4>
+        </div>
+        <div class="adl-floatL showResult">
+        <i class="fa fa-eye"></i> Showing 2 Results
+        </div>
+        <a href="existing-superfunds_archived.html" class="adl-floatL viewArchvd">
+        <i class="fa fa-folder-open"></i> View 3 Archived
+        </a>        
+        </div>
+        
+        <div class="adl-floatR totalAcBlnc">  
+            <label>Total Account Balance:</label>
+            <div class="value">$100,000</div>            
+        </div><!--totalAcBlnc-->
+        
+        </div><!--title-->
+        
+        <div class="card-container">
+        
+        <div class="cardWrap">
+        <div class="card">
+            
+        <div class="row">
+        <div class="topValues col-10">
+        <div class="inline">
+            <label class="text-truncate">Abhay Gupta</label>
+             <span class="font-semibold">12%</span>
+        </div>
+        <div class="inline">
+            <label class="text-truncate">Ankita Gupta</label>
+             <span class="font-semibold">50%</span>
+        </div>
+        <div class="inline">
+            <label class="text-truncate">Other</label>
+             <span class="font-semibold">38%</span>
+        </div>
+        </div>       
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">JBH12345</div>
+            </div>
+            <div class="amnt">
+            <div class="value text-grey">
+            <div class="iconBox"><img width="18" src="Images/adlNewImages/adl2/pieIcon.svg" alt="">
+            <div class="contentBox">
+            <h3>ALLOCATION</h3>
+            <div class="adlSet">
+            <img src="Images/adlNewImages/adl2/graphAllocation.jpg" alt="">
+            </div>
+            </div>
+            </div> <!--iconBox-->
+            $10,000</div>            
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-check-circle"></i> Current</div>
+            <div class="col-33 adl-no-paddingL"><img width="12" src="Images/adlNewImages/adl2/accumulationIcon.svg" alt=""> Accumulation</div>
+            </div>  
+            
+            <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>       
+            <li formodel="policyArchiveModal" onclick="open_Model(this);"><i class="fa fa-file-archive-o"></i> Archive</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>
+            </ul>
+            </div>
+            
+            </div><!--details-->
+        </div><!--row-->
+        
+        <div class="detailBlock col-10">      
+            <div class="col-2">
+            <label>Life</label>
+            <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>TPD</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>Trauma</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>IP</label>
+             <div class="amnt">$100,000</div>
+            </div>      
+        </div>
+        </div><!--card-->
+        </div><!--cardWrap-->
+        <div class="cardWrap">
+        <div class="card">
+            
+        <div class="row">
+        <div class="topValues col-10">
+        <div class="inline">
+            <label class="text-truncate">Abhay Gupta</label>
+             <span class="font-semibold">12%</span>
+        </div>
+        <div class="inline">
+            <label class="text-truncate">Ankita Gupta</label>
+             <span class="font-semibold">50%</span>
+        </div>
+        <div class="inline">
+            <label class="text-truncate">Other</label>
+             <span class="font-semibold">38%</span>
+        </div>
+        </div>       
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">JBH12345</div>
+            </div>
+            <div class="amnt">
+            <div class="value text-grey">
+            <div class="iconBox"><img width="18" src="Images/adlNewImages/adl2/pieIcon.svg" alt="">
+            <div class="contentBox">
+            <h3>ALLOCATION</h3>
+            <div class="adlSet">
+            <img src="Images/adlNewImages/adl2/graphAllocation.jpg" alt="">
+            </div>
+            </div>
+            </div> $10,000</div>
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-check-circle"></i> Current</div>
+            <div class="col-33 adl-no-paddingL"><img width="12" src="Images/adlNewImages/adl2/accumulationIcon.svg" alt=""> Accumulation</div>
+            </div>  
+            
+            <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>       
+            <li formodel="policyArchiveModal" onclick="open_Model(this);"><i class="fa fa-file-archive-o"></i> Archive</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>
+            </ul>
+            </div>
+            
+            </div><!--details-->
+        </div><!--row-->
+        
+        <div class="detailBlock col-10">      
+            <div class="col-2">
+            <label>Life</label>
+            <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>TPD</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>Trauma</label>
+             <div class="amnt">$100,000</div>
+            </div>
+            <div class="col-2">
+            <label>IP</label>
+             <div class="amnt">$100,000</div>
+            </div>      
+        </div>
+        </div><!--card-->
+        </div><!--cardWrap-->
+        
+        </div><!--card-container-->
+        
+      </div><!--userWrap-->
+      
+      <div class="userWrap">
+      
+        <div class="title col-10">
+        
+        <div class="adl-marginT adl-floatL col-sm2-5">        
+        <div class="adl-floatL col-sm2-10">
+        <h4>Super Funds <span class="text-blue">Ankita Gupta</span><i id="sfbtn" formodel="sfModal" onclick="open_Model(this);" class="fa fa-plus-circle"></i></h4>
+        </div>
+        <div class="adl-floatL showResult">
+        <i class="fa fa-eye"></i> Showing 5 Results
+        </div>
+        <div class="adl-floatL viewArchvd">
+        <i class="fa fa-folder-open"></i> View 3 Archived
+        </div>        
+        </div>
+        
+        <div class="adl-floatR totalAcBlnc">  
+            <label>Total Account Balance:</label>
+            <div class="value">$100,000</div>
+            <span class="small">Excluding SMSF</span>
+        </div><!--totalAcBlnc-->
+        
+        </div><!--title-->
+        
+        <div class="card-container">
+        
+        <div class="cardWrap">
+        <div class="card">
+                
+        <div class="row">
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details adl-marginB">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">A/C: JBH12345</div>
+            </div>
+            <div class="amnt">
+            <div class="value"><img width="18" src="Images/adlNewImages/adl2/pieIcon.svg" alt=""> $10,000</div>            
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-check-circle"></i> Current</div>
+            <div class="col-33 adl-no-paddingL"><img width="12" src="Images/adlNewImages/adl2/accumulationIcon.svg" alt=""> Accumulation</div>
+            </div>
+            
+            <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>       
+            <li formodel="policyArchiveModal" onclick="open_Model(this);"><i class="fa fa-file-archive-o"></i> Archive</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>
+            </ul>
+            </div>
+            
+            </div><!--details-->
+        </div><!--row-->
+
+        </div><!--card-->
+        </div><!--cardWrap-->     
+        <div class="cardWrap">
+        <div class="card">
+                
+        <div class="row">
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details adl-marginB">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">A/C: JBH12345</div>
+            </div>
+            <div class="amnt">
+            <div class="value"><img width="18" src="Images/adlNewImages/adl2/pieIcon.svg" alt=""> $10,000</div>            
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-check-circle"></i> Current</div>
+            <div class="col-33 adl-no-paddingL"><img width="12" src="Images/adlNewImages/adl2/accumulationIcon.svg" alt=""> Accumulation</div>
+            </div>
+            
+            <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>       
+            <li formodel="policyArchiveModal" onclick="open_Model(this);"><i class="fa fa-file-archive-o"></i> Archive</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>
+            </ul>
+            </div>
+            
+            </div><!--details-->
+        </div><!--row-->
+
+        </div><!--card-->
+        </div><!--cardWrap-->  
+        <div class="cardWrap">
+        <div class="card">
+                
+        <div class="row">
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details adl-marginB">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">A/C: JBH12345</div>
+            </div>
+            <div class="amnt">
+            <div class="value"><img width="18" src="Images/adlNewImages/adl2/pieIcon.svg" alt=""> $10,000</div>            
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-check-circle"></i> Current</div>
+            <div class="col-33 adl-no-paddingL"><img width="12" src="Images/adlNewImages/adl2/accumulationIcon.svg" alt=""> Accumulation</div>
+            </div>
+            
+            <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>       
+            <li formodel="policyArchiveModal" onclick="open_Model(this);"><i class="fa fa-file-archive-o"></i> Archive</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>
+            </ul>
+            </div>
+            
+            </div><!--details-->
+        </div><!--row-->
+
+        </div><!--card-->
+        </div><!--cardWrap-->  
+        <div class="cardWrap">
+        <div class="card">
+                
+        <div class="row">
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details adl-marginB">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">A/C: JBH12345</div>
+            </div>
+            <div class="amnt">
+            <div class="value"><img width="18" src="Images/adlNewImages/adl2/pieIcon.svg" alt=""> $10,000</div>            
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-check-circle"></i> Current</div>
+            <div class="col-33 adl-no-paddingL"><img width="12" src="Images/adlNewImages/adl2/accumulationIcon.svg" alt=""> Accumulation</div>
+            </div>
+            
+            <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>       
+            <li formodel="policyArchiveModal" onclick="open_Model(this);"><i class="fa fa-file-archive-o"></i> Archive</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>
+            </ul>
+            </div>
+            
+            </div><!--details-->
+        </div><!--row-->
+
+        </div><!--card-->
+        </div><!--cardWrap-->  <div class="cardWrap">
+        <div class="card">
+                
+        <div class="row">
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details adl-marginB">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">A/C: JBH12345</div>
+            </div>
+            <div class="amnt">
+            <div class="value"><img width="18" src="Images/adlNewImages/adl2/pieIcon.svg" alt=""> $10,000</div>            
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-check-circle"></i> Current</div>
+            <div class="col-33 adl-no-paddingL"><img width="12" src="Images/adlNewImages/adl2/accumulationIcon.svg" alt=""> Accumulation</div>
+            </div>
+            
+            <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>       
+            <li formodel="policyArchiveModal" onclick="open_Model(this);"><i class="fa fa-file-archive-o"></i> Archive</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>
+            </ul>
+            </div>
+            
+            </div><!--details-->
+        </div><!--row-->
+
+        </div><!--card-->
+        </div><!--cardWrap-->  
+           
+        
+        </div><!--card-container-->
+        
+      </div><!--userWrap-->
+      
+      </div><!--adl-container-inside-->
+      
+ 
+<div class="adl-modal" id="smsfModal">
+  <div class="adl-modal-content col-95">
+  
+    <div class="adl-modal-header">
+      <div class="adl-modal-title col-8 adl-no-paddingLR">
+            <div class="name">Self Managed Super Fund</div>
+      </div>
+    <span class="adl-modal-icon adl-modal-close" onclick="close_Model();">X</span>
+    </div><!--adl-modal-header-->
+    
+    <div class="leftSec">
+    <div class="adl-scroll overflow-scroll-basic">    
+    <div class="blockSec">
+    <h3>SUPER DETAILS  <span class="links adl-floatR"><a href="#">Extras(12)</a></span> </h3>
+<div class="wrap1 adlSet">
+<div class="adl-paddingB adl-no-paddingLR col-10 cell-borderB">
+    <div class="form-horizontal adl-marginT">
+		<div class="adl-form-group col-35 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Name</label>
+         </div>
+         <div class="adl-form-group col-35 slideLabel adl-select">
+         <select class="form-control baseBorder">
+         <option></option>
+          <option value="1">25 Apr 2017</option>
+         </select>
+         <label class="control-label">Commencement Date</label>
+         </div>
+         <div class="adl-form-group col-3 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Account Code</label>
+         </div>       
+    </div>
+    <div class="form-horizontal adl-marginT">		
+         <div class="adl-form-group col-35 slideLabel adl-select">
+         <select class="form-control baseBorder">
+         <option></option>
+          <option value="1">Recommended</option>
+         </select>
+         <label class="control-label">Account Status</label>
+         </div>
+         <div class="adl-form-group col-35 slideLabel">
+         <input type="text" class="form-control baseBorder">
+         <label class="control-label">TFN</label>
+         </div>
+         <div class="adl-form-group col-3 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">ABN</label>
+         </div>       
+    </div>
+    <div class="form-horizontal adl-marginT">
+         <div class="adl-form-group col-35 slideLabel">
+          <input type="text" class="form-control baseBorder">
+         <label class="control-label">Corporate Trustee Name</label>
+         </div>
+         <div class="adl-form-group col-35 slideLabel">
+          <input type="text" class="form-control baseBorder">
+         <label class="control-label">Corporate ACN</label>
+         </div>                
+    </div>
+    
+    <div class="col-10 textL">
+    <button id="addMemberBtn" type="button" class="adl-btn">Add Member</button>
+    </div>
+    
+    <div class="col-10">
+    <div id="memberGrid" class="gridDivs">
+        <div class="head">
+        	<div class="col-25 cell">Name</div>
+            <div class="col-1 cell textC">Balance</div>
+            <div class="col-1 cell textC">Director</div>
+            <div class="col-1 cell textC">Trustee</div>
+            <div class="col-1 cell textC">Pension</div>
+            <div class="col-35 cell">Notes</div>            
+        </div><!--header-->
+        <div class="body">
+        	<div class="col-25 cell fontSB">Ankita Gupta</div>            
+            <div class="col-1 textC cell">1.0%</div>            
+            <div class="col-1 textC cell"><i class="fa fa-check"></i></div>            
+            <div class="col-1 textC cell"><i class="fa fa-check"></i></div>     
+            <div class="col-1 textC cell"><i class="fa fa-close"></i></div>
+            <div class="col-35 cell">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>      
+        </div><!--body-->
+        <div class="nav">
+            <a><i class="fa fa-pencil"></i> Edit</a>
+            <a><i class="fa fa-trash-o"></i> Delete</a>
+        </div>
+        </div><!--memberGrid-->
+    </div>
+    
+</div>
+<div class="commentBox adlSet">
+    <h3 class=" adl-no-marginB">COMMENTS (<span>12</span>)</h3>
+    <div class="small">Enter detail you might want to remember to report for now or later.</div>
+    
+    <ol class="commentList">
+    <li>
+    <div class="adl-form-group">
+    <textarea class="form-control baseBorder no-border autoTextarea">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</textarea>
+    </div>
+    <div class="confirm">
+    Delete? <a href="#"><i class="fa fa-trash"></i> Confirm</a>
+    </div>
+    <div class="nav">
+    <a class="editComment"><i class="fa fa-pencil"></i></a>
+    <a><i class="fa fa-clone"></i></a>
+    <a><i class="fa fa-trash-o"></i></a>
+    </div>
+    </li>
+    <li>
+    <div class="adl-form-group">
+    <textarea class="form-control baseBorder no-border autoTextarea">Lorem Ipsum is simply dummy text of the printing.</textarea>
+    </div>
+    <div class="nav">
+    <a class="editComment"><i class="fa fa-pencil"></i></a>
+     <a><i class="fa fa-clone"></i></a>
+    <a><i class="fa fa-trash-o"></i></a>
+    </div>
+    </li>
+    <li>
+    <div class="adl-form-group">
+    <textarea class="form-control baseBorder no-border autoTextarea">Lorem Ipsum is simply dummy text of the printing and typesetting industry</textarea>
+    </div>
+    <div class="nav">
+    <a class="editComment"><i class="fa fa-pencil"></i></a>
+    <a><i class="fa fa-clone"></i></a>
+    <a><i class="fa fa-trash-o"></i></a>
+    </div>
+    </li>    
+    </ol><!--commentList-->
+    
+    <div class="col-10 newComment">
+    <div class="adl-form-group adl-no-margin col-10">
+    <textarea class="form-control baseBorder no-borderLR no-borderT autoTextarea" placeholder="Hit enter or click to start a new comment"></textarea>
+    </div>
+    </div><!--newComment-->
+    
+    </div><!--commentBox-->
+</div><!--wrap1-->
+
+<div class="wrap2 adlSet">
+<div class="title adlSet">
+<h5 class="adl-floatL">Add Member Details</h5>
+<div class="adl-floatR">
+<button id="cancelMemberBtn" type="button" class="adl-btn btn-sm bordered">CANCEL</button>
+<button type="button" class="adl-btn btn-sm">SAVE</button>
+</div>
+</div>
+
+<div class="adl-paddingB adl-no-paddingLR col-10">
+    <div class="form-horizontal adl-marginT">
+		<div class="adl-form-group col-35 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Member Name</label>
+         </div>
+         <div class="adl-form-group col-15 slideLabel">
+         <input type="text" class="form-control baseBorder">
+         <label class="control-label">Balance(%)</label>
+         </div>
+         <div class="adl-form-group col-25 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Estate Option</label>
+         </div>
+         <div class="adl-form-group col-25 slideLabel adl-select">
+         <select class="form-control baseBorder">
+         <option></option>
+          <option value="1">Recommended</option>
+         </select>
+         <label class="control-label">Account Status</label>
+         </div>
+    </div>
+    <div class="form-horizontal adl-marginT">        
+         <div class="adl-form-group col-2 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">TFN</label>
+         </div>
+         <div class="adl-form-group col-2 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">ABN</label>
+         </div> 
+         <div class="adl-form-group col-35 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Corporate Trustee Name</label>
+         </div>  
+         <div class="adl-form-group col-25 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Corporate ACN</label>
+         </div>    
+    </div>
+    <div class="form-horizontal adl-marginT">
+         <div class="adl-form-group col-10 slideLabel">
+          <textarea class="form-control baseBorder no-borderLR no-borderT autoTextarea" ></textarea>
+          <label class="control-label">Notes</label>
+         </div>             
+    </div>
+    
+<div class="adlSet adl-marginT">
+<div class="panelWrap adlSet">
+<div class="head adlSet">
+<h5>Pension Details</h5>
+<div class="col-4">
+    <label class="control-label col-7 adl-no-paddingLR textR">Pension paying account</label>
+    <div class="col-3 head-switch textL">
+    <div class="switch option">
+    <input id="ppaChk" type="checkbox">
+    <label for="ppaChk"></label>
+    </div>
+    </div>
+</div>
+<i class="fa fa-chevron-down panelToggleBtn"></i>
+</div><!--head-->
+<div class="body adlSet">
+<div class="form-horizontal adl-marginT">
+<div class="adl-form-group col-45 switchCombo adl-no-marginB">
+         <div class="col-10 adl-no-paddingLR">
+                <label class="control-label col-6 adl-no-paddingL">Minimum Payment</label>
+                <div class="col-4 head-switch textL">
+                <div class="switch option">
+                <input id="mpChk" type="checkbox">
+                <label for="mpChk"></label>
+                </div>
+                </div>
+          </div>
+          <div class="col-10 adl-no-paddingLR adl-marginT">
+                <label class="control-label col-6 adl-no-paddingL">Apply Deeming Rates</label>
+                <div class="col-4 head-switch textL">
+                <div class="switch option">
+                <input id="adrChk" type="checkbox">
+                <label for="adrChk"></label>
+                </div>
+                </div>
+          </div>
+          </div>
+          <div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Indexation Rate(%)</label>
+          </div>
+          <div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Balance Date</label>
+          </div>
+</div>
+<div class="form-horizontal adl-marginT">
+<div class="adl-form-group col-15 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Growth(%)</label>
+          </div>
+          <div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">TTR Duration(yr)</label>
+          </div>
+          <div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Payment Amount</label>
+          </div>
+          <div class="adl-form-group col-35 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Concessional components</label>
+          </div>
+</div>
+<div class="form-horizontal adl-marginT">
+<div class="adl-form-group col-35 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Non Concessional components</label>
+          </div>
+          <div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Total</label>
+          </div>
+          <div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Deductible Amount</label>
+          </div>
+          <div class="adl-form-group col-15 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Tax Free</label>
+          </div>
+</div>
+<div class="form-horizontal adl-marginT">
+<div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Income(%)</label>
+          </div>
+          <div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Imputation Credits(%)</label>
+          </div>          
+          <div class="adl-form-group col-3 col-sm-4 col-sm2-4 adl-no-marginB">
+          <div class="col-10 adl-no-paddingLR adl-marginT">
+                <label class="control-label col-4 adl-no-paddingL">TTR Pension</label>
+                <div class="col-6 head-switch textL">
+                <div class="switch option">
+                <input id="ttrChk" type="checkbox">
+                <label for="ttrChk"></label>
+                </div>
+                </div>
+          </div>
+          </div>
+</div>
+
+</div><!--body-->
+</div><!--panelWrap-->
+
+</div>
+   
+</div>
+</div><!--wrap2-->
+
+    </div><!--blockSec-->
+    </div><!--adl-scroll-->
+    </div><!--leftSec-->
+    
+    <div class="rightSec">
+    <div class="blockSec adl-no-paddingB">
+    <div class="title col-10 adl-no-paddingLR">
+    <div class="adl-floatL">
+     <h3>Underlying Investment (<span>15</span>) <i id="addCashBox" class="fa fa-plus-circle"></i></h3>
+    </div>
+    <div class="amnt">$100,000</div> 
+    </div><!--title-->
+    
+    <div class="adlSet adl-scroll overflow-scroll-basic">
+    
+    <div class="addCash">
+    <div class="card">
+		<div class="form-horizontal">
+        <div class="adl-form-group col-10 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Name</label>
+         </div>
+        </div>
+        <div class="form-horizontal">
+        <div class="adl-form-group col-35 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Code</label>
+         </div>
+         <div class="adl-form-group col-65 slideLabel adl-select">
+         <select class="form-control baseBorder">
+          <option value="1">Australian Share</option>
+         </select>
+         </div>
+        </div>
+        <div class="detailBlock col-10">     
+            <div class="col-33 col-sm-25">
+            <label>Proportion</label>
+            <div class="amnt">11.11 %</div>
+            </div>
+            <div class="col-33 col-sm-35">
+            <label>Recommended</label>
+             <div class="amnt">$10,000</div>
+            </div>
+            <div class="col-33  col-sm-4">
+            <label>Regular Investment</label>
+             <div class="amnt">$3,000</div>
+            </div>   
+        </div>        
+    </div><!--card-->
+    
+    <div class="col-10 adl-no-paddingR textR">
+<button type="button" id="cancelAddCash" class="adl-btn bordered">Cancel</button>
+<button type="button" class="adl-btn">Submit</button>
+</div>
+    
+    </div><!--addCash-->
+        
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        
+    </div>
+    </div><!--blockSec-->
+    </div><!--rightSec-->
+    
+<div class="adl-modal-footer">
+<div class="col-10 textR">
+<button type="button" class="adl-btn btn-md bordered">CANCEL</button>
+<button type="button" class="adl-btn btn-md">SAVE</button>
+</div>
+
+</div><!-- end of adl-modal-footer -->
+  </div>
+  </div><!--smsfModal-->
+  
+<div class="adl-modal" id="sfModal">
+  <div class="adl-modal-content col-95">
+  
+    <div class="adl-modal-header">
+      <div class="adl-modal-title col-8 adl-no-paddingLR">
+            <div class="name col-25 adl-no-paddingLR">
+            <div class="adl-form-group col-10 adl-no-paddingL adl-no-margin adl-select">
+            <select class="form-control baseBorder filled font16 fontSB adl-no-paddingLR">
+          <option value="1">Industry Super Fund</option>
+         </select>
+            </div>
+            </div>
+            <div class="col-7 deleteBox">
+            <a id="deleteSF" class="redFont1" href="#">Delete</a>
+            <div class="col-5 confirmRow">
+            Move to recycle bin? <a class="redFont1 adl-marginLR" href="#">Confirm</a> <a class="text-grey2" href="#">Cancel</a>
+            </div>
+            </div>
+      </div>
+    <span class="adl-modal-icon adl-modal-close" onclick="close_Model();">X</span>
+    </div><!--adl-modal-header-->
+    
+    <div class="leftSec">
+    <div class="adl-scroll overflow-scroll-basic">    
+    <div class="blockSec">
+    <h3>SUPER DETAILS  <span class="links adl-floatR"><a href="#">Extras(12)</a></span> </h3>
+<div class="wrap1 adlSet">
+<div class="adl-paddingB adl-no-paddingLR col-10 cell-borderB">
+    <div class="form-horizontal adl-marginT">
+		<div class="adl-form-group col-35 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Name</label>
+         </div>
+         <div class="adl-form-group col-35 slideLabel adl-select">
+         <select class="form-control baseBorder">
+         <option></option>
+          <option value="1">25 Apr 2017</option>
+         </select>
+         <label class="control-label">Commencement Date</label>
+         </div>
+         <div class="adl-form-group col-3 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Account Code</label>
+         </div>       
+    </div>
+    <div class="form-horizontal adl-marginT">		
+         <div class="adl-form-group col-35 slideLabel adl-select">
+         <select class="form-control baseBorder">
+         <option></option>
+          <option value="1">Recommended</option>
+         </select>
+         <label class="control-label">Account Status</label>
+         </div>
+         <div class="adl-form-group col-35 slideLabel">
+         <input type="text" class="form-control baseBorder">
+         <label class="control-label">TFN</label>
+         </div>
+         <div class="adl-form-group col-3 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">ABN</label>
+         </div>       
+    </div>
+    <div class="form-horizontal adl-marginT">
+         <div class="adl-form-group col-35 slideLabel">
+          <input type="text" class="form-control baseBorder">
+         <label class="control-label">Corporate Trustee Name</label>
+         </div>
+         <div class="adl-form-group col-35 slideLabel">
+          <input type="text" class="form-control baseBorder">
+         <label class="control-label">Corporate ACN</label>
+         </div>                
+    </div>
+</div>
+
+
+<div class="adlSet adl-marginT">
+<div class="panelWrap adlSet">
+<div class="head adlSet">
+<h5>Pension Details</h5>
+<div class="col-4">
+    <label class="control-label col-7 adl-no-paddingLR textR">Pension paying account</label>
+    <div class="col-3 head-switch textL">
+    <div class="switch option">
+    <input id="ppaChk2" type="checkbox">
+    <label for="ppaChk2"></label>
+    </div>
+    </div>
+</div>
+<i class="fa fa-chevron-down panelToggleBtn"></i>
+</div><!--head-->
+<div class="body adlSet">
+<div class="form-horizontal adl-marginT">
+<div class="adl-form-group col-45 switchCombo adl-no-marginB">
+         <div class="col-10 adl-no-paddingLR">
+                <label class="control-label col-6 adl-no-paddingL">Minimum Payment</label>
+                <div class="col-4 head-switch textL">
+                <div class="switch option">
+                <input id="mpChk" type="checkbox">
+                <label for="mpChk"></label>
+                </div>
+                </div>
+          </div>
+          <div class="col-10 adl-no-paddingLR adl-marginT">
+                <label class="control-label col-6 adl-no-paddingL">Apply Deeming Rates</label>
+                <div class="col-4 head-switch textL">
+                <div class="switch option">
+                <input id="adrChk" type="checkbox">
+                <label for="adrChk"></label>
+                </div>
+                </div>
+          </div>
+          </div>
+          <div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Indexation Rate(%)</label>
+          </div>
+          <div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Balance Date</label>
+          </div>
+</div>
+<div class="form-horizontal adl-marginT">
+<div class="adl-form-group col-15 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Growth(%)</label>
+          </div>
+          <div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">TTR Duration(yr)</label>
+          </div>
+          <div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Payment Amount</label>
+          </div>
+          <div class="adl-form-group col-35 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Concessional components</label>
+          </div>
+</div>
+<div class="form-horizontal adl-marginT">
+<div class="adl-form-group col-35 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Non Concessional components</label>
+          </div>
+          <div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Total</label>
+          </div>
+          <div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Deductible Amount</label>
+          </div>
+          <div class="adl-form-group col-15 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Tax Free</label>
+          </div>
+</div>
+<div class="form-horizontal adl-marginT">
+<div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Income(%)</label>
+          </div>
+          <div class="adl-form-group col-25 slideLabel">
+          <input type="text" class="form-control baseBorder">
+          <label class="control-label">Imputation Credits(%)</label>
+          </div>          
+          <div class="adl-form-group col-3 col-sm-4 col-sm2-4 adl-no-marginB">
+          <div class="col-10 adl-no-paddingLR adl-marginT">
+                <label class="control-label col-4 adl-no-paddingL">TTR Pension</label>
+                <div class="col-6 head-switch textL">
+                <div class="switch option">
+                <input id="ttrChk" type="checkbox">
+                <label for="ttrChk"></label>
+                </div>
+                </div>
+          </div>
+          </div>
+</div>
+
+</div><!--body-->
+</div><!--panelWrap-->
+
+<div class="panelWrap adlSet">
+<div class="head adlSet">
+<h5>Comments (<span>12</span>)</h5>
+<i class="fa fa-chevron-down panelToggleBtn"></i>
+</div><!--head-->
+<div class="body adlSet">
+<div class="commentBox adlSet">
+    <div class="small">Enter detail you might want to remember to report for now or later.</div>
+    
+    <ol class="commentList">
+    <li>
+    <div class="adl-form-group">
+    <textarea class="form-control baseBorder no-border autoTextarea">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry</textarea>
+    </div>
+    <div class="confirm">
+    Delete? <a href="#"><i class="fa fa-trash"></i> Confirm</a>
+    </div>
+    <div class="nav">
+    <a class="editComment"><i class="fa fa-pencil"></i></a>
+    <a><i class="fa fa-clone"></i></a>
+    <a><i class="fa fa-trash-o"></i></a>
+    </div>
+    </li>
+    <li>
+    <div class="adl-form-group">
+    <textarea class="form-control baseBorder no-border autoTextarea">Lorem Ipsum is simply dummy text of the printing.</textarea>
+    </div>
+    <div class="nav">
+    <a class="editComment"><i class="fa fa-pencil"></i></a>
+     <a><i class="fa fa-clone"></i></a>
+    <a><i class="fa fa-trash-o"></i></a>
+    </div>
+    </li>
+    <li>
+    <div class="adl-form-group">
+    <textarea class="form-control baseBorder no-border autoTextarea">Lorem Ipsum is simply dummy text of the printing and typesetting industry</textarea>
+    </div>
+    <div class="nav">
+    <a class="editComment"><i class="fa fa-pencil"></i></a>
+    <a><i class="fa fa-clone"></i></a>
+    <a><i class="fa fa-trash-o"></i></a>
+    </div>
+    </li>    
+    </ol><!--commentList-->
+    
+    <div class="col-10 newComment">
+    <div class="adl-form-group adl-no-margin col-10">
+    <textarea class="form-control baseBorder no-borderLR no-borderT autoTextarea" placeholder="Hit enter or click to start a new comment"></textarea>
+    </div>
+    </div><!--newComment-->
+    
+    </div>
+</div><!--body-->
+</div><!--panelWrap-->
+
+</div>
+
+</div>
+
+
+    </div><!--blockSec-->
+    </div><!--adl-scroll-->
+    </div><!--leftSec-->
+    
+    <div class="rightSec">
+    <div class="blockSec adl-no-paddingB">
+    <div class="title col-10 adl-no-paddingLR">
+    <div class="adl-floatL">
+     <h3>Underlying Investment (<span>15</span>) <i id="addCashBox2" class="fa fa-plus-circle"></i></h3>
+    </div>
+    <div class="amnt">$100,000</div> 
+    </div><!--title-->
+    
+    <div class="adlSet adl-scroll overflow-scroll-basic">
+    
+    <div class="addCash">
+    <div class="card">
+		<div class="form-horizontal">
+        <div class="adl-form-group col-10 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Name</label>
+         </div>
+        </div>
+        <div class="form-horizontal">
+        <div class="adl-form-group col-35 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Code</label>
+         </div>
+         <div class="adl-form-group col-65 slideLabel adl-select">
+         <select class="form-control baseBorder">
+          <option value="1">Australian Share</option>
+         </select>
+         </div>
+        </div>
+        <div class="detailBlock col-10">     
+            <div class="col-33 col-sm-25">
+            <label>Proportion</label>
+            <div class="amnt">11.11 %</div>
+            </div>
+            <div class="col-33 col-sm-35">
+            <label>Recommended</label>
+             <div class="amnt">$10,000</div>
+            </div>
+            <div class="col-33  col-sm-4">
+            <label>Regular Investment</label>
+             <div class="amnt">$3,000</div>
+            </div>   
+        </div>        
+    </div><!--card-->
+    
+    <div class="col-10 adl-no-paddingR textR">
+<button type="button" id="cancelAddCash" class="adl-btn bordered">Cancel</button>
+<button type="button" class="adl-btn">Submit</button>
+</div>
+    
+    </div><!--addCash-->
+        
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        <div class="card">
+         <div class="col-7 adl-no-paddingLR">
+            <div class="name text-truncate">Alexander Resources</div>
+            <div class="code">LEF0135AU</div>
+            <div class="name2 text-truncate">Australian Shares</div>
+            </div>
+            <div class="col-3 adl-no-paddingLR">
+            <div class="value">$10,000</div>
+            <label>11.11%</label>            
+            </div>
+        </div><!--card-->
+        
+    </div>
+    </div><!--blockSec-->
+    </div><!--rightSec-->
+    
+<div class="adl-modal-footer">
+<div class="col-10 textR">
+<button type="button" class="adl-btn btn-md bordered">CANCEL</button>
+<button type="button" class="adl-btn btn-md">SAVE</button>
+</div>
+
+</div><!-- end of adl-modal-footer -->
+  </div>
+  </div><!--sfModal-->
+
+
+<div class="adl-modal" id="policyArchiveModal">
+  <div class="adl-modal-content col-35">
+  <div class="adl-modal-header">      <div class="adl-modal-title">Archive Superfund</div>
+    	<span class="adl-modal-icon adl-modal-close" onclick="close_Model();">X</span>
+    </div>
+
+<div class="adl-paddingLR">
+<div class="fontSB font14">Superfund will move to Archived, if closed. Continue Archiving?</div>
+
+<div class="cardWrap">
+        <div class="card">
+            
+        <div class="row">
+        <div class="topValues col-10">
+        <div class="inline">
+            <label class="text-truncate">Abhay Gupta</label>
+             <span class="font-semibold">12%</span>
+        </div>
+        <div class="inline">
+            <label class="text-truncate">Ankita Gupta</label>
+             <span class="font-semibold">50%</span>
+        </div>
+        <div class="inline">
+            <label class="text-truncate">Other</label>
+             <span class="font-semibold">38%</span>
+        </div>
+        </div>       
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">JBH12345</div>
+            </div>
+            <div class="amnt">
+            <div class="value text-grey"><img width="18" src="Images/adlNewImages/adl2/pieIcon.svg" alt=""> $10,000</div>            
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-33 adl-no-paddingL"><i class="fa fa-check-circle"></i> Current</div>
+            <div class="col-33 adl-no-paddingL"><img width="12" src="Images/adlNewImages/adl2/accumulationIcon.svg" alt=""> Accumulation</div>
+            </div>  
+            
+            <i class="fa fa-ellipsis-v"></i>
+            <div class="rightNav">
+            <ul>       
+            <li formodel="policyArchiveModal" onclick="open_Model(this);"><i class="fa fa-file-archive-o"></i> Archive</li>
+            <li><i class="fa fa-clone"></i> Duplicate</li>
+            </ul>
+            </div>
+            
+            </div><!--details-->
+        </div><!--row-->
+        
+        <div class="detailBlock col-10">      
+            <div class="col-10 fontSB font14">
+            Underlying Investments (15)
+            </div>
+            
+        </div>
+        </div><!--card-->
+        </div><!--cardWrap-->
+
+<div class="textR">
+<button type="button" class="adl-btn bordered">CANCEL</button>
+<button type="button" class="adl-btn">CONFIRM</button>
+</div>
+
+</div>
+
+  </div>
+</div><!--policyArchiveModal-->
+
+<div class="slidingBox slidingBoxOpen">
+    <div class="slidingIcon"><i class="fa fa-caret-right toggleArrow" aria-hidden="true"></i></div>
+    <div class="slidingContent vCenter">
+     <div class="slidingContentBox vCenter">
+      <div class="slideIcon"><img src="./images/adlNewImages/adl2/needsAnalysisIcon.svg"></div>
+      <div class="slideInfo">
+       <h4>Proceed To</h4>
+       <h3>Research</h3></div>
+     </div><!--slidingContentBox-->
+    </div><!--slidingCont-->
+</div><!--slidingBox-->
+
+
+
+
+
+
+</div><!--container--> 
+  
+</div>
+
+
+
+
+
+<script>
+$(document).ready(function(){	
+	//slide label//
+	$(".form-control").focus(function(){
+	
+		$(this).addClass("filled")
+		});		
+	$(".form-control").blur(function(){		
+		var fieldVar = $(this).val();		
+		if(fieldVar == ''){
+			$(this).removeClass("filled");
+		}
+		else{
+			$(this).addClass("filled");
+		}
+		});
+		
+		//Sliding Button
+		$(".slidingIcon").click(function(){
+		$(this).children('.toggleArrow').toggleClass('fa-caret-right fa-caret-left');
+		$(this).parent('.slidingBox').toggleClass('slidingBoxOpen slidingBoxClose');
+ 		});
+	
+	$(".cCover").click(function(){
+		$(".subModalWrap.childCover").addClass('subModalBottomZero');
+		$(this).addClass("btnActive");
+		$(".policyContent").addClass("adl-fade");
+	});
+		$(".pOptions").click(function(){
+		$(".subModalWrap.paymentMethods").addClass('subModalBottomZero');
+		$(this).addClass("btnActive");
+		$(".policyContent").addClass("adl-fade");
+	});
+		$(".vHistory").click(function(){
+		$(this).addClass("btnActive");
+		$(".subModalWrap.versionHistory").addClass('subModalBottomZero');
+		$(".policyContent").addClass("adl-fade");
+	});
+	$(".subModal-icon").click(function(){
+		$('.adl-modal-footer .adl-btn').removeClass('btnActive')
+		$(this).parent().parent().removeClass("subModalBottomZero");
+		$(".policyContent").removeClass("adl-fade");
+	})
+	
+	//auto height textarea
+		$('.autoTextarea').each(function () { this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;'); }).on('input', function () {
+        this.style.height = 10 + 'px';
+        this.style.height = (this.scrollHeight) + 'px';
+		});
+	   
+	//expand comment row
+	$(".editComment, .autoTextarea").click(function(){
+		$(this).parent().parent().addClass("expand");
+	})
+	$('html').click(function() {
+   		$('.commentList li').removeClass('expand')
+	});
+	$('.commentList li').click(function(event){
+		 event.stopPropagation();
+	});
+	//Add Cash Box
+	$('#addCashBox').click(function(){
+		$('.addCash').toggleClass('open');
+	});
+	$('#cancelAddCash').click(function(){
+		$(this).parent().parent().removeClass('open');
+	});
+	//member box
+	$('#addMemberBtn').click(function(){
+		$('.wrap1').addClass('hide');
+		$('.wrap2').addClass('show');		
+		//auto height textarea
+	    $('.autoTextarea').each(function () { this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;'); }).on('input', function () {
+        this.style.height = 10 + 'px';
+        this.style.height = (this.scrollHeight) + 'px';
+		});	
+	});
+	$('#cancelMemberBtn').click(function(){
+		$('.wrap1').removeClass('hide');
+		$('.wrap2').removeClass('show');
+		//auto height textarea
+	    $('.autoTextarea').each(function () { this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;'); }).on('input', function () {
+        this.style.height = 10 + 'px';
+        this.style.height = (this.scrollHeight) + 'px';
+		});	
+	});
+	
+	$(".panelToggleBtn").click(function(){
+		$(this).parent().siblings().slideToggle();
+		$(this).toggleClass('fa-chevron-down fa-chevron-up');
+	});
+	
+	});
+	//load autoheight textarea on click of plus btn
+	$("#smsfBtn").click(function(){
+		$('.autoTextarea').each(function () { this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;'); }).on('input', function () {
+        this.style.height = 10 + 'px';
+        this.style.height = (this.scrollHeight) + 'px';
+		});
+	});
+	$("#sfBtn").click(function(){
+		$('.autoTextarea').each(function () { this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;'); }).on('input', function () {
+        this.style.height = 10 + 'px';
+        this.style.height = (this.scrollHeight) + 'px';
+		});
+	});
+	
+	$('#deleteSF').click(function(){
+		$(this).addClass('hide');
+		$('.confirmRow').addClass('show');
+	});
+	
+	
+</script>
+
+</body>
+</html>

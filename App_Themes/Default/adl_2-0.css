@@ -13,7 +13,11 @@
 }
 
 h1, h2, h3, h4, h5, h6, .normal, .small, .big, .font28, .font28 td, .font28 th, .font28 label, .font18, .font18 td, .font18 th, .font18 label, .font16, .font16 td, .font16 th, .font16 label, .font15, .font15 td, .font15 th, .font15 label, .font14, .font14 td, .font14 th, .font14 label, .font9, .font9 td, .font9 th, .font9 label, .successMsg, .errorMsg, .adl-heading, .adl-heading .head, .adl-btn, .adl-btn-head, .adl-btn-pop, .form-control, .adl-form-group .control-label, .adl-form-group .form-control, .form-control-field{
-	font-family:'Roboto', sans-serif
+	font-family:'Roboto', sans-serif!important
+}
+
+.adl_2-0 img{
+	max-width:100%
 }
 
 .adl_2-0 .adl-btn, .adl_2-0 .adl-btn-head{
@@ -40,6 +44,10 @@ a.adl-link{
 	color:#666
 }
 
+.adl_2-0 .adlHide{
+	display:none!important
+}
+
 .adlSet{
 	float:left;
 	width:100%
@@ -52,6 +60,7 @@ a.adl-link{
 	height:45px
 }
 .adl_2-0 .adl-modal-title{
+	color:#485a65;
 	font-variant:normal;
 	font-family:'Roboto', sans-serif;
 	font-size:16px;
@@ -91,6 +100,24 @@ a.adl-link{
 	background-color:transparent
 }
 
+.adl_2-0 .adl-btn-head.text-blue{
+	color:#41a3ea!important;
+}
+
+/*drop menu*/
+.adl_2-0 .adl-menu ul li, .adl-menu ul li input, .adl-menu ul li button{
+	font: 400 13px/19px 'Roboto', sans-serif !important;
+	background:transparent !important;
+}
+.adl_2-0 .adl-menu .menu-list{
+	border-radius:5px;
+	overflow: hidden;
+}
+.adl_2-0 .adl-menu{
+	right:0;
+	top: 35px;
+}
+/**/
 
 /*autoheight text area*/
 .form-control.autoTextarea{
@@ -279,7 +306,7 @@ position: absolute;
 
 /*select V shape drop aro*/
 .adl-selectV select.form-control, .adl-selectV select.form-control-field{
-	-webkit-appearance:none
+	-webkit-appearance:none;
 }
 .adl-selectV::before {
     content: "\25Bc";
@@ -311,7 +338,7 @@ position: absolute;
 
 
 .insurance .adl-container-inside, .superlogic .adl-container-inside{
-    height: calc(100vh - 140px);
+    height: calc(100vh - 45px);
 }
 
 
@@ -319,7 +346,12 @@ position: absolute;
 .adl_2-0 #nav-flow{
 	width:100%;
 	height:44px;
+    position: relative;
+    z-index: 9999;
 	box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    -webkit-box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    -moz-box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    -ms-box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 .adl_2-0 #nav-flow #nav{
 	display: inline-block;
@@ -336,6 +368,9 @@ position: absolute;
 .adl_2-0 #nav-flow #nav > li > img{
 	width:22px;
 	margin-right:5px
+}
+.adl_2-0 #nav-flow #nav > li > img[width="18"]{
+	width:18px
 }
 
 .adl_2-0 #nav-flow #nav > li:before {
@@ -488,6 +523,9 @@ position: absolute;
     border: 2px solid #fff;
     box-shadow: 0 0 5px rgba(0,0,0,0.15);
 }
+.adl_2-0 #nav-flow .profilePic:hover{
+	cursor:pointer
+}
 .adl_2-0 #nav-flow .profilePic + .profilePic{
 	margin-left:5px
 }
@@ -510,29 +548,36 @@ position: absolute;
 	color:#C47334
 }
 
+.adl_2-0 #nav-flow .adl-btn-head{
+	border-color:#ddd
+}
+.adl_2-0 #nav-flow .adl-btn-head:hover{
+	border-color:#41a3ea
+}
+
 /**/
 
 
-.adl_2-0 .userWrap .title h3{
+.adl_2-0 .title h3{
 	color: #485a65;
 }
-.adl_2-0 .userWrap .title h3 i.fa-chevron-left.link{
+.adl_2-0 .title h3 i.fa-chevron-left.link{
 	font-size:15px;
 	color:#1db2de;
 }
-.adl_2-0 .userWrap .title h3 i.fa-chevron-left.link:hover{
+.adl_2-0 .title h3 i.fa-chevron-left.link:hover{
 	color:#485a65;
 }
-.adl_2-0 .userWrap .title{
+.adl_2-0 .title{
     margin: 10px 0;
     border-bottom: 1px solid #eee;
     padding-bottom: 3px;
 }
-.adl_2-0 .userWrap .title .fa-plus-circle{
+.adl_2-0 .title .fa-plus-circle{
 	margin-left:10px;
 	font-size:20px;
 }
-.adl_2-0 .userWrap .title .fa-plus-circle:hover{
+.adl_2-0 .title .fa-plus-circle:hover{
 	cursor:pointer;
 	color:#41a3ea
 }
@@ -543,32 +588,32 @@ position: absolute;
 	float:left;
 	margin-right:10px
 }
-.adl_2-0 .userWrap .showResult{
+.adl_2-0 .showResult{
 	color:#999;
 	margin-left:15px
 }
-.adl_2-0 .userWrap .viewArchvd{
+.adl_2-0 .viewArchvd{
 	color:#1db2de;
 	margin-left:15px
 }
-.adl_2-0 .userWrap .viewArchvd:hover{
+.adl_2-0 .viewArchvd:hover{
 	text-decoration:underline;
 	cursor:pointer
 }
-.adl_2-0 .userWrap .viewArchvd i{
+.adl_2-0 .viewArchvd i{
 	color:#ECC129
 }
 .adl_2-0 .title .totalPrmm .detailBlock{
-	background-color:#1db2de;
-	padding:8px 0;
-	color:#fff;
-	border-radius:5px;
-	position:absolute;
-	left:110%;
-	opacity:0;
-	top:0;
-	width:500px;
-	transition:all 0.4s ease-out
+ background-color:#1db2de;
+ padding:2px 0 6px;
+ color:#fff;
+ border-radius:5px;
+ position:absolute;
+ left:110%;
+ opacity:0;
+ top:-2px;
+ width:500px;
+ transition:all 0.4s ease-out
 }
 .adl_2-0 .title .totalPrmm:hover .detailBlock{
 	left:calc(100% - 500px);
@@ -614,7 +659,9 @@ position: absolute;
 .adl_2-0 .userWrap.partner h4, .adl_2-0 .userWrap.partner .cardWrap .card .details .amnt .value, .adl_2-0 .userWrap.partner .totalPrmm .value{
 	color:#b65100
 }
-
+.adl_2-0 .text-brown{
+	color:#b65100
+}
 
 /*user cards*/
 .adl_2-0 .card-container{
@@ -711,6 +758,9 @@ position: absolute;
 	color:#6C3;
 	font-size:14px
 }
+.adl_2-0 .cardWrap .card .details .infoRow .red{
+	color:#e74c3c
+}
 .adl_2-0 .cardWrap .card .fa-ellipsis-v{
 	position:absolute;
 	right:7px;
@@ -725,9 +775,7 @@ position: absolute;
 .adl_2-0 .cardWrap .card .rightNav{
     position: absolute;
 	border-radius:3px;
-	padding:5px 10px;
-	opacity:0;
-	filter:alpha(opacity=0);
+	padding:5px 10px 3px;
 	z-index:1;
     right:-100px;
     top: 25px;
@@ -760,7 +808,7 @@ position: absolute;
 	right:3px;
 }
 .adl_2-0 .cardWrap .card .rightNav li{
-	line-height: 25px;
+	line-height: 20px;
 }
 .adl_2-0 .cardWrap .card .rightNav i{
 	margin-right:3px
@@ -774,6 +822,69 @@ position: absolute;
 }
 
 /**/
+
+/* icon hover box*/
+.adl_2-0 .iconBox{
+	position:relative;
+    display: inline-block;
+    padding: 5px 5px 3px;
+	background-color:#fff;
+    border: 1px solid #fff;
+    margin: -5px -5px 0 0;
+    border-top-left-radius: 50%;
+	-moz-border-top-left-radius: 50%;
+	-webkit-border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+	-moz-border-top-right-radius: 50%;
+	-webkit-border-top-right-radius: 50%;
+}
+.adl_2-0 .iconBox:hover{
+    border:1px solid #ddd;
+	box-shadow:0 0 7px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 0 7px rgba(0,0,0,0.2);
+	-webkit-box-shadow:0 0 7px rgba(0,0,0,0.2);
+}
+.adl_2-0 .iconBox::after{
+	content: "";
+    display: block;
+    width: 28px;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    z-index: 99;
+}
+.adl_2-0 .iconBox .contentBox{
+	display:none;
+    position: absolute;
+    left: -170px;
+    width: 350px;
+    height: 175px;
+    top: 28px;
+    z-index: 99;
+    background-color: #fff;
+    padding:10px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	box-shadow:0 0 7px rgba(0,0,0,0.2);
+	-webkit-box-shadow:0 0 7px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 0 7px rgba(0,0,0,0.2);
+}
+.adl_2-0 .iconBox .contentBox h3{
+	font-size:14px
+}
+.adl_2-0 .iconBox:hover .contentBox{
+	display:block;
+	cursor:default
+}
+/**/
+
+.adl_2-0 .cardWrap:nth-child(3n) .iconBox .contentBox{
+	left: -236px;
+}
 
 /*no policy box*/
 .adl_2-0 .noPolicies{
@@ -843,6 +954,8 @@ position: absolute;
 }
 .adl_2-0 .noPolicies .sprte span{
 	border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
 	border:1px solid #dde2e6;
 	background-color: #F9FAFB;
 	width:25px;
@@ -1273,17 +1386,13 @@ position: absolute;
     color: #333;
 }
 
-
-.adl_2-0 .adl-modal-title{
-	color:#485a65;
-	font-family:'Roboto', sans-serif;
-	font-weight:500
-}
-.adl_2-0 .adl-modal-header{
+.adl_2-0 .insurance #policyModal .adl-modal-header{
 	float:left;
 	width:100%;
     height: 55px;
 }
+
+
 .adl_2-0 .adl-modal-header .name{
 	font-variant: normal;
 	font-size: 16px;
@@ -1317,7 +1426,7 @@ position: absolute;
 	color: #e74c3c
 }
 
-.adl_2-0 .adl-modal-close{
+.adl_2-0 .insurance #policyModal .adl-modal-close{
 	margin-top:5px
 }
 .adl_2-0 .adl-modal-close{
@@ -1377,13 +1486,12 @@ position: absolute;
 }
 .adl_2-0 h3{
 	color:#485a65;
-	margin-bottom:10px
 }
 .adl_2-0 h4{
 	font-weight:400;
 }
 
-.adl_2-0 #policyModal .adl-modal-content, .adl_2-0 #smsfModal .adl-modal-content{
+.adl_2-0 #policyModal .adl-modal-content, .adl_2-0 #smsfModal .adl-modal-content, .adl_2-0 #sfModal .adl-modal-content{
 	top:9px!important
 }
 .adl_2-0 #policyModal .life, .adl_2-0 #policyModal .tpd, .adl_2-0 #policyModal .trauma, .adl_2-0 #policyModal .ip, .adl_2-0 #policyModal .be {
@@ -1412,7 +1520,7 @@ position: absolute;
     float: left;
 	width:100%
 }
-.adl_2-0 #policyDeleteModal .cardWrap, .adl_2-0 #policyArchiveModal .cardWrap{
+.adl_2-0 #policyDeleteModal .cardWrap, .adl_2-0 #policyArchiveModal .cardWrap, .adl_2-0 #policyReopenModal .cardWrap{
 	width:100%;
 	padding:10px 0 0
 }
@@ -1464,6 +1572,9 @@ position: absolute;
 	border-radius: 8px;
 	line-height: 19px;
 	font-size:11px
+}
+.adl_2-0 .head-switch .switch > label{
+	float:left
 }
 .adl_2-0 .head-switch .switch > label::after {
     box-shadow: 0 0px 6px rgba(0,0,0,0.2);
@@ -1565,6 +1676,7 @@ position: absolute;
     font-size: 13px;
     text-transform: uppercase;
     line-height: 14px;
+	margin-bottom:0
 }
 .slideIcon{
     margin-right:5px;
@@ -3067,21 +3179,7 @@ border: solid 1px #d2dade;
 .rLeftPanel .panelBodyWrap .quoteSection.adl-fade:hover .editQuote{
 	opacity: 0;
 }
-..adl_2-0 .adl-modal-close {
-    background-image: none;
-    background-color: #e74c3c;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    width: 24px;
-    line-height: 26px;
-    height: 24px;
-    font-size: 14px;
-}
-.adl_2-0 .adl-modal-close:hover {
-    cursor: pointer;
-    background-color: #cf3d2e;
-}
+
 .expandTile{
     position: absolute;
     left: 100%;
@@ -3334,33 +3432,33 @@ display: inline-block;
 .adl_2-0 .blockSec h3 .links a:hover{
 	color:#666
 }
-.adl_2-0 #smsfModal .leftSec{
+.adl_2-0 #smsfModal .leftSec, .adl_2-0 #sfModal .leftSec{
 	float:left;
 	width:65%
 }
-.adl_2-0 #smsfModal .rightSec{
+.adl_2-0 #smsfModal .rightSec, .adl_2-0 #sfModal .rightSec{
 	float: left;
     width: 35%;
 }
-.adl_2-0 #smsfModal .leftSec .adl-scroll{
+.adl_2-0 #smsfModal .leftSec .adl-scroll, .adl_2-0 #sfModal .leftSec .adl-scroll{
 	height: calc(100vh - 140px);
 }
-.adl_2-0 #smsfModal h3{
+.adl_2-0 #smsfModal h3, .adl_2-0 #sfModal h3{
 	font-size:17px
 }
-.adl_2-0 #smsfModal .rightSec .title .fa-plus-circle{
+.adl_2-0 #smsfModal .rightSec .title .fa-plus-circle, .adl_2-0 #sfModal .rightSec .title .fa-plus-circle{
 	font-size: 18px;
     color: #1db2de;
 }
-.adl_2-0 #smsfModal .rightSec .title .fa-plus-circle:hover {
+.adl_2-0 #smsfModal .rightSec .title .fa-plus-circle:hover , .adl_2-0 #sfModal .rightSec .title .fa-plus-circle:hover {
     cursor: pointer;
     color: #41a3ea;
 }
-.adl_2-0 #smsfModal .rightSec .title .fa-plus-circle:active{
+.adl_2-0 #smsfModal .rightSec .title .fa-plus-circle:active, .adl_2-0 #sfModal .rightSec .title .fa-plus-circle:active{
 	color:#666
 }
 
-.adl_2-0 #smsfModal .rightSec .card {
+.adl_2-0 #smsfModal .rightSec .card, .adl_2-0 #sfModal .rightSec .card{
     border: 1px solid #dde2e6;
 	padding:8px;
     overflow: hidden;
@@ -3372,7 +3470,7 @@ display: inline-block;
     -webkit-transition: all 0.15s ease 0s;
     -moz-transition: all 0.15s ease 0s;
 }
-.adl_2-0 #smsfModal .rightSec .card + .card{
+.adl_2-0 #smsfModal .rightSec .card + .card, .adl_2-0 #sfModal .rightSec .card + .card{
 	margin-top:10px
 }
 .adl_2-0 #smsfModal .rightSec .card .name{
@@ -3380,18 +3478,18 @@ display: inline-block;
     line-height: 18px;
     font-size: 14px;
 }
-.adl_2-0 #smsfModal .rightSec .card .code, .adl_2-0 #smsfModal .rightSec .card .name2{
+.adl_2-0 #smsfModal .rightSec .card .code, .adl_2-0 #smsfModal .rightSec .card .name2, .adl_2-0 #sfModal .rightSec .card .code, .adl_2-0 #sfModal .rightSec .card .name2{
 	font-size:12px;
 	color: #888;
 	float:left
 }
-.adl_2-0 #smsfModal .rightSec .card .code{
+.adl_2-0 #smsfModal .rightSec .card .code, .adl_2-0 #sfModal .rightSec .card .code{
 	width:40%
 }
-.adl_2-0 #smsfModal .rightSec .card .name2{
+.adl_2-0 #smsfModal .rightSec .card .name2, .adl_2-0 #sfModal .rightSec .card .name2{
 	width:60%
 }
-.adl_2-0 #smsfModal .rightSec .card .value{
+.adl_2-0 #smsfModal .rightSec .card .value, .adl_2-0 #sfModal .rightSec .card .value{
 	float: left;
     color: #1db2de;
     font-weight: 600;
@@ -3399,7 +3497,7 @@ display: inline-block;
     margin-top: 8px;
     font-family: 'Roboto Condensed', sans-serif;
 }
-.adl_2-0 #smsfModal .rightSec .card label{
+.adl_2-0 #smsfModal .rightSec .card label, .adl_2-0 #sfModal .rightSec .card label{
 	font-size:12px;
 	color: #888;
 }
@@ -3467,7 +3565,25 @@ display: inline-block;
 .adl_2-0 .commentList li .nav a:hover{
 	cursor:pointer
 }
-.adl_2-0 .commentList li:hover .nav, .adl_2-0 .commentList li.expand .nav{
+
+.adl_2-0 .commentList li .confirm{
+	opacity:0;
+    position: absolute;
+    right: 85px;
+    top: 0px;
+    background-color: #fff;
+	border-left:1px solid #ddd;
+    padding: 5px;
+    height: 100%;
+    line-height: 32px;
+	transition:all 0.2s;
+}
+.adl_2-0 .commentList li .confirm a{
+	color:#e74c3c;
+	margin-left:5px
+}
+
+.adl_2-0 .commentList li:hover .nav, .adl_2-0 .commentList li.expand .nav, .adl_2-0 .commentList li:hover .confirm{
 	opacity:1
 }
 .adl_2-0 .commentList li .adl-form-group{
@@ -3546,22 +3662,22 @@ padding: 0 5px;
 	border-color:#0da103;
 }
 
-.adl_2-0 #smsfModal .rightSec .title .amnt{
+.adl_2-0 #smsfModal .rightSec .title .amnt, .adl_2-0 #sfModal .rightSec .title .amnt{
 	float: right;
     color: #1db2de;
     font-weight: 600;
     font-size: 20px;
 }
-.adl_2-0 #smsfModal .rightSec .adl-scroll{
-	height:calc(100vh - 179px);
+.adl_2-0 #smsfModal .rightSec .adl-scroll, .adl_2-0 #sfModal .rightSec .adl-scroll{
+	height:calc(100vh - 203px);
 	padding-bottom:8px
 }
-.adl_2-0 #smsfModal .rightSec .card .detailBlock {
+.adl_2-0 #smsfModal .rightSec .card .detailBlock , .adl_2-0 #sfModal .rightSec .card .detailBlock{
     background-color: #F9FAFB;
     color: #485a65;
     padding: 8px 5px;
 }
-.adl_2-0 #smsfModal .rightSec .addCash{
+.adl_2-0 #smsfModal .rightSec .addCash, .adl_2-0 #sfModal .rightSec .addCash{
 	padding-bottom:10px;
 	margin-bottom:10px;
 	float:left;
@@ -3569,65 +3685,94 @@ padding: 0 5px;
 	display:none;
 	transition:all 0.3s
 }
-.adl_2-0 #smsfModal .rightSec .addCash .card{
+.adl_2-0 #smsfModal .rightSec .addCash .card, .adl_2-0 #sfModal .rightSec .addCash .card{
 	padding:10px 0 0
 }
-.adl_2-0 #smsfModal .rightSec .addCash .card .detailBlock{
+.adl_2-0 #smsfModal .rightSec .addCash .card .detailBlock, .adl_2-0 #sfModal .rightSec .addCash .card .detailBlock{
 	margin-top:8px
 }
-.adl_2-0 #smsfModal .rightSec .addCash .card .detailBlock label{
+.adl_2-0 #smsfModal .rightSec .addCash .card .detailBlock label, .adl_2-0 #sfModal .rightSec .addCash .card .detailBlock label{
 	text-transform:none;
 	font-size:11px
 }
-.adl_2-0 #smsfModal .rightSec .addCash.open{
+.adl_2-0 #smsfModal .rightSec .addCash.open, .adl_2-0 #sfModal .rightSec .addCash.open{
 	display:block
 }
 
-.adl_2-0 #smsfModal .adl-modal-title{
-	margin-top:5px
-}
-
-
-.adl_2-0 #smsfModal .wrap1.hide{
+.adl_2-0 #smsfModal .wrap1.hide, .adl_2-0 #sfModal .wrap1.hide{
 	display:none
 }
-.adl_2-0 #smsfModal .wrap2.show{
+.adl_2-0 #smsfModal .wrap2.show, .adl_2-0 #sfModal .wrap2.show{
 	display:block
 }
-.adl_2-0 #smsfModal .wrap2{
+.adl_2-0 #smsfModal .wrap2, .adl_2-0 #sfModal .wrap2{
 	display:none
 }
 
-.adl_2-0 #smsfModal h5{
+.adl_2-0 #smsfModal h5, .adl_2-0 #sfModal h5{
 	color:#485a65;
 	font-size: 15px;
 }
-.adl_2-0 #smsfModal .title .adl-btn{
+.adl_2-0 #smsfModal .title .adl-btn, .adl_2-0 #sfModal .title .adl-btn{
 	min-width: 80px;
     margin: -10px 0 0;
 }
 
 
-
-/*end superfunds*/
-
-/*scrollbar inside modals*/
-.adl_2-0 .adl-modal .adl-modal-content .adl-scroll::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+.adl_2-0 #sfModal .adl-modal-header .deleteBox .confirmRow, #deleteSF.hide{
+	display:none	
 }
-.adl_2-0 .adl-modal .adl-modal-content .adl-scroll::-webkit-scrollbar-track {
+.adl_2-0 #sfModal .adl-modal-header .deleteBox .confirmRow.show{
+	display:block	
+}
+
+.adl_2-0 .panelWrap .commentBox{
+	margin:0
+}
+
+
+/*collapse panels*/
+.panelWrap{
+	border:1px solid #d7e8ec;
+	border-radius:5px;
+}
+.panelWrap .head{
+	padding:12px 8px;
+	background-color: #dfeef2;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	position:relative
+}
+.panelWrap .head h5{
+	float:left
+}
+.panelWrap .body{
+	padding:20px 8px
+}
+
+.panelWrap .head .panelToggleBtn{
+	position: absolute;
+    right: 10px;
+    top: 10px;
     background-color: #fff;
-    border-bottom:none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 18px;
+    border: 1px solid #41a3ea;
+    color: #41a3ea;
+    -webkit-text-stroke: 1px #fff;
+	transition:all 0.3s
 }
-.adl_2-0 .adl-modal .adl-modal-content .adl-scroll::-webkit-scrollbar-thumb {
-    background-color: #e8edf1
+.panelWrap .head .panelToggleBtn:hover{
+	cursor:pointer;
+	background-color:#41a3ea;
+	color:#fff;
+	 -webkit-text-stroke: 1px #41a3ea;
 }
-.adl_2-0 .adl-modal .adl-modal-content .adl-scroll::-webkit-scrollbar-thumb:hover {
-    background-color: #d5dce3
-}
-/**/
 
+/**/
 
 
 /*Super Funds Rollover styles Begin*/
@@ -3816,34 +3961,189 @@ padding: 0 5px;
 }
 /*Super Funds Rollover styles End*/
 
-
-
-
-@media only screen 
-and (min-width : 768px) 
-and (max-width : 1024px) 
-and (orientation : landscape){
-.adl_2-0 .card-container .cardWrap{
-	width: 50%;
+.adl_2-0 .superlogic .title h4{
+	color:#485a65
+}
+.adl_2-0 .superlogic .title h4 .text-blue{
+	color:#1db2de !important
+}
+.adl_2-0 .superlogic .title .fa-plus-circle{
+	color:#1db2de
+}
+.adl_2-0 .superlogic img[width="18"]{
+	width:18px
+}
+.adl_2-0 .superlogic img[width="12"]{
+	width:12px
+}
+.adl_2-0 .cardWrap .card .details .infoRow img{
+	margin-bottom:-1px
 }
 
+
+.adl_2-0 .superlogic .card{
+	overflow:visible
+}
+.adl_2-0 .superlogic .card .detailBlock{
+	border-bottom-left-radius: 12px;
+	-moz-border-bottom-left-radius: 12px;
+	-webkit-border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+	-moz-border-bottom-right-radius: 12px;
+	-webkit-border-bottom-right-radius: 12px;
+}
+.adl_2-0 .superlogic .card .topValues{
+	border-bottom:1px solid #ddd;
+	padding:10px
+}
+.adl_2-0 .superlogic .card .topValues .inline{
+	display:inline-block;
+}
+.adl_2-0 .superlogic .card .topValues .inline + .inline{
+	margin-left:10px
+}
+.adl_2-0 .superlogic .card .topValues label{
+	float:left;
+	margin-right:2px;
+	max-width:150px
+}
+
+.adl_2-0 .superlogic .cardWrap .card .fa-ellipsis-v{
+	top:17px
+}
+.adl_2-0 .superlogic .cardWrap .card .details{
+	position:relative
+}
+.adl_2-0 .superlogic .cardWrap .card .rightNav{
+	top:36px;
+	display:none;
+	right: 7px;
+}
+.adl_2-0 .superlogic .cardWrap .card .fa-ellipsis-v:hover + .rightNav, .adl_2-0 .superlogic .cardWrap .card .rightNav:hover{
+	display:block;
+	right: 1px;
+}
+
+.adl_2-0 .title .totalAcBlnc{
+    position: relative;
+    margin-top: 11px;
+}
+
+.adl_2-0 .title .totalAcBlnc label{
+	font-weight: 500;
+    font-size: 18px;
+}
+.adl_2-0 .title .totalAcBlnc .value{
+    color: #1db2de;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: inline-block;
+}
+.adl_2-0 .title .totalAcBlnc .na{
+	display:inline-block;
+	color:#888;
+    font-size: 18px;
+}
+.adl_2-0 .title .totalAcBlnc .small{
+    width: 50px;
+    display: inline-block;
+    font-size: 10px!important;
+    font-weight: 600;
+    line-height: 9px;
+}
+
+/*end superfunds*/
+
+/*scrollbar inside modals*/
+.adl_2-0 .adl-modal .adl-modal-content .adl-scroll::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+.adl_2-0 .adl-modal .adl-modal-content .adl-scroll::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-bottom:none;
+}
+.adl_2-0 .adl-modal .adl-modal-content .adl-scroll::-webkit-scrollbar-thumb {
+    background-color: #e8edf1
+}
+.adl_2-0 .adl-modal .adl-modal-content .adl-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #d5dce3
 }
 /**/
 
 
-@media only screen 
-and (min-width : 768px) 
-and (max-width : 1024px) 
-and (orientation : portrait){
-.adl_2-0 .card-container .cardWrap{
-	width: 50%;
+/* Media Queries--- laptop */
+@media only screen and (max-width: 1366px) {
+	
+.col-md-2 {
+    width: 20%;
+}
+.col-md-3 {
+    width: 30%;
+}
+.col-md-4 {
+    width: 40%;
+}
+.col-md-5 {
+    width: 50%;
+}
+.col-md-6 {
+    width: 60%;
+}
+.col-md-7 {
+    width: 70%;
+}
+.col-md-8 {
+    width: 80%;
+}
+.col-md-9 {
+    width: 90%;
+}
+.col-md-10 {
+    width: 100%;
+}
+.col-md-05 {
+    width: 5%;
+}
+.col-md-15 {
+    width: 15%;
+}
+.col-md-25 {
+    width: 25%;
+}
+.col-md-35 {
+    width: 35%;
+}
+.col-md-33 {
+    width: 33.333333%;
+}
+.col-md-45 {
+    width: 45%;
+}
+.col-md-54 {
+    width: 54%;
+}
+.col-md-55 {
+    width: 55%;
+}
+.col-md-65 {
+    width: 65%;
+}
+.col-md-66{/*it can be used to make 2-1 column grid and the rest will be col-33*/
+    width: 66.66666667%
+}
+.col-md-75 {
+    width: 75%;
+}
+.col-md-85 {
+    width: 85%;
+}
+.col-md-95 {
+    width: 95%;
 }
 
-}
-/**/
 
-/* Media Queries */
-@media (min-width: 768px) and (max-width: 1366px) {
 .col-25.rLeftPanel{
 width: 26%;
 }
@@ -3856,9 +4156,271 @@ width: 74%;
 .gridHeaderRisk > div{
 	font-size: 12px;
 }
+
+.adl_2-0 .noPolicies .block {
+    padding-left: 10px;
+}
+.adl_2-0 .noPolicies .block .icon{
+	margin-right: 40px;
+}
+
+}
+/**/
+
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) 
+and (orientation : landscape){
+.col-sm-2 {
+    width: 20%;
+}
+.col-sm-3 {
+    width: 30%;
+}
+.col-sm-4 {
+    width: 40%;
+}
+.col-sm-5 {
+    width: 50%;
+}
+.col-sm-6 {
+    width: 60%;
+}
+.col-sm-7 {
+    width: 70%;
+}
+.col-sm-8 {
+    width: 80%;
+}
+.col-sm-9 {
+    width: 90%;
+}
+.col-sm-10 {
+    width: 100%;
+}
+.col-sm-05 {
+    width: 5%;
+}
+.col-sm-15 {
+    width: 15%;
+}
+.col-sm-25 {
+    width: 25%;
+}
+.col-sm-35 {
+    width: 35%;
+}
+.col-sm-33 {
+    width: 33.333333%;
+}
+.col-sm-45 {
+    width: 45%;
+}
+.col-sm-54 {
+    width: 54%;
+}
+.col-sm-55 {
+    width: 55%;
+}
+.col-sm-65 {
+    width: 65%;
+}
+.col-sm-66{/*it can be used to make 2-1 column grid and the rest will be col-33*/
+    width: 66.66666667%
+}
+.col-sm-75 {
+    width: 75%;
+}
+.col-sm-85 {
+    width: 85%;
+}
+.col-sm-95 {
+    width: 95%;
 }
 
 
+.adl_2-0 .card-container .cardWrap{
+	width: 50%;
+}
+.adl_2-0 #smsfModal .rightSec .blockSec{
+	padding:0 10px
+}
+.adl_2-0 #smsfModal .rightSec .title .amnt{
+	width:100%
+}
+.adl_2-0 #smsfModal .rightSec h3{
+	margin-bottom:3px
+}
+.adl_2-0 #smsfModal .rightSec .adl-scroll {
+    height: calc(100vh - 204px);
+}
+
+.adl_2-0 .adl-form-group.slideLabel .control-label, .adl_2-0 .slideLabel.form-control-label{
+	font-size:12px
+}
+
+.adl_2-0 .cardWrap:nth-child(2n) .iconBox .contentBox{
+	left: -236px;
+}
+
+.adl_2-0 .noPolicies{
+	padding:20px 10px
+}
+.adl_2-0 .noPolicies .icon{
+	display:none
+}
+.adl_2-0 .noPolicies .block.col-sm-45{
+	width:45%
+}
+.adl_2-0 .noPolicies .block.col-sm-55{
+	width:55%;
+    padding-left: 40px;
+}
+.adl_2-0 .noPolicies .sprte{
+	left:45%;
+}
+.adl_2-0 .noPolicies .block {
+    padding-left: 0
+}
+.adl_2-0 .noPolicies .block .icon{
+	margin-right:10px;
+}
+
+}
+/**/
+
+
+@media only screen 
+and (min-width : 768px) 
+and (max-width : 1024px) 
+and (orientation : portrait), (max-width : 768px) {
+.col-sm2-2 {
+    width: 20%;
+}
+.col-sm2-3 {
+    width: 30%;
+}
+.col-sm2-4 {
+    width: 40%;
+}
+.col-sm2-5 {
+    width: 50%;
+}
+.col-sm2-6 {
+    width: 60%;
+}
+.col-sm2-7 {
+    width: 70%;
+}
+.col-sm2-8 {
+    width: 80%;
+}
+.col-sm2-9 {
+    width: 90%;
+}
+.col-sm2-10 {
+    width: 100%;
+}
+.col-sm2-05 {
+    width: 5%;
+}
+.col-sm2-15 {
+    width: 15%;
+}
+.col-sm2-25 {
+    width: 25%;
+}
+.col-sm2-35 {
+    width: 35%;
+}
+.col-sm2-33 {
+    width: 33.333333%;
+}
+.col-sm2-45 {
+    width: 45%;
+}
+.col-sm2-54 {
+    width: 54%;
+}
+.col-sm2-55 {
+    width: 55%;
+}
+.col-sm2-65 {
+    width: 65%;
+}
+.col-sm2-66{/*it can be used to make 2-1 column grid and the rest will be col-33*/
+    width: 66.66666667%
+}
+.col-sm2-75 {
+    width: 75%;
+}
+.col-sm2-85 {
+    width: 85%;
+}
+.col-sm2-95 {
+    width: 95%;
+}
+
+
+.adl_2-0 .superlogic #nav-flow #nav > li{
+	padding: 2px 6px 2px 18px;
+}
+.adl_2-0 #nav-flow #nav > li img{
+	display:none
+}
+#smsfModal .adl-modal-content{
+	width:95%
+}
+.adl_2-0 .card-container .cardWrap{
+	width: 100%;
+}
+
+.adl_2-0 #smsfModal .leftSec, .adl_2-0 #smsfModal .rightSec{
+	width:100%
+}
+
+.adl_2-0 #smsfModal .leftSec .adl-scroll, .adl_2-0 #smsfModal .rightSec .adl-scroll{
+	height:auto
+}
+.adl_2-0 #smsfModal .rightSec .adl-scroll > .card, .adl_2-0 #smsfModal .rightSec .adl-scroll > .card + .card{
+	width:calc(50% - 4px);
+	margin:2px
+}
+
+.adl_2-0 .cardWrap .iconBox .contentBox{
+	left: -236px;
+}
+.adl_2-0 .showResult{
+	margin-left:0
+}
+
+.adl_2-0 .noPolicies {
+    padding: 20px 10px;
+}
+.adl_2-0 .noPolicies .icon{
+	display:none
+}
+.adl_2-0 .noPolicies .block.col-sm2-45{
+	width:45%
+}
+.adl_2-0 .noPolicies .block.col-sm2-5{
+	width:50%;
+	float:right
+}
+.adl_2-0 .noPolicies .sprte{
+	left: 45%;
+}
+.adl_2-0 .noPolicies .block {
+    padding-left: 0
+}
+.adl_2-0 .noPolicies .block .icon{
+	margin-right:10px;
+}
+
+
+}
+/**/
 
 
 

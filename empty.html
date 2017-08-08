@@ -1,0 +1,375 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="App_Themes/Default/adlStyle.css" rel="stylesheet" />
+<script src="script/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="script/adl_script.js"></script>
+
+<link href="App_Themes/Default/adl_2-0.css" rel="stylesheet" />
+
+<!--scroller-->
+<!--<script src="script/jquery.min.js"></script>-->
+<script src="script/perfect-scrollbar.with-mousewheel.min.js"></script>
+
+<!--font-awesome-icon-->
+<link href="App_Themes/Default/icon-font-awesome/font-awesome.css" type="text/css" rel="stylesheet" />
+<link href="App_Themes/Default/icon-font-awesome/font-awesome.min.css" type="text/css" rel="stylesheet" />
+
+<!--sliding label-->
+<script type="text/javascript" src="script/jquery-3.2.0.min.js"></script>
+
+<style>
+
+body{
+	overflow:hidden
+}
+
+/*temp*/
+.adl-modal-close {
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -3px -355px no-repeat;
+}
+.circleAroBlu-icon {
+    height: 23px;
+    width: 22px;
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -101px -292px no-repeat;
+}
+.deleteGrey-icon {
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -5px -69px no-repeat;
+}
+.drop-aro span {
+	background: url(Images/adlNewImages/icon-sprite-sheet.png) -70px -324px no-repeat;
+}
+.input-icon-calendar {
+    background: url(Images/adlNewImages/icon-sprite-sheet.png) -1px -163px no-repeat #E3EBF6;
+}
+.profilePic{
+    background: url(Images/adlNewImages/profile-pic.jpg) center bottom no-repeat #eee;
+    background-size: 130%;
+}
+
+.adl_2-0 #nav li i{
+	background: url(Images/adlNewImages/existingPoliciesIcon.svg) 80% center center no-repeat;
+}
+
+
+</style>
+
+</head>
+<body>
+<div class="adl-wrapper adl_2-0">
+    <div class="adl-container superlogic">
+      <nav id="nav-flow">  
+      <div class="profileWrap">
+      <div class="pContainer">
+      <i class="fa fa-check-circle"></i>
+      <div class="profilePic"><img src="Images/adlNewImages/pp1.jpg" alt="" ></div>
+      </div>
+      <div class="pContainer">
+      <i class="fa fa-check-circle"></i>
+      <div class="profilePic"><img src="Images/adlNewImages/pp2.jpg" alt="" ></div>
+      </div>
+      </div><!--profileWrap-->
+      
+        <ul id="nav">
+        <li class="active"><img src="Images/adlNewImages/adl2/existingPoliciesIcon.svg" alt="" > Existing SuperFunds</li>
+        <li><img src="Images/adlNewImages/adl2/needsAnalysisIcon.svg" alt="" > Research</li>
+        <li><img width="18" src="Images/adlNewImages/adl2/investment-portfolioIcon.svg" alt="" > Investment Portfolio</li>
+        <li><img width="18" src="Images/adlNewImages/adl2/feesIcon.svg" alt="" > Fees</li>
+        <li><img src="Images/adlNewImages/adl2/rolloverIcon.svg" alt="" > Rollover</li>
+        <li><img src="Images/adlNewImages/adl2/recommendedIcon.svg" alt="" > Recommended</li>
+        </ul>
+        
+        <div class="adl-floatR adl-marginR adl-parent">
+        <button class="adl-btn-head btn-sm font13 adl-marginT text-blue" for-drop-menu="addMenu_id">Options <i class="fa fa-caret-down"></i></button>
+        <div class="adl-menu" id="addMenu_id">
+                        <div class="menu-list">
+                        <ul>
+                        <li>Generate Reports</li> 
+                        <li>Set Defaults</li> 
+                        <li>Mapping</li>                     
+                        </ul>
+                       </div>
+        </div>
+        </div>
+      
+      </nav><!--nav-flow-->
+      
+      <div class="adl-container-inside adl-scroll overflow-scroll-basic">      
+      
+      <div class="userWrap">
+      
+        <div class="title col-10">
+        
+        <div class="adl-marginT adl-floatL col-sm2-5">
+        <div class="adl-floatL col-sm2-10">
+        <h4>Self Manged Super Funds<i id="smsfBtn" formodel="smsfModal" onclick="open_Model(this);" class="fa fa-plus-circle"></i></h4>
+        </div>
+        <div class="adl-floatL showResult">
+        <i class="fa fa-eye"></i> Showing 0 Results
+        </div>
+        <div class="adl-floatL viewArchvd">
+        <i class="fa fa-folder-open"></i> View 0 Archived
+        </div>        
+        </div>
+        
+        <div class="adl-floatR totalAcBlnc">  
+            <label>Total Account Balance:</label>
+            <div class="value adlHide">$100,000</div>
+             <div class="na">Not Available</div>           
+        </div><!--totalAcBlnc-->
+        
+        </div><!--title-->
+        
+<div class="noPolicies">
+        	<div class="block col-sm-45 col-sm2-45">
+            <div class="icon"><img src="Images/adlNewImages/box1.png" alt=""></div>
+            <div class="info">
+            <h5><span>Abhay Gupta</span> have <span class="fontSB text-grey">no SMSF</span></h5>            
+            <a href="#"><i class="fa fa-plus-circle"></i> Add New Super Fund</a>            
+            </div><!--info-->
+            </div><!--block-->
+            
+            <div class="sprte"><span>OR</span></div>
+            
+            <div class="block col-sm-55 col-sm2-5">
+            <div class="icon"><img src="Images/adlNewImages/box2.png" alt=""></div>
+            <div class="info">
+            <h5>Alternatively, You may declare any of these</h5>         
+            <div class="full"><span class="text-grey"><span class="fontSB">No SMSF needed</span> for</span> <span>Abhay Gupta</span> <a href="#">Declare</a></div>
+            <div class="full"><span class="text-grey"><span class="fontSB">Information is not shared</span></span> about Super Fund <a href="#">Declare</a></div> 
+            </div><!--info-->
+            </div><!--block-->
+            
+        </div><!--noPolicies-->
+        
+      </div><!--userWrap-->
+      
+      <div class="userWrap">
+      
+        <div class="title col-10">
+        
+        <div class="adl-marginT adl-floatL col-sm2-5">
+        <div class="adl-floatL col-sm2-10">
+        <h4>Super Funds <span class="text-blue">Abhay Gupta</span><i class="fa fa-plus-circle"></i></h4>
+        </div>
+        <div class="adl-floatL showResult">
+        <i class="fa fa-eye"></i> Showing 0 Results
+        </div>
+        <div class="adl-floatL viewArchvd">
+        <i class="fa fa-folder-open"></i> View 0 Archived
+        </div>        
+        </div>
+        
+        <div class="adl-floatR totalAcBlnc">  
+            <label>Total Account Balance:</label>
+            <div class="value adlHide">$100,000</div>
+             <div class="na">Not Available</div>
+            <span class="small">Excluding SMSF</span>
+        </div><!--totalAcBlnc-->
+        
+        </div><!--title-->
+        
+        <div class="noPolicies">
+        	<div class="block col-sm-45 col-sm2-45">
+            <div class="icon"><img src="Images/adlNewImages/box1.png" alt=""></div>
+            <div class="info">
+            <h5><span>Abhay Gupta</span> have <span class="fontSB text-grey">no Super Funds</span></h5>            
+            <a href="#"><i class="fa fa-plus-circle"></i> Add New Super Fund</a>            
+            </div><!--info-->
+            </div><!--block-->
+            
+            <div class="sprte"><span>OR</span></div>
+            
+            <div class="block col-sm-55 col-sm2-5">
+            <div class="icon"><img src="Images/adlNewImages/box2.png" alt=""></div>
+            <div class="info">
+            <h5>Alternatively, You may declare any of these</h5>         
+            <div class="full"><span class="text-grey"><span class="fontSB">No Super Funds needed</span> for</span> <span>Abhay Gupta</span> <a href="#">Declare</a></div>
+            <div class="full"><span class="text-grey"><span class="fontSB">Information is not shared</span></span> about Super Fund <a href="#">Declare</a></div> 
+            </div><!--info-->
+            </div><!--block-->
+            
+        </div><!--noPolicies-->
+        
+      </div><!--userWrap-->
+      
+      <div class="userWrap partner">
+      
+        <div class="title col-10">
+        
+        <div class="adl-marginT adl-floatL col-sm2-5">
+        <div class="adl-floatL col-sm2-10">
+        <h4>Super Funds <span class="text-brown">Ankita Gupta</span><i class="fa fa-plus-circle"></i></h4>
+        </div>
+        <div class="adl-floatL showResult">
+        <i class="fa fa-eye"></i> Showing 0 Results
+        </div>
+        <div class="adl-floatL viewArchvd">
+        <i class="fa fa-folder-open"></i> View 0 Archived
+        </div>        
+        </div>
+        
+        <div class="adl-floatR totalAcBlnc">  
+            <label>Total Account Balance:</label>
+            <div class="value adlHide">$100,000</div>
+             <div class="na">Not Available</div>
+            <span class="small">Excluding SMSF</span>
+        </div><!--totalAcBlnc-->
+        
+        </div><!--title-->
+        
+        <div class="noPolicies">
+        	<div class="block col-sm-45 col-sm2-45">
+            <div class="icon"><img src="Images/adlNewImages/box1.png" alt=""></div>
+            <div class="info">
+            <h5><span>Ankita Gupta</span> have <span class="fontSB text-grey">no Super Funds</span></h5>            
+            <a href="#"><i class="fa fa-plus-circle"></i> Add New Super Fund</a>            
+            </div><!--info-->
+            </div><!--block-->
+            
+            <div class="sprte"><span>OR</span></div>
+            
+            <div class="block col-sm-55 col-sm2-5">
+            <div class="icon"><img src="Images/adlNewImages/box2.png" alt=""></div>
+            <div class="info">
+            <h5>Alternatively, You may declare any of these</h5>         
+            <div class="full"><span class="text-grey"><span class="fontSB">No Super Funds needed</span> for</span> <span>Ankita Gupta</span> <a href="#">Declare</a></div>
+            <div class="full"><span class="text-grey"><span class="fontSB">Information is not shared</span></span> about Super Fund <a href="#">Declare</a></div> 
+            </div><!--info-->
+            </div><!--block-->
+            
+        </div><!--noPolicies-->
+        
+      </div><!--userWrap-->
+      
+      </div><!--adl-container-inside-->
+
+<div class="slidingBox slidingBoxOpen">
+    <div class="slidingIcon"><i class="fa fa-caret-right toggleArrow" aria-hidden="true"></i></div>
+    <div class="slidingContent vCenter">
+     <div class="slidingContentBox vCenter">
+      <div class="slideIcon"><img src="./images/adlNewImages/adl2/needsAnalysisIcon.svg"></div>
+      <div class="slideInfo">
+       <h4>Proceed To</h4>
+       <h3>Research</h3></div>
+     </div><!--slidingContentBox-->
+    </div><!--slidingCont-->
+</div><!--slidingBox-->
+
+
+
+
+
+
+</div><!--container--> 
+</div><!--adl-wrapper-->
+
+
+<script>
+$(document).ready(function(){	
+	//slide label//
+	$(".form-control").focus(function(){
+	
+		$(this).addClass("filled")
+		});		
+	$(".form-control").blur(function(){		
+		var fieldVar = $(this).val();		
+		if(fieldVar == ''){
+			$(this).removeClass("filled");
+		}
+		else{
+			$(this).addClass("filled");
+		}
+		});
+		
+		//Sliding Button
+		$(".slidingIcon").click(function(){
+		$(this).children('.toggleArrow').toggleClass('fa-caret-right fa-caret-left');
+		$(this).parent('.slidingBox').toggleClass('slidingBoxOpen slidingBoxClose');
+ 		});
+	
+	$(".cCover").click(function(){
+		$(".subModalWrap.childCover").addClass('subModalBottomZero');
+		$(this).addClass("btnActive");
+		$(".policyContent").addClass("adl-fade");
+	});
+		$(".pOptions").click(function(){
+		$(".subModalWrap.paymentMethods").addClass('subModalBottomZero');
+		$(this).addClass("btnActive");
+		$(".policyContent").addClass("adl-fade");
+	});
+		$(".vHistory").click(function(){
+		$(this).addClass("btnActive");
+		$(".subModalWrap.versionHistory").addClass('subModalBottomZero');
+		$(".policyContent").addClass("adl-fade");
+	});
+	$(".subModal-icon").click(function(){
+		$('.adl-modal-footer .adl-btn').removeClass('btnActive')
+		$(this).parent().parent().removeClass("subModalBottomZero");
+		$(".policyContent").removeClass("adl-fade");
+	})
+	
+	//auto height textarea
+			  $('.autoTextarea').each(function () { this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;'); }).on('input', function () {
+        this.style.height = 10 + 'px';
+        this.style.height = (this.scrollHeight) + 'px';
+		});
+	   
+	//expand comment row
+	$(".editComment, .autoTextarea").click(function(){
+		$(this).parent().parent().addClass("expand");
+	})
+	$('html').click(function() {
+   		$('.commentList li').removeClass('expand')
+	});
+	$('.commentList li').click(function(event){
+		 event.stopPropagation();
+	});
+	//Add Cash Box
+	$('#addCashBox').click(function(){
+		$('.addCash').toggleClass('open');
+	});
+	$('#cancelAddCash').click(function(){
+		$(this).parent().parent().removeClass('open');
+	});
+	//member box
+	$('#addMemberBtn').click(function(){
+		$('.wrap1').addClass('hide');
+		$('.wrap2').addClass('show');		
+		//auto height textarea
+	    $('.autoTextarea').each(function () { this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;'); }).on('input', function () {
+        this.style.height = 10 + 'px';
+        this.style.height = (this.scrollHeight) + 'px';
+		});	
+	});
+	$('#cancelMemberBtn').click(function(){
+		$('.wrap1').removeClass('hide');
+		$('.wrap2').removeClass('show');
+		//auto height textarea
+	    $('.autoTextarea').each(function () { this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;'); }).on('input', function () {
+        this.style.height = 10 + 'px';
+        this.style.height = (this.scrollHeight) + 'px';
+		});	
+	});
+	
+	$(".panelToggleBtn").click(function(){
+		$(this).parent().siblings().slideToggle();
+		$(this).toggleClass('fa-chevron-down fa-chevron-up');
+	});
+	
+	});
+	//load autoheight textarea on click of plus btn
+	$("#smsfBtn").click(function(){
+		$('.autoTextarea').each(function () { this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;'); }).on('input', function () {
+        this.style.height = 10 + 'px';
+        this.style.height = (this.scrollHeight) + 'px';
+		});
+	})
+	
+</script>
+
+</body>
+</html>
