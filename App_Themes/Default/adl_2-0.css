@@ -3779,7 +3779,7 @@ padding: 0 5px;
 .rollOverBody {
 	position: relative;
     padding-left: 445px !important;
-	height: calc(100vh - 218px);
+/* 	height: calc(100vh - 138px); */
 	margin-top: 10px;
 }
 .rollOverBody .roPanelLeft{
@@ -3788,6 +3788,7 @@ padding: 0 5px;
     width: 430px;
     HEIGHT: 100%;
     left: 0px;
+	height: calc(100vh - 138px);
 }
 .roSubHead .roSubHeadInfo{
     padding-left: 20px;
@@ -3817,7 +3818,8 @@ padding: 0 5px;
     float: left;
     border-radius: 4px;
     padding: 5px 0px 0px;
-    width: 390px;
+    /* width: 390px; */
+	width: 100%;
 	background: #fff;
 	transition: all 0.15s;
 	position: relative;
@@ -3856,7 +3858,7 @@ padding: 0 5px;
 .roCard .name{
     font-weight: 500;
     font-size: 14px;
-	color: #333l;
+	color: #333;
 }
 .roCard .accumlation{
     height: 30px;
@@ -3903,11 +3905,12 @@ padding: 0 5px;
     line-height: 14px;
 }
 .rollOverBody .roPanelright{
-	height: 100%;
+/* 	height: 100%; */
+    height: calc(100vh - 138px);
 }
 .rollOverBody .roPanelright .roGraphsview{
    border: solid 2px #40eec8;
-    height: 100%;
+/*     height: 100%; */
     border-bottom: none;
     border-right: snow;
     background: #f4f8f9;
@@ -3960,6 +3963,143 @@ padding: 0 5px;
     color: #65737f;
 }
 /*Super Funds Rollover styles End*/
+
+
+/* Investment Portfolio styles begins */
+.adl_2-0 .superlogic .investmentfolio .title h4.subh4 {
+    text-transform: uppercase;
+    color: #333;
+}
+.ipHeadSelect .form-control {
+    height: auto;
+    padding-top: 0px !important;
+
+}
+.ipHeadSelect .adl-select::after {
+    right: 5px !important;
+	bottom: -2px !important;
+	color: #1982cc;
+}
+.ipHeadCname{
+    color: #009f7f;
+    font-weight: 500;
+    margin-left: 5px;
+    font-size: 14px;
+}
+.for{
+	color: #333;
+	    font-size: 14px;
+    font-weight: 500;
+}
+.investmentfolio .cardHeader{
+    background: #dfeef2;
+    width: 100%;
+    float: left;
+    border-radius: 4px;
+    padding: 5px 10px;
+    color: #333;
+    font-size: 13px;
+}
+.investmentfolio .cardWrap{
+    width: 100%;
+    padding: 5px 0px;
+}
+.investmentfolio #cardWrapHeight{
+	height: calc(100vh - 175px);
+}
+.investmentfolio .cardWrap .card{
+    border-radius: 4px;
+}
+.investmentfolio .cardWrap .card:hover{
+    cursor: default;
+    box-shadow: 0 0 0px rgba(0,0,0,0.0);
+    border: 1px solid #dde2e6;
+}
+.investmentfolio .cardWrap .cardDetails {
+	padding: 12px 0px;
+}
+.investmentfolio .cardWrap .cardBorderR{
+    border-right: 1px solid #e8edf1;
+}
+.investmentfolio .cardWrap .minHeight{
+	min-height: 38px;
+}
+.investmentfolio .cardWrap .card label{
+	font-weight: 500;
+    font-size: 14px;
+    color: #333;
+}
+.investmentfolio .cardWrap .card .value{
+	color: #666;
+    font-size: 14px;
+}
+.investmentfolio .cardWrap .card .value span:first-child{
+    border-right: 1px solid #666;
+    padding-right: 5px;
+}
+.investmentfolio .cardWrap .card .vCenter{
+   display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+}
+.investmentfolio .cardWrap .card .amnt,
+.investmentfolio .addInvesmentCard .card .amnt{
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #65737f;
+}
+.investmentfolio .addInvesmentCard{
+    width: 100%;
+    padding: 5px 0px;
+	display: none;
+}
+.investmentfolio .addInvesmentCard .card{
+    border: 1px solid #dde2e6;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 4px;
+    float: left;
+    position: relative;
+    transition: all 0.15s ease 0s;
+    -webkit-transition: all 0.15s ease 0s;
+    -moz-transition: all 0.15s ease 0s;
+    padding: 10px 0px 20px;
+}
+.investmentfolio .ipPolicyDetails .opSigns{
+    height: 26px;
+    width: 26px;
+    background: #e1e8ed;
+    opacity: 0.4;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+	margin-right: 10px;
+}
+.investmentfolio .ipPolicyDetails .opSigns span{
+    width: 13.8px;
+    height: 1.2px;
+    border: solid 1.2px #333333;
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    margin-left: -6.9px;
+    top: 50%;
+}
+.investmentfolio .ipPolicyDetails .opSigns.two span:first-child{
+	top: 42%;
+}
+.investmentfolio .ipPolicyDetails .opSigns.two span:last-child{
+	top: 58%;
+}
+.investmentfolio .ipPolicyDetails .bal.under{
+ color: #e74c3c;
+}
+.investmentfolio #policyScrollHeight{
+    height: calc(100vh - 143px);
+}
+/* Investment Portfolio styles end */
 
 .adl_2-0 .superlogic .title h4{
 	color:#485a65
