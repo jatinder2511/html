@@ -21,48 +21,12 @@
 <!--sliding label-->
 <script type="text/javascript" src="script/jquery-3.2.0.min.js"></script>
 
-<style>
-
-body{
-	overflow:hidden
-}
-
-/*temp*/
-.adl-modal-close {
-    background: url(Images/adlNewImages/icon-sprite-sheet.png) -3px -355px no-repeat;
-}
-.circleAroBlu-icon {
-    height: 23px;
-    width: 22px;
-    background: url(Images/adlNewImages/icon-sprite-sheet.png) -101px -292px no-repeat;
-}
-.deleteGrey-icon {
-    background: url(Images/adlNewImages/icon-sprite-sheet.png) -5px -69px no-repeat;
-}
-.drop-aro span {
-	background: url(Images/adlNewImages/icon-sprite-sheet.png) -70px -324px no-repeat;
-}
-.input-icon-calendar {
-    background: url(Images/adlNewImages/icon-sprite-sheet.png) -1px -163px no-repeat #E3EBF6;
-}
-.profilePic{
-    background: url(Images/adlNewImages/profile-pic.jpg) center bottom no-repeat #eee;
-    background-size: 130%;
-}
-
-.adl_2-0 #nav li i{
-	background: url(Images/adlNewImages/existingPoliciesIcon.svg) 80% center center no-repeat;
-}
-
-
-</style>
-
 </head>
 <body>
 <div class="adl-wrapper adl_2-0">
 
     <div class="adl-container superlogic">
-      <nav id="nav-flow">  
+      <nav id="nav-flow">
       <div class="profileWrap">
       <div class="pContainer">
       <i class="fa fa-check-circle"></i>
@@ -75,12 +39,14 @@ body{
       </div><!--profileWrap-->
       
         <ul id="nav">
-        <li class="active"><img src="Images/adlNewImages/adl2/existingPoliciesIcon.svg" alt="" > Existing SuperFunds</li>
-        <li><img src="Images/adlNewImages/adl2/needsAnalysisIcon.svg" alt="" > Research</li>
-        <li><img width="18" src="Images/adlNewImages/adl2/investment-portfolioIcon.svg" alt="" > Investment Portfolio</li>
-        <li><img width="18" src="Images/adlNewImages/adl2/feesIcon.svg" alt="" > Fees</li>
-        <li><img src="Images/adlNewImages/adl2/rolloverIcon.svg" alt="" > Rollover</li>
-        <li><img src="Images/adlNewImages/adl2/recommendedIcon.svg" alt="" > Recommended</li>
+        <li class="active"><a href="existing-superfunds.html"><img src="Images/adlNewImages/adl2/existingPoliciesIcon.svg" alt="" > Existing SuperFunds</a></li>
+        <li><a href="#"><img src="Images/adlNewImages/adl2/needsAnalysisIcon.svg" alt="" > Research</a></li>
+        <li><a href="investment_portfolio.html"><img width="18" src="Images/adlNewImages/adl2/investment-portfolioIcon.svg" alt="" > Investment Portfolio</a></li>
+        <li><a href="#"><img width="18" src="Images/adlNewImages/adl2/feesIcon.svg" alt="" > Fees</a></li>
+        <li><a href="rollover.html"><img src="Images/adlNewImages/adl2/rolloverIcon.svg" alt="" > Rollover</a></li>
+        <li><a href="#"><img src="Images/adlNewImages/adl2/recommendedIcon.svg" alt="" > Recommended</a></li>
+        <li><a href="#"><img src="Images/adlNewImages/adl2/justificationIcon.svg" alt="" > Justification</a></li>
+        <li><a href="#"><img src="Images/adlNewImages/adl2/justificationIcon.svg" alt="" > Justification</a></li>
         </ul>
         
         <div class="adl-floatR adl-marginR adl-parent">
@@ -281,7 +247,7 @@ body{
         
         <div class="adl-marginT adl-floatL col-sm2-5">        
         <div class="adl-floatL col-sm2-10">
-        <h4>Super Funds <span class="text-blue">Ankita Gupta</span><i id="sfbtn" formodel="sfModal" onclick="open_Model(this);" class="fa fa-plus-circle"></i></h4>
+        <h4>Super Funds <span class="text-blue">Ankita Gupta</span><i id="sfBtn" formodel="sfModal" onclick="open_Model(this);" class="fa fa-plus-circle"></i></h4>
         </div>
         <div class="adl-floatL showResult">
         <i class="fa fa-eye"></i> Showing 5 Results
@@ -602,7 +568,11 @@ body{
     
     <div class="col-10 newComment">
     <div class="adl-form-group adl-no-margin col-10">
-    <textarea class="form-control baseBorder no-borderLR no-borderT autoTextarea" placeholder="Hit enter or click to start a new comment"></textarea>
+    <textarea class="form-control baseBorder no-borderLR no-borderT autoTextarea" placeholder="Please enter to add a new comment"></textarea>
+    		<div class="row textR adlHide">
+            <button type="button" class="adl-btn btn-sm bordered adl-no-marginB">Cancel</button>
+            <button type="button" class="adl-btn btn-sm adl-no-marginB">Save</button>
+            </div>
     </div>
     </div><!--newComment-->
     
@@ -794,36 +764,38 @@ body{
     
     <div class="addCash">
     <div class="card">
-		<div class="form-horizontal">
-        <div class="adl-form-group col-10 slideLabel">
-         <input type="text" class="form-control baseBorder">          
-         <label class="control-label">Name</label>
-         </div>
-        </div>
-        <div class="form-horizontal">
-        <div class="adl-form-group col-35 slideLabel">
-         <input type="text" class="form-control baseBorder">          
-         <label class="control-label">Code</label>
-         </div>
-         <div class="adl-form-group col-65 slideLabel adl-select">
+    	<div class="form-horizontal">
+    	<div class="adl-form-group col-10 slideLabel adl-select">
          <select class="form-control baseBorder">
           <option value="1">Australian Share</option>
          </select>
          </div>
+         </div>
+        <div class="form-horizontal">
+        <div class="adl-form-group col-4 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Code</label>
+         </div>
+         <div class="adl-form-group col-6 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Name</label>
+         </div>
         </div>
-        <div class="detailBlock col-10">     
-            <div class="col-33 col-sm-25">
+        <div class="detailBlock col-10">
+        <div class="form-horizontal">
+            <div class="adl-form-group col-33 col-sm-25">
             <label>Proportion</label>
-            <div class="amnt">11.11 %</div>
+            <input type="text" class="form-control baseBorder amnt adl-no-padding" value="11.11%">
             </div>
-            <div class="col-33 col-sm-35">
+            <div class="adl-form-group col-33 col-sm-35">
             <label>Recommended</label>
-             <div class="amnt">$10,000</div>
+            <input type="text" class="form-control baseBorder amnt adl-no-padding" value="$10,000">
             </div>
-            <div class="col-33  col-sm-4">
+            <div class="adl-form-group col-33 col-sm-4">
             <label>Regular Investment</label>
-             <div class="amnt">$3,000</div>
-            </div>   
+            <input type="text" class="form-control baseBorder amnt adl-no-padding" value="$3,000">
+            </div>
+         </div>
         </div>        
     </div><!--card-->
     
@@ -975,50 +947,76 @@ body{
     <div class="blockSec">
     <h3>SUPER DETAILS  <span class="links adl-floatR"><a href="#">Extras(12)</a></span> </h3>
 <div class="wrap1 adlSet">
-<div class="adl-paddingB adl-no-paddingLR col-10 cell-borderB">
+<div class="adl-paddingB adl-no-paddingLR col-10">
     <div class="form-horizontal adl-marginT">
-		<div class="adl-form-group col-35 slideLabel">
+		<div class="adl-form-group col-2 slideLabel">
          <input type="text" class="form-control baseBorder">          
          <label class="control-label">Name</label>
          </div>
+         <div class="adl-form-group col-2 slideLabel adl-select">
+         <select class="form-control baseBorder">
+         <option></option>
+          <option value="1">Abhay</option>
+         </select>
+         <label class="control-label">Member</label>
+         </div>
+         <div class="adl-form-group col-25 slideLabel adl-select">
+         <select class="form-control baseBorder">
+         <option></option>
+          <option value="1">Business Expenses</option>
+         </select>
+         <label class="control-label">Industry Super Fund</label>
+         </div>
          <div class="adl-form-group col-35 slideLabel adl-select">
          <select class="form-control baseBorder">
          <option></option>
-          <option value="1">25 Apr 2017</option>
+          <option value="1">ACSRF Allocated Pension - Cash</option>
          </select>
-         <label class="control-label">Commencement Date</label>
+         <label class="control-label">Industry Option</label>
          </div>
-         <div class="adl-form-group col-3 slideLabel">
-         <input type="text" class="form-control baseBorder">          
-         <label class="control-label">Account Code</label>
-         </div>       
     </div>
     <div class="form-horizontal adl-marginT">		
-         <div class="adl-form-group col-35 slideLabel adl-select">
+         
+         <div class="adl-form-group col-25 slideLabel">
+         <input type="text" class="form-control baseBorder">
+         <label class="control-label">Investment Option Amount</label>
+         </div>
+         <div class="adl-form-group col-15 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">As at</label>
+         </div>   
+         <div class="adl-form-group col-2 slideLabel adl-select">
          <select class="form-control baseBorder">
          <option></option>
-          <option value="1">Recommended</option>
+          <option value="1">Current</option>
          </select>
          <label class="control-label">Account Status</label>
          </div>
-         <div class="adl-form-group col-35 slideLabel">
+         <div class="adl-form-group col-2 slideLabel">
          <input type="text" class="form-control baseBorder">
-         <label class="control-label">TFN</label>
-         </div>
-         <div class="adl-form-group col-3 slideLabel">
-         <input type="text" class="form-control baseBorder">          
-         <label class="control-label">ABN</label>
-         </div>       
+         <label class="control-label">Account Code</label>
+         </div>  
+         <div class="adl-form-group col-2 slideLabel">
+         <input type="text" class="form-control baseBorder">
+         <label class="control-label">Issue Date</label>
+         </div> 
     </div>
     <div class="form-horizontal adl-marginT">
-         <div class="adl-form-group col-35 slideLabel">
-          <input type="text" class="form-control baseBorder">
-         <label class="control-label">Corporate Trustee Name</label>
+         <div class="adl-form-group col-4 slideLabel adl-select">
+         <select class="form-control baseBorder">
+         <option></option>
+          <option value="1">Binding death nomination lapsing</option>
+         </select>
+         <label class="control-label">Estate Options</label>
          </div>
          <div class="adl-form-group col-35 slideLabel">
-          <input type="text" class="form-control baseBorder">
-         <label class="control-label">Corporate ACN</label>
-         </div>                
+        <input type="text" class="form-control baseBorder">
+         <label class="control-label">Death Nominee</label>
+         </div>   
+         <div class="adl-form-group col-25 slideLabel">
+         <input type="text" class="form-control baseBorder">
+         <label class="control-label">BDN Expire Date</label>
+         </div>     
     </div>
 </div>
 
@@ -1177,7 +1175,11 @@ body{
     
     <div class="col-10 newComment">
     <div class="adl-form-group adl-no-margin col-10">
-    <textarea class="form-control baseBorder no-borderLR no-borderT autoTextarea" placeholder="Hit enter or click to start a new comment"></textarea>
+    <textarea class="form-control baseBorder no-borderLR no-borderT autoTextarea" placeholder="Please enter to add a new comment"></textarea>
+    		<div class="row textR adlHide">
+            <button type="button" class="adl-btn btn-sm bordered adl-no-marginB">Cancel</button>
+            <button type="button" class="adl-btn btn-sm adl-no-marginB">Save</button>
+            </div>
     </div>
     </div><!--newComment-->
     
@@ -1207,36 +1209,38 @@ body{
     
     <div class="addCash">
     <div class="card">
-		<div class="form-horizontal">
-        <div class="adl-form-group col-10 slideLabel">
-         <input type="text" class="form-control baseBorder">          
-         <label class="control-label">Name</label>
-         </div>
-        </div>
-        <div class="form-horizontal">
-        <div class="adl-form-group col-35 slideLabel">
-         <input type="text" class="form-control baseBorder">          
-         <label class="control-label">Code</label>
-         </div>
-         <div class="adl-form-group col-65 slideLabel adl-select">
+    	<div class="form-horizontal">
+    	<div class="adl-form-group col-10 slideLabel adl-select">
          <select class="form-control baseBorder">
           <option value="1">Australian Share</option>
          </select>
          </div>
+         </div>
+        <div class="form-horizontal">
+        <div class="adl-form-group col-4 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Code</label>
+         </div>
+         <div class="adl-form-group col-6 slideLabel">
+         <input type="text" class="form-control baseBorder">          
+         <label class="control-label">Name</label>
+         </div>
         </div>
-        <div class="detailBlock col-10">     
-            <div class="col-33 col-sm-25">
+        <div class="detailBlock col-10">
+        <div class="form-horizontal">
+            <div class="adl-form-group col-33 col-sm-25">
             <label>Proportion</label>
-            <div class="amnt">11.11 %</div>
+            <input type="text" class="form-control baseBorder amnt adl-no-padding" value="11.11%">
             </div>
-            <div class="col-33 col-sm-35">
+            <div class="adl-form-group col-33 col-sm-35">
             <label>Recommended</label>
-             <div class="amnt">$10,000</div>
+            <input type="text" class="form-control baseBorder amnt adl-no-padding" value="$10,000">
             </div>
-            <div class="col-33  col-sm-4">
+            <div class="adl-form-group col-33 col-sm-4">
             <label>Regular Investment</label>
-             <div class="amnt">$3,000</div>
-            </div>   
+            <input type="text" class="form-control baseBorder amnt adl-no-padding" value="$3,000">
+            </div>
+         </div>
         </div>        
     </div><!--card-->
     
@@ -1559,13 +1563,22 @@ $(document).ready(function(){
         this.style.height = (this.scrollHeight) + 'px';
 		});
 	});
+		
 	$("#sfBtn").click(function(){
 		$('.autoTextarea').each(function () { this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;'); }).on('input', function () {
-        this.style.height = 10 + 'px';
-        this.style.height = (this.scrollHeight) + 'px';
+		this.style.height = 10 + 'px';
+		this.style.height = (this.scrollHeight) + 'px';
 		});
 	});
-	
+	//Add Cash Box
+	$('#addCashBox2').click(function(){
+		$('.addCash').toggleClass('open');
+	});
+	$('#cancelAddCash2').click(function(){
+		$(this).parent().parent().removeClass('open');
+	});
+		
+
 	$('#deleteSF').click(function(){
 		$(this).addClass('hide');
 		$('.confirmRow').addClass('show');

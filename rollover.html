@@ -21,42 +21,6 @@
 <!--sliding label-->
 <script type="text/javascript" src="script/jquery-3.2.0.min.js"></script>
 
-<style>
-
-body{
-	overflow:hidden
-}
-
-/*temp*/
-.adl-modal-close {
-    background: url(Images/adlNewImages/icon-sprite-sheet.png) -3px -355px no-repeat;
-}
-.circleAroBlu-icon {
-    height: 23px;
-    width: 22px;
-    background: url(Images/adlNewImages/icon-sprite-sheet.png) -101px -292px no-repeat;
-}
-.deleteGrey-icon {
-    background: url(Images/adlNewImages/icon-sprite-sheet.png) -5px -69px no-repeat;
-}
-.drop-aro span {
-	background: url(Images/adlNewImages/icon-sprite-sheet.png) -70px -324px no-repeat;
-}
-.input-icon-calendar {
-    background: url(Images/adlNewImages/icon-sprite-sheet.png) -1px -163px no-repeat #E3EBF6;
-}
-.profilePic{
-    background: url(Images/adlNewImages/profile-pic.jpg) center bottom no-repeat #eee;
-    background-size: 130%;
-}
-
-.adl_2-0 #nav li i{
-	background: url(Images/adlNewImages/existingPoliciesIcon.svg) 80% center center no-repeat;
-}
-
-
-</style>
-
 </head>
 <body>
 <div class="adl-wrapper adl_2-0">
@@ -75,12 +39,13 @@ body{
       </div><!--profileWrap-->
       
         <ul id="nav">
-        <li><img src="Images/adlNewImages/adl2/existingPoliciesIcon.svg" alt="" > Existing SuperFunds</li>
-        <li><img src="Images/adlNewImages/adl2/needsAnalysisIcon.svg" alt="" > Research</li>
-        <li><img width="18" src="Images/adlNewImages/adl2/investment-portfolioIcon.svg" alt="" > Investment Portfolio</li>
-        <li><img width="18" src="Images/adlNewImages/adl2/feesIcon.svg" alt="" > Fees</li>
-        <li class="active"><img src="Images/adlNewImages/adl2/rolloverIcon.svg" alt="" > Rollover</li>
-        <li><img src="Images/adlNewImages/adl2/recommendedIcon.svg" alt="" > Recommended</li>
+        <li><a href="existing-superfunds.html"><img src="Images/adlNewImages/adl2/existingPoliciesIcon.svg" alt="" > Existing SuperFunds</a></li>
+        <li><a href="#"><img src="Images/adlNewImages/adl2/needsAnalysisIcon.svg" alt="" > Research</a></li>
+        <li><a href="investment_portfolio.html"><img width="18" src="Images/adlNewImages/adl2/investment-portfolioIcon.svg" alt="" > Investment Portfolio</a></li>
+        <li><a href="#"><img width="18" src="Images/adlNewImages/adl2/feesIcon.svg" alt="" > Fees</a></li>
+        <li class="active"><a href="rollover.html"><img src="Images/adlNewImages/adl2/rolloverIcon.svg" alt="" > Rollover</a></li>
+        <li><a href="#"><img src="Images/adlNewImages/adl2/recommendedIcon.svg" alt="" > Recommended</a></li>
+        <li><a href="#"><img src="Images/adlNewImages/adl2/justificationIcon.svg" alt="" > Justification</a></li>
         </ul>
       
       </nav><!--nav-flow-->
@@ -118,7 +83,9 @@ body{
 							
 							<div class="col-5">
 								<div class="rAmountTitle">Rollover Amount</div>
-								<div  class="rAmount">$10,000</div>
+								<div  class="rAmount adl-form-group">
+                                <input type="text" class="form-control baseBorder" value="$10,000">
+                                </div>
 								<div class="remainingamount">Remaining amount $5,000</div>
 							</div>
 							
@@ -142,7 +109,9 @@ body{
 							
 							<div class="col-5">
 								<div class="rAmountTitle">Rollover Amount</div>
-								<div  class="rAmount">$1000</div>
+								<div  class="rAmount adl-form-group">
+                                <input type="text" class="form-control baseBorder" value="$10,000">
+                                </div>
 								<div class="remainingamount">Remaining amount $5000</div>
 							</div>
 							
@@ -167,7 +136,9 @@ body{
 							
 							<div class="col-5">
 								<div class="rAmountTitle">Rollover Amount</div>
-								<div  class="rAmount">$10,000</div>
+								<div  class="rAmount adl-form-group">
+                                <input type="text" class="form-control baseBorder" value="$10,000">
+                                </div>
 								<div class="remainingamount">Remaining amount $5,000</div>
 							</div>
 							
@@ -191,7 +162,9 @@ body{
 							
 							<div class="col-5">
 								<div class="rAmountTitle">Rollover Amount</div>
-								<div  class="rAmount">$10,000</div>
+								<div  class="rAmount adl-form-group">
+                                <input type="text" class="form-control baseBorder" value="$10,000">
+                                </div>
 								<div class="remainingamount">Remaining amount $5,000</div>
 							</div>
 							
@@ -278,11 +251,310 @@ body{
       </div><!--adl-container-inside-->
   </div><!--container--> 
 
+
+
+<div id="reasonModal" class="adl-modal">
+
+<div class="adl-modal-content col-95">
+
+<div class="left">
+
+<div class="cardWrap">
+	<div class="card adl-marginB">
+        <div class="row col-5">
+       <div class="adl-marginTB fontSB font15">Rolling Into</div>
+        </div><!--row-->
+      </div><!--card-->
+        
+        <div class="card active">           
+        <div class="row">          
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">JBH12345</div>
+            </div>
+            <div class="amnt">
+            <label>p.a.</label>
+            <div class="value">$10,000</div>            
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-25 adl-no-paddingL red"><i class="fa fa-circle"></i> Closed</div>
+            <div class="col-4 adl-no-paddingL"><img width="12" src="Images/adlNewImages/adl2/accumulationIcon.svg" alt=""> Accumulation</div>
+           <div class="col-35 adl-no-paddingL"><img width="16" src="Images/adlNewImages/Error_Insurance.svg" alt=""> $10,000</div>
+            </div>  
+            
+            </div><!--details-->
+        </div><!--row-->
+
+        </div><!--card-->
+</div><!--cardWrap-->
+
+<div class="adl-scroll noBG overflow-scroll-basic adlSet">
+<div class="cardWrap adl-paddingT">
+		<div class="card adl-marginTB">
+        <div class="row col-5">
+       <div class="adl-marginTB fontSB font15">Rolling Out Of</div>
+        </div><!--row-->
+      </div><!--card-->
+      
+        <div class="card out">           
+        <div class="row">          
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">JBH12345</div>
+            </div>
+            <div class="amnt">
+            <label>p.a.</label>
+            <div class="value">$10,000</div>            
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-25 adl-no-paddingL red"><i class="fa fa-circle"></i> Closed</div>
+            <div class="col-4 adl-no-paddingL"><img width="12" src="Images/adlNewImages/adl2/accumulationIcon.svg" alt=""> Accumulation</div>
+           <div class="col-35 adl-no-paddingL"><img width="16" src="Images/adlNewImages/Error_Insurance.svg" alt=""> $10,000</div>
+            </div>         
+
+            </div><!--details-->            
+            <div class="adlSet grey-bg textC red LH2">
+            Associated Insurance will be lost.
+            </div>
+        </div><!--row-->
+
+        </div><!--card-->
+        </div><!--cardWrap--> 
+<div class="cardWrap">
+        <div class="card out">           
+        <div class="row">          
+            <div class="logo"><img src="Images/adlNewImages/logo/amp.png" alt=""></div>
+            <div class="details">
+            <div class="cmpny">
+            <div class="name text-truncate">Priority Protection Plan</div>
+            <div class="code">JBH12345</div>
+            </div>
+            <div class="amnt">
+            <label>p.a.</label>
+            <div class="value">$10,000</div>            
+            </div>
+            
+            <div class="col-10 adl-no-paddingLR infoRow">
+            <div class="col-25 adl-no-paddingL red"><i class="fa fa-circle"></i> Closed</div>
+            <div class="col-4 adl-no-paddingL"><img width="12" src="Images/adlNewImages/adl2/accumulationIcon.svg" alt=""> Accumulation</div>
+           <div class="col-35 adl-no-paddingL"><img width="16" src="Images/adlNewImages/Error_Insurance.svg" alt=""> $10,000</div>
+            </div>             
+            
+            </div><!--details-->
+        </div><!--row-->
+
+        </div><!--card-->
+        </div><!--cardWrap-->
+</div>
+
+
+</div><!--left-->
+
+
+
+<div class="right">
+
+<div class="col-10 content">
+
+<span class="adl-modal-icon adl-modal-close" onclick="close_Model();">X</span>
+
+<div class="tabsHead">
+	<ul>
+    <li class="tabBtn active" onclick="openTab(event, 'tab1')">REASONS</li>
+    <li class="tabBtn" onclick="openTab(event, 'tab2')">CONSEQUENCES</li>
+    </ul>
+</div>
+
+<div id="tab1" class="tabsContent adl-scroll overflow-scroll-basic" style="display: block;">
+<div class="withoutCheck" style="display: none;">
+<div class="selected">
+<h3>SELECTED REASONS</h3>
+<ol>
+<li>Because you are older than when you took out the existing policy, you may have to pay a higher premium.</li>
+<li>There may be restrictions in the new policy.</li>
+</ol>
+</div>
+
+<div class="skipped">
+<h3>SKIPPED REASONS</h3>
+<ol>
+<li>You may not receive approval for cover under the new policy.</li>
+<li>The Delay before a suicide or trauma claim can be paid may start again.</li>
+<li>Due to the sum insured you may be required to undergo a medical test and/or blood screen.</li>
+<li>Due to your hobbies/lifestyle activities an exclusion may now be applied.</li>
+<li>By holding your insurance viaa superannuation, your retirement savings will not grow at the same pace.</li>
+<li>If your insurance is held in your superannuation, your benefits are paid into your superannuation fund and
+access to these funds will be subject to meeting a conditions of release and at the discretion of the trustee.
+Furthermore, you may have to pay tax on the TPD payout.</li>
+<li>If Your Insurance is held within superannuation , and you amke additional contribution cover the rquired
+Premiums, yopu will need to ensure that you don't advertently breach the contributions caps.</li>
+<li>If Your Insurance is held your superannuation , your benefits may be taxable if paid to a non-dependent or a
+superannuation lump sum payable to yourself. You should refer to your tax professional for advice on the impact to
+you.</li>
+<li>Change to your health may affect your insurability and may result in restrictions and/ot higher premiums.</li>
+<li>If Your Insurance is held your superannuation , and you roll over yout superannuatio to another fund, your insurance
+policy will automatically end.</li>
+</ol>
+</div>
+</div><!-- end of withoutCheck -->
+
+<div class="withCheck">
+<div class="selected">
+<h5>Choose all that apply. Use the text box to add reasons not mentioned below.</h5>
+</div>
+<div class="listToSelect">
+<ul>
+	<li>
+		<input class="adl-checkbox" type="checkbox" id="cb1" checked>
+		<label for="cb1"><span class="check_text">Because you are older than when you took out the existing policy, you may have to pay a higher premium.</span></label>
+	</li>
+	<li>
+		<input class="adl-checkbox" type="checkbox" id="cb2">
+		<label for="cb2"><span class="check_text">There may be restrictions in the new policy.</span></label>
+	</li>
+	<li >
+		<input class="adl-checkbox" type="checkbox" id="cb3" checked>
+		<label for="cb3"><span class="check_text">You may not receive approval for cover under the new policy.</span></label>
+	</li>
+		<li>
+		<input class="adl-checkbox" type="checkbox" id="cb4">
+		<label for="cb4"><span class="check_text">The Delay before a suicide or trauma claim can be paid may start again.</span></label>
+	</li>
+	<li>
+		<input class="adl-checkbox" type="checkbox" id="cb5" checked>
+		<label for="cb5"><span class="check_text">Due to the sum insured you may be required to undergo a medical test and/or blood screen.</span></label>
+	</li>
+	<li>
+		<input class="adl-checkbox" type="checkbox" id="cb6" checked>
+		<label for="cb6"><span class="check_text">Due to your hobbies/lifestyle activities an exclusion may now be applied.</span></label>
+	</li>
+		<li>
+		<input class="adl-checkbox" type="checkbox" id="cb7">
+		<label for="cb7"><span class="check_text">By holding your insurance viaa superannuation, your retirement savings will not grow at the same pace.</span></label>
+	</li>
+		<li>
+		<input class="adl-checkbox" type="checkbox" id="cb8">
+		<label for="cb8"><span class="check_text">If your insurance is held in your superannuation, your benefits are paid into your superannuation fund and
+access to these funds will be subject to meeting a conditions of release and at the discretion of the trustee.
+Furthermore, you may have to pay tax on the TPD payout.</span></label>
+	</li>
+		<li>
+		<input class="adl-checkbox" type="checkbox" id="cb9">
+		<label for="cb9"><span class="check_text">If Your Insurance is held within superannuation , and you amke additional contribution cover the rquired
+Premiums, yopu will need to ensure that you don't advertently breach the contributions caps.</span></label>
+	</li>
+		<li>
+		<input class="adl-checkbox" type="checkbox" id="cba">
+		<label for="cba"><span class="check_text">If Your Insurance is held your superannuation , your benefits may be taxable if paid to a non-dependent or a
+superannuation lump sum payable to yourself. You should refer to your tax professional for advice on the impact to
+you.</span></label>
+	</li>
+		<li>
+		<input class="adl-checkbox" type="checkbox" id="cbb">
+		<label for="cbb"><span class="check_text">Change to your health may affect your insurability and may result in restrictions and/ot higher premiums.</span></label>
+	</li>
+	<li>
+		<input class="adl-checkbox" type="checkbox" id="cbc">
+		<label for="cbc"><span class="check_text">If Your Insurance is held your superannuation , and you roll over yout superannuatio to another fund, your insurance
+policy will automatically end.</span></label>
+	</li>
+	<li>
+		<div class="adl-form-group other">
+        <textarea class="form-control baseBorder no-borderLR no-borderT autoTextarea" placeholder="Other Reason"></textarea>
+            <div class="row textR adlHide">
+            <button type="button" class="adl-btn btn-sm bordered adl-no-marginB">Cancel</button>
+            <button type="button" class="adl-btn btn-sm adl-no-marginB">Save</button>
+            </div>
+        </div>
+        
+	</li>
+</ul>
+</div>
+</div><!-- end of withCheck -->
+</div><!--tab1-->
+ 
+  <div id="tab2" class="tabsContent adl-scroll overflow-scroll-basic">
+<div class="withoutCheck">
+<div class="selected">
+<h3>SELECTED REASONS</h3>
+<ol>
+<li>Because you are older than when you took out the existing policy, you may have to pay a higher premium.</li>
+<li>There may be restrictions in the new policy.</li>
+</ol>
+</div>
+
+<div class="skipped">
+<h3>SKIPPED REASONS</h3>
+<ol>
+<li>You may not receive approval for cover under the new policy.</li>
+<li>The Delay before a suicide or trauma claim can be paid may start again.</li>
+<li>Due to the sum insured you may be required to undergo a medical test and/or blood screen.</li>
+<li>Due to your hobbies/lifestyle activities an exclusion may now be applied.</li>
+<li>By holding your insurance viaa superannuation, your retirement savings will not grow at the same pace.</li>
+<li>If your insurance is held in your superannuation, your benefits are paid into your superannuation fund and
+access to these funds will be subject to meeting a conditions of release and at the discretion of the trustee.
+Furthermore, you may have to pay tax on the TPD payout.</li>
+<li>If Your Insurance is held within superannuation , and you amke additional contribution cover the rquired
+Premiums, yopu will need to ensure that you don't advertently breach the contributions caps.</li>
+<li>If Your Insurance is held your superannuation , your benefits may be taxable if paid to a non-dependent or a
+superannuation lump sum payable to yourself. You should refer to your tax professional for advice on the impact to
+you.</li>
+<li>Change to your health may affect your insurability and may result in restrictions and/ot higher premiums.</li>
+<li>If Your Insurance is held your superannuation , and you roll over yout superannuatio to another fund, your insurance
+policy will automatically end.</li>
+</ol>
+</div>
+</div><!-- end of withoutCheck -->
+ </div>
+
+
+
+</div>
+
+<div class="adl-modal-footer textR">
+
+<span class="adlHide">
+<button type="button" onclick="close_Model();" class="adl-btn bordered">EDIT</button>
+<button type="button" class="adl-btn">CONFIRM &amp; CLOSE</button>
+</span>
+
+<button type="button" class="adl-btn">SAVE CHANGES</button>
+
+</div><!--adl-modal-footer-->
+
+</div><!--right-->
+
+</div><!--adl-modal-content-->
+
+</div><!--reasonModal-->
+
+
+
+
+
+
+
+
+
+<div class="slidingBox">
+    <div class="slidingIcon"><i class="fa fa-caret-right toggleArrow" aria-hidden="true"></i></div>
+    <div class="slidingContent vCenter">
+     <div class="slidingContentBox vCenter">
+      <div formodel="reasonModal" onclick="open_Model(this);" class="slideInfo">
+       <h3>ADD JUSTIFICATION</h3></div>
+     </div><!--slidingContentBox-->
+    </div><!--slidingCont-->
 </div>
 
 
 
-
+</div>
 
 <script>
 $(document).ready(function(){	
@@ -300,8 +572,51 @@ $(document).ready(function(){
 			$(this).addClass("filled");
 		}
 		});
+		
+		//Sliding Button
+	$(".slidingIcon").click(function(){
+	$(this).children('.toggleArrow').toggleClass('fa-caret-right fa-caret-left');
+	$(this).parent('.slidingBox').toggleClass('slidingBoxOpen slidingBoxClose');
+	});
+	
+	//auto height textarea
+		$('.autoTextarea').each(function () { this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;'); }).on('input', function () {
+        this.style.height = 10 + 'px';
+        this.style.height = (this.scrollHeight) + 'px';
+		});
+	
+	$('.slideInfo').click(function(){
+		$('.autoTextarea').each(function () { this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;'); }).on('input', function () {
+        this.style.height = 10 + 'px';
+        this.style.height = (this.scrollHeight) + 'px';
+		});
+	});
 	
 	});
+	
+	
+	//tabSection
+function openTab(evt, tabName) {
+    // Declare all variables
+    var i, tabsContent, tabBtn;
+
+    // Get all elements with class="tabsContent" and hide them
+    tabsContent = document.getElementsByClassName("tabsContent");
+    for (i = 0; i < tabsContent.length; i++) {
+        tabsContent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tabBtn" and remove the class "active"
+    tabBtn = document.getElementsByClassName("tabBtn");
+    for (i = 0; i < tabBtn.length; i++) {
+        tabBtn[i].className = tabBtn[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+	
+}
 </script>
 
 </body>

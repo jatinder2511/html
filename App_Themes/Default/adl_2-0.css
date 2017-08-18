@@ -35,6 +35,9 @@ h1, h2, h3, h4, h5, h6, .normal, .small, .big, .font28, .font28 td, .font28 th, 
 	color:#fff
 }
 
+a:hover{
+    cursor: pointer
+}
 a.adl-link{
 	color:#1db2de;
 	text-decoration:none;
@@ -358,22 +361,28 @@ position: absolute;
     height: 44px;
 }
 .adl_2-0 #nav-flow #nav > li{
-    padding: 2px 15px 2px 30px;
+
     display: inline-flex;
     position: relative;
-    height: 44px;
     align-items: center;
 	float: left;
 }
-.adl_2-0 #nav-flow #nav > li > img{
-	width:22px;
+.adl_2-0 #nav-flow #nav > li a{
+	padding: 2px 15px 2px 30px;
+    height: 44px;
+	color:#485a65;
+    display: inline-flex;
+    align-items: center;
+}
+.adl_2-0 #nav-flow #nav > li > a > img{
+	max-width:22px;
 	margin-right:5px
 }
-.adl_2-0 #nav-flow #nav > li > img[width="18"]{
+.adl_2-0 #nav-flow #nav > li > a > img[width="18"]{
 	width:18px
 }
 
-.adl_2-0 #nav-flow #nav > li:before {
+.adl_2-0 #nav-flow #nav > li a:before {
 	position: absolute;
 	left:100%;
 	top:0;
@@ -385,7 +394,7 @@ position: absolute;
 	border-bottom: 22px solid transparent;
 	border-left: 8px solid #666;
 }
-.adl_2-0 #nav-flow #nav > li:after {
+.adl_2-0 #nav-flow #nav > li a:after {
 	position: absolute;
 	left:100%;
 	top:0;
@@ -398,7 +407,7 @@ position: absolute;
 	border-left: 8px solid #fff;
 }
 
-.adl_2-0 #nav-flow #nav > li.active, .adl_2-0 #nav-flow #nav > li:hover{
+.adl_2-0 #nav-flow #nav > li.active a, .adl_2-0 #nav-flow #nav > li a:hover{
 	color:#fff;
 	background: #78cdf2;
 	background: -moz-linear-gradient(left, #78cdf2 0%, #78cdf2 27%, #1a82cc 100%);
@@ -406,21 +415,21 @@ position: absolute;
 	background: linear-gradient(to right, #78cdf2 0%,#78cdf2 27%,#1a82cc 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#78cdf2', endColorstr='#1a82cc',GradientType=1 );
 }
-.adl_2-0 #nav-flow #nav > li.active:before, .adl_2-0 #nav-flow #nav > li:hover:before{
+.adl_2-0 #nav-flow #nav > li.active a:before, .adl_2-0 #nav-flow #nav > li a:hover:before{
 	border:none
 }
-.adl_2-0 #nav-flow #nav > li.active:after, .adl_2-0 #nav-flow #nav > li:hover:after {
+.adl_2-0 #nav-flow #nav > li.active a:after, .adl_2-0 #nav-flow #nav > li a:hover:after {
 	border-left: 8px solid #1A82CC;
 }
 
-.adl_2-0 #nav-flow #nav > li:hover{
+.adl_2-0 #nav-flow #nav > li a:hover{
 	cursor:pointer
 }
-.adl_2-0 #nav-flow #nav > li.active:hover{
+.adl_2-0 #nav-flow #nav > li.active a:hover{
 	cursor:default
 }
 
-.adl_2-0 #nav-flow #nav > li:hover .dropSection, .adl_2-0 #nav-flow #nav > li .dropSection:hover {
+.adl_2-0 #nav-flow #nav > li a:hover .dropSection, .adl_2-0 #nav-flow #nav > li .dropSection a:hover {
 	opacity:1;
 	left: -80px;
 	transition:all 0.3s
@@ -628,6 +637,7 @@ position: absolute;
 .adl_2-0 .detailBlock .amnt{
 	font:700 15px 'Roboto Condensed', sans-serif;
     line-height: 14px;
+    color: #485a65;
 }
 
 .adl_2-0 .title .totalPrmm{
@@ -1440,7 +1450,7 @@ position: absolute;
     height: 24px;
     font-size: 14px;
 }
-.insurance .adl-modal-close:hover{
+.adl_2-0 .adl-modal-close:hover{
 	cursor:pointer;
 	background-color:#cf3d2e
 }
@@ -1524,12 +1534,12 @@ position: absolute;
 	width:100%;
 	padding:10px 0 0
 }
-.adl_2-0 #policyDeleteModal .card:hover, .adl_2-0 #policyArchiveModal .card:hover{
+.adl_2-0 #policyDeleteModal .card:hover, .adl_2-0 #policyArchiveModal .card:hover, .adl_2-0 #policyReopenModal .card:hover{
 	box-shadow:none;
 	border:1px solid #dde2e6;
 	cursor:default
 }
-.adl_2-0 #policyDeleteModal .card .fa-ellipsis-v, .adl_2-0 #policyArchiveModal .card .fa-ellipsis-v{
+.adl_2-0 #policyDeleteModal .card .fa-ellipsis-v, .adl_2-0 #policyArchiveModal .card .fa-ellipsis-v, .adl_2-0 #policyReopenModal .card .fa-ellipsis-v{
 	display:none
 }
 
@@ -1849,7 +1859,7 @@ position: absolute;
 
 .adl_2-0 #reasonModal .adl-modal-content{
 	position:relative;
-	padding:20px 20px 30px 400px;
+	padding:20px 5px 30px 400px;
 	background-color:transparent;
 	box-shadow:none;
 	top:15px!important
@@ -1861,6 +1871,12 @@ position: absolute;
     box-shadow: 0 10px 35px rgba(0,0,0,0.4);
     float: left;
     width: 100%;
+	position:relative
+}
+.adl_2-0 #reasonModal .adl-modal-content .right .adl-modal-close{
+	position: absolute;
+    right: 5px;
+    top: 5px;
 }
 .adl_2-0 #reasonModal .adl-modal-footer{
 	border-bottom-right-radius: 6px;
@@ -1871,7 +1887,7 @@ position: absolute;
     position: absolute;
     left: 0;
     top: 0;
-    padding: 15px;
+    padding:15px 15px 0 0;
     width: 400px;
 }
 .adl_2-0 #reasonModal .adl-modal-content .left .cardWrap{
@@ -1882,10 +1898,37 @@ position: absolute;
 	border:none;
 	border-radius:6px;
 }
+.adl_2-0 #reasonModal .adl-modal-content .left .cardWrap .card:hover{
+	cursor:default;
+}
+.adl_2-0 #reasonModal .adl-modal-content .left .cardWrap .card.out{
+	opacity:0.8;
+}
 .adl_2-0 #reasonModal .adl-modal-content .left .cardWrap .card.active{
 	border-right:10px solid #41a3ea;
 	width:calc(100% + 15px)
 }
+.adl_2-0 #reasonModal .adl-modal-content .left .cardWrap .card.select{
+	border-right:5px solid #41a3ea;
+}
+
+.adl_2-0 #reasonModal .adl-modal-content .left .cardWrap .card.scenarioSelect .link{
+	position:absolute;
+	right:10px;
+	top:14px
+}
+.adl_2-0 #reasonModal .adl-modal-content .left .cardWrap .card.scenarioSelect .link:hover{
+	font-weight:500
+}
+.adl_2-0 #reasonModal .adl-modal-content .left .cardWrap .card.scenarioSelect .renameRow{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 99;
+}
+
 .adl_2-0 #reasonModal .adl-modal-content .left .replaceRow .adl-btn{
 	padding:5px 8px;
 	height:auto
@@ -1904,7 +1947,7 @@ position: absolute;
     width: 100px;
 }
 .adl_2-0 #reasonModal .adl-modal-content .left .adl-scroll{
-	max-height:calc(100vh - 280px)
+	max-height:calc(100vh - 322px);
 }
 
 
@@ -2042,6 +2085,124 @@ list-style: decimal inside;
 
 
 .adl_2-0 #reasonModal .skipped ul li .check_text {
+    display: inline-block;
+}
+
+.adl_2-0 #reasonModal .skipped ul li.skipReason:before{
+	content:'\f142';
+	font-family: FontAwesome;
+	position:absolute;
+	left:0;
+	top:0;
+	color:#075991
+}
+.adl_2-0 #reasonModal .skipped ul li.skipReason:after{
+	content:'\f142';
+	font-family: FontAwesome;
+	position:absolute;
+	left:4px;
+	top:0;
+	color:#075991
+}
+.adl_2-0 #reasonModal .withCheck .selected{
+    margin-bottom: 5px;
+}
+.adl_2-0 #reasonModal .withCheck .selected h5{
+    color: #898989;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.adl_2-0 #reasonModal .tabsHead .tabBtn {
+    width: 25%;
+}
+.adl_2-0 #reasonModal .tabsContent{
+	margin-top:20px;
+	float:left;
+	width:100%;
+	height: calc(100vh - 200px);
+}
+.adl_2-0 #reasonModal .selected{
+	float:left;
+	width:100%;
+	padding:0 25px;
+	margin-bottom:20px
+}
+.adl_2-0 #reasonModal .listToSelect{
+	float:left;
+	width:100%;
+	padding:0 25px;
+}
+.adl_2-0 #reasonModal .selected li, .adl_2-0 #reasonModal .skipped li, .adl_2-0 #reasonModal .listToSelect li{
+	margin-top:8px;
+	line-height:18px
+}
+.adl_2-0 #reasonModal .selected li, .adl_2-0 #reasonModal .listToSelect li{
+	padding-left:15px;
+	position:relative
+}
+.adl_2-0 #reasonModal .selected li:before{
+	content:'\f142';
+	font-family: FontAwesome;
+	position:absolute;
+	left:0;
+	top:0;
+	color:#075991
+}
+.adl_2-0 #reasonModal .selected li:after{
+	content:'\f142';
+	font-family: FontAwesome;
+	position:absolute;
+	left:4px;
+	top:0;
+	color:#075991
+}
+
+ .adl_2-0 #reasonModal .listToSelect textarea.autoTextarea:focus + .row.adlHide{
+	 display:block!important
+ }
+
+.adl_2-0 #reasonModal h3{
+	color:#485a65;
+	font-size:14px;
+	margin:0
+}
+.adl_2-0 #reasonModal ol{
+	padding:0;
+	margin:0
+}
+.adl_2-0 #reasonModal ol li{
+list-style: decimal inside;
+    text-indent: -15px;
+    padding-left: 15px;	
+}
+
+.adl_2-0 #reasonModal .skipped{
+	float:left;
+	width:100%;
+	padding:0 25px;
+	margin-bottom:15px;
+	opacity:0.7
+}
+.adl_2-0 #reasonModal ol{
+	padding:0;
+	margin:0
+}
+.adl_2-0 #reasonModal ol li{
+	list-style:decimal inside;	
+}
+.adl_2-0 #reasonModal .skipped ul li label, .adl_2-0 #reasonModal .listToSelect ul li label{
+    float: left;
+}
+.adl_2-0 #reasonModal .skipped ul li, .adl_2-0 #reasonModal .listToSelect ul li{
+    width: 100%;
+    display: inline-block;
+	position: relative;
+    padding-left: 15px;
+}
+
+
+.adl_2-0 #reasonModal .skipped ul li .check_text, .adl_2-0 #reasonModal .listToSelect ul li .check_text {
     display: inline-block;
 }
 
@@ -3606,6 +3767,9 @@ display: inline-block;
 }
 
 
+
+
+
 .adl_2-0 #memberGrid .body{
 	display: flex;
     width: 100%;
@@ -3718,6 +3882,12 @@ padding: 0 5px;
     margin: -10px 0 0;
 }
 
+.adl_2-0 .newComment textarea.autoTextarea:focus + .row.adlHide{
+	display:block!important
+}
+
+
+
 
 .adl_2-0 #sfModal .adl-modal-header .deleteBox .confirmRow, #deleteSF.hide{
 	display:none	
@@ -3735,6 +3905,7 @@ padding: 0 5px;
 .panelWrap{
 	border:1px solid #d7e8ec;
 	border-radius:5px;
+	margin-bottom:1px
 }
 .panelWrap .head{
 	padding:12px 8px;
@@ -3843,7 +4014,6 @@ padding: 0 5px;
     background-color: #cf3d2e;
 }
 .rollOverBody .roPanelLeft .roCard:hover{
-	cursor: pointer;
 	border: 1px solid #1982cc;
 	
 }
@@ -3870,10 +4040,12 @@ padding: 0 5px;
 .roCard .accumlation img.accumlationImg{
 	float: left;
     margin-right: 4px;
+	width:14px
 }
 .roCard .accumlation img.accumlationError{
 	float: right;
 	margin-right: 4px;
+	width:20px
 }
 .roCard .amount{
     font-weight: 600;
@@ -3883,9 +4055,6 @@ padding: 0 5px;
 	color: #65737f;
 }
 .roCard .rAmount{
-    height: 30px;
-    border-bottom: 1px solid #dde2e6;
-    margin: 6px 22px;
     color: #333;
 }
 .roCard .rAmountTitle{
@@ -3905,21 +4074,19 @@ padding: 0 5px;
     line-height: 14px;
 }
 .rollOverBody .roPanelright{
-/* 	height: 100%; */
     height: calc(100vh - 138px);
-}
-.rollOverBody .roPanelright .roGraphsview{
-   border: solid 2px #40eec8;
-/*     height: 100%; */
+	   border: solid 2px #40eec8;
     border-bottom: none;
     border-right: snow;
     background: #f4f8f9;
     border-radius: 4px;
+}
+.rollOverBody .roPanelright .roGraphsview{
     padding: 10px;
 }
 .rollOverBody .roGraphsview .roGraphsTitle{
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
 	color: #333;
 }
 .rollOverBody .roGraphsview .roGraphsSubTitle{
