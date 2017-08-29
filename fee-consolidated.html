@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="App_Themes/Default/adlStyle.css" rel="stylesheet" />
+<script src="script/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="script/adl_script.js"></script>
+
+<link href="App_Themes/Default/adl_2-0.css" rel="stylesheet" />
+
+<!--scroller-->
+<!--<script src="script/jquery.min.js"></script>-->
+<script src="script/perfect-scrollbar.with-mousewheel.min.js"></script>
+
+<!--font-awesome-icon-->
+<link href="App_Themes/Default/icon-font-awesome/font-awesome.css" type="text/css" rel="stylesheet" />
+<link href="App_Themes/Default/icon-font-awesome/font-awesome.min.css" type="text/css" rel="stylesheet" />
+
+<!--sliding label-->
+<script type="text/javascript" src="script/jquery-3.2.0.min.js"></script>
+
+</head>
+<body>
+<div class="adl-wrapper adl_2-0">
+  
+  
+    <div class="adl-container superlogic">
+      <nav id="nav-flow">
+      <div class="profileWrap">
+      <div class="pContainer">
+      <i class="fa fa-check-circle"></i>
+      <div class="profilePic"><img src="Images/adlNewImages/pp1.jpg" alt="" ></div>
+      </div>
+      <div class="pContainer">
+      <i class="fa fa-check-circle"></i>
+      <div class="profilePic"><img src="Images/adlNewImages/pp2.jpg" alt="" ></div>
+      </div>
+      </div><!--profileWrap-->
+      
+        <ul id="nav">
+        <li><a href="existing-superfunds.html"><img src="Images/adlNewImages/adl2/existingPoliciesIcon.svg" alt="" > Existing SuperFunds</a></li>
+        <li class="active"><a href="#"><img src="Images/adlNewImages/adl2/needsAnalysisIcon.svg" alt="" > Research</a></li>
+        <li><a href="investment_portfolio.html"><img width="18" src="Images/adlNewImages/adl2/investment-portfolioIcon.svg" alt="" > Investment Portfolio</a></li>
+        <li><a href="#"><img width="18" src="Images/adlNewImages/adl2/feesIcon.svg" alt="" > Fees</a></li>
+        <li><a href="rollover.html"><img src="Images/adlNewImages/adl2/rolloverIcon.svg" alt="" > Rollover</a></li>
+        <li><a href="#"><img src="Images/adlNewImages/adl2/recommendedIcon.svg" alt="" > Recommended</a></li>
+        <li><a href="#"><img src="Images/adlNewImages/adl2/justificationIcon.svg" alt="" > Justification</a></li>
+        </ul>
+        
+        <div class="adl-floatR adl-marginR adl-parent">
+        <button class="adl-btn-head btn-sm font13 adl-marginT text-blue" for-drop-menu="addMenu_id">Options <i class="fa fa-caret-down"></i></button>
+        <div class="adl-menu" id="addMenu_id">
+                        <div class="menu-list">
+                        <ul>
+                        <li>Generate Reports</li> 
+                        <li>Set Defaults</li> 
+                        <li>Mapping</li>                     
+                        </ul>
+                       </div>
+        </div>
+        </div>
+      
+      </nav><!--nav-flow-->
+      
+      <div class="adl-container-inside">      
+      
+      <div class="userWrap adlSet gridBG">
+      
+        <div class="title col-10 no-borderB adl-no-marginB">
+        <div class="adl-marginT adl-floatL">
+			<div class="adl-floatL">
+				<h3 class="panelHeading"><i class="fa fa-chevron-left link"></i> Fees</h3>
+				<div class="adl-floatL adl-form-group adl-no-margin adl-no-padding adl-select feeSelect">
+					<select class="fontSB font14 form-control baseBorder">
+						<option value="1">Comparison on Consolidated Amount</option>
+						<option value="2">Aggregate On Amount</option>
+					</select>
+				</div>
+			</div>
+        </div>
+        </div><!--title-->
+		<div>
+			<div class="col-10 adl-no-margin policyResults">
+					<span>Comparing fees of Recommended Superfund with <span>4</span> Superfunds</span>
+					<div class="adl-floatR cmprBtn">
+						<span class="arrowSet">
+							<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</span>
+						<span>Compare</span>
+					</div>
+			</div>
+		</div>
+			<div class="col-10 crGridWrap adl-scroll feeCompare" id="feeCosolidated" style="overflow:auto;">
+			<div class="adl-floatL">
+				<div class="adl-floatL crGridHeaderWrap">
+					<div class="cell parmsWrap">PARAMETERS <span class="editParm"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</span></div>
+					<div class="cell crGridHead headActive">
+						<div class="logo">
+							<img src="./images/adlNewImages/adl2/amp.png">
+						</div>
+						<div class="logoDetails">
+							<div class="adlSet fundName adl-margin5">
+								<div class="adl-form-group col-10 adl-no-margin adl-no-padding adl-select">
+									 <select class="form-control baseBorder">
+										 <option>Acuity SuperWrap</option>
+										  <option value="1">SuperWrap</option>
+									 </select>
+								</div>
+							</div>
+							<div class="adlSet adl-margin5">
+								<div class="recmnd">
+									<i class="fa fa-star" aria-hidden="true"></i> 
+									<span>Recommended</span><span style="display:none;">Recommend</span>
+								</div>
+							</div>
+							<div class="adl-floatL" style="margin-top: 8px; ">
+								<div class="info">
+									<span class="iconBox iconBoxInvert">
+										<span class="infoIcon ">i</span>
+										<span class="contentBox">
+											<span class="contactHead">Call Center Conatct</span>
+											<span class="adlSet" style="margin-top: 5px;">
+												<span class="contactIcon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+												<span class="contactInfo">
+													<span class="adlSet conatctNo">1300547873</span>
+													<span class="adlSet"> 9:00am to 11:00pm </span>
+												</span>
+											</span>
+										</span>
+									</span> 
+									
+									<span class="showData">A/c bal: $15,000</span><span class="hideData">Hide</span>
+								</div>
+							</div>
+						</div>
+					</div><!-- end of crGridHead -->
+					<div class="cell crGridHead">
+						<div class="logo">
+							<img src="./images/adlNewImages/adl2/amp.png">
+						</div>
+						<div class="logoDetails">
+							<div class="adlSet fundName adl-margin5">
+								<div class="adl-form-group col-10 adl-no-margin adl-no-padding adl-select">
+									 <select class="form-control baseBorder">
+										 <option>Acuity SuperWrap</option>
+										  <option value="1">SuperWrap</option>
+									 </select>
+								</div>
+							</div>
+							<div class="adlSet adl-margin5">
+								<div class="recmnd fade">
+									<i class="fa fa-star" aria-hidden="true"></i> 
+									<span style="display:none;">Recommended</span><span >Recommend</span>
+								</div>
+							</div>
+							<div class="adl-floatL" style="margin-top: 8px; ">
+								<div class="info">
+									<span class="iconBox iconBoxInvert">
+										<span class="infoIcon ">i</span>
+										<span class="contentBox">
+											<span class="contactHead">Call Center Conatct</span>
+											<span class="adlSet" style="margin-top: 5px;">
+												<span class="contactIcon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+												<span class="contactInfo">
+													<span class="adlSet conatctNo">1300547873</span>
+													<span class="adlSet"> 9:00am to 11:00pm </span>
+												</span>
+											</span>
+										</span>
+									</span> 
+									
+									<span class="showData">A/c bal: $15,000</span><span class="hideData">Hide</span>
+								</div>
+							</div>
+						</div>
+					</div><!-- end of crGridHead -->
+					<div class="cell crGridHead">
+						<div class="logo">
+							<img src="./images/adlNewImages/adl2/amp.png">
+						</div>
+						<div class="logoDetails">
+							<div class="adlSet fundName adl-margin5">
+								<div class="adl-form-group col-10 adl-no-margin adl-no-padding adl-select">
+									 <select class="form-control baseBorder">
+										 <option>Acuity SuperWrap</option>
+										  <option value="1">SuperWrap</option>
+									 </select>
+								</div>
+							</div>
+							<div class="adlSet adl-margin5">
+								<div class="recmnd fade">
+									<i class="fa fa-star" aria-hidden="true"></i> 
+									<span style="display:none;">Recommended</span><span >Recommend</span>
+								</div>
+							</div>
+							<div class="adl-floatL" style="margin-top: 8px; ">
+								<div class="info">
+									<span class="iconBox iconBoxInvert">
+										<span class="infoIcon ">i</span>
+										<span class="contentBox">
+											<span class="contactHead">Call Center Conatct</span>
+											<span class="adlSet" style="margin-top: 5px;">
+												<span class="contactIcon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+												<span class="contactInfo">
+													<span class="adlSet conatctNo">1300547873</span>
+													<span class="adlSet"> 9:00am to 11:00pm </span>
+												</span>
+											</span>
+										</span>
+									</span> 
+									
+									<span class="showData">A/c bal: $15,000</span><span class="hideData">Hide</span>
+								</div>
+							</div>
+						</div>
+					</div><!-- end of crGridHead -->
+					<div class="cell crGridHead">
+						<div class="logo">
+							<img src="./images/adlNewImages/adl2/amp.png">
+						</div>
+						<div class="logoDetails">
+							<div class="adlSet fundName adl-margin5">
+								<div class="adl-form-group col-10 adl-no-margin adl-no-padding adl-select">
+									 <select class="form-control baseBorder">
+										 <option>Acuity SuperWrap</option>
+										  <option value="1">SuperWrap</option>
+									 </select>
+								</div>
+							</div>
+							<div class="adlSet adl-margin5">
+								<div class="recmnd fade">
+									<i class="fa fa-star" aria-hidden="true"></i> 
+									<span style="display:none;">Recommended</span><span >Recommend</span>
+								</div>
+							</div>
+							<div class="adl-floatL" style="margin-top: 8px; ">
+								<div class="info">
+									<span class="iconBox iconBoxInvert">
+										<span class="infoIcon ">i</span>
+										<span class="contentBox">
+											<span class="contactHead">Call Center Conatct</span>
+											<span class="adlSet" style="margin-top: 5px;">
+												<span class="contactIcon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+												<span class="contactInfo">
+													<span class="adlSet conatctNo">1300547873</span>
+													<span class="adlSet"> 9:00am to 11:00pm </span>
+												</span>
+											</span>
+										</span>
+									</span> 
+									
+									<span class="showData">A/c bal: $15,000</span><span class="hideData">Hide</span>
+								</div>
+							</div>
+						</div>
+					</div><!-- end of crGridHead -->
+					<div class="cell crGridHead">
+						<div class="logo">
+							<img src="./images/adlNewImages/adl2/amp.png">
+						</div>
+						<div class="logoDetails">
+							<div class="adlSet fundName adl-margin5">
+								<div class="adl-form-group col-10 adl-no-margin adl-no-padding adl-select">
+									 <select class="form-control baseBorder">
+										 <option>Acuity SuperWrap</option>
+										  <option value="1">SuperWrap</option>
+									 </select>
+								</div>
+							</div>
+							<div class="adlSet adl-margin5">
+								<div class="recmnd fade">
+									<i class="fa fa-star" aria-hidden="true"></i> 
+									<span style="display:none;">Recommended</span><span >Recommend</span>
+								</div>
+							</div>
+							<div class="adl-floatL" style="margin-top: 8px; ">
+								<div class="info">
+									<span class="iconBox iconBoxInvert">
+										<span class="infoIcon ">i</span>
+										<span class="contentBox">
+											<span class="contactHead">Call Center Conatct</span>
+											<span class="adlSet" style="margin-top: 5px;">
+												<span class="contactIcon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+												<span class="contactInfo">
+													<span class="adlSet conatctNo">1300547873</span>
+													<span class="adlSet"> 9:00am to 11:00pm </span>
+												</span>
+											</span>
+										</span>
+									</span> 
+									
+									<span class="showData">A/c bal: $15,000</span><span class="hideData">Hide</span>
+								</div>
+							</div>
+						</div>
+					</div><!-- end of crGridHead -->
+	 			<div class="cell crGridHead">
+						<div class="logo">
+							<img src="./images/adlNewImages/adl2/amp.png">
+						</div>
+						<div class="logoDetails">
+							<div class="adlSet fundName adl-margin5">
+								<div class="adl-form-group col-10 adl-no-margin adl-no-padding adl-select">
+									 <select class="form-control baseBorder">
+										 <option>Acuity SuperWrap</option>
+										  <option value="1">SuperWrap</option>
+									 </select>
+								</div>
+							</div>
+							<div class="adlSet adl-margin5">
+								<div class="recmnd fade">
+									<i class="fa fa-star" aria-hidden="true"></i> 
+									<span style="display:none;">Recommended</span><span >Recommend</span>
+								</div>
+							</div>
+							<div class="adl-floatL" style="margin-top: 8px; ">
+								<div class="info">
+									<span class="iconBox iconBoxInvert">
+										<span class="infoIcon ">i</span>
+										<span class="contentBox">
+											<span class="contactHead">Call Center Conatct</span>
+											<span class="adlSet" style="margin-top: 5px;">
+												<span class="contactIcon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+												<span class="contactInfo">
+													<span class="adlSet conatctNo">1300547873</span>
+													<span class="adlSet"> 9:00am to 11:00pm </span>
+												</span>
+											</span>
+										</span>
+									</span> 
+									
+									<span class="showData">A/c bal: $15,000</span><span class="hideData">Hide</span>
+								</div>
+							</div>
+						</div>
+					</div><!-- end of crGridHead -->
+					<div class="headSmsfBtn">
+						<span>Show SMSF</span>
+					</div>
+				</div><!-- end of crGridHeaderWrap -->
+				
+				<div class="adlSet crGridBodyWrap">
+				
+					<div class="adlSet crGridRow">
+						<div class="crGridrowHead">
+							<div class="cell crGridTitle cellFlex">Contributions
+							<span class="closeGrids"><i aria-hidden="true" class="fa fa-caret-up" ></i></span>
+							</div>
+							<div class="cell crGridTitle cellFlex flagsCounter">
+								 <span class="flagYes"><i aria-hidden="true" class="fa fa-check"></i><sup class="counterValue">0</sup></span>
+                                <span class="flagNo"><i aria-hidden="true" class="fa fa-times"></i><sup class="counterValue">0</sup></span>
+							</div>
+							<div class="cell crGridTitle cellFlex flagsCounter">
+								 <span class="flagYes"><i aria-hidden="true" class="fa fa-check"></i><sup class="counterValue">0</sup></span>
+                                <span class="flagNo"><i aria-hidden="true" class="fa fa-times"></i><sup class="counterValue">0</sup></span>
+							</div>
+							<div class="cell crGridTitle cellFlex flagsCounter">
+								 <span class="flagYes"><i aria-hidden="true" class="fa fa-check"></i><sup class="counterValue">0</sup></span>
+                                <span class="flagNo"><i aria-hidden="true" class="fa fa-times"></i><sup class="counterValue">0</sup></span>
+							</div>
+							<div class="cell crGridTitle cellFlex flagsCounter">
+								 <span class="flagYes"><i aria-hidden="true" class="fa fa-check"></i><sup class="counterValue">0</sup></span>
+                                <span class="flagNo"><i aria-hidden="true" class="fa fa-times"></i><sup class="counterValue">0</sup></span>
+							</div>
+							<div class="cell crGridTitle cellFlex flagsCounter">
+								 <span class="flagYes"><i aria-hidden="true" class="fa fa-check"></i><sup class="counterValue">0</sup></span>
+                                <span class="flagNo"><i aria-hidden="true" class="fa fa-times"></i><sup class="counterValue">0</sup></span>
+							</div>
+							<div class="cell crGridTitle cellFlex flagsCounter">
+								 <span class="flagYes"><i aria-hidden="true" class="fa fa-check"></i><sup class="counterValue">0</sup></span>
+                                <span class="flagNo"><i aria-hidden="true" class="fa fa-times"></i><sup class="counterValue">0</sup></span>
+							</div> 
+						</div><!-- end of crGridRowHead -->
+						<div class="adlSet crGridBody">
+							<div class="adl-floatL crGridSubRow cellFlexParent">
+								<div class="cell cellFlex">
+									Low Income Superannuation
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+								<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<!-- <span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+							</div><!-- end of crGridSubRow-->
+							<div class="adl-floatL crGridSubRow cellFlexParent">
+								<div class="cell cellFlex">Ancillary benefits</div>
+								<div class="cell cellFlex textSmall">Discounted banking options through ME Bank, Money Magazine’s Best of the Best award.</div>
+								<div class="cell cellFlex textSmall">Acess to Health Partners health insurance discounts, access to discounted first aid courses through St John A and access to ME bank’s products.</div>
+								<div class="cell cellFlex textSmall">One account for life, Insurance fee.</div>
+								<div class="cell cellFlex textSmall cellEmpty ">&nbsp;</div>
+								<div class="cell cellFlex textSmall cellEmpty">&nbsp;</div>
+							<div class="cell cellFlex textSmall">One account for life, Insurance fee.</div>
+							</div><!-- end of crGridSubRow-->
+							<div class="adl-floatL crGridSubRow cellFlexParent">
+								<div class="cell cellFlex">via Australia Post</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+								<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+								<!-- 	<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> 
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+								<!-- 	<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+							</div><!-- end of crGridSubRow-->
+							
+							<div class="adl-floatL crGridSubRow cellFlexParent">
+								<div class="cell cellFlex">via BPAY</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+								<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex jtextSmall Center ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<!-- <span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+							</div><!-- end of crGridSubRow-->
+							
+							<div class="adl-floatL crGridSubRow cellFlexParent">
+								<div class="cell cellFlex">via cheque</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+								<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<!-- <span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> 
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> 
+									<!-- <span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+							</div><!-- end of crGridSubRow-->
+							
+							<div class="adl-floatL crGridSubRow cellFlexParent">
+								<div class="cell cellFlex">Salary sacrifice</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+								<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<!-- <span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+							</div><!-- end of crGridSubRow-->
+						</div><!-- end of crGridBody -->
+					</div><!-- end of crGridRow-->
+
+					<div class="adlSet crGridRow">
+						<div class="crGridrowHead">
+							<div class="cell crGridTitle cellFlex">Misc
+							<span class="closeGrids"><i aria-hidden="true" class="fa fa-caret-up" ></i></span>
+							</div>
+							<div class="cell crGridTitle cellFlex flagsCounter">
+								 <span class="flagYes"><i aria-hidden="true" class="fa fa-check"></i><sup class="counterValue">0</sup></span>
+                                <span class="flagNo"><i aria-hidden="true" class="fa fa-times"></i><sup class="counterValue">0</sup></span>
+							</div>
+							<div class="cell crGridTitle cellFlex flagsCounter">
+								 <span class="flagYes"><i aria-hidden="true" class="fa fa-check"></i><sup class="counterValue">0</sup></span>
+                                <span class="flagNo"><i aria-hidden="true" class="fa fa-times"></i><sup class="counterValue">0</sup></span>
+							</div>
+							<div class="cell crGridTitle cellFlex flagsCounter">
+								 <span class="flagYes"><i aria-hidden="true" class="fa fa-check"></i><sup class="counterValue">0</sup></span>
+                                <span class="flagNo"><i aria-hidden="true" class="fa fa-times"></i><sup class="counterValue">0</sup></span>
+							</div>
+							<div class="cell crGridTitle cellFlex flagsCounter">
+								 <span class="flagYes"><i aria-hidden="true" class="fa fa-check"></i><sup class="counterValue">0</sup></span>
+                                <span class="flagNo"><i aria-hidden="true" class="fa fa-times"></i><sup class="counterValue">0</sup></span>
+							</div>
+							<div class="cell crGridTitle cellFlex flagsCounter">
+								 <span class="flagYes"><i aria-hidden="true" class="fa fa-check"></i><sup class="counterValue">0</sup></span>
+                                <span class="flagNo"><i aria-hidden="true" class="fa fa-times"></i><sup class="counterValue">0</sup></span>
+							</div>
+							<div class="cell crGridTitle cellFlex flagsCounter">
+								 <span class="flagYes"><i aria-hidden="true" class="fa fa-check"></i><sup class="counterValue">0</sup></span>
+                                <span class="flagNo"><i aria-hidden="true" class="fa fa-times"></i><sup class="counterValue">0</sup></span>
+							</div> 
+						</div><!-- end of crGridRowHead -->
+						<div class="adlSet crGridBody">
+							<div class="adl-floatL crGridSubRow cellFlexParent">
+								<div class="cell cellFlex">
+									Low Income Superannuation
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+								<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<!-- <span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+							</div><!-- end of crGridSubRow-->
+							<div class="adl-floatL crGridSubRow cellFlexParent">
+								<div class="cell cellFlex">Ancillary benefits</div>
+								<div class="cell cellFlex textSmall">Discounted banking options through ME Bank, Money Magazine’s Best of the Best award.</div>
+								<div class="cell cellFlex textSmall">Acess to Health Partners health insurance discounts, access to discounted first aid courses through St John A and access to ME bank’s products.</div>
+								<div class="cell cellFlex textSmall">One account for life, Insurance fee.</div>
+								<div class="cell cellFlex textSmall cellEmpty ">&nbsp;</div>
+								<div class="cell cellFlex textSmall cellEmpty">&nbsp;</div>
+							<div class="cell cellFlex textSmall">One account for life, Insurance fee.</div>
+							</div><!-- end of crGridSubRow-->
+							<div class="adl-floatL crGridSubRow cellFlexParent">
+								<div class="cell cellFlex">via Australia Post</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+								<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+								<!-- 	<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> 
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+								<!-- 	<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span> -->
+									<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span>
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+								<div class="cell cellFlex textSmall jCenter ynFlags">
+									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
+									<!--<span class="flagNo"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+								</div>
+							</div><!-- end of crGridSubRow-->
+							
+							
+						</div><!-- end of crGridBody -->
+					</div><!-- end of crGridRow-->
+				</div><!-- end of crGridBodyWrap -->
+				</div>
+			</div><!-- end of crGridWrap -->
+
+			
+			
+      </div><!--userWrap-->
+      
+      </div><!--adl-container-inside-->
+      
+      
+      <div class="slidingBox slidingBoxOpen">
+    <div class="slidingIcon"><i class="fa fa-caret-right toggleArrow" aria-hidden="true"></i></div>
+    <div class="slidingContent vCenter">
+     <div class="slidingContentBox vCenter">
+      <div class="slideIcon"><img src="./images/adlNewImages/adl2/reportsIcon.svg"></div>
+      <div class="slideInfo">
+       <h3>VIEW <br> REPORTS</h3></div>
+     </div><!--slidingContentBox-->
+    </div><!--slidingCont-->
+</div><!--slidingBox-->
+      
+    </div><!--container--> 
+    
+
+  
+</div>
+
+
+<script>
+$(document).ready(function(){	
+	//slide label//
+	$(".form-control").focus(function(){
+	
+		$(this).addClass("filled")
+		});		
+	$(".form-control").blur(function(){		
+		var fieldVar = $(this).val();		
+		if(fieldVar == ''){
+			$(this).removeClass("filled");
+		}
+		else{
+			$(this).addClass("filled");
+		}
+		});
+		
+		//Sliding Button
+		$(".slidingIcon").click(function(){
+		$(this).children('.toggleArrow').toggleClass('fa-caret-right fa-caret-left');
+		$(this).parent('.slidingBox').toggleClass('slidingBoxOpen slidingBoxClose');
+ 		});
+		
+		//Recommend
+		$(".cell.crGridHead").click(function(){
+			$(this).toggleClass("headActive")
+			$(this).children(".logoDetails").find(".recmnd ").toggleClass("fade");
+		});
+ 
+		//Toggle Grids
+		$(".closeGrids").click(function(){
+	
+		$(this).parent().parent().siblings(".crGridBody").toggleClass("toggleGrid");
+		$(this).children(".fa").toggleClass("fa-caret-up fa-caret-down")
+		});
+ 
+	});
+</script>
+</body>
+</html>
