@@ -2007,12 +2007,7 @@ position: absolute;
 }
 
 
-.adl_2-0 #reasonModal .tabsContent{
-	margin-top:20px;
-	float:left;
-	width:100%;
-	max-height: calc(100vh - 200px);
-}
+
 .adl_2-0 #reasonModal .selected{
 	float:left;
 	width:100%;
@@ -2122,12 +2117,8 @@ list-style: decimal inside;
 	width:100%;
 	height: calc(100vh - 200px);
 }
-.adl_2-0 #reasonModal .selected{
-	float:left;
-	width:100%;
-	padding:0 25px;
-	margin-bottom:20px
-}
+
+
 .adl_2-0 #reasonModal .listToSelect{
 	float:left;
 	width:100%;
