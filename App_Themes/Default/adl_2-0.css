@@ -11,7 +11,9 @@
 	text-align:left;
 	color: #485a65
 }
-
+body {
+    overflow: hidden;
+}
 h1, h2, h3, h4, h5, h6, .normal, .small, .big, .font28, .font28 td, .font28 th, .font28 label, .font18, .font18 td, .font18 th, .font18 label, .font16, .font16 td, .font16 th, .font16 label, .font15, .font15 td, .font15 th, .font15 label, .font14, .font14 td, .font14 th, .font14 label, .font9, .font9 td, .font9 th, .font9 label, .successMsg, .errorMsg, .adl-heading, .adl-heading .head, .adl-btn, .adl-btn-head, .adl-btn-pop, .form-control, .adl-form-group .control-label, .adl-form-group .form-control, .form-control-field{
 	font-family:'Roboto', sans-serif!important
 }
@@ -4449,8 +4451,20 @@ opacity:1;
     box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
     z-index: 1;
     position: relative;
-    border: 1px solid #41a3ea;
+    border: 1px solid #41a3ea !important;
 	cursor: pointer;
+}
+.crGridWrap .crGridHeaderWrap .crGridHead.headActive.headActiveDouble{
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top: none !important;
+}
+.crGridWrap .crGridHeaderWrap .crGridHead.recStatusPre:hover{
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    position: relative;
+    border: 1px solid #f4f8f9 !important;
+	cursor: default;
 }
 .crGridWrap .crGridHeaderWrap .crGridHead.parmsWrap:hover{
     box-shadow: 0px 0px 0px rgba(0,0,0,0.2);
@@ -4485,7 +4499,7 @@ float: left;
     height: 20px;
     font-size: 12px;
     padding: 0px;
-  color: #3ba2ed;
+  color: #41a3ea;
   padding-right: 18px;
 }
 .crGridHeaderWrap .logoDetails .recmnd{
@@ -4517,16 +4531,16 @@ opacity:0.3;
 .crGridWrap .crGridHeaderWrap .crGridHead:hover .logoDetails .info .hideData{
 	display:  inline-block;
 }
-.crGridHeaderWrap .logoDetails .info .infoIcon {
+.crGridWrap .info .infoIcon {
 	display: inline-block;
     width: 13px;
     height: 13px;
     text-align: center;
     border-radius: 50%;
     line-height: 12px;
-    border: 1px solid #3ba2ed;
+    border: 1px solid #41a3ea;
     font-size: 9px;
-    color: #3ba2ed;
+    color: #41a3ea;
 }
 .crGridHeaderWrap .desc{
     font-size: 10px;
@@ -4540,9 +4554,12 @@ opacity:0.3;
 	float: left;
 	padding: 4px 10px;
 	width: 220px;
-	border-right: 1px solid #f4f8f9;
+	border-right: 1px solid #f4f8f9 !important;
 	line-height: 14px;
 /* 	color: #333; */
+
+    border-bottom: 1px solid #f4f8f9;
+    background: #fff
 
 }
 .crGridWrap .cell.cellEmpty{
@@ -4567,11 +4584,14 @@ opacity:0.3;
 .crGridWrap .cell:last-child{
 	border-right: none;
 }
+
 .crGridWrap .crGridHeaderWrap .cell:first-child,
 .crGridWrap .crGridrowHead .cell:first-child,
 .crGridWrap .crGridSubRow .cell:first-child{ 
 	width:250px;
 }
+
+
 .crGridWrap .crGridHeaderWrap .cell:first-child{
     padding-top: 72px;
     padding-left: 10px !important;
@@ -4586,19 +4606,38 @@ opacity:0.3;
     border: 1px solid #f4f8f9;
     transition: all 0.2s;
 }
-
+.crGridWrap .crGridrowTopHead .crGridTitleMain{
+    background: #dfeef2;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+	text-transform: uppercase;
+}
 .crGridWrap .crGridrowHead .crGridTitle{
-    background-color: #dfeef2;
+    background: #dfeef2;
     font-weight: 500;
     font-size: 13px;
-    position: relative
+    position: relative;
+	text-transform: uppercase;
 }
 .crGridWrap .crGridHeaderWrap  .editParm{
-    color: #3ba2ed;
+    color: #41a3ea;
     font-weight: normal;
     margin-left: 7px;
     font-size: 13px;
     cursor: pointer;
+}
+.crGridWrap .crGridHeaderWrap  .editParm .showEye{
+	display: inline-block;
+}
+.crGridWrap .crGridHeaderWrap  .editParm .hideEye{
+	display: none;
+}
+.crGridWrap .crGridHeaderWrap  .editParm.activeParm .showEye{
+	display: none;
+}
+.crGridWrap .crGridHeaderWrap  .editParm.activeParm .hideEye{
+	display: inline-block;
 }
 .crGridWrap .crGridrowHead .crGridTitle.flagsCounter {
     -webkit-box-pack: center;
@@ -4623,7 +4662,7 @@ opacity:0.3;
 }
 .crGridWrap .crGridrowHead .crGridTitle.flagsCounter .fa {
     font-size: 30px;
-    -webkit-text-stroke: 4px #eaf3f5;
+    -webkit-text-stroke: 4px #dfeef2;
 }
 .crGridWrap .crGridrowHead .closeGrids {
     position: absolute;
@@ -4636,10 +4675,10 @@ opacity:0.3;
     top: 7px;
 }
 .crGridWrap .crGridSubRow {
-	border-bottom: 1px solid #f4f8f9;
-	background:#fff;
+/* 	border-bottom: 1px solid #f4f8f9;
+	background:#fff; */
 }
-.crGridWrap .crGridSubRow.cellFlexParent{
+.crGridWrap .cellFlexParent{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -4731,22 +4770,80 @@ min-height: 40px;
 	margin-bottom: 5px !important;
 }
 .feeCompare.crGridWrap .crGridHeaderWrap{
-    padding-right: 20px;
+/*  padding-right: 20px; */ 
 }
 .feeCompare.crGridWrap .cell{
-    width: 216px;
+/*     width: 240px; */
+	width: 15%;
+}
+.feeCompare.crGridWrap .recStatusWrap .cell{
+    height: auto;
+    text-align: center;
+    padding: 15px 4px;
+}
+.feeCompare.crGridWrap .recStatusWrap .recStatus{
+	margin-bottom: 4px;
+}
+.feeCompare.crGridWrap .recStatusWrap .amount{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #65737f;
+}
+.feeCompare.crGridWrap .recStatusWrap .green{
+    color: #58b03f;
+}
+.feeCompare.crGridWrap .recStatusWrap .red{
+	color: #e74c3c;
+}
+.feeCompare.crGridWrap .recStatusPre{
+	width: 61%
+}
+.feeCompare.crGridWrap .cellValues:hover{
+	border: 1px solid #3ba2ed !important;
+
+}
+.crGridSubRow .cell {
+	border: 1px solid transparent;
+	position: relative;
+    border-bottom: 1px solid #f4f8f9
+} 
+.feeCompare .crGridSubRow .cell .cellActions{
+    color: #3ba2ed;
+    font-size: 13px;
+    position: absolute;
+    right: 5px;
+    top: 4px;
+    cursor: pointer;
+}.feeCompare .crGridSubRow .cell .cellActions .fa{
+	display: none;
+}
+.feeCompare.crGridWrap .cellValues .cellfield{
+padding-right: 4px;
+}
+.feeCompare.crGridWrap .cellValues .cellfield input{
+    border-bottom: 1px solid transparent !important;
+}
+.feeCompare.crGridWrap .cellValues:hover .cellfield input{
+	border-bottom: 1px solid #8bc8f3 !important;
+}
+.feeCompare.crGridWrap .cellValues:hover .cellActions .fa.fa-pencil{
+display: block;
 }
 .feeCompare.crGridWrap .crGridHeaderWrap .cell:first-child, 
 .feeCompare.crGridWrap .crGridrowHead .cell:first-child,
- .feeCompare.crGridWrap .crGridSubRow .cell:first-child{
-    width: 258px;
+ .feeCompare.crGridWrap .crGridSubRow .cell:first-child,
+ .feeCompare.crGridWrap .crGridrowTopHead .cell:first-child{
+/*     width: 350px; */
+	width: 23.6%;
 }
 .feeCompare.crGridWrap .crGridHeaderWrap .headSmsfBtn{
     position: absolute;
     right: 0;
     width: 100px;
     background: #f4f8f9;
-    background-color: #3ba2ed;
+    background-color: #41a3ea;
     color: #fff;
     border-top-right-radius: 6px;
     text-align: center;
@@ -4761,6 +4858,12 @@ min-height: 40px;
     cursor: pointer;
     top: 41px;
     right: -39px;
+}
+.feeCompare.crGridWrap .crGridHeaderWrap .headSmsfBtn:hover{
+	background: #166ead;
+}
+.feeCompare.crGridWrap .crGridrowHead .crGridTitle{
+	background-color: #f7f7f7;
 }
 .adl_2-0 .info .iconBox.iconBoxInvert{
 	    margin: -5px -2px 0 0;
@@ -4778,41 +4881,522 @@ min-height: 40px;
     -moz-border-bottom-right-radius: 50%;
     -webkit-border-bottom-right-radius: 50%;
 }
+.adl_2-0 .info .iconBox.infoCenter{
+	    margin: -5px -2px 0 0;
+}
+
+
 .adl_2-0 .info .iconBox.iconBoxInvert::after{
     bottom: 18px;
     width: 23px;
 }
-.adl_2-0 .info .iconBox.iconBoxInvert .contentBox {
+.adl_2-0 .info .iconBox.iconBoxInvert .contentBox
+ {
     left: -60px;
     width: 200px;
     height: auto;
     top: -65px;
     padding: 8px 5px;
 }
-.adl_2-0 .info .iconBox.iconBoxInvert .contactHead{
+.adl_2-0 .info .iconBox.infoCenter .contentBox{
+    width: 200px;
+    height: auto;
+    padding: 8px 5px;
+	left: -60px;
+	top:22px;
+}
+.adl_2-0 .info .iconBox.iconBoxInvert .contactHead,
+.adl_2-0 .info .iconBox.infoCenter .contactHead{
     color: #333333;
     font-size: 13px;
     font-weight: 500;
 }
-.adl_2-0 .info .iconBox.iconBoxInvert .contactIcon{
+.adl_2-0 .info .iconBox.iconBoxInvert .contactIcon,
+.adl_2-0 .info .iconBox.infoCenter .contactIcon{
     font-size: 18px;
     font-weight: 600;
     float: left;
     display: inline-block;
 }
-.adl_2-0 .info .iconBox.iconBoxInvert .contactInfo{
+.adl_2-0 .info .iconBox.iconBoxInvert .contactInfo,
+.adl_2-0 .info .iconBox.infoCenter .contactInfo{
     display: inline-block;
     float: left;
     margin-left: 10px;
+	width: calc(100% - 28px);
 }
-.adl_2-0 .info .iconBox.iconBoxInvert .conatctNo{
-    color: #3ba2ed;
+.adl_2-0 .info .iconBox.iconBoxInvert .conatctNo,
+.adl_2-0 .info .iconBox.infoCenter .conatctNo{
+    color: #41a3ea ;
     font-size: 12px
+}
+.adl_2-0 .info .iconBox.infoCenter::after{
+	width: 23px;
 }
 #feeCosolidated{
     height: calc(100vh - 138px);
 }
+.info.infoICR{
+    position: absolute;
+    right: 30px;
+    top: 13px;
+}
+.info.infoICR .contentBox{
+    width: 500px !important;
+    margin-left: -250px;
+    padding: 0px 0px !important;
+    left: auto !important;
+    bottom: 22px !important;
+    top: auto !important;
+    overflow: hidden;
+}
+.info.infoICR .infoICRhead{
+	overflow: hidden;
+    padding: 6px 10px;
+    border-bottom: 1px solid #dadada;
+}
+.info.infoICR .infoICRGridHead >div{
+	padding-left: 5px !important;
+}
+.info.infoICR .infoICRtitle{
+    font-variant: normal;
+    font-family: Roboto,sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    float: left;
+	font-weight: 500;
+}
+.info.infoICR .infoICRGridHead {
+    font-size: 12px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+.info.infoICR .infoICRGridBody > div:nth-child(even){
+    background: #dfeef2;
+}
+.info.infoICR .infoICRGridBody {
+max-height: 120px;
+}
+.info.infoICR .cellFlexParent .cellFlex {
+    min-height: 30px;
+    line-height: 12px;
+	padding-left: 5px !important;
+}
+.info.infoICR .cellFlexParent > .cellFlex span input{
+	font-size: 11px;
+	    color: #485a65;
+		border-bottom-color: #e1e8ed
+}
+.adl_2-0 .info.infoICR.infoICRactive .iconBox {
+    border: 1px solid #ddd;
+    box-shadow: 0 0 7px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 7px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0 7px rgba(0,0,0,0.2);
+}
+.adl_2-0 .info.infoICR.infoICRactive .iconBox:hover{
+    border: 1px solid #ddd;
+    box-shadow: 0 0 7px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 7px rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 0 7px rgba(0,0,0,0.2);
+}
+.adl_2-0 .info.infoICR .iconBox:hover {
+	cursor: pointer;
+    border: none;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+.adl_2-0 .info.infoICR .iconBox:hover .contentBox {
+    display: none;
+    cursor: default;
+}
+.adl_2-0 .info.infoICR.infoICRactive .contentBox{
+	display: block;
+}
+.adl_2-0 .info.infoICR.infoICRactive .iconBox:hover .contentBox {
+    display: block;
+    cursor: default;
+}
+.feeCompare .crGridSubRow .cell:nth-child(5) .info.infoICR .contentBox {
+    margin-left: -320px;
+}
+.feeCompare .crGridSubRow .cell:nth-child(6) .info.infoICR .contentBox {
+    margin-left: -465px;
+}
+.feeCompare .smsfDrop{
+    position: absolute;
+
+    width: 0px;
+	 right: 0px;
+    min-height: 200px;
+    z-index: -1;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    border-radius: 5px;
+	padding: 10px;
+	transition: all 0.3s;
+	opacity: 0;
+	overflow: hidden;
+	
+}
+.feeCompare .smsfDrop.active{
+	    overflow: visible;
+    right: 22px;
+	opacity: 1;
+	    width: 375px;
+		 z-index: 999;
+}
+
+.feeCompare .smsfDrop #smsfDropHeight{
+    max-height: calc(100vh - 310px);
+}
+.feeCompare .smsfDrop .crGridHeaderWrap{
+	padding-right: 0px;
+}
+.feeCompare .smsfDrop .crGridHeaderWrap .crGridHead .logo{
+    width: 80px;
+    height: 60px;
+}
+.feeCompare .smsfDrop .crGridHeaderWrap .crGridHead .logoDetails{
+    width: calc(100% - 90px);
+}
+.feeCompare .smsfDrop .crGridHeaderWrap .cell:first-child {
+	padding-top: 0px;
+    border: 1px solid #dcdede !important;
+    width: 100%;
+    padding-right: 20px;
+}
+.feeCompare .smsfDrop .crGridHeaderWrap .crGridHead.headActive {
+    border: 1px solid #41a3ea !important;
+}
+.feeCompare .smsfDrop .crGridHeaderWrap .crGridHead:hover{
+    border: 1px solid #41a3ea !important;
+}
+.feeCompare .smsfDrop .borderR{
+    border-right: 1px solid #f4f8f9;
+}
+.feeCompare .smsfDrop .smsfTotal{
+    background: #dfeef2;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 500;
+	padding: 10px 0px ;
+	
+}
+.feeCompare .smsfDrop .addSmsfRow{
+    color: #41a3ea;
+    cursor: pointer;
+    font-weight: 500
+}
+.feeCompare .smsfDrop .addSmsfRow:hover{
+    color: #166ead;
+}
+.feeCompare .smsfDrop .cellFlex {
+	border: 1px solid transparent;
+}
+.feeCompare .smsfDrop .borderR{
+    border-right: 1px solid #f4f8f9;
+}
+.feeCompare .smsfDrop .info .iconBox.iconBoxInvert .contentBox{
+    width: 215px;
+}
+.feeCompare .smsfDrop .info .iconBox.iconBoxInvert::after{
+    bottom: 17px;
+}
+.crGridSubRow .cell .selectParm{
+    position: absolute;
+    right: 4px;
+    top: 1px;
+	font-size: 14px;
+	transition: all 0.3s;
+}
+.crGridSubRow .cell .selectParm .fa{
+	display: none
+}
+.crGridSubRow .cell .selectParm .showTick.fa-check-circle{
+	display: block;
+}
+.crGridSubRow .cell .selectParm .showCross.fa-times-circle{
+	display: block;
+}
+ .crGridSubRow .cell .selectParm .fa.fa-check-circle{
+    color: #58d44c;
+}
+.crGridSubRow .cell .selectParm .fa.fa-times-circle{
+    color: #d44c58;
+}
+.crGridWrap .crGridSubRow .cell.parameterLabel.show:hover{
+	cursor: pointer;
+	color: #41a3ea;
+}
+.feeCompwthgrap{
+	padding-top: 40px;
+}
+.secTitle{
+	color: #333333;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    margin-bottom: 10px;
+}
+.feeCompwthgrap .graphCardsWrap .graphCard{
+    float: left;
+    border-radius: 4px;
+    padding: 10px 0px 10px;
+    width: 100%;
+    background: #fff;
+    transition: all 0.15s;
+    position: relative;
+    border: 1px solid #dde2e6;
+	border-left: 6px solid;
+}
+.feeCompwthgrap .graphCardsWrap .graphCard.ck1{
+	border-left-color: #41a3ea;
+}
+.feeCompwthgrap .graphCardsWrap .graphCard.ck2{
+	border-left-color: #38edc3;
+}
+.feeCompwthgrap .graphCardsWrap .graphCard.ck3{
+	border-left-color: #39cfed;
+}
+.feeCompwthgrap .graphCardsWrap .graphCard .name {
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+}
+.feeCompwthgrap .graphCardsWrap .graphCard .recmnded{
+    font-size: 10px;
+    background: #41a3ea;
+    color: #fff;
+    padding: 2px 5px 2px 12px;
+    position: relative;
+}
+.feeCompwthgrap .graphCardsWrap .graphCard .recmnded .recStar{
+    position: absolute;
+    left: 2px;
+    top: 3px;
+    font-size: 20px;
+}
+.feeCompwthgrap .graphCardsWrap .graphCard .logo{
+    float: left;
+    width: 20%;
+    height: 50px;
+    padding: 6px 10px 0px 0px;
+}
+.feeCompwthgrap .graphCardsWrap .graphCard .details{
+    float: left;
+    width: 80%;
+    padding: 4px 10px 0 0;
+}
+.feeCompwthgrap .graphCardsWrap .graphCard .code {
+    color: #666;
+    font-size: 14px;
+}
+
+.feeCompwthgrap .graphCardsWrap .graphCard .amount {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #65737f;
+}
+
+.feeCompwthgrap .graphCardsWrap + .graphCardsWrap {
+    margin-top: 5px;
+}
+
 /*Fee Styling Ends*/
+
+/*Select list Div based*/
+.selectOption{
+    position: relative;
+    width: auto;
+    display: inline-block;
+    padding-right: 12px;
+    max-width: 100%;
+}
+.selectOption.adl-select:after{
+    line-height: 19px;
+    right: 0px;
+    top: 0;
+    color: #d0d6da;
+}
+.selectOption .list{
+    position: absolute;
+    top: 20px;
+    padding:0;
+    overflow: hidden;
+    background: #fff;
+    min-width: 120px;
+    max-width: 200px;    
+    max-height: 0;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    -ms-box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    transition: all 0.2s;
+}
+.selectOption .list.show{
+    padding:2px 5px;
+    max-height: 215px;
+}
+.selectOption .list .adl-scroll{
+    opacity: 0;
+    padding: 0
+}
+.selectOption .list.show .adl-scroll{
+    opacity: 1;
+    max-height: 215px;
+}
+
+.selectOption .list ul{
+    white-space: nowrap
+}
+.selectOption .list ul li + li{
+    border-top: 1px solid #eee;
+}
+.selectOption:hover{
+    cursor: pointer
+}
+.selectOption .list ul li:hover{
+    cursor: pointer;
+    color: #41a3ea
+}
+.adl-modal-header .selectOption{
+    padding-right: 16px;
+}
+.adl-modal-header  .selectOption.adl-select:after{
+    top: 4px;
+    color: #1982cc;
+}
+.adl-modal-header .selectOption .list{
+    z-index: 9;
+	top: 25px;
+}
+.adl-modal-header .selectOption .list ul li{
+	font-size: 13px;
+	font-weight: normal;
+	    line-height: 20px;
+}
+.adl-modal-header .selectValue{
+    color: #1982cc;
+}
+/**/
+
+/*super Loggic Accountdeatils Popup */
+.acDflt{
+float: left;
+width: 100%
+}
+.consoleModal .CnslBtnWrapper.accDfBtnWrap{
+	padding-right:20px;
+}
+.acDflt .mdlT select{
+	color:#41a3ea;
+	font-size: 14px;
+}
+.acDflt .mdlT select option{
+    color: #485a65;	
+	font-size: 13px;
+}
+.consoleModal .CnslBtnWrapper.accDfBtnWrap{
+	padding-right:20px;
+}
+.modalBody .clr{
+	color:#41a3ea;
+	padding-left:6px;
+}
+.modalBody .dvPd{
+	padding-left:15px;
+}
+.modalBody .acB{
+	color:#b0b0b0;
+}
+.acB .form-control {
+	height:0px;
+	padding:8px;
+}
+.consoleModal .adl-modal-content{    
+    border-radius: 8px;
+}
+.consoleModal .adlHeader{
+    padding: 10px 0px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    font-weight: 500;
+}
+.consoleModal .modalClose{ 
+   width: 22px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 50%;
+    background: #e74c3c;
+    color: #fff;
+    cursor: pointer;
+}
+.consoleModal .modalClose:hover {
+    background-color: #cf3d2e;
+}
+.consoleModal .modalTitle {
+    margin-top: 2px;  
+}
+.consoleModal .modalBody{
+    font-size: 14px;
+}
+.consoleModal .fotterBtns button{
+
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: normal;
+}
+.consoleModal .fotterBtns .btnBordered{
+       background: none;
+    color: #41a3ea;
+    border: 1px solid #41a3ea; 
+}
+.consoleModal .fotterBtns .btnBordered:hover{
+       background: #41a3ea;
+    color: #fff;
+    border: 1px solid #41a3ea; 
+}
+/*super Loggic Accountdeatils Popup  Ends*/
+
+
+/* Superlogic Recommend Css Begins */
+.adl_2-0 .superlogic .cardWrap .card .details.detailList{
+    width: 100%;
+    padding: 10px 10px;
+    background: #f3f6f8;
+    height: auto;
+}
+.adl_2-0 .superlogic .cardWrap .card .detailListWrap .detailList:nth-child(odd){
+    background: #fcfbff;
+}
+.adl_2-0 .superlogic .card .topValues .btnSMSF{
+    display: inline-block;
+    background: #41a3ea;
+    color: #fff;
+    padding: 4px 20px;
+    cursor: pointer;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    margin-right: 10px;
+}
+.adl_2-0 .superlogic .card .topValues .btnSMSF:hover{
+background-color: #166ead;
+}
+.adl_2-0 .slRecommend .cardWrap .card:hover {
+    cursor: default;
+    box-shadow: 0 0 0px rgba(0,0,0,0);
+    border: 1px solid #dde2e6;
+}
+/* Superlogic Recommend Css Ends */
 
 /* Media Queries--- laptop */
 @media only screen and (max-width: 1366px) {
@@ -5028,8 +5612,34 @@ and (orientation : landscape){
 	margin-right:10px;
 }
 
+/*Fee tab styles */
+
+.feeCompare.crGridWrap .crGridHeaderWrap .cell:first-child,
+.feeCompare.crGridWrap .crGridrowHead .cell:first-child, 
+.feeCompare.crGridWrap .crGridSubRow .cell:first-child, 
+.feeCompare.crGridWrap .crGridrowTopHead .cell:first-child{
+     width: 350px; 
+}
+.feeCompare.crGridWrap .cell {
+   width: 240px;
+}
+#feeCosolidated {
+    height: calc(100vh - 222px);
+}
+.feeCompare.crGridWrap .recStatusPre {
+    width: 61%;
+}
+/*Ends */
+
+
 }
 /**/
+
+
+
+
+/
+
 
 
 @media only screen 
@@ -5164,6 +5774,11 @@ and (orientation : portrait), (max-width : 768px) {
 /**/
 
 
+@media only screen and (min-width : 992px) and (max-width : 1367px) {
+.adl_2-0 .info .iconBox.iconBoxInvert .contentBox {
+    width: 185px;
+}
+}
 
 
 

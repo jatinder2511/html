@@ -74,8 +74,8 @@
 				<h3 class="panelHeading"><i class="fa fa-chevron-left link"></i> Fees</h3>
 				<div class="adl-floatL adl-form-group adl-no-margin adl-no-padding adl-select feeSelect">
 					<select class="fontSB font14 form-control baseBorder">
-						<option value="1">Comparison on Consolidated Amount</option>
-						<option value="2">Aggregate On Amount</option>
+						<option value="1">Aggregate On Amount</option>
+						<option value="2">Comparison on Consolidated Amount</option>
 					</select>
 				</div>
 			</div>
@@ -83,18 +83,22 @@
         </div><!--title-->
 		<div>
 			<div class="col-10 adl-no-margin policyResults">
-					<span>Comparing fees of Recommended Superfund with <span>4</span> Superfunds</span>
-					<div class="adl-floatR cmprBtn">
-						<span class="arrowSet">
-							<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-							<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-						</span>
-						<span>Compare</span>
-					</div>
+					<span>Comparing fees of Recommended Superfund with <span>4</span> Superfunds | <span>1</span> superfund hidden <a href="#">Show</a></span>
 			</div>
 		</div>
-			<div class="col-10 crGridWrap adl-scroll feeCompare" id="feeCosolidated" style="overflow:auto;">
+			<div class="col-10 crGridWrap adl-scroll feeCompare aggregate" id="feeCosolidated" style="overflow:auto;">
 			<div class="adl-floatL">
+				<div class="adlSet crGridHeaderWrap recStatusWrap">
+					<div class="cell parmsWrap"></div>
+					<div class="cell crGridHead headActive">
+						<div class="recStatus green">Post Recommendations</div>
+						<div class="jCenter"><span class="amount">$600</span> <sup class="red">+$50</sup></div>
+					</div><!-- end of crGridHead -->
+					<div class="cell crGridHead recStatusPre">
+						<div class="recStatus">Pre Recommendations</div>
+						<div class="jCenter"><span class="amount">$550</span> <sup class="red">+$50</sup></div>
+					</div><!-- end of crGridHead -->
+				</div><!-- end of recStatus -->
 				<div class="adlSet crGridHeaderWrap">
 					<div class="cell parmsWrap">PARAMETERS <span class="editParm toolTipcustom">
 						<div class="eye showEye"><i class="fa fa-eye" aria-hidden="true"></i> Show Parameters</div>
@@ -104,7 +108,7 @@
                         </div>
 					</span>
 					</div>
-					<div class="cell crGridHead headActive">
+					<div class="cell crGridHead headActive headActiveDouble">
 						<div class="logo">
 							<img src="./images/adlNewImages/adl2/amp.png">
 						</div>
@@ -1675,12 +1679,14 @@ $(document).ready(function(){
 			
 			//Select parametrs to show in report
 			$(".editParm").click(function () { 
-			$(this).toggleClass("activeParm");
+				
+				$(this).toggleClass("activeParm");
 				if($(".selectParm").hasClass("active")){
 					$(".selectParm .fa.fa-check-circle").removeClass("showTick");
 					$(".selectParm .fa.fa-times-circle").removeClass("showCross");
 					$(".parameterLabel").removeClass("show");
 					$(".selectParm").removeClass("active");
+					
 				}
 				
 				else{

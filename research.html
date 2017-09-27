@@ -122,7 +122,13 @@
 			<div class="col-10 crGridWrap adl-scroll " id="rScrollHeight" style="overflow:auto;">
 			<div class="adl-floatL">
 				<div class="adl-floatL crGridHeaderWrap">
-					<div class="cell parmsWrap">PARAMETERS <span class="editParm"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</span></div>
+					<div class="cell parmsWrap">PARAMETERS <span class="editParm toolTipcustom">
+						<div class="eye showEye"><i class="fa fa-eye" aria-hidden="true"></i> Show Parameters</div>
+						<div class="eye hideEye"><i class="fa fa-eye-slash" aria-hidden="true"></i> Hide Parameters</div>
+					<div class="tTipInner dtop text-center" style="width: 200px;">
+                            <span>Show/Hide parameters in report</span>
+                        </div>
+					</span></div>
 					<div class="cell crGridHead headActive">
 						<div class="logo">
 							<img src="./images/adlNewImages/adl2/amp.png">
@@ -144,8 +150,21 @@
 							</div>
 							<div class="adlSet">
 								<div class="info">
-									<span class="infoIcon ">i</span> <span class="showData">A/c bal: $15,000</span><span class="hideData">Hide</span>
-								</div>
+									<span class="iconBox infoCenter">
+										<span class="infoIcon ">i</span>
+										<span class="contentBox">
+											<span class="contactHead">Call Center Contact</span>
+											<span class="adlSet" style="margin-top: 5px;">
+												<span class="contactIcon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+												<span class="contactInfo">
+													<span class="adlSet conatctNo">1300547873</span>
+													<span class="adlSet"> 9:00am to 11:00pm </span>
+												</span>
+											</span>
+										</span>
+									</span> 
+									<span class="showData">A/c bal: $15,000</span><span class="hideData">Hide</span>
+								</div><!-- end of info-->
 							</div>
 						</div>
 						<div class="adlSet">
@@ -333,8 +352,9 @@
 						</div><!-- end of crGridRowHead -->
 						<div class="adlSet crGridBody">
 							<div class="adl-floatL crGridSubRow cellFlexParent">
-								<div class="cell cellFlex">
+								<div class="cell cellFlex parameterLabel">
 									Low Income Superannuation
+									<span class="selectParm"><i class="fa fa-check-circle"></i> <i class="fa fa-times-circle"></i></span>
 								</div>
 								<div class="cell cellFlex textSmall jCenter ynFlags">
 									<span class="flagYes"><i class="fa fa-check" aria-hidden="true"></i></span>
@@ -730,6 +750,35 @@ $(document).ready(function(){
 		$(this).parent().parent().siblings(".crGridBody").toggleClass("toggleGrid");
 		$(this).children(".fa").toggleClass("fa-caret-up fa-caret-down")
 		});
+		
+		
+					//Select parametrs to show in report
+			$(".editParm").click(function () { 
+			$(this).toggleClass("activeParm");
+				if($(".selectParm").hasClass("active")){
+					$(".selectParm .fa.fa-check-circle").removeClass("showTick");
+					$(".selectParm .fa.fa-times-circle").removeClass("showCross");
+					$(".parameterLabel").removeClass("show");
+					$(".selectParm").removeClass("active");
+				}
+				
+				else{
+					$(".selectParm .fa.fa-check-circle").addClass("showTick");
+					$(".selectParm .fa.fa-times-circle").removeClass("showCross");
+					$(".parameterLabel").toggleClass("show");
+					$(".selectParm").addClass("active");
+				
+				}
+
+			});
+			
+			$(".parameterLabel").click(function(){
+				if($(".parameterLabel").hasClass("show")){
+					$(this).children().find(".fa.fa-check-circle").toggleClass("showTick");
+					$(this).children().find(".fa.fa-times-circle").toggleClass("showCross")
+				}
+				
+			});
  
 	});
 </script>
