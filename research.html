@@ -122,6 +122,7 @@
 			<div class="col-10 crGridWrap adl-scroll " id="rScrollHeight" style="overflow:auto;">
 			<div class="adl-floatL">
 				<div class="adl-floatL crGridHeaderWrap">
+
 					<div class="cell parmsWrap">PARAMETERS <span class="editParm toolTipcustom">
 						<div class="eye showEye"><i class="fa fa-eye" aria-hidden="true"></i> Show Parameters</div>
 						<div class="eye hideEye"><i class="fa fa-eye-slash" aria-hidden="true"></i> Hide Parameters</div>
@@ -129,6 +130,7 @@
                             <span>Show/Hide parameters in report</span>
                         </div>
 					</span></div>
+
 					<div class="cell crGridHead headActive">
 						<div class="logo">
 							<img src="./images/adlNewImages/adl2/amp.png">
@@ -352,6 +354,7 @@
 						</div><!-- end of crGridRowHead -->
 						<div class="adlSet crGridBody">
 							<div class="adl-floatL crGridSubRow cellFlexParent">
+
 								<div class="cell cellFlex parameterLabel">
 									Low Income Superannuation
 									<span class="selectParm"><i class="fa fa-check-circle"></i> <i class="fa fa-times-circle"></i></span>
@@ -750,8 +753,7 @@ $(document).ready(function(){
 		$(this).parent().parent().siblings(".crGridBody").toggleClass("toggleGrid");
 		$(this).children(".fa").toggleClass("fa-caret-up fa-caret-down")
 		});
-		
-		
+				
 					//Select parametrs to show in report
 			$(".editParm").click(function () { 
 			$(this).toggleClass("activeParm");
@@ -779,7 +781,7 @@ $(document).ready(function(){
 				}
 				
 			});
- 
+
 	});
 </script>
 </body>

@@ -7960,6 +7960,7 @@ display: block;
     bottom: 18px;
     width: 23px;
 }
+
 .adl_2-0 .info .iconBox.iconBoxInvert .contentBox
  {
     left: -60px;
@@ -7974,6 +7975,15 @@ display: block;
     padding: 8px 5px;
 	left: -60px;
 	top:22px;
+}
+
+
+.adl_2-0 #reasonModal .selected{
+	float:left;
+	width:100%;
+	padding:0 25px;
+	margin-bottom:20px
+
 }
 .adl_2-0 .info .iconBox.iconBoxInvert .contactHead,
 .adl_2-0 .info .iconBox.infoCenter .contactHead{
@@ -8087,6 +8097,7 @@ max-height: 120px;
 .adl_2-0 .info.infoICR .iconBox::after{
 z-index: 999;
 }
+
 .adl_2-0 .info.infoICR .iconBox:hover {
 	 cursor: pointer;
     border: none;
@@ -8098,6 +8109,12 @@ z-index: 999;
 .adl_2-0 .info.infoICR .iconBox:hover .contentBox {
  display: none;
     cursor: default;
+}
+
+.adl_2-0 #reasonModal .listToSelect{
+	float:left;
+	width:100%;
+	padding:0 25px;
 }
 .adl_2-0 .info.infoICR.infoICRactive .contentBox{
 	display: block;
@@ -10203,8 +10220,437 @@ width: calc(100% - 26px);
     line-height: 9px;
 }
 
+
 .cardWrap.rcmndd .card .bricksWrap .brick .amnt{
     font-size: 14px;
+}
+.crGridWrap .crGridHeaderWrap .crGridHead:hover,
+.crGridWrap .crGridHeaderWrap .crGridHead.headActive{
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    z-index: 1;
+    position: relative;
+    border: 1px solid #41a3ea;
+	cursor: pointer;
+}
+.crGridWrap .crGridHeaderWrap .crGridHead.parmsWrap:hover{
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.2);
+    z-index: auto;
+    position: relative;
+    border: 0px solid #41a3ea;
+	cursor: default;
+}
+.crGridHeaderWrap .crGridHead .logo{
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    float: left;
+    position: relative;
+}
+.crGridHeaderWrap .crGridHead .logoDetails{
+	float: left;
+    margin-left: 4px;
+    width: calc(100% - 65px);
+}
+.crGridHeaderWrap .logoDetails .fundName label{
+float: left;
+}
+.crGridHeaderWrap .logoDetails .fundName select{
+    float: left;
+    height: 20px;
+    font-size: 12px;
+    padding: 0px;
+  color: #3ba2ed;
+  padding-right: 18px;
+}
+.crGridHeaderWrap .logoDetails .recmnd{
+    display: inline-block;
+    background: #58b03f;
+    color: #fff;
+    font-size: 10px;
+    padding: 0px 5px;
+    border-radius: 2px;
+    margin: 6px 0px 0px;
+}
+.crGridHeaderWrap .logoDetails .recmnd.fade{
+opacity:0.3;
+}
+.crGridHeaderWrap .logoDetails .recmnd .fa.fa-star {
+    font-size: 7px;
+}
+.crGridHeaderWrap .logoDetails .info{
+    margin: 4px 0px;
+    font-size: 11px;
+}
+.crGridHeaderWrap .logoDetails .info .hideData{
+	display: none;
+	    color: #3ba2ed;
+}
+.crGridWrap .crGridHeaderWrap .crGridHead:hover .logoDetails .info .showData{
+	display: none;
+}
+.crGridWrap .crGridHeaderWrap .crGridHead:hover .logoDetails .info .hideData{
+	display:  inline-block;
+}
+.crGridHeaderWrap .logoDetails .info .infoIcon {
+	display: inline-block;
+    width: 13px;
+    height: 13px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 12px;
+    border: 1px solid #3ba2ed;
+    font-size: 9px;
+    color: #3ba2ed;
+}
+.crGridHeaderWrap .desc{
+    font-size: 10px;
+    line-height: 10px;
+}
+.crGridHeaderWrap .logoDetails .fundName .adl-select::after {
+    right: 2px;
+    bottom: -5px;
+}
+.crGridWrap .cell{
+	float: left;
+	padding: 4px 10px;
+	width: 220px;
+	border-right: 1px solid #f4f8f9;
+	line-height: 14px;
+/* 	color: #333; */
+
+}
+.crGridWrap .cell.cellEmpty{
+    background-color: #f4f8f9;
+}
+.jCenter{
+    justify-content: center;
+}
+.crGridWrap .cell.textSmall{
+	font-size:11px;
+}
+.crGridWrap .cell.ynFlags .fa{
+    font-size: 24px;
+    -webkit-text-stroke: 3px #fff;
+}
+.crGridWrap .cell .flagYes .fa{
+    color: #58d44c;
+}
+.crGridWrap .cell .flagNo .fa{
+    color: #d44c58;
+}
+.crGridWrap .cell:last-child{
+	border-right: none;
+}
+.crGridWrap .crGridHeaderWrap .cell:first-child,
+.crGridWrap .crGridrowHead .cell:first-child,
+.crGridWrap .crGridSubRow .cell:first-child{ 
+	width:250px;
+}
+.crGridWrap .crGridHeaderWrap .cell:first-child{
+    padding-top: 72px;
+    padding-left: 10px !important;
+    font-weight: 500;
+    font-size: 15px;
+    background: transparent;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    height: 100px;
+    /* padding: 4px; */
+    border-right: none;
+    border: 1px solid #f4f8f9;
+    transition: all 0.2s;
+}
+
+.crGridWrap .crGridrowHead .crGridTitle{
+    background-color: #dfeef2;
+    font-weight: 500;
+    font-size: 13px;
+    position: relative
+}
+.crGridWrap .crGridHeaderWrap  .editParm{
+    color: #3ba2ed;
+    font-weight: normal;
+    margin-left: 7px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.crGridWrap .crGridrowHead .crGridTitle.flagsCounter {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.crGridWrap .crGridrowHead .crGridTitle.flagsCounter .flagYes {
+    margin-right: 40px;
+}
+.crGridWrap .crGridrowHead .crGridTitle.flagsCounter .counterValue {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    display: inl;
+    background-color: #fff;
+    display: inline-block;
+    text-align: center;
+    font-size: 11px;
+    line-height: 18px;
+    position: absolute;
+}
+.crGridWrap .crGridrowHead .crGridTitle.flagsCounter .fa {
+    font-size: 30px;
+    -webkit-text-stroke: 4px #eaf3f5;
+}
+.crGridWrap .crGridrowHead .closeGrids {
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    top: 7px;
+}
+.crGridWrap .crGridSubRow {
+	border-bottom: 1px solid #f4f8f9;
+	background:#fff;
+}
+.crGridWrap .crGridSubRow.cellFlexParent{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: stretch;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    /* justify-content: center; */
+}
+.crGridWrap .crGridBody.toggleGrid{
+display: none;
+}
+.crGridWrap .cellFlex
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-align: center;
+     align-items: center;
+min-height: 40px;
+}
+#rScrollHeight{
+    height: calc(100vh - 102px);
+}
+
+.adl_2.0 [type="checkbox"].adl-checkbox:not(:checked) + label:after,
+.adl_2.0 [type="checkbox"].adl-checkbox:checked + label:after{
+ content: '7';
+ -webkit-transform: scaleX(-1) rotate(120deg);
+ -moz-transform: scaleX(-1) rotate(120deg);
+ -ms-transform: scaleX(-1) rotate(120deg);
+ -o-transform: scaleX(-1) rotate(120deg);
+ transform: scaleX(-1) rotate(120deg);
+ position: absolute;
+ top: 2px;
+ left: 3px;
+ font-size: 10px;
+ color: #41a3ea;
+ line-height: 12px;
+ transition: all .2s;
+ font-family: Tahoma, Geneva, sans-serif;
+ font-weight: 600;
+}
+.showSort.otherBg select{
+	background: transparent;
+}
+/*Research Styles End */
+
+/*Fees Styling Begins*/
+.adl_2-0 .adl-select.feeSelect::after{
+    color: #3ba2ed;
+    right: 8px;
+}
+.adl_2-0 .cmprBtn{
+    display: inline-block;
+    border: 1px solid #3ba2ed;
+    padding: 3px 10px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    padding-left: 24px;
+    color: #3ba2ed;
+    position: relative;
+    cursor: pointer;
+	transition: all .15s ease 0s;
+    -webkit-transition: all .15s ease 0s;
+    -moz-transition: all .15s ease 0s;
+}
+.adl_2-0 .cmprBtn:hover{
+    background-color: #3ba2ed;
+	color: #fff;
+}
+.adl_2-0 .cmprBtn .arrowSet{
+    position: absolute;
+    left: 6px;
+}
+.adl_2-0 .cmprBtn .arrowSet .fa{
+    position: absolute;
+}
+.adl_2-0 .cmprBtn .arrowSet .fa + .fa{
+    position: absolute;
+    top: 5px;
+    left: 1px;
+}
+.adl_2-0 .adl-margin5{
+	margin-top: 5px !important;
+	margin-bottom: 5px !important;
+}
+.feeCompare.crGridWrap .crGridHeaderWrap{
+    padding-right: 20px;
+}
+.feeCompare.crGridWrap .cell{
+    width: 216px;
+}
+.feeCompare.crGridWrap .crGridHeaderWrap .cell:first-child, 
+.feeCompare.crGridWrap .crGridrowHead .cell:first-child,
+ .feeCompare.crGridWrap .crGridSubRow .cell:first-child{
+    width: 258px;
+}
+.feeCompare.crGridWrap .crGridHeaderWrap .headSmsfBtn{
+    position: absolute;
+    right: 0;
+    width: 100px;
+    background: #f4f8f9;
+    background-color: #3ba2ed;
+    color: #fff;
+    border-top-right-radius: 6px;
+    text-align: center;
+    font-size: 12px;
+    border-top-left-radius: 6px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    z-index: 1;
+    transform: rotate(90deg);
+    cursor: pointer;
+    top: 41px;
+    right: -39px;
+}
+.adl_2-0 .info .iconBox.iconBoxInvert{
+	    margin: -5px -2px 0 0;
+	    border-top-left-radius: 0;
+		-moz-border-top-left-radius: 0;
+	-webkit-border-top-left-radius: 0;
+    border-top-right-radius: 0;
+	-moz-border-top-right-radius: 0;
+	-webkit-border-top-right-radius: 0;
+	
+    border-bottom-left-radius: 50%;
+    -moz-border-bottom-left-radius: 50%;
+    -webkit-border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    -moz-border-bottom-right-radius: 50%;
+    -webkit-border-bottom-right-radius: 50%;
+}
+.adl_2-0 .info .iconBox.iconBoxInvert::after{
+    bottom: 18px;
+    width: 23px;
+}
+.adl_2-0 .info .iconBox.iconBoxInvert .contentBox {
+    left: -60px;
+    width: 200px;
+    height: auto;
+    top: -65px;
+    padding: 8px 5px;
+}
+.adl_2-0 .info .iconBox.iconBoxInvert .contactHead{
+    color: #333333;
+    font-size: 13px;
+    font-weight: 500;
+}
+.adl_2-0 .info .iconBox.iconBoxInvert .contactIcon{
+    font-size: 18px;
+    font-weight: 600;
+    float: left;
+    display: inline-block;
+}
+.adl_2-0 .info .iconBox.iconBoxInvert .contactInfo{
+    display: inline-block;
+    float: left;
+    margin-left: 10px;
+}
+.adl_2-0 .info .iconBox.iconBoxInvert .conatctNo{
+    color: #3ba2ed;
+    font-size: 12px
+}
+#feeCosolidated{
+    height: calc(100vh - 138px);
+}
+/*Fee Styling Ends*/
+
+/* Media Queries--- laptop */
+@media only screen and (max-width: 1366px) {
+	
+.col-md-2 {
+    width: 20%;
+}
+.adl_2-0 .title .totalAcBlnc .totalAcBlncHover{
+    position: absolute;
+    width: 520px;
+    left: 110%;
+    background-color: #e7ebec;
+    padding: 5px 0px;
+   bottom: -18px;
+    z-index: 1;
+	    transition: all 0.4s ease-out;
+		opacity:0;
+}
+.adl_2-0 .title .totalAcBlnc .AcLogo{
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    line-height: 45px;
+    text-align: center;
+    float: left
+}
+.adl_2-0 .title .totalAcBlnc .amnt{
+    display: inline-block;
+    float: left;
+    margin-top: 10px;
+    font: 700 16px 'Roboto Condensed', sans-serif;
+    margin-left: 5px;
+}
+.adl_2-0 .title .totalAcBlnc.totalAcBlncWrap:hover .totalAcBlncHover{
+opacity:1;
+	left: calc(100% - 520px);
+}
+.crGridWrap .crGridHeaderWrap{
+	position: relative;
+}
+.crGridWrap .crGridHeaderWrap .crGridHead{
+    background: #fff;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    height: 100px;
+	padding: 4px;
+	border-right: none;
+	border: 1px solid #f4f8f9;
+	transition: all 0.2s;
+}
+.crGridWrap .crGridHeaderWrap .crGridHead:hover,
+.crGridWrap .crGridHeaderWrap .crGridHead.headActive{
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    z-index: 1;
+    position: relative;
+    border: 1px solid #41a3ea !important;
+	cursor: pointer;
 }
 .adl_2-0 .cardWrap.rcmndd .card .details .amnt .value{
         font-size: 15px;
