@@ -703,6 +703,14 @@ img.item_icon {
     line-height: 16px;
     transition: all .2s;
 }
+.adl_2-0 [type="checkbox"].adl-checkbox.sqrDot:not(:checked) + label:after, .adl_2-0 [type="checkbox"].adl-checkbox.sqrDot:checked + label:after{
+	content: '\f04d';
+    font-size: 9px;
+    font-family: FontAwesome;
+    transform: rotate(0);
+    left: 3px;
+}
+
 /*----end----*/
 
 /*radio button*/

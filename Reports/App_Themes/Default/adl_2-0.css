@@ -242,6 +242,10 @@ input[type="text"]{
 	color:#7d7777
 }
 
+.adl_2-0 .slideLabel.adl-select.adl-no-paddingR::after, .adl_2-0 .slideLabel.adl-select.adl-no-paddingLR::after{
+	right:3px
+}
+
 .adl_2-0 .form-horizontal.adl-marginT{
     display: flex;
     flex-flow: row wrap;

@@ -27,13 +27,13 @@
 <body>
 <div class="adl-wrapper adl_2-0">
 
-    <div class="adl-container reports blank">
-         <header class="adlSet">      
+    <div class="adl-container reports">
+         <header class="adlSet">
       <aside>
       <div class="col-10 adl-form-group reportsSrch">
-      <span class="col-1 adl-no-paddingLR font16 text-grey2"><i class="fa fa-dollar"></i><i class="fa fa-align-justify"></i></span>
+      <span class="col-1 adl-no-paddingLR font16 text-grey"><i class="fa fa-dollar"></i><i class="fa fa-align-justify"></i></span>
       <div class="input-with-icon col-8 adl-no-paddingL">
-      <input type="text" placeholder="Search Reports..." value="Investment Reports" class="form-control baseBorder font15" />
+      <input type="text" placeholder="Search Reports..." value="Investment Reports" class="form-control baseBorder font15 no-border" />
       <span class="icon-right input-icon-search"></span>
       </div>
       <span class="link col-1 adl-no-paddingR"><i class="fa fa fa-minus-square-o"></i></span>
@@ -42,17 +42,42 @@
       
       <article>
       <div class="title adlSet">
-      <div class="titleNames selected">Asset Allocation Details <span class="link"><i class="fa fa-ellipsis-v"></i></span></div>
+      	<div class="titleNames selected">Asset Allocation Details <span class="link"><i class="fa fa-ellipsis-v"></i></span></div>
+        <div class="titleNames">Asset Allocation Details <span class="link"><i class="fa fa-ellipsis-v"></i></span></div>
+        <div class="titleNames">Asset Allocation Details <span class="link"><i class="fa fa-ellipsis-v"></i></span></div>
       </div>
       </article>
       </header>
       
+      
+      
       <main class="adlSet">
       <aside>
+      
+      <div class="adlSet whitebg">
+      <div class="col-6 adl-no-paddingR row1">
+        <div class="adl-form-group col-45 slideLabel adl-select adl-no-paddingL adl-no-margin">
+        <input class="form-control baseBorder no-border" placeholder="Start" type="text">
+        </div>
+        <div class="col-1 adl-no-paddingLR textC">to</div>
+        <div class="adl-form-group col-45 slideLabel adl-select adl-no-paddingR adl-no-margin">
+        <input class="form-control baseBorder no-border" placeholder="End" type="text">
+        </div>        
+       </div>
+       <div class="col-4 adl-no-paddingR">
+       <div class="adl-form-group col-10 slideLabel adl-select cell-borderL adl-no-margin">
+        <select class="form-control baseBorder no-border">
+        <option>All Entities</option>
+        </select>
+        </div>
+       </div>
+
+      </div><!--adlSet-->
+      
       <ul id="reportsNav" class="navList adlSet">
       <li>
       <div class="navOption adlSet">
-      <span class="adl-floatL"><input class="adl-checkbox" type="checkbox" id="option1">
+      <span class="adl-floatL"><input class="adl-checkbox sqrDot" type="checkbox" id="option1">
 		<label for="option1"><span class="check_text">Asset Allocation</span></label>
 	</span>
        <span class="toggleBtn"><i class="fa fa-angle-down"></i></span></div>
@@ -69,19 +94,19 @@
       </li>
       <li>
       <div class="navOption adlSet">
-      <span class="adl-floatL"><input class="adl-checkbox" type="checkbox" id="option2">
+      <span class="adl-floatL"><input class="adl-checkbox sqrDot" type="checkbox" id="option2">
 		<label for="option2"><span class="check_text">Distribution</span></label>
 	</span></div>
     </li>
       <li>
         <div class="navOption adlSet">
-        <span class="adl-floatL"><input class="adl-checkbox" type="checkbox" id="option3">
+        <span class="adl-floatL"><input class="adl-checkbox sqrDot" type="checkbox" id="option3">
         <label for="option3"><span class="check_text">ICR</span></label>
         </span></div>
       </li>
       <li>
         <div class="navOption adlSet">
-        <span class="adl-floatL"><input class="adl-checkbox" type="checkbox" id="option4">
+        <span class="adl-floatL"><input class="adl-checkbox sqrDot" type="checkbox" id="option4">
         <label for="option4"><span class="check_text">Income and Growth</span></label>
         </span>
         <span class="toggleBtn"><i class="fa fa-angle-down"></i></span></div>
@@ -105,19 +130,37 @@
       </li>
       <li>
         <div class="navOption adlSet">
-        <span class="adl-floatL"><input class="adl-checkbox" type="checkbox" id="option5">
+        <span class="adl-floatL"><input class="adl-checkbox sqrDot" type="checkbox" id="option5">
         <label for="option5"><span class="check_text">Projected Income</span></label>
-        </span>
-        <span class="toggleBtn"><i class="fa fa-angle-down"></i></span></div>
-        <ul>
-          <li>
-          <input class="adl-checkbox" type="checkbox" id="option5a">
-        <label for="option5a"><span class="check_text">Short Term Portfolio Returns</span></label>
-        </li>
-        </ul>
+        </span></div>
+      </li>
+      <li>
+        <div class="navOption adlSet">
+        <span class="adl-floatL"><input class="adl-checkbox sqrDot" type="checkbox" id="option6">
+        <label for="option6"><span class="check_text">Short Term Portfolio Returns Report</span></label>
+        </span></div>
+      </li>      
+      <li>
+        <div class="navOption adlSet">
+        <span class="adl-floatL"><input class="adl-checkbox sqrDot" type="checkbox" id="option7">
+        <label for="option7"><span class="check_text">Transaction List</span></label>
+        </span></div>
+      </li>
+      <li>
+        <div class="navOption adlSet">
+        <span class="adl-floatL"><input class="adl-checkbox sqrDot" type="checkbox" id="option8">
+        <label for="option8"><span class="check_text">Unrealised Capital Gains Report</span></label>
+        </span></div>
+      </li>
+      <li>
+        <div class="navOption adlSet">
+        <span class="adl-floatL"><input class="adl-checkbox sqrDot" type="checkbox" id="option9">
+        <label for="option9"><span class="check_text">Valuation Report</span></label>
+        </span></div>
       </li>
       </ul>
       </aside>
+      
       <article>
       <div class="rightWrap adlSet">
       	<div class="reportsWrap assetDetails">
@@ -130,10 +173,10 @@
                 </div>
                 <div class="adl-floatR">
                 	<div class="adl-form-group adl-select">
-                     <input type="text" disabled class="form-control no-border" value="Sep 16" />
+                     <input type="text" class="form-control no-border" value="Sep 16" />
                      </div>
                      <div class="adl-form-group adl-select">
-                     <input type="text" disabled class="form-control no-border" value="Sep 17" />
+                     <input type="text" class="form-control no-border" value="Sep 17" />
                      </div>
                      
                      <span class="link adl-floatL refresh"><i class="fa fa-rotate-right adl-floatL"></i></span>
@@ -142,6 +185,8 @@
                 </div><!--header-->
                 
                 <div class="adl-scroll overflow-scroll-basic adlSet">
+                
+                <div class="tableSection adlSet">
                 
                 <div class="adlSet col-10 section">
                 <div class="big col-10">
@@ -303,6 +348,8 @@
                     </div>        
                     </div><!--divTable-->
                 </div><!--section-->
+                
+                </div><!--tableSection-->
                 
                 
                 

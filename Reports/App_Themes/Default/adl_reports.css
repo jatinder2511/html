@@ -12,7 +12,6 @@ aside{
 article{
 	float:left;
 	width:80%;
-	height:100vh;
 	position:relative;
 }
 header{
@@ -22,10 +21,11 @@ header{
 	background-color: #F4F8F9;
 	margin: 0;
     padding: 5px 10px;
+	border-right: 1px solid #eee;
 }
 .reportsSrch .link i{
 	float: right;
-    margin: 7px 0 0;
+    margin: 5px 0 0;
     font-size: 20px;
 }
 .reportsSrch .fa-align-justify{
@@ -34,23 +34,35 @@ header{
 	font-size: 14px;
 }
 .reportsSrch .font16{
-	margin-top:8px
+	margin-top:6px
 }
 .reportsSrch .form-control{
 	padding-right:25px
 }
-.adl-container.reports aside, .adl-container.reports article{
-	height:100vh
+.adl-container.reports main aside, .adl-container.reports main article{
+	height:calc(100vh - 40px)
 }
 .adl-container.reports article .titleNames{
 	font-size:16px;
 	float:left;
 	padding:9px;
-	background-color:#fff;		
+	border-top:3px solid transparent;
+}
+.adl-container.reports article .titleNames:hover{
+	color:#41a3ea;
+	border-top:3px solid #41a3ea;
+	cursor:pointer
+}
+.adl-container.reports article .titleNames > span.link{
+	display:none
 }
 .adl-container.reports article .titleNames.selected{
 	font-weight:bold;
-	border-top:3px solid #41a3ea;
+	border-top:3px solid #41a3ea;	
+	background-color:#fff;
+}
+.adl-container.reports article .titleNames.selected > span.link{
+	display:inline-block
 }
 .adl-container.reports article .title{
 	border-bottom:none;
@@ -59,6 +71,7 @@ header{
 }
 #reportsNav{
 	background-color:#F4F8F9;
+	border-top:1px solid #eee;
 	border-right:1px solid #eee
 }
 #reportsNav .navOption{
@@ -135,13 +148,7 @@ header{
 .reportsWrap .header .adl-form-group .form-control{
 	padding:0 10px
 }
-.reportsWrap .header .adl-form-group .form-control[disabled]{
-	border:none!important;
-	color:#485a65!important;
-}
-.reportsWrap .header .adl-form-group .form-control[disabled]:hover, .reportsWrap .header .adl-form-group input[disabled]{
-	cursor:pointer!important;
-}
+
 .reportsWrap .header .refresh{
 	margin-top:7px;
 	margin-right:10px;
@@ -246,7 +253,41 @@ header{
 
 /*end*/
 
+.adl-container.reports.blank article *{
+	display:none
+}
 
+.adl-container.reports.blank:before {
+	content: '';
+    display: block;
+    width: 350px;
+    height: 270px;
+    margin: auto;
+    position: absolute;
+    left: 58%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+	background:url(../../assets/adl2/landing_graphic.svg) no-repeat center center;
+}
+.adl-container.reports.blank:after {
+    content: "Select report(s) from the left panel to view and download.";
+    display: block;
+    width: 500px;
+    margin: auto;
+    position: absolute;
+    left: 58%;
+    top: 50%;
+    margin-left: -230px;
+    margin-top: 120px;
+    text-align: center;
+    color: #999;
+    font-size: 17px;
+}
+
+.adl-container.reports main aside .row1 .col-1{
+	margin-top:5px
+}
 
 
 
