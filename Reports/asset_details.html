@@ -64,13 +64,13 @@
                     </div>
                   </div>
               </div>
-              <div class="titleNames">Asset Allocation Details 
+              <div class="titleNames">IGR-Default
                 <span class="link">
                   <i class="fa fa-ellipsis-v">
                   </i>
                 </span>
               </div>
-              <div class="titleNames">Asset Allocation Details 
+              <div class="titleNames">Distribution
                 <span class="link">
                   <i class="fa fa-ellipsis-v">
                   </i>
@@ -263,7 +263,7 @@
           <article id="article2">
 
             <div class="rightWrap adlSet">
-              <div class="reportsWrap assetDetails">
+              <div class="reportsWrap adlSet assetDetails">
                 <div class="header adlSet">
                   <div class="adl-floatL">
                     <span class="tabLink active" href="#">All
@@ -279,6 +279,7 @@
                     <div class="adl-form-group adl-select">
                       <input type="text" class="form-control no-border" value="Sep 16" />
                     </div>
+                    <div class="adl-floatL LH25 text-grey2">to</div>
                     <div class="adl-form-group adl-select">
                       <input type="text" class="form-control no-border" value="Sep 17" />
                     </div>
@@ -288,19 +289,21 @@
                     </span>
                     <span class="link adl-floatL showhide fontSB">
                       <i class="fa fa-eye">
-                      </i> Show Graph
+                      </i> 
+                      <span>Show Graph</span>
+                      <span class="adlHide">Hide Graph</span>
                     </span>                     
                   </div>
                 </div>
                 <!--header-->
                 <div class="adl-scroll overflow-scroll-basic adlSet">
-                  <div class="tableSection adlSet">
+                  <div class="tableSection adlSet white-bg">
                     <div class="adlSet col-10 section">
                       <div class="big col-10">
                         <span>Michael Ross
                         <span class="link"><i class="fa fa-ellipsis-v"></i></span>
                   		</span>
-                        <span class="adl-floatR">A$53,282
+                        <span class="adl-floatR">A$ 53,282
                         </span>
                       </div>
                       <div class="divTable">
@@ -494,7 +497,7 @@
                         <span>Joint - Michael, Rachel
                         <span class="link"><i class="fa fa-ellipsis-v"></i></span>
                         </span>
-                        <span class="adl-floatR">A$53,282
+                        <span class="adl-floatR"><span><i class="fa fa-tag greenFont6 flipX"></i></span> A$ 53,282
                         </span>
                       </div>
                       <div class="divTable">
@@ -596,7 +599,7 @@
                   </div>
                   <!--tableSection-->
 
-                  <div class="graphSection adlSet">
+                  <div class="graphSection adlSet white-bg adlHide">
                     <div class="adlSet col-10 section">
                         <div class="col-65">
                           <div class="title fontB adl-marginB">Asset Value Graph($)</div><!-- end of title -->
@@ -765,16 +768,16 @@
           $(this).parent().siblings('ul').slideToggle('fast');
           $(this).children('i').toggleClass('fa-angle-down fa-angle-up');
           $(this).toggleClass('active');
-        })
+        });
 		//expand right section
 		$('#expandBtn').click(function(){
 			$(this).toggleClass('fa-minus-square-o fa-plus-square-o')
 			$('.adl-container.reports').toggleClass('expand');
-		})
+		});
 		//left nav list select
 		$('#reportsNav li ul li label').click(function(){
 			$(this).parent().toggleClass('selected');
-		})
+		});
 		//title names menu
 		$('.titleNames .link').click(function(){
 			$(this).siblings('.adl-menu').toggleClass('adlShow');
@@ -782,15 +785,6 @@
 		});
 
         });
-  
-  $('#expandBtn').click(function(){
-   $(this).toggleClass('fa-minus-square-o fa-plus-square-o')
-   $('.adl-container.reports').toggleClass('expand');
-  });
-  
-  $('#reportsNav li ul li label').click(function(){
-   $(this).parent().toggleClass('selected');
-  });
 
 //overview quickSearch
   $(".quickSearchValue .fa.fa-search").click(function(){
@@ -801,7 +795,6 @@
     $(this).parent(".quickSearchWrap").addClass('adlHide');
     $(".quickSearchValue").removeClass('adlHide');
   })
-
 
 //overview list menu
   $("ul.level1 > li").click(function(){
@@ -820,6 +813,49 @@ $(".toggleOverview .show").click(function(){
     $(this).siblings(".hide").removeClass("adlHide");
     $(".ovSummary").slideDown();
 });
+
+//show/hide graph section
+$('.showhide').click(function(){
+	$(this).children('i').toggleClass('fa-eye fa-eye-slash');
+	$(this).children('span').toggleClass('adlHide');
+	$('.graphSection').toggleClass('adlHide');
+	$('.tableSection').slideToggle();
+	
+	   
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       
     </script>
   </body>

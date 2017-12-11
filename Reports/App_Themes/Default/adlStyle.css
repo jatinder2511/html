@@ -111,6 +111,19 @@ ul, li {
     list-style: none;
 }
 
+.LH1{
+	line-height:1
+}
+.LH15{
+	line-height:1.5
+}
+.LH2{
+	line-height:2
+}
+.LH25{
+	line-height:2.5
+}
+
 /* ---------- Adl Text/Allignment  --------- */
 .normal {
     font-size: 13px !important;
@@ -166,6 +179,9 @@ ul, li {
 
 .font-semibold, .fontSB {
     font-weight: 600 !important;
+}
+.fontI{
+	font-style:italic!important;
 }
 
 .text-left, .textL {
