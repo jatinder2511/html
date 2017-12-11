@@ -414,6 +414,11 @@ header{
     font-size: 14px;
     font-family: Roboto Condensed,sans-serif;
 }
+.ovList ul li .cent {
+    font-size: 10px;
+    margin-right: 5px;
+    color: #999;	
+}
 .ovList ul li .fa{
 	margin-right: 5px
 }
