@@ -4,16 +4,24 @@
 .adl-container.reports{
 	background-color:#F4F8F9
 }
-aside{
+aside, #aside2{
 	float:left;
-	width:20%;
-	background-color:#fff
+	width:280px;
+	background-color:#fff;
+	transition:all 0.4s
 }
-article{
+article, #artcile2{
 	float:left;
-	width:80%;
-	position:relative;
+	width:calc(100% - 280px);
+    transition: all 0.4s;
+    position: absolute;
+    left: 280px;
 }
+.adl-container.reports .fa-ellipsis-v{
+	width:10px;
+	text-align:center
+}
+
 header{
 	height:40px
 }
@@ -43,10 +51,11 @@ header{
 	height:calc(100vh - 40px)
 }
 .adl-container.reports article .titleNames{
-	font-size:16px;
+	font-size:15px;
 	float:left;
 	padding:9px;
 	border-top:3px solid transparent;
+	position:relative
 }
 .adl-container.reports article .titleNames:hover{
 	color:#41a3ea;
@@ -64,6 +73,20 @@ header{
 .adl-container.reports article .titleNames.selected > span.link{
 	display:inline-block
 }
+.adl-container.reports article .titleNames.selected .adl-menu{
+	width:120px
+}
+.adl-container.reports article .titleNames.selected .adl-menu .menu-list{
+	min-width:auto
+}
+.adl-container.reports article .titleNames.selected .adl-menu .menu-list ul li{
+	line-height:15px!important
+}
+.adl-container.reports article .titleNames.selected .adl-menu.adlShow{
+	display:block
+}
+
+
 .adl-container.reports article .title{
 	border-bottom:none;
 	padding:0;
@@ -73,6 +96,9 @@ header{
 	background-color:#F4F8F9;
 	border-top:1px solid #eee;
 	border-right:1px solid #eee
+}
+#reportsNav .check_text{
+	float:left
 }
 #reportsNav .navOption{
 	padding:10px;
@@ -94,14 +120,20 @@ header{
 #reportsNav li ul li{
 	padding:10px 10px 10px 20px;
 	border-bottom:1px solid #eee;
-	background-color:#fff
+	background-color:#fff;
+	display:block;
+	position:relative
+}
+#reportsNav li ul li.selected{
+	background-color:#EBF5FE;
+	border-bottom:1px solid #d9ecfd
 }
 #reportsNav .toggleBtn{
 	position: absolute;
     right: 15px;
     top: 11px;
     color: #41a3ea;
-    height: 30px;
+    height: 29px;
     padding: 0 2px;
     font-size: 17px;
 }
@@ -287,6 +319,13 @@ header{
 
 .adl-container.reports main aside .row1 .col-1{
 	margin-top:5px
+}
+.adl-container.reports.expand #aside2{
+	margin-left:-280px
+}
+.adl-container.reports.expand #article2{
+	width:100%;
+	left:0
 }
 
 
