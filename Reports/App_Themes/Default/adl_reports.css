@@ -391,7 +391,7 @@ header{
     background: #fff;
     box-shadow: 0px 0px 12px rgba(0,0,0,0.15);
     margin-top: 5px;
-    padding: 10px;
+    padding: 10px 0px;
     font-size: 12px;
     max-height: 300px;
     height: auto !important;	
@@ -400,6 +400,9 @@ header{
 .ovList ul.level1 > li:hover > .field{
 	color: #41a3ea;
 		cursor: pointer;
+}
+.ovList ul.level1 > li{
+	padding: 0px 10px;
 }
 .ovList ul li .value {
     font-size: 14px;
@@ -411,13 +414,16 @@ header{
     color: #999;	
 }
 .ovList ul li .fa{
-	margin-right: 5px
+	margin-right: 5px;
+}
+.ovList ul.level1 li.active{
+background-color: #ebf5fe;
 }
 .ovList ul li + li{
-    padding-top: 5px;
+    margin-top: 3px;
 }
 .ovList ul.level2 li + li{
-    padding-top: 2px;
+    margin-top: 2px;
 }
 .ovList ul.level2{
 	padding: 0px 0px 0px 16px;
@@ -519,6 +525,19 @@ header{
     width: 200px;
     text-align: center;
 }
+.ovList.ovListType2 .headers{
+	color: #999;
+}
+
+/*Report Tabs*/
+.tabContent{
+	display: none;
+}
+
+.tabContent.active{
+	display: block;
+}
+/*End*/
 
 
 
