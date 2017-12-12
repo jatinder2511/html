@@ -213,13 +213,19 @@ header{
 	padding:0 10px
 }
 
+.reportsWrap .header .adl-form-group .form-control.sm, .reportsWrap .header .adl-select::after{
+	height:20px;
+	line-height:20px;
+	z-index:9
+}
+
 .reportsWrap .header .refresh{
-	margin-top:7px;
-	margin-right:10px;
-	font-size:14px
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 2px;
 }
 .reportsWrap .header .showhide{
-	margin:5px;
+	margin:0 5px;
 }
 
 /*div based table*/
@@ -244,7 +250,8 @@ header{
 }
 .divTable .divRow.divHead .divCol{
 	vertical-align:middle;
-	padding:5px 3px
+	padding:5px 3px;
+	height:25px
 }
 .divTable .divRow.divFoot .divCol{
 	background-color:#E3F8F3;
@@ -266,53 +273,63 @@ header{
 .divTable .divRow + .divRow .divCol + .divCol{
 	border-left:1px solid #f4f4f4;
 }
+.divTable .divRow .divCol:first-child{
+	padding-left:10px
+}
+.divTable .divRow .divCol:last-child{
+	padding-right:10px
+}
+.divTable .divRow .divCol[class*="col"]{
+	float:none!important
+}
 
 /*end*/
 
 
 /*Asset allocation*/
-.assetDetails .divTable .divRow.divHead .divCol{
+.assetSection .divTable .divRow.divHead .divCol{
 	font-size:11px;
-	line-height:12px
+	line-height:12px;
 }
-.assetDetails .divTable .divRow{
+.assetSection .divTable .divRow{
 	font-size:12px
 }
-.assetDetails .divTable .divRow .divCol.prcnt{
+.assetSection .divTable .divRow .divCol.prcnt{
 	width:35px
 }
-.assetDetails .divTable .divCol:nth-child(1){
+
+.assetDetails.divTable .divCol:nth-child(1){
 	width:20%
 }
-.assetDetails .divTable .divCol:nth-child(2){
+.assetDetails.divTable .divCol:nth-child(2){
 	width:70px
 }
-.assetDetails .divTable .divCol:nth-child(4){
+.assetDetails.divTable .divCol:nth-child(4){
 	width:70px
 }
-.assetDetails .divTable .divCol:nth-child(5){
+.assetDetails.divTable .divCol:nth-child(5){
 	width:70px
 }
-.assetDetails .divTable .divCol:nth-child(7){
+.assetDetails.divTable .divCol:nth-child(7){
 	width:80px
 }
-.assetDetails .divTable .divCol:nth-child(8){
+.assetDetails.divTable .divCol:nth-child(8){
 	width:70px
 }
-.assetDetails .divTable .divCol:nth-child(10){
+.assetDetails.divTable .divCol:nth-child(10){
 	width:70px
 }
-.assetDetails .divTable .divCol:nth-child(12){
+.assetDetails.divTable .divCol:nth-child(12){
 	width:70px
 }
-.assetDetails .divTable .divCol:nth-child(13){
+.assetDetails.divTable .divCol:nth-child(13){
 	width:85px
 }
-.assetDetails .divTable .divCol:nth-child(14){
+.assetDetails.divTable .divCol:nth-child(14){
 	width:75px
 }
-.assetDetails .adl-scroll{
-	height:calc(100vh - 91px)
+.assetSection .adl-scroll{
+	height:calc(100vh - 81px)
 }
 
 /*end*/
