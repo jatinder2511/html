@@ -481,7 +481,44 @@ header{
     right: 10px;
 }
 /*end*/
+.graphSection .graphValues{
+	position: relative;
+}
+.graphSection .graphValues .label{
+	color: #999;
+	font-size: 12px;
+}
+.graphSection .graphValues .value{
+	font-size: 15px;
+}
+.graphValues.withLine::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: #ddd;
+    top: 15px;
+    z-index: 1;
+}
+.graphValues.withLine > div{
+    position: absolute;
+    z-index: 9;
+}
+.graphValues.withLine > div:last-child{
+	right: 0px;
+}
 
+.graphValues.withLine > div:first-child{
+	left: 0px;
+}
+
+.graphValues.withLine.three > div:nth-child(2){
+    right: 0px;
+    left: 0;
+    margin: auto;
+    width: 200px;
+    text-align: center;
+}
 
 
 
