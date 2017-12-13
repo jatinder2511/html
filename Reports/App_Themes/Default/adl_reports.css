@@ -240,6 +240,7 @@ header{
 .divTable .divRow{
 	display:table-row;
 	line-height:16px;
+	font-size:12px
 }
 .divTable .divRow:nth-child(2n+2){
 	background-color:#F4F8F9
@@ -284,26 +285,27 @@ header{
 .divTable .divRow .divCol[class*="col"]{
 	float:none!important
 }
-
+.divTable .divRow.divHead .divCol{
+	font-size:11px;
+	line-height:12px;
+}
+.divTable .divRow .divCol.prcnt{
+	width:58px
+}
 .divTable.tagRow{
 	box-shadow: none;
+}
+.divTable.tagRow .tag{
+	background-color:#F4F8F9
+}
+.divTable.tagRow .divRow .divCol + .divCol{
+	border-left:1px solid transparent
 }
 
 /*end*/
 
 
 /*Asset allocation*/
-.assetSection .divTable .divRow.divHead .divCol{
-	font-size:11px;
-	line-height:12px;
-}
-.assetSection .divTable .divRow{
-	font-size:12px
-}
-.assetSection .divTable .divRow .divCol.prcnt{
-	width:58px
-}
-
 .assetDetails.divTable .divCol:nth-child(1){
 	width:20%
 }
@@ -545,7 +547,15 @@ background-color: #ebf5fe;
 }
 /*End*/
 
+/*Income Growth*/
+.igSection .adl-scroll{
+	height:calc(100vh - 81px)
+}
+.igSection .divTable.tagRow .divCol:nth-child(2), .igSection .divTable.tagRow .divCol:nth-child(5){
+	width:21%
+}
 
+/*end*/
 
 
 

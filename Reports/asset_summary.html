@@ -568,6 +568,19 @@ $('.showhide').click(function(){
 	$('.tableSection').slideToggle();
 	   
 });
+
+//tabs
+$(".reportsWrap .tabLink").click(function(){
+
+      var tab_id = $(this).attr('data-tab');
+
+      $('.reportsWrap .tabLink').removeClass('active');
+      $('.tabContent').removeClass('active');
+
+      $(this).addClass('active');
+      $("#"+tab_id).addClass('active');
+
+});
       
     </script>
   </body>
