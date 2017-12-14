@@ -505,6 +505,15 @@ background-color: #ebf5fe;
 .graphSection .graphValues .value{
 	font-size: 15px;
 }
+.graphSection .lineSwitch{
+    width: 175px;	
+}
+.graphSection .lineSwitch .lineSwitchLabel{
+color: #999;
+}
+.graphSection .lineSwitch .lineSwitchLabel:first-child{
+margin-right: 6px;
+}
 .graphValues.withLine::before{
     position: absolute;
     content: "";
