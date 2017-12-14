@@ -512,7 +512,7 @@ background-color: #ebf5fe;
 color: #999;
 }
 .graphSection .lineSwitch .lineSwitchLabel:first-child{
-margin-right: 6px;
+margin-right: 5px;
 }
 .graphValues.withLine::before{
     position: absolute;
