@@ -1163,8 +1163,24 @@
         
         
         
-        <div class="">
+        
+        <div class="iconCircle infoAdd">
+        <div class="dots">
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
         </div>
+        <i class="fa fa-remove"></i>
+        </div><!--infoAdd-->
+        <div class="infoList">
+        <ul>
+        <li><i class="fa fa-file-pdf-o"></i><div>PDF</div></li>
+        <li><i class="fa fa-file-excel-o"></i><div>Excel</div></li>
+        <li><i class="fa fa-file-word-o"></i><div>Word</div></li>
+        <li><i class="fa fa-print"></i><div>Print</div></li>
+        <li><i class="fa fa-envelope"></i><div>Mail</div></li>
+        </ul>
+        </div><!--infolist-->
         
         
       </div>
@@ -1273,6 +1289,40 @@ $(".reportsWrap .tabLink").click(function(){
       $("#"+tab_id).addClass('active');
 
 });
+
+//info add btn
+$('.infoAdd').click(function(){
+	$(this).toggleClass('active');
+	$('.infoList').toggleClass('active');
+	$('.rightWrap').toggleClass('adl-fade');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       
     </script>
   </body>

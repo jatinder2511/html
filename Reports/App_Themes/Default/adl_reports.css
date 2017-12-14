@@ -127,7 +127,9 @@ header{
 #reportsNav{
 	background-color:#F4F8F9;
 	border-top:1px solid #eee;
-	border-right:1px solid #eee
+	border-right:1px solid #eee;
+	border-radius: 5px;
+    overflow: hidden;
 }
 #reportsNav .check_text{
 	float:left

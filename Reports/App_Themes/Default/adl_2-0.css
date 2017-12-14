@@ -9254,6 +9254,76 @@ margin-left: -3px;
   /*pension accumulation css ends*/
 
 
+/*	*/
+.infoAdd{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #41a3ea;
+    color: #fff;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 48px;
+    padding: 0;
+    transition:all 0.2s ease-in-out 0s;
+    z-index:9999;
+    box-shadow:0 1px 3px rgba(0,0,0,0.2)
+ }
+ .infoAdd .dots{
+	font-size: 6px;
+    transform: rotate(90deg);
+    letter-spacing: 0.6px;
+ }
+ .infoAdd:hover {
+	cursor:pointer;
+    transform:rotate(180deg);
+}
+
+.infoList{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    width: 50px;
+    max-height: 50px;
+	overflow:hidden;
+    border-radius: 50px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0px 8px rgba(0,0,0,0.3);
+	transition:all 0.3s
+}
+.infoList.active{
+	max-height:none;
+	padding-bottom:50px
+}
+.infoList li{
+	padding:8px 0;
+	line-height: 14px;
+	transition:all 0.2s
+}
+.infoList li:first-child{
+	padding-top:15px
+}
+.infoList li:hover{
+	cursor:pointer;
+	background-color:#41a3ea;
+	color:#fff
+}
+.infoList li i{
+	font-size:15px
+}
+
+.infoAdd.active .dots{
+	display:none
+}
+
+
+/*end*/
+
+
+
 
 
 /* Media Queries--- laptop */
