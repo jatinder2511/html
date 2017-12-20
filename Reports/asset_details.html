@@ -108,7 +108,7 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option1">
+                    <input class="adl-checkbox" type="checkbox" id="option1">
                     <label for="option1">
                       <span class="check_text">Asset Allocation
                       </span>
@@ -122,14 +122,14 @@
                 <ul>
                   <li>
                     <input class="adl-checkbox" type="checkbox" id="option1a">
-                    <label for="option1a">
+                    <label onclick="location.href='asset_summary.html';"  for="option1a">
                       <span class="check_text">Summary
                       </span>
                     </label>
                   </li>
                   <li>          
                     <input class="adl-checkbox" type="checkbox" id="option1b">
-                    <label for="option1b">
+                    <label onclick="location.href='asset_details.html';" for="option1b">
                       <span class="check_text">Details
                       </span>
                     </label>
@@ -139,7 +139,7 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option2">
+                    <input class="adl-checkbox " type="checkbox" id="option2">
                     <label for="option2">
                       <span class="check_text">Distribution
                       </span>
@@ -150,7 +150,7 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option3">
+                    <input class="adl-checkbox " type="checkbox" id="option3">
                     <label for="option3">
                       <span class="check_text">ICR
                       </span>
@@ -161,8 +161,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option4">
-                    <label for="option4">
+                    <input class="adl-checkbox " type="checkbox" id="option4">
+                    <label onclick="location.href='income_growth.html';" for="option4">
                       <span class="check_text">Income and Growth
                       </span>
                     </label>
@@ -175,7 +175,7 @@
                 <ul>
                   <li>
                     <input class="adl-checkbox" type="checkbox" id="option4a">
-                    <label for="option4a">
+                    <label onclick="location.href='income_growth.html';" for="option4a">
                       <span class="check_text">Default
                       </span>
                     </label>
@@ -206,8 +206,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option5">
-                    <label for="option5">
+                    <input class="adl-checkbox " type="checkbox" id="option5">
+                    <label onclick="location.href='projected_income.html';" for="option5">
                       <span class="check_text">Projected Income
                       </span>
                     </label>
@@ -217,8 +217,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option6">
-                    <label for="option6">
+                    <input class="adl-checkbox " type="checkbox" id="option6">
+                    <label onclick="location.href='short_term_portfolio.html';" for="option6">
                       <span class="check_text">Short Term Portfolio Returns Report
                       </span>
                     </label>
@@ -228,8 +228,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option7">
-                    <label for="option7">
+                    <input class="adl-checkbox " type="checkbox" id="option7">
+                    <label onclick="location.href='transaction_list.html';" for="option7">
                       <span class="check_text">Transaction List
                       </span>
                     </label>
@@ -239,8 +239,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option8">
-                    <label for="option8">
+                    <input class="adl-checkbox " type="checkbox" id="option8">
+                    <label onclick="location.href='unrealised_capital_gains.html';" for="option8">
                       <span class="check_text">Unrealised Capital Gains Report
                       </span>
                     </label>
@@ -250,8 +250,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option9">
-                    <label for="option9">
+                    <input class="adl-checkbox " type="checkbox" id="option9">
+                    <label onclick="location.href='valuation_report.html';" for="option9">
                       <span class="check_text">Valuation Report
                       </span>
                     </label>
@@ -266,13 +266,13 @@
               <div class="reportsWrap adlSet assetSection">
                 <div class="header adlSet">
                   <div class="adl-floatL">
-                    <span class="tabLink active" href="#">All
+          			<span class="tabLink active" data-tab="tab1">All
                     </span>
-                    <span class="tabLink" href="#">Michael Ross
+                    <span class="tabLink" data-tab="tab2">Michael Ross
                     </span>
-                    <span class="tabLink" href="#">Rachel
+                    <span class="tabLink" data-tab="tab3">Rachel
                     </span>
-                    <span class="tabLink" href="#">Joint
+                    <span class="tabLink" data-tab="tab4">Joint
                     </span>
                   </div>
                   <div class="adl-floatR">
@@ -288,20 +288,163 @@
                       </i>
                     </span>
                     <span class="link adl-floatL showhide fontSB">
-                      <i class="fa fa-eye">
+                      <i class="fa fa-eye-slash">
                       </i> 
-                      <span>Show Graph</span>
-                      <span class="adlHide">Hide Graph</span>
+                      <span class="adlHide">Show Graph</span>
+                      <span>Hide Graph</span>
                     </span>                     
                   </div>
                 </div>
                 <!--header-->
                 <div class="adl-scroll overflow-scroll-basic adlSet">
-                  <div class="tableSection adlSet white-bg">
+                
+                <div class="adlSet all tabContent active" id="tab1">
+                
+                <div class="graphSection adlSet white-bg">
+                    <div class="adlSet col-10 section">
+                        <div class="col-65">
+                          <div class="title fontB adl-marginB">Asset Value Graph($)</div><!-- end of title -->
+                          <div>See how your assets are dustributed. Click an asset to see breakup.</div>
+                          <div class="text-center col-10 adl-no-paddingLR adl-paddingT">
+                            <img src ="Images/adlNewImages/adl2/assetGraph1.jpg">
+                          </div>
+                        </div>
+
+                        <div class="col-35">
+                          <div class="title adl-paddingR adl-marginB">
+                          <span class="fontB">Overview </span>
+                            <span class="toggleOverview text-blue fontSB adl-floatR">
+                              <span class="hide">Hide</span>
+                              <span class="show adlHide">Show</span>
+                            </span>
+                          </div><!-- end of title -->
+                        
+                          <div class="adl-marginB ovSummary adl-paddingR">
+                            <span>32</span> assets in total. "Accountants Australian Shares" is values highest. <span class="greenFont6">No low value assets to consider re-shuffling.</span>
+                          </div><!--ed of ovSummary -->
+
+                          <div class="adlSet ovDetails">
+                            <div class="col-10 adl-no-paddingLR">
+
+                              <div class="col-8 adl-no-paddingL positionR quickSearchWrap adlHide">
+                                <div class="full positionR quickSearch">
+                                   <input type="text" name="search" placeholder="Search">
+                                   <i aria-hidden="true" class="fa fa-search"></i>
+                                </div><!-- end of quickSearch -->
+                                   <i aria-hidden="true" class="fa fa-close link"></i>
+                              </div> 
+
+                              <div class="col-8 adl-no-paddingL positionR quickSearchValue">
+                                  <span class="fontB">Asset Type</span>
+                                  <i aria-hidden="true" class="fa fa-search link"></i>
+                              </div> 
+
+                              <div class="col-2 adl-no-paddingL textR"><span class="fontB">Value</span> <i class="fa fa-sort-amount-desc link"></i></div>
+                            </div>
+
+                            <div class="col-10 ovList adl-scroll overflow-scroll-basic light">
+                              <ul class="level1">
+                                <li>
+                                  <i class="fa fa-circle blueFont7"></i><span class="field">Australian Shares</span>
+                                  <span class="value adl-floatR fontB">$47,692</span>
+                                 <ul class="level2">
+                                   <li>
+                                     <span class="field"> <span class="initials">M</span>Investors share Poll Ntp</span>
+                                     <span class="value adl-floatR ">$47,692</span>
+                                   </li>
+                                  <li>
+                                     <span class="field"><span class="initials">M</span>Cash</span>
+                                     <span class="value adl-floatR ">$47,692</span>
+                                   </li>
+                                   <li>
+                                     <span class="field"> <span class="initials">J</span>Investors share Poll Ntp</span>
+                                     <span class="value adl-floatR ">$47,692</span>
+                                   </li>
+                                  <li>
+                                     <span class="field"><span class="initials">M</span>Cash</span>
+                                     <span class="value adl-floatR ">$47,692</span>
+                                   </li>                                   
+                                 </ul>
+                                </li>
+                                <li>
+                                  <i class="fa fa-circle blueFont8"></i><span class="field">Cash</span>
+                                  <span class="value adl-floatR fontB">$47,692</span>
+                                </li>
+                                <li>
+                                  <i class="fa fa-circle blueFont8"></i><span class="field">Direct Property<i class="fa fa-tag greenFont6"></i></span>
+                                  <span class="value adl-floatR fontB">$47,692</span>
+                                <ul class="level2">
+                                   <li>
+                                     <span class="field"> <span class="initials">J</span>Investors share Poll Ntp</span>
+                                     <span class="value adl-floatR ">$47,692</span>
+                                   </li>
+                                  <li>
+                                     <span class="field"><span class="initials">M</span>Cash</span>
+                                     <span class="value adl-floatR ">$47,692</span>
+                                   </li>
+                                   <li>
+                                     <span class="field"> <span class="initials">J</span>Investors share Poll Ntp</span>
+                                     <span class="value adl-floatR ">$47,692</span>
+                                   </li>
+                                  <li>
+                                     <span class="field"><span class="initials">M</span>Cash</span>
+                                     <span class="value adl-floatR ">$47,692</span>
+                                   </li>                                   
+                                 </ul>
+
+                                </li>
+                                <li>
+                                  <i class="fa fa-circle blueFont9"></i><span class="field">Listed Property<i class="fa fa-tag redFont6"></i></span>
+                                  <span class="value adl-floatR fontB">$47,692</span>
+                                                                  <ul class="level2">
+                                   <li>
+                                     <span class="field"> <span class="initials">R</span>Investors share Poll Ntp</span>
+                                     <span class="value adl-floatR ">$47,692</span>
+                                   </li>
+                                  <li>
+                                     <span class="field"><span class="initials">R</span>Cash</span>
+                                     <span class="value adl-floatR ">$47,692</span>
+                                   </li>
+                                   <li>
+                                     <span class="field"> <span class="initials">M</span>Investors share Poll Ntp</span>
+                                     <span class="value adl-floatR ">$47,692</span>
+                                   </li>
+                                  <li>
+                                     <span class="field"><span class="initials">R</span>Cash</span>
+                                     <span class="value adl-floatR ">$47,692</span>
+                                   </li>                                   
+                                 </ul>
+                                  </li>
+                                <li>
+                                  <i class="fa fa-circle blueFont10"></i><span class="field">International Property</span>
+                                  <span class="value adl-floatR fontB">$47,692</span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                        </div>
+                    </div>
+                  </div><!--end of graphSection -->
+                  
+                  <div class="tableSection adlSet white-bg down">
+                  <div class="col-10 textC tableSectionBtn">
+                  <button type="button" class="adl-btn showTblSection">VIEW TABLE</button>
+                  </div>
                     <div class="adlSet col-10 section">
                       <div class="big col-10">
-                        <span>Michael Ross
+                        <span class="adl-parent">Michael Ross
                         <span class="link"><i class="fa fa-ellipsis-v"></i></span>
+                        <div class="adl-menu">
+                  	<div class="menu-list">
+                    	<ul>
+                        <li>Use Alternative Asset Allocation</li>
+                        <li>Close</li>
+                        <li>Close Others</li>
+                        <li>Close All</li>
+                        </ul>
+                    </div>
+                  </div>
                   		</span>
                         <span class="adl-floatR">A$ 53,282
                         </span>
@@ -598,133 +741,18 @@
                     <!--section-->
                   </div>
                   <!--tableSection-->
-
-                  <div class="graphSection adlSet white-bg adlHide">
-                    <div class="adlSet col-10 section">
-                        <div class="col-65">
-                          <div class="title fontB adl-marginB">Asset Value Graph($)</div><!-- end of title -->
-                          <div>See how your assets are dustributed. Click an asset to see breakup.</div>
-                          <div class="text-center col-10 adl-no-paddingLR adl-paddingT">
-                            <img src ="Images/adlNewImages/adl2/assetGraph1.jpg">
-                          </div>
-                        </div>
-
-                        <div class="col-35">
-                          <div class="title adl-paddingR adl-marginB">
-                          <span class="fontB">Overview </span>
-                            <span class="toggleOverview text-blue fontSB adl-floatR">
-                              <span class="hide">Hide</span>
-                              <span class="show adlHide">Show</span>
-                            </span>
-                          </div><!-- end of title -->
-                        
-                          <div class="adl-marginB ovSummary adl-paddingR">
-                            <span>32</span> assets in total. "Accountants Australian Shares" is values highest. <span class="greenFont6">No low value assets to consider re-shuffling.</span>
-                          </div><!--ed of ovSummary -->
-
-                          <div class="adlSet ovDetails">
-                            <div class="col-10 adl-no-paddingLR">
-
-                              <div class="col-8 adl-no-paddingL positionR quickSearchWrap adlHide">
-                                <div class="full positionR quickSearch">
-                                   <input type="text" name="search" placeholder="Search">
-                                   <i aria-hidden="true" class="fa fa-search"></i>
-                                </div><!-- end of quickSearch -->
-                                   <i aria-hidden="true" class="fa fa-close link"></i>
-                              </div> 
-
-                              <div class="col-8 adl-no-paddingL positionR quickSearchValue">
-                                  <span class="fontB">Asset Type</span>
-                                  <i aria-hidden="true" class="fa fa-search link"></i>
-                              </div> 
-
-                              <div class="col-2 adl-no-paddingL textR"><span class="fontB">Value</span> <i class="fa fa-sort-amount-desc link"></i></div>
-                            </div>
-
-                            <div class="col-10 ovList adl-scroll overflow-scroll-basic light">
-                              <ul class="level1">
-                                <li>
-                                  <i class="fa fa-circle blueFont7"></i><span class="field">Australian Shares</span>
-                                  <span class="value adl-floatR fontB">$47,692</span>
-                                 <ul class="level2">
-                                   <li>
-                                     <span class="field"> <span class="initials">M</span>Investors share Poll Ntp</span>
-                                     <span class="value adl-floatR ">$47,692</span>
-                                   </li>
-                                  <li>
-                                     <span class="field"><span class="initials">M</span>Cash</span>
-                                     <span class="value adl-floatR ">$47,692</span>
-                                   </li>
-                                   <li>
-                                     <span class="field"> <span class="initials">J</span>Investors share Poll Ntp</span>
-                                     <span class="value adl-floatR ">$47,692</span>
-                                   </li>
-                                  <li>
-                                     <span class="field"><span class="initials">M</span>Cash</span>
-                                     <span class="value adl-floatR ">$47,692</span>
-                                   </li>                                   
-                                 </ul>
-                                </li>
-                                <li>
-                                  <i class="fa fa-circle blueFont8"></i><span class="field">Cash</span>
-                                  <span class="value adl-floatR fontB">$47,692</span>
-                                </li>
-                                <li>
-                                  <i class="fa fa-circle blueFont8"></i><span class="field">Direct Property<i class="fa fa-tag greenFont6"></i></span>
-                                  <span class="value adl-floatR fontB">$47,692</span>
-                                <ul class="level2">
-                                   <li>
-                                     <span class="field"> <span class="initials">J</span>Investors share Poll Ntp</span>
-                                     <span class="value adl-floatR ">$47,692</span>
-                                   </li>
-                                  <li>
-                                     <span class="field"><span class="initials">M</span>Cash</span>
-                                     <span class="value adl-floatR ">$47,692</span>
-                                   </li>
-                                   <li>
-                                     <span class="field"> <span class="initials">J</span>Investors share Poll Ntp</span>
-                                     <span class="value adl-floatR ">$47,692</span>
-                                   </li>
-                                  <li>
-                                     <span class="field"><span class="initials">M</span>Cash</span>
-                                     <span class="value adl-floatR ">$47,692</span>
-                                   </li>                                   
-                                 </ul>
-
-                                </li>
-                                <li>
-                                  <i class="fa fa-circle blueFont9"></i><span class="field">Listed Property<i class="fa fa-tag redFont6"></i></span>
-                                  <span class="value adl-floatR fontB">$47,692</span>
-                                                                  <ul class="level2">
-                                   <li>
-                                     <span class="field"> <span class="initials">R</span>Investors share Poll Ntp</span>
-                                     <span class="value adl-floatR ">$47,692</span>
-                                   </li>
-                                  <li>
-                                     <span class="field"><span class="initials">R</span>Cash</span>
-                                     <span class="value adl-floatR ">$47,692</span>
-                                   </li>
-                                   <li>
-                                     <span class="field"> <span class="initials">M</span>Investors share Poll Ntp</span>
-                                     <span class="value adl-floatR ">$47,692</span>
-                                   </li>
-                                  <li>
-                                     <span class="field"><span class="initials">R</span>Cash</span>
-                                     <span class="value adl-floatR ">$47,692</span>
-                                   </li>                                   
-                                 </ul>
-                                  </li>
-                                <li>
-                                  <i class="fa fa-circle blueFont10"></i><span class="field">International Property</span>
-                                  <span class="value adl-floatR fontB">$47,692</span>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-
-                        </div>
-                    </div>
-                  </div><!--end of graphSection -->
+                </div>
+                <!--tab1-->
+                
+                <div class="adlSet all tabContent active" id="tab2">                
+                </div>
+                <!--tab2-->
+                <div class="adlSet all tabContent active" id="tab2">                
+                </div>
+                <!--tab3-->
+                <div class="adlSet all tabContent active" id="tab2">                
+                </div>
+                <!--tab4-->
 
                 </div>
                 <!--adl-scroll-->
@@ -732,11 +760,32 @@
               <!--reportsWrap-->
             </div>
             <!--rightWrap-->
-          </article>
-        </main>
+          </article>       </main>
+        
+        
+        
+        
+        <div class="iconCircle infoAdd">
+        <div class="dots">
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
+        </div>
+        <i class="fa fa-remove"></i>
+        </div><!--infoAdd-->
+        <div class="infoList">
+        <ul>
+        <li><i class="fa fa-file-pdf-o"></i><div>PDF</div></li>
+        <li><i class="fa fa-file-excel-o"></i><div>Excel</div></li>
+        <li><i class="fa fa-file-word-o"></i><div>Word</div></li>
+        <li><i class="fa fa-print"></i><div>Print</div></li>
+        <li><i class="fa fa-envelope"></i><div>Mail</div></li>
+        </ul>
+        </div><!--infolist-->
+        
+        
       </div>
-      <!--adl-container--> 
-    </div>
+      <!--adl-container--> </div>
     <!--adl-wrapper-->
 
 <script>
@@ -778,11 +827,6 @@
 		$('#reportsNav li ul li label').click(function(){
 			$(this).parent().toggleClass('selected');
 		});
-		//title names menu
-		$('.titleNames .link').click(function(){
-			$(this).siblings('.adl-menu').toggleClass('adlShow');
-			$('.rightWrap').toggleClass('adl-fade');
-		});
 
         });
 
@@ -819,25 +863,45 @@ $(".toggleOverview .show").click(function(){
 $('.showhide').click(function(){
 	$(this).children('i').toggleClass('fa-eye fa-eye-slash');
 	$(this).children('span').toggleClass('adlHide');
-	$('.graphSection').toggleClass('adlHide');
-	$('.tableSection').slideToggle();
-	
+	$('.graphSection').slideToggle();
+	//$('.tableSection').toggleClass('down');
+	if ($('.tableSection').hasClass('down')){
+        $('.tableSection').removeClass('down');
+    }
+	else if ($('.tableSection').hasClass('up')){
+        $('.tableSection').removeClass('up');
+    }
+	else {
+		$('.tableSection').addClass('down');
+		$('.rightWrap .adl-scroll').animate({
+        scrollTop: $(".tableSection").offset().top - 70
+    	}, 600);
+	}
 	   
+});
+//table section down button
+$('.showTblSection').click(function(){
+	$('.rightWrap .adl-scroll').animate({
+        scrollTop: $(".tableSection").offset().top - 70
+    }, 600);
+	$(this).parents('.down').removeClass('down').addClass('up');
 });
 
 //tabs
 $(".reportsWrap .tabLink").click(function(){
-
       var tab_id = $(this).attr('data-tab');
-
       $('.reportsWrap .tabLink').removeClass('active');
       $('.tabContent').removeClass('active');
-
       $(this).addClass('active');
       $("#"+tab_id).addClass('active');
 
 });
-
+//info add btn
+$('.infoAdd').click(function(){
+	$(this).toggleClass('active');
+	$('.infoList').toggleClass('active');
+	$('.adl-container.reports').toggleClass('adl-fade');
+});
       
     </script>
   </body>

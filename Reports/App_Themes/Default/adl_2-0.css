@@ -9271,7 +9271,7 @@ margin-left: -3px;
     box-shadow:0 1px 3px rgba(0,0,0,0.2)
  }
  .infoAdd .dots{
-	font-size: 6px;
+	font-size: 5px;
     transform: rotate(90deg);
     letter-spacing: 0.6px;
  }
@@ -9291,16 +9291,17 @@ margin-left: -3px;
     border-radius: 50px;
     text-align: center;
     background-color: #fff;
-    box-shadow: 0 0px 8px rgba(0,0,0,0.3);
 	transition:all 0.3s
 }
 .infoList.active{
 	max-height:none;
-	padding-bottom:50px
+	padding-bottom:50px;	
+    box-shadow: 0 0px 8px rgba(0,0,0,0.3);
 }
 .infoList li{
 	padding:8px 0;
 	line-height: 14px;
+	font-weight:500;
 	transition:all 0.2s
 }
 .infoList li:first-child{
@@ -9314,15 +9315,124 @@ margin-left: -3px;
 .infoList li i{
 	font-size:15px
 }
-
+.infoAdd .fa-remove{
+	display:none;
+	line-height: 48px;
+}
 .infoAdd.active .dots{
 	display:none
 }
-
+.infoAdd.active .fa-remove{
+	display:block;
+    -webkit-text-stroke: 1px #41a3ea;
+}
 
 /*end*/
 
 
+
+/*div based table*/
+.divTable{
+	display:table;
+	table-layout:fixed;
+	width: 100%;
+	overflow: hidden;
+	border-radius:5px;
+	box-shadow:0px 1px 5px rgba(0,0,0,0.2)
+}
+.divTable .divRow{
+	display:table-row;
+	line-height:16px;
+	font-size:12px
+}
+.divTable .divRow:nth-child(2n+2){
+	background-color:#F4F8F9
+}
+.divTable .divRow.divHead{
+	color:#999;
+	line-height:13px;
+	font-size:11px;
+	background-color:#fff
+}
+.divTable .divRow.divHead .divCol{
+	vertical-align:middle;
+	padding:5px 3px;
+	height:25px
+}
+.divTable .divRow.divFoot .divCol{
+	background-color:#E3F8F3;
+	font-weight:600;
+	vertical-align:middle;
+    border-color: #d2f3eb!important;
+}
+.divTable .divRow:nth-child(2) .divCol{
+	border-top:1px solid #eee!important;
+}
+.divTable .divRow .divCol{
+	display:table-cell;
+	padding:5px 3px;
+	line-height:14px
+}
+.divTable .divRow + .divRow .divCol{
+	border-top:1px solid #f1f2f3
+}
+.divTable .divRow + .divRow .divCol + .divCol{
+	border-left:1px solid #f1f2f3
+}
+.divTable .divRow .divCol:first-child{
+	padding-left:10px
+}
+.divTable .divRow .divCol:last-child{
+	padding-right:10px
+}
+.divTable .divRow .divCol[class*="col"]{
+	float:none!important
+}
+.divTable .divRow.divHead .divCol{
+	font-size:11px;
+	line-height:12px;
+}
+.divTable .divRow .divCol.prcnt{
+	width:58px
+}
+.divTable.tagRow{
+	box-shadow: none;
+}
+.divTable.tagRow .tag{
+	background-color:#F4F8F9
+}
+.divTable.tagRow .divRow .divCol + .divCol{
+	border-left:1px solid transparent
+}
+.divTable .divRow .divTable{
+	box-shadow:none;
+	border-radius:0;
+	border:none
+}
+.divTable .divRow .divTable .divRow .divCol{
+	border-top:none!important;
+}
+.divTable .divRow.divHead .divTable .divRow .divCol{
+	height:auto;
+	padding:0 3px
+}
+.divTable .divRow.divFoot + .divRow.divFoot .divCol{
+	background-color:#d2f3eb;
+	border-color: #c6ece3!important;
+}
+.divTable .divRow.divFoot .divTable .divRow .divCol{
+	padding:0 3px
+}
+.divTable .divRow .divTable .divRow .divCol:first-child{
+	padding-left:0px
+}
+.divTable .divRow .divTable .divRow .divCol:last-child{
+	padding-right:0px
+}
+
+
+
+/*end*/
 
 
 

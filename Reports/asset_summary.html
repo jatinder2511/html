@@ -97,7 +97,7 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option1">
+                    <input class="adl-checkbox" type="checkbox" id="option1">
                     <label for="option1">
                       <span class="check_text">Asset Allocation
                       </span>
@@ -111,14 +111,14 @@
                 <ul>
                   <li>
                     <input class="adl-checkbox" type="checkbox" id="option1a">
-                    <label for="option1a">
+                    <label onclick="location.href='asset_summary.html';"  for="option1a">
                       <span class="check_text">Summary
                       </span>
                     </label>
                   </li>
                   <li>          
                     <input class="adl-checkbox" type="checkbox" id="option1b">
-                    <label for="option1b">
+                    <label onclick="location.href='asset_details.html';" for="option1b">
                       <span class="check_text">Details
                       </span>
                     </label>
@@ -128,7 +128,7 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option2">
+                    <input class="adl-checkbox " type="checkbox" id="option2">
                     <label for="option2">
                       <span class="check_text">Distribution
                       </span>
@@ -139,7 +139,7 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option3">
+                    <input class="adl-checkbox " type="checkbox" id="option3">
                     <label for="option3">
                       <span class="check_text">ICR
                       </span>
@@ -150,8 +150,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option4">
-                    <label for="option4">
+                    <input class="adl-checkbox " type="checkbox" id="option4">
+                    <label onclick="location.href='income_growth.html';" for="option4">
                       <span class="check_text">Income and Growth
                       </span>
                     </label>
@@ -164,7 +164,7 @@
                 <ul>
                   <li>
                     <input class="adl-checkbox" type="checkbox" id="option4a">
-                    <label for="option4a">
+                    <label onclick="location.href='income_growth.html';" for="option4a">
                       <span class="check_text">Default
                       </span>
                     </label>
@@ -195,8 +195,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option5">
-                    <label for="option5">
+                    <input class="adl-checkbox " type="checkbox" id="option5">
+                    <label onclick="location.href='projected_income.html';" for="option5">
                       <span class="check_text">Projected Income
                       </span>
                     </label>
@@ -206,8 +206,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option6">
-                    <label for="option6">
+                    <input class="adl-checkbox " type="checkbox" id="option6">
+                    <label onclick="location.href='short_term_portfolio.html';" for="option6">
                       <span class="check_text">Short Term Portfolio Returns Report
                       </span>
                     </label>
@@ -217,8 +217,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option7">
-                    <label for="option7">
+                    <input class="adl-checkbox " type="checkbox" id="option7">
+                    <label onclick="location.href='transaction_list.html';" for="option7">
                       <span class="check_text">Transaction List
                       </span>
                     </label>
@@ -228,8 +228,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option8">
-                    <label for="option8">
+                    <input class="adl-checkbox " type="checkbox" id="option8">
+                    <label onclick="location.href='unrealised_capital_gains.html';" for="option8">
                       <span class="check_text">Unrealised Capital Gains Report
                       </span>
                     </label>
@@ -239,8 +239,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option9">
-                    <label for="option9">
+                    <input class="adl-checkbox " type="checkbox" id="option9">
+                    <label onclick="location.href='valuation_report.html';" for="option9">
                       <span class="check_text">Valuation Report
                       </span>
                     </label>
@@ -276,69 +276,17 @@
                       </i>
                     </span>
                     <span class="link adl-floatL showhide fontSB">
-                      <i class="fa fa-eye">
+                      <i class="fa fa-eye-slash">
                       </i> 
-                      <span>Show Graph</span>
-                      <span class="adlHide">Hide Graph</span>
+                      <span class="adlHide">Show Graph</span>
+                      <span>Hide Graph</span>
                     </span>                     
                   </div>
                 </div>
                 <!--header-->
                 <div class="adl-scroll overflow-scroll-basic adlSet">
-                  <div class="tableSection adlSet">
 
-                    <div class="adlSet col-10 section">
-                      <div class="big col-10">
-                        <span>Combined</span>
-                        <span class="adl-floatR">A$ 53,282
-                        </span>
-                      </div>
-                      <div class="divTable assetSum">
-                        <div class="divRow divHead">
-                          <div class="divCol">Investment Class <i class="fa fa-sort-amount-desc"></i></div>                          
-                          <div class="divCol col-15 textR">Amount($) <i class="fa fa-sort-amount-desc"></i></div>
-                          <div class="divCol col-15 textR">Percentage(%)</div>
-                        </div>
-                        <!--divHead-->
-                        <div class="divRow">
-                          <div class="divCol">Australian Shares</div>
-                          <div class="divCol textR">47,692</div>
-                          <div class="divCol textR">22.83</div>
-                        </div>
-                        <div class="divRow">
-                          <div class="divCol">Cash</div>
-                          <div class="divCol textR">58,422</div>
-                          <div class="divCol textR">27.97</div>
-                        </div>
-                        <div class="divRow">
-                          <div class="divCol">Direct Property</div>
-                          <div class="divCol textR">62,000</div>
-                          <div class="divCol textR">29.68</div>
-                        </div>
-                        <div class="divRow">
-                          <div class="divCol">Listed Property</div>
-                          <div class="divCol textR">1,794</div>
-                          <div class="divCol textR">0.86</div>
-                        </div>
-                        <div class="divRow">
-                          <div class="divCol">International Property</div>
-                          <div class="divCol textR">35,000</div>
-                          <div class="divCol textR">16.75</div>
-                        </div>
-                                             
-                        <div class="divRow divFoot">
-                          <div class="divCol">Total</div>
-                          <div class="divCol textR">208,908</div>
-                          <div class="divCol"></div>
-                        </div>        
-                      </div>
-                      <!--divTable-->
-                    </div>
-                    <!--section-->
-                  </div>
-                  <!--tableSection-->
-
-                  <div class="graphSection adlSet adlHide">
+                  <div class="graphSection adlSet">
                     <div class="adlSet col-10 section">
                         <div class="col-65">
                           <div class="title fontB adl-marginB">Asset Value Graph($)</div><!-- end of title -->
@@ -469,6 +417,63 @@
                         </div>
                     </div>
                   </div><!--end of graphSection -->
+                  
+                  <div class="tableSection adlSet down">
+                  <div class="col-10 textC tableSectionBtn">
+                  <button type="button" class="adl-btn showTblSection">VIEW TABLE</button>
+                  </div>
+
+                    <div class="adlSet col-10 section">
+                      <div class="big col-10">
+                        <span>Combined</span>
+                        <span class="adl-floatR">A$ 53,282
+                        </span>
+                      </div>
+                      <div class="divTable assetSum">
+                        <div class="divRow divHead">
+                          <div class="divCol">Investment Class <i class="fa fa-sort-amount-desc link"></i></div>                          
+                          <div class="divCol col-15 textR">Amount($) <i class="fa fa-sort-amount-desc link"></i></div>
+                          <div class="divCol col-15 textR">Percentage(%)</div>
+                        </div>
+                        <!--divHead-->
+                        <div class="divRow">
+                          <div class="divCol">Australian Shares</div>
+                          <div class="divCol textR">47,692</div>
+                          <div class="divCol textR">22.83</div>
+                        </div>
+                        <div class="divRow">
+                          <div class="divCol">Cash</div>
+                          <div class="divCol textR">58,422</div>
+                          <div class="divCol textR">27.97</div>
+                        </div>
+                        <div class="divRow">
+                          <div class="divCol">Direct Property</div>
+                          <div class="divCol textR">62,000</div>
+                          <div class="divCol textR">29.68</div>
+                        </div>
+                        <div class="divRow">
+                          <div class="divCol">Listed Property</div>
+                          <div class="divCol textR">1,794</div>
+                          <div class="divCol textR">0.86</div>
+                        </div>
+                        <div class="divRow">
+                          <div class="divCol">International Property</div>
+                          <div class="divCol textR">35,000</div>
+                          <div class="divCol textR">16.75</div>
+                        </div>
+                                             
+                        <div class="divRow divFoot">
+                          <div class="divCol">Total</div>
+                          <div class="divCol textR">208,908</div>
+                          <div class="divCol"></div>
+                        </div>        
+                      </div>
+                      <!--divTable-->
+                    </div>
+                    <!--section-->
+       
+                  </div>
+                  <!--tableSection-->
 
                 </div>
                 <!--adl-scroll-->
@@ -476,11 +481,32 @@
               <!--reportsWrap-->
             </div>
             <!--rightWrap-->
-          </article>
-        </main>
+          </article>       </main>
+        
+        
+        
+        
+        <div class="iconCircle infoAdd">
+        <div class="dots">
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
+        </div>
+        <i class="fa fa-remove"></i>
+        </div><!--infoAdd-->
+        <div class="infoList">
+        <ul>
+        <li><i class="fa fa-file-pdf-o"></i><div>PDF</div></li>
+        <li><i class="fa fa-file-excel-o"></i><div>Excel</div></li>
+        <li><i class="fa fa-file-word-o"></i><div>Word</div></li>
+        <li><i class="fa fa-print"></i><div>Print</div></li>
+        <li><i class="fa fa-envelope"></i><div>Mail</div></li>
+        </ul>
+        </div><!--infolist-->
+        
+        
       </div>
-      <!--adl-container--> 
-    </div>
+      <!--adl-container--> </div>
     <!--adl-wrapper-->
 
 <script>
@@ -522,11 +548,6 @@
 		$('#reportsNav li ul li label').click(function(){
 			$(this).parent().toggleClass('selected');
 		})
-		//title names menu
-		$('.titleNames .link').click(function(){
-			$(this).siblings('.adl-menu').toggleClass('adlShow');
-			$('.rightWrap').toggleClass('adl-fade');
-		});
 
         });
 
@@ -564,23 +585,61 @@ $(".toggleOverview .show").click(function(){
 $('.showhide').click(function(){
 	$(this).children('i').toggleClass('fa-eye fa-eye-slash');
 	$(this).children('span').toggleClass('adlHide');
-	$('.graphSection').toggleClass('adlHide');
-	$('.tableSection').slideToggle();
+	$('.graphSection').slideToggle();
+	//$('.tableSection').toggleClass('down');
+	if ($('.tableSection').hasClass('down')){
+        $('.tableSection').removeClass('down');
+    }
+	else if ($('.tableSection').hasClass('up')){
+        $('.tableSection').removeClass('up');
+    }
+	else {
+		$('.tableSection').addClass('down');
+		$('.rightWrap .adl-scroll').animate({
+        scrollTop: $(".tableSection").offset().top - 70
+    	}, 600);
+	}
 	   
+});
+//table section down button
+$('.showTblSection').click(function(){
+	$('.rightWrap .adl-scroll').animate({
+        scrollTop: $(".tableSection").offset().top - 70
+    }, 600);
+	$(this).parents('.down').removeClass('down').addClass('up');
 });
 
 //tabs
 $(".reportsWrap .tabLink").click(function(){
-
       var tab_id = $(this).attr('data-tab');
-
       $('.reportsWrap .tabLink').removeClass('active');
       $('.tabContent').removeClass('active');
-
       $(this).addClass('active');
       $("#"+tab_id).addClass('active');
 
 });
+//info add btn
+$('.infoAdd').click(function(){
+	$(this).toggleClass('active');
+	$('.infoList').toggleClass('active');
+	$('.adl-container.reports').toggleClass('adl-fade');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       
     </script>
   </body>

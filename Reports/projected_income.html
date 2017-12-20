@@ -48,7 +48,7 @@
           </aside>
           <article>
             <div class="title adlSet">
-              <div class="titleNames selected">Income and Growth Default 
+              <div class="titleNames selected">Projected Income
                 <span class="link">
                   <i class="fa fa-ellipsis-v">
                   </i>                  
@@ -97,7 +97,7 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option1">
+                    <input class="adl-checkbox" type="checkbox" id="option1">
                     <label for="option1">
                       <span class="check_text">Asset Allocation
                       </span>
@@ -111,14 +111,14 @@
                 <ul>
                   <li>
                     <input class="adl-checkbox" type="checkbox" id="option1a">
-                    <label for="option1a">
+                    <label onclick="location.href='asset_summary.html';"  for="option1a">
                       <span class="check_text">Summary
                       </span>
                     </label>
                   </li>
                   <li>          
                     <input class="adl-checkbox" type="checkbox" id="option1b">
-                    <label for="option1b">
+                    <label onclick="location.href='asset_details.html';" for="option1b">
                       <span class="check_text">Details
                       </span>
                     </label>
@@ -128,7 +128,7 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option2">
+                    <input class="adl-checkbox " type="checkbox" id="option2">
                     <label for="option2">
                       <span class="check_text">Distribution
                       </span>
@@ -139,7 +139,7 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option3">
+                    <input class="adl-checkbox " type="checkbox" id="option3">
                     <label for="option3">
                       <span class="check_text">ICR
                       </span>
@@ -150,8 +150,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option4">
-                    <label for="option4">
+                    <input class="adl-checkbox " type="checkbox" id="option4">
+                    <label onclick="location.href='income_growth.html';" for="option4">
                       <span class="check_text">Income and Growth
                       </span>
                     </label>
@@ -164,7 +164,7 @@
                 <ul>
                   <li>
                     <input class="adl-checkbox" type="checkbox" id="option4a">
-                    <label for="option4a">
+                    <label onclick="location.href='income_growth.html';" for="option4a">
                       <span class="check_text">Default
                       </span>
                     </label>
@@ -195,8 +195,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option5">
-                    <label for="option5">
+                    <input class="adl-checkbox " type="checkbox" id="option5">
+                    <label onclick="location.href='projected_income.html';" for="option5">
                       <span class="check_text">Projected Income
                       </span>
                     </label>
@@ -206,8 +206,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option6">
-                    <label for="option6">
+                    <input class="adl-checkbox " type="checkbox" id="option6">
+                    <label onclick="location.href='short_term_portfolio.html';" for="option6">
                       <span class="check_text">Short Term Portfolio Returns Report
                       </span>
                     </label>
@@ -217,8 +217,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option7">
-                    <label for="option7">
+                    <input class="adl-checkbox " type="checkbox" id="option7">
+                    <label onclick="location.href='transaction_list.html';" for="option7">
                       <span class="check_text">Transaction List
                       </span>
                     </label>
@@ -228,8 +228,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option8">
-                    <label for="option8">
+                    <input class="adl-checkbox " type="checkbox" id="option8">
+                    <label onclick="location.href='unrealised_capital_gains.html';" for="option8">
                       <span class="check_text">Unrealised Capital Gains Report
                       </span>
                     </label>
@@ -239,8 +239,8 @@
               <li>
                 <div class="navOption adlSet">
                   <span class="adl-floatL">
-                    <input class="adl-checkbox sqrDot" type="checkbox" id="option9">
-                    <label for="option9">
+                    <input class="adl-checkbox " type="checkbox" id="option9">
+                    <label onclick="location.href='valuation_report.html';" for="option9">
                       <span class="check_text">Valuation Report
                       </span>
                     </label>
@@ -255,13 +255,13 @@
               <div class="reportsWrap igSection">
                 <div class="header adlSet">
                   <div class="adl-floatL">
-          <span class="tabLink active" data-tab="tab1">All
+          			<span class="tabLink active" data-tab="tab1">All
                     </span>
                     <span class="tabLink" data-tab="tab2">Michael Ross
                     </span>
                     <span class="tabLink" data-tab="tab3">Rachel
                     </span>
-                    <span class="tabLink" data-tab="tab4">Joint
+                    <span class="tabLink" data-tab="tab3">Joint
                     </span>
                   </div>
                   <div class="adl-floatR">
@@ -276,327 +276,196 @@
                       <i class="fa fa-rotate-right adl-floatL">
                       </i>
                     </span>
-                    <span class="link adl-floatL showhide fontSB">
-                      <i class="fa fa-eye"></i> 
-                      <span>Show Graph</span>
-                      <span class="adlHide">Hide Graph</span>
-                    </span>                     
+                                         
                   </div>
                 </div>
                 <!--header-->
                 <div class="adl-scroll overflow-scroll-basic adlSet">
                   <div class="adlSet all tabContent active" id="tab1">
                   <div class="tableSection adlSet white-bg">
-                    <div class="adlSet col-10 section">
-                      <div class="big col-10">
-                        <span>Michael Ross
-                  		</span>
-                      </div>
-                <div class="divTable tagRow">
-                      <div class="divRow">
-                          <div class="divCol">
-                          </div>                
-                          <div colspan="3" class="divCol textC tag">Start Date: Sep 12, 2016
-                          </div>
-                          <div class="divCol textR col-07">
-                          </div>
-                          <div class="divCol textR col-07">
-                          </div>
-                          <div class="divCol textC tag">End Date: Sep 12, 2017
-                          </div>
-                          <div class="divCol textR col-07">
-                          </div>
-                          <div class="divCol textR col-07">
-                          </div>
-                          <div class="divCol textR prcnt">
-                          </div>
-                          <div class="divCol textR prcnt">
-                          </div>
-                       </div>
-                   </div><!--divTableTag-->
-        
-                      <div class="divTable">                      
-                        <div class="divRow divHead">
-                          <div class="divCol">Assets
-                          </div>
-                          <div class="divCol textR col-07">Units
-                          </div>
-                          <div class="divCol textR col-07">Price($)
-                          </div>
-                          <div class="divCol textR col-07">Value($)
-                          </div>
-                          <div class="divCol textR col-07">Add($)
-                          </div>
-                          <div class="divCol textR col-07">With($)
-                          </div>
-                          <div class="divCol textR col-07">Units
-                          </div>
-                          <div class="divCol textR col-07">Price($)
-                          </div>
-                          <div class="divCol textR col-07">Value($)
-                          </div>
-                          <div class="divCol textR col-07">Income($)
-                          </div>
-                          <div class="divCol textR col-07">IG($)
-                          </div>
-                          <div class="divCol textR prcnt">Actual
-                          </div>
-                          <div class="divCol textR prcnt">Ann.
-                          </div>
-						</div>
-                          <div class="divRow">
-                            <div class="divCol">Adcorp Australia Limited
-                            </div>
-                            <div class="divCol textR">5,500,545
-                            </div>
-                            <div class="divCol textR">0.02
-                            </div>
-                            <div class="divCol textR">104,510
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">5,500,545
-                            </div>
-                            <div class="divCol textR">0.01
-                            </div>
-                            <div class="divCol textR">49,505
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR redFont1">-55,005
-                            </div>
-                            <div class="divCol textR">-53%
-                            </div>
-                            <div class="divCol textR redFont1">-53%
-                            </div>
-       
-                          </div>   
-                          <div class="divRow">
-                            <div class="divCol">Carnegie Wave Energy Limited
-                            </div>
-                            <div class="divCol textR">385,045
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">385,045
-                            </div>
-                            <div class="divCol textR">0.04
-                            </div>
-                            <div class="divCol textR">16,172
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">16,172
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                 
-                          </div>     
-                          <div class="divRow">
-                            <div class="divCol">Farmaforce Limited
-                            </div>
-                            <div class="divCol textR">8,980,545
-                            </div>
-                            <div class="divCol textR">0.17
-                            </div>
-                            <div class="divCol textR">1,526,693
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">830
-                            </div>
-                            <div class="divCol textR">8,979,825
-                            </div>
-                            <div class="divCol textR">0.13
-                            </div>
-                            <div class="divCol textR">1,167,377
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR redFont1">-358,485
-                            </div>
-                            <div class="divCol textR">23%
-                            </div>
-                            <div class="divCol textR redFont1">-23%
-                            </div>
-                        
-                          </div>  
-                            
-                          <div class="divRow divFoot">
-                            <div class="divCol">Subtotal
-                            </div>
-                            <div class="divCol textR">
-                            </div>
-                            <div class="divCol textR">
-                            </div>
-                            <div class="divCol textR">1,631,203
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">
-                            </div>
-                            <div class="divCol textR">
-                            </div>
-                            <div class="divCol textR">
-                            </div>
-                            <div class="divCol textR">1,233,054
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">397,319
-                            </div>
-                            <div class="divCol textR">24.36%
-                            </div>
-                            <div class="divCol textR">
-                            </div>
-                            
-                          </div>        
-                        </div>
-                        <!--divTable-->
-                      </div>
-                      <!--section-->
+                    
                       <div class="adlSet col-10 section">
                         <div class="big col-10">
-                          <span>Joint - Michael, Rachel
+                          <span>Mr. Michael Ross
                           </span>
                         </div>
-                        <div class="divTable tagRow">
-                      <div class="divRow">
-                          <div class="divCol">
-                          </div>                
-                          <div colspan="3" class="divCol textC tag">Start Date: Sep 12, 2016
-                          </div>
-                          <div class="divCol textR col-07">
-                          </div>
-                          <div class="divCol textR col-07">
-                          </div>
-                          <div class="divCol textC tag">End Date: Sep 12, 2017
-                          </div>
-                          <div class="divCol textR col-07">
-                          </div>
-                          <div class="divCol textR col-07">
-                          </div>
-                          <div class="divCol textR prcnt">
-                          </div>
-                          <div class="divCol textR prcnt">
-                          </div>
-                       </div>
-                   </div><!--divTableTag-->
+                        
                         <div class="divTable">
                         	
                           <div class="divRow divHead">
-                            <div class="divCol">Assets
+                            <div class="divCol col-1">Group
                             </div>
-                            <div class="divCol textR col-07">Units
-                            </div>
-                            <div class="divCol textR col-07">Price($)
-                            </div>
-                            <div class="divCol textR col-07">Value($)
-                            </div>
-                            <div class="divCol textR col-07">Add($)
-                            </div>
-                            <div class="divCol textR col-07">With($)
-                            </div>
-                            <div class="divCol textR col-07">Units
-                            </div>
-                            <div class="divCol textR col-07">Price($)
-                            </div>
-                            <div class="divCol textR col-07">Value($)
-                            </div>
-                            <div class="divCol textR col-07">Income($)
-                            </div>
-                            <div class="divCol textR col-07">IG($)
-                            </div>
-                            <div class="divCol textR prcnt">Actual
-                            </div>
-                            <div class="divCol textR prcnt">Ann.
+                            <div class="divCol col-9">
+                            <div class="divTable">
+                             <div class="divRow">
+                                <div class="divCol textL col-2">Security
+                                </div>
+                                <div class="divCol textL col-1">Symbol
+                                </div>
+                                <div class="divCol textR col-15">Quantity
+                                </div>
+                                <div class="divCol textR col-15">Market Value($)
+                                </div>
+                                <div class="divCol textR col-15">Ann. Unit Inc.
+                                </div>
+                                 <div class="divCol textR col-15">Proj. Ann. Inc.
+                                </div>
+                                 <div class="divCol textR col-15">Imp. Credit
+                                </div>
+                                <div class="divCol textR col-15">Div. Yield($)
+                                </div>
+                                 <div class="divCol textR prcnt">Assets (%)
+                                </div>
+                              </div>
+                            </div><!--divTable-->
                             </div>
                           </div>
                           <!--divHead-->
     
                           <div class="divRow">
-                            <div class="divCol">48 Elizabeth Street, Melbourne
+                            <div class="divCol col-1">Equities
                             </div>
-                            <div class="divCol textR">n/a
-                            </div>
-                            <div class="divCol textR">n/a
-                            </div>
-                            <div class="divCol textR">62,000
-                            </div>
-                            <div class="divCol textR">62,000
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">n/a
-                            </div>
-                            <div class="divCol textR">n/a
-                            </div>
-                            <div class="divCol textR">62,000
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">n/a
-                            </div>
-                        
-                          </div>
-                                                 
+                           <div class="divCol col-9">
+                            <div class="divTable">
+                             <div class="divRow">
+                                <div class="divCol textL col-2">Adcorp Limited
+                                </div>
+                                <div class="divCol textL col-1">AAU
+                                </div>
+                                <div class="divCol textR col-15">12,000
+                                </div>
+                                <div class="divCol textR col-15 text-grey2">108
+                                </div>
+                                <div class="divCol textR col-15">0
+                                </div>
+                                 <div class="divCol textR col-15">0
+                                </div>
+                                 <div class="divCol textR col-15">0
+                                </div>
+                                <div class="divCol textR col-15">0
+                                </div>
+                                 <div class="divCol textR prcnt greenFont6">3.29
+                                </div>
+                              </div>
+                            </div><!--divTable-->
+                            <div class="divTable">
+                             <div class="divRow">
+                                <div class="divCol textL col-2">Carnegie Limited
+                                </div>
+                                <div class="divCol textL col-1">CWE
+                                </div>
+                                <div class="divCol textR col-15">17,000
+                                </div>
+                                <div class="divCol textR col-15 text-grey2">714
+                                </div>
+                                <div class="divCol textR col-15">0
+                                </div>
+                                 <div class="divCol textR col-15">0
+                                </div>
+                                 <div class="divCol textR col-15">0
+                                </div>
+                                <div class="divCol textR col-15">0
+                                </div>
+                                 <div class="divCol textR prcnt greenFont6">21.76
+                                </div>
+                              </div>
+                            </div><!--divTable-->
+                            <div class="divTable">
+                             <div class="divRow">
+                                <div class="divCol textL col-2">Farmaforce Limited
+                                </div>
+                                <div class="divCol textL col-1">FFC
+                                </div>
+                                <div class="divCol textR col-15">30,000
+                                </div>
+                                <div class="divCol textR col-15 text-grey2">2,460
+                                </div>
+                                <div class="divCol textR col-15">0
+                                </div>
+                                 <div class="divCol textR col-15">0
+                                </div>
+                                 <div class="divCol textR col-15">0
+                                </div>
+                                <div class="divCol textR col-15">0
+                                </div>
+                                 <div class="divCol textR prcnt greenFont6">74.95
+                                </div>
+                              </div>
+                            </div><!--divTable-->
+                            </div><!--col-8-->
+                          </div><!--divRow-->
                           <div class="divRow divFoot">
-                            <div class="divCol">Subtotal
+                            <div class="divCol col-2">Subtotal
                             </div>
-                            <div class="divCol textR">
+                           <div class="divCol col-8">
+                            <div class="divTable">
+                             <div class="divRow">
+                                <div class="divCol textL col-2">
+                                </div>
+                                <div class="divCol textL col-1">
+                                </div>
+                                <div class="divCol textR col-15">
+                                </div>
+                                <div class="divCol textR col-15">3,282
+                                </div>
+                                <div class="divCol textR col-15">
+                                </div>
+                                 <div class="divCol textR col-15">0
+                                </div>
+                                 <div class="divCol textR col-15">0
+                                </div>
+                                <div class="divCol textR col-15">
+                                </div>
+                                 <div class="divCol textR prcnt greenFont6">
+                                </div>
+                              </div>
+                            </div><!--divTable-->
+                            </div><!--col-8-->
+                          </div>              
+                          <!--divFoot-->
+                          <div class="divRow divFoot">
+                            <div class="divCol col-2">Total
                             </div>
-                            <div class="divCol textR">
-                            </div>
-                            <div class="divCol textR">62,000
-                            </div>
-                            <div class="divCol textR">62,000
-                            </div>
-                            <div class="divCol textR">
-                            </div>
-                            <div class="divCol textR">
-                            </div>
-                            <div class="divCol textR">
-                            </div>
-                            <div class="divCol textR">62,000
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">0
-                            </div>
-                            <div class="divCol textR">
-                            </div>
-                            
-                          </div>        
+                           <div class="divCol col-8">
+                            <div class="divTable">
+                             <div class="divRow">
+                                <div class="divCol textL col-2">
+                                </div>
+                                <div class="divCol textL col-1">
+                                </div>
+                                <div class="divCol textR col-15">
+                                </div>
+                                <div class="divCol textR col-15">3,282
+                                </div>
+                                <div class="divCol textR col-15">
+                                </div>
+                                 <div class="divCol textR col-15">0
+                                </div>
+                                 <div class="divCol textR col-15">0
+                                </div>
+                                <div class="divCol textR col-15">
+                                </div>
+                                 <div class="divCol textR prcnt">
+                                </div>
+                              </div>
+                            </div><!--divTable-->
+                            </div><!--col-8-->
+                          </div>              
+                          <!--divFoot-->
+                                  
                         </div>
                         <!--divTable-->
                       </div>
                       <!--section-->
+                      
                     </div>
                     <!--tableSection-->
                     
                     <div class="graphSection adlSet white-bg adlHide">                
                       <div class="adlSet col-10 section all">                 
                         <div class="col-10">
-                          <div class="title fontB adl-marginB">Income and Growth Graph($)</div><!-- end of title -->
-                            <div>32 assets in total <span class="redFont6 fontI">"Adcorp Australia Limited" 
-                            has negative annualised % of -53%(avg) f
-                            or over 3 months.Consider re-shiffling.</span></div>
+                          <div class="title fontB adl-marginB">Short Term Portfolio Returns Graph($)</div><!-- end of title -->
+                            <div>32 assets in total <span class="redFont6 fontI">"Investors Share Pool NTP" has negative income and growth of 24% in 1 month. Consider re-shuffling.</span></div>
 
                             <div class="col-10 adl-no-paddingLR adl-paddingT">
 
@@ -607,7 +476,7 @@
                                   </div>
                                   <div class="adl-paddingL white-bg">
                                       <div class="label">Total Period</div>
-                                      <div class="value full greenFont6 fontB textC">1 year</div>
+                                      <div class="value full greenFont6 fontB textC">2 year</div>
                                   </div>
                               </div><!-- end of graphValues -->
 
@@ -846,9 +715,10 @@
                     <div class="graphSection adlSet white-bg adlHide">                
                       <div class="adlSet col-10 section">
                           <div class="col-65">
-                            <div class="title fontB adl-marginB">Income and Growth Graph($)</div><!-- end of title -->
-                            <div class="col-10 adl-no-paddingLR adl-paddingT">
+                            <div class="title fontB adl-marginB">Short Term Portfolio Graph($)</div><!-- end of title -->
+                            <div class="adlSet">See how your short term assets have performed from Sep 16 to Sep 17</div>
 
+                            <div class="col-10 adl-no-paddingLR adl-paddingT">
                               <div class="adlSet graphValues withLine three">
                                 <div class="adl-paddingR white-bg">
                                     <div class="label">Start: Sep 21 2016</div>
@@ -856,16 +726,16 @@
                                   </div>
                                    <div class="adl-paddingLR white-bg">
                                     <div class="label">12 months:</div>
-                                    <div class="value full redFont6 fontB textC">-53%</div>
+                                    <div class="value full greenFont6 fontB textC">7.01%</div>
                                   </div>
                                   <div class="adl-paddingL white-bg">
                                       <div class="label">End: Sep 21 2017</div>
-                                      <div class="value full redFont6 fontB textC">$55,055</div>
+                                      <div class="value full greenFont6 fontB textC">$4,055</div>
                                   </div>
                               </div><!-- end of graphValues -->
 
                                 <div class="text-center col-10 adl-no-paddingLR adl-paddingT">
-                                  <img style="width: 100%" src ="Images/adlNewImages/adl2/assetGraph5.jpg">
+                                  <img style="width: 100%" src ="Images/adlNewImages/adl2/assetGraph6.jpg">
                                 </div>
                             </div>                       
                           </div>
@@ -1091,9 +961,10 @@
                     <div class="graphSection adlSet white-bg adlHide">                
                       <div class="adlSet col-10 section">
                           <div class="col-65">
-                            <div class="title fontB adl-marginB">Income and Growth Graph($)</div><!-- end of title -->
-                            <div class="col-10 adl-no-paddingLR adl-paddingT">
+                            <div class="title fontB adl-marginB">Short Term Portfolio Graph($)</div><!-- end of title -->
+                            <div class="adlSet">See how your short term assets have performed from Sep 16 to Sep 17</div>
 
+                            <div class="col-10 adl-no-paddingLR adl-paddingT">
                               <div class="adlSet graphValues withLine three">
                                 <div class="adl-paddingR white-bg">
                                     <div class="label">Start: Sep 21 2016</div>
@@ -1101,16 +972,16 @@
                                   </div>
                                    <div class="adl-paddingLR white-bg">
                                     <div class="label">12 months:</div>
-                                    <div class="value full redFont6 fontB textC">-53%</div>
+                                    <div class="value full greenFont6 fontB textC">7.01%</div>
                                   </div>
                                   <div class="adl-paddingL white-bg">
                                       <div class="label">End: Sep 21 2017</div>
-                                      <div class="value full redFont6 fontB textC">$55,055</div>
+                                      <div class="value full greenFont6 fontB textC">$4,055</div>
                                   </div>
                               </div><!-- end of graphValues -->
 
                                 <div class="text-center col-10 adl-no-paddingLR adl-paddingT">
-                                  <img style="width: 100%" src ="Images/adlNewImages/adl2/assetGraph5.jpg">
+                                  <img style="width: 100%" src ="Images/adlNewImages/adl2/assetGraph6.jpg">
                                 </div>
                             </div>                       
                           </div>
@@ -1129,7 +1000,7 @@
                                   </div>
                                 </div>
 
-                                <div class="col-10 fontSB">Michael Ross</div>
+                                <div class="col-10 fontSB">Rachel</div>
                                 <ul class="adlSet level1">
                                   <li>
                                     <i class="fa fa-circle blueFont7"></i><span class="field">Adcorp Australian Limited <i class="fa fa-tag redFont6"></i></span>
@@ -1160,6 +1031,25 @@
             <!--rightWrap-->
           </article>
         </main>
+        
+        <div class="iconCircle infoAdd">
+        <div class="dots">
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
+            <i class="fa fa-circle"></i>
+        </div>
+        <i class="fa fa-remove"></i>
+        </div><!--infoAdd-->
+        <div class="infoList">
+        <ul>
+        <li><i class="fa fa-file-pdf-o"></i><div>PDF</div></li>
+        <li><i class="fa fa-file-excel-o"></i><div>Excel</div></li>
+        <li><i class="fa fa-file-word-o"></i><div>Word</div></li>
+        <li><i class="fa fa-print"></i><div>Print</div></li>
+        <li><i class="fa fa-envelope"></i><div>Mail</div></li>
+        </ul>
+        </div><!--infolist-->
+        
       </div>
       <!--adl-container--> 
     </div>
@@ -1204,11 +1094,6 @@
 		$('#reportsNav li ul li label').click(function(){
 			$(this).parent().toggleClass('selected');
 		})
-		//title names menu
-		$('.titleNames .link').click(function(){
-			$(this).siblings('.adl-menu').toggleClass('adlShow');
-			$('.rightWrap').toggleClass('adl-fade');
-		});
 
         });
 
@@ -1243,28 +1128,61 @@ $(".toggleOverview .show").click(function(){
     $(".ovSummary").slideDown();
 });
 
+
 //show/hide graph section
 $('.showhide').click(function(){
 	$(this).children('i').toggleClass('fa-eye fa-eye-slash');
 	$(this).children('span').toggleClass('adlHide');
-	$('.graphSection').toggleClass('adlHide');
-	$('.tableSection').slideToggle();
-	
+	$('.graphSection').slideToggle();
+	//$('.tableSection').toggleClass('down');
+	if ($('.tableSection').hasClass('down')){
+        $('.tableSection').removeClass('down');
+    }
+	else if ($('.tableSection').hasClass('up')){
+        $('.tableSection').removeClass('up');
+    }
+	else {
+		$('.tableSection').addClass('down');
+		$('.rightWrap .adl-scroll').animate({
+        scrollTop: $(".tableSection").offset().top - 70
+    	}, 600);
+	}
 	   
+});
+//table section down button
+$('.showTblSection').click(function(){
+	$('.rightWrap .adl-scroll').animate({
+        scrollTop: $(".tableSection").offset().top - 70
+    }, 600);
+	$(this).parents('.down').removeClass('down').addClass('up');
 });
 
 //tabs
 $(".reportsWrap .tabLink").click(function(){
-
       var tab_id = $(this).attr('data-tab');
-
       $('.reportsWrap .tabLink').removeClass('active');
       $('.tabContent').removeClass('active');
-
       $(this).addClass('active');
       $("#"+tab_id).addClass('active');
 
 });
+//info add btn
+$('.infoAdd').click(function(){
+	$(this).toggleClass('active');
+	$('.infoList').toggleClass('active');
+	$('.adl-container.reports').toggleClass('adl-fade');
+});
+
+
+
+
+
+
+
+
+
+
+
       
     </script>
   </body>
