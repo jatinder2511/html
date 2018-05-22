@@ -40,8 +40,8 @@
                 <span class="icon-right input-icon-search">
                 </span>
               </div>
-              <span class="link col-1 adl-no-paddingR">
-                <i class="fa fa-minus-square-o" id="expandBtn"></i>
+              <span class="link col-1 adl-no-paddingLR expandLink">
+                <i class="fa fa-bars" id="expandBtn"></i>
               </span>
             </div>
             <!--reportsSrch-->
@@ -57,8 +57,10 @@
                   	<div class="menu-list">
                     	<ul>
                         <li>Use Alternative Asset Allocation</li>
+                        <li formodel="duplicateModal" onClick="open_Model(this)">Duplicate</li>
+                        <li>Fullscreen</li>
                         <li>Close</li>
-                        <li>Close Others</li>
+                        <li formodel="closeTabsModal" onClick="open_Model(this)">Close Others</li>
                         <li>Close All</li>
                         </ul>
                     </div>
@@ -76,6 +78,7 @@
                   </i>
                 </span>
               </div>
+              
             </div>
           </article>
         </header>
@@ -120,19 +123,13 @@
                   </span>
                 </div>
                 <ul>
-                  <li>
-                    <input class="adl-checkbox" type="checkbox" id="option1a">
-                    <label onclick="location.href='asset_summary.html';"  for="option1a">
-                      <span class="check_text">Summary
-                      </span>
-                    </label>
-                  </li>
                   <li>          
                     <input class="adl-checkbox" type="checkbox" id="option1b">
                     <label onclick="location.href='asset_details.html';" for="option1b">
-                      <span class="check_text">Details
+                      <span class="check_text">Details                      
                       </span>
                     </label>
+                    <span class="navListLabel">1 Duplicated</span>
                   </li>
                 </ul>
               </li>
@@ -184,20 +181,6 @@
                     <input class="adl-checkbox" type="checkbox" id="option4b">
                     <label for="option4b">
                       <span class="check_text">Since Inception
-                      </span>
-                    </label>
-                  </li>
-                  <li>
-                    <input class="adl-checkbox" type="checkbox" id="option4c">
-                    <label for="option4c">
-                      <span class="check_text">XIRR
-                      </span>
-                    </label>
-                  </li>
-                  <li>
-                    <input class="adl-checkbox" type="checkbox" id="option4d">
-                    <label for="option4d">
-                      <span class="check_text">Since inception + XIRR
                       </span>
                     </label>
                   </li>
@@ -265,16 +248,47 @@
             <div class="rightWrap adlSet">
               <div class="reportsWrap adlSet assetSection">
                 <div class="header adlSet">
-                  <div class="adl-floatL">
+                  <div class="adl-floatL innerSectionNav">
           			<span class="tabLink active" data-tab="tab1">All
                     </span>
-                    <span class="tabLink" data-tab="tab2">Michael Ross
+                    <span class="tabLink" data-tab="tab2">Michael Ross <span class="iconCircle">X</span>
                     </span>
-                    <span class="tabLink" data-tab="tab3">Rachel
+                    <span class="tabLink" data-tab="tab3">Rachel <span class="iconCircle">X</span>
                     </span>
-                    <span class="tabLink" data-tab="tab4">Joint
+                    <span class="tabLink" data-tab="tab4">Joint <span class="iconCircle">X</span>
                     </span>
+                    <div class="adl-floatL newEntity">
+                    <span class="adl-form-group baseBorder adl-select">
+                    <select class="form-control no-border sm">
+                    <option>Entities</option>
+                    </select>
+                    </span>
+                    </div>
+                    
+                    <div class="adl-floatL moreTabs adl-parent">
+                    <span>+5</span>
+                    <div class="adl-menu">
+                  	<div class="menu-list">
+                    	<ul>
+                        <li>Option1 <span class="iconCircle">X</span></li>
+                        <li>Option2 <span class="iconCircle">X</span></li>
+                        <li>Option3 <span class="iconCircle">X</span></li>
+                        <li>Option4 <span class="iconCircle">X</span></li>
+                        <li>Option5 <span class="iconCircle">X</span></li>
+                        </ul>
+                    </div>
                   </div>
+                    </div><!--moreTabs-->
+                    
+                    <div class="adl-floatL">
+                    <span id="innerSectionNavEdit" class="link">EDIT</span>
+                    <span id="innerSectionNavDone" class="link">DONE</span>
+                    <span id="innerSectionNavCancel" class="link">CANCEL</span>
+                    </div>
+
+                    
+                  </div><!--innerSectionNav-->
+                  
                   <div class="adl-floatR">
                     <div class="adl-form-group adl-select">
                       <input type="text" class="form-control no-border sm" value="Sep 16" />
@@ -296,6 +310,7 @@
                   </div>
                 </div>
                 <!--header-->
+                
                 <div class="adl-scroll overflow-scroll-basic adlSet">
                 
                 <div class="adlSet all tabContent active" id="tab1">
@@ -431,21 +446,25 @@
                   <div class="col-10 textC tableSectionBtn">
                   <button type="button" class="adl-btn showTblSection">VIEW TABLE</button>
                   </div>
+                  
                     <div class="adlSet col-10 section">
                       <div class="big col-10">
-                        <span class="adl-parent">Michael Ross
-                        <span class="link"><i class="fa fa-ellipsis-v"></i></span>
-                        <div class="adl-menu">
-                  	<div class="menu-list">
-                    	<ul>
-                        <li>Use Alternative Asset Allocation</li>
-                        <li>Close</li>
-                        <li>Close Others</li>
-                        <li>Close All</li>
-                        </ul>
-                    </div>
-                  </div>
-                  		</span>
+                        <div class="adl-floatL">
+                        <span class="adl-floatL">Michael Ross</span>
+                        
+                            <div class="adl-parent adl-floatL">
+                            <span class="link adl-paddingL"><i class="fa fa-ellipsis-v"></i></span>
+                            <div class="adl-menu">
+                            <div class="menu-list">
+                            <ul>
+                            <li>Export</li>
+                            <li formodel="columnsModal" onclick="open_Model(this);">Choose Columns</li>
+                            </ul>
+                            </div>
+                            </div>
+                            </div>
+                  
+                  		</div>
                         <span class="adl-floatR">A$ 53,282
                         </span>
                       </div>
@@ -637,10 +656,23 @@
                     <!--section-->
                     <div class="adlSet col-10 section">
                       <div class="big col-10">
-                        <span>Joint - Michael, Rachel
-                        <span class="link"><i class="fa fa-ellipsis-v"></i></span>
-                        </span>
-                        <span class="adl-floatR"><span><i class="fa fa-tag greenFont6 flipX"></i></span> A$ 53,282
+                        <div class="adl-floatL">
+                        <span class="adl-floatL">Joint - Michael, Rachel</span>
+                        
+                            <div class="adl-parent adl-floatL">
+                            <span class="link adl-paddingL"><i class="fa fa-ellipsis-v"></i></span>
+                            <div class="adl-menu">
+                            <div class="menu-list">
+                            <ul>
+                            <li>Export</li>
+                            <li>Choose Columns</li>
+                            </ul>
+                            </div>
+                            </div>
+                            </div>
+                  
+                  		</div>
+                        <span class="adl-floatR">A$ 53,282
                         </span>
                       </div>
                       <div class="divTable">
@@ -760,7 +792,8 @@
               <!--reportsWrap-->
             </div>
             <!--rightWrap-->
-          </article>       </main>
+          </article>
+          </main>
         
         
         
@@ -776,7 +809,7 @@
         <div class="infoList">
         <ul>
         <li><i class="fa fa-file-pdf-o"></i><div>PDF</div></li>
-        <li><i class="fa fa-file-excel-o"></i><div>Excel</div></li>
+        <li formodel="reportsModal"  onclick="open_Model(this);"><i class="fa fa-file-excel-o"></i><div>Excel</div></li>
         <li><i class="fa fa-file-word-o"></i><div>Word</div></li>
         <li><i class="fa fa-print"></i><div>Print</div></li>
         <li><i class="fa fa-envelope"></i><div>Mail</div></li>
@@ -784,9 +817,390 @@
         </div><!--infolist-->
         
         
-      </div>
-      <!--adl-container--> </div>
-    <!--adl-wrapper-->
+    
+<div class="adl-modal" id="columnsModal">
+<div class="adl-modal-content col-25">
+<div class="adl-modal-header">
+<div class="adl-modal-title col-85 adl-no-paddingLR"><span class="adl-floatL">Choose Columns</span>
+<div class="adl-floatL adl-form-group col-5 adl-no-marginTB adl-select">
+<select class="form-control baseBorder filled">
+<option>My Defaults</option>
+</select>
+</div>
+</div>
+<span class="adl-modal-icon adl-modal-close" onclick="close_Model();">X</span>
+</div><!--adl-modal-header-->
+
+<div class="adlSet col-10">
+
+<div class="adlSet col-10">
+<input class="adl-checkbox" type="checkbox" id="slctAll">
+<label class="adl-floatL" for="slctAll">
+  <span class="check_text">Select All</span>
+</label>
+
+<div class="col-6 adl-floatR adl-no-paddingR positionR quickSearchWrap">
+<div class="full positionR quickSearch">
+   <input type="text" name="search" placeholder="Search...">
+   <i aria-hidden="true" class="fa fa-search"></i>
+</div><!-- end of quickSearch -->
+</div>
+</div>
+
+<div class="adlSet adl-marginB adl-scroll overflow-scroll-basic">
+<ul class="adlSet itemList">
+<li class="adlSet">
+<input class="adl-checkbox " type="checkbox" id="astsChk">
+<label class="adl-floatL" for="astsChk">
+  <span class="check_text">Assets
+  </span>
+</label>
+</li>
+<li class="adlSet">
+<input class="adl-checkbox " type="checkbox" id="untChk">
+<label class="adl-floatL" for="untChk">
+  <span class="check_text">Units
+  </span>
+</label>
+</li>
+<li class="adlSet">
+<input class="adl-checkbox " type="checkbox" id="prcChk">
+<label class="adl-floatL" for="prcChk">
+  <span class="check_text">Price
+  </span>
+</label>
+</li>
+<li class="adlSet">
+<input class="adl-checkbox " type="checkbox" id="vChk">
+<label class="adl-floatL" for="vChk">
+  <span class="check_text">Value
+  </span>
+</label>
+</li>
+<li class="adlSet">
+<input class="adl-checkbox " type="checkbox" id="iChk">
+<label class="adl-floatL" for="iChk">
+  <span class="check_text">Income
+  </span>
+</label>
+</li>
+<li class="adlSet">
+<input class="adl-checkbox " type="checkbox" id="igChk">
+<label class="adl-floatL" for="igChk">
+  <span class="check_text">Income & Growth
+  </span>
+</label>
+</li>
+</ul>
+</div>
+
+<div class="textR adlSet cell-borderT">
+<button type="button" class="adl-btn bordered btn-sm adl-floatL">Revert</button>
+<span class="errorMsg adlHide">error message</span>
+<button type="button" class="adl-btn bordered btn-sm">Cancel</button>
+<button type="button" class="adl-btn btn-sm">Update Columns</button>
+</div>
+
+</div>
+
+</div><!--adl-modal-content-->
+</div><!--columnsModal-->
+
+<div class="adl-modal" id="reportsModal">
+<div class="adl-modal-content col-35">
+<div class="adl-modal-header">
+<div class="adl-modal-title col-9 adl-no-paddingLR"><span class="adl-floatL">Excel Report "<span>Asset Allocation Details</span>" </span>
+<div class="adl-floatL adl-form-group adl-no-marginTB adl-select adl-paddingLR">
+<select class="form-control baseBorder filled font14 fontSB text-grey">
+<option>Excel</option>
+</select>
+</div>
+</div>
+<span class="adl-modal-icon adl-modal-close" onclick="close_Model();">X</span>
+</div><!--adl-modal-header-->
+
+<div class="adlSet col-10">
+
+<div class="adlSet adl-marginB adl-scroll overflow-scroll-basic">
+<div class="textC fontSB font14 adl-padding">Continue downloading single report?</div>
+</div>
+
+<div class="textR adlSet cell-borderT">
+<button formodel="reportsMultiModal" onClick="open_Model(this)" type="button" class="adl-btn bordered btn-sm adl-floatL">Multiple</button>
+<span class="errorMsg adlHide">error message</span>
+<button type="button" class="adl-btn bordered btn-sm">Cancel</button>
+<button type="button" class="adl-btn btn-sm">Download Single</button>
+</div>
+
+</div>
+
+</div><!--adl-modal-content-->
+</div><!--reportsModal-->
+
+<div class="adl-modal" id="reportsMultiModal">
+<div class="adl-modal-content col-3">
+<div class="adl-modal-header">
+<div class="adl-modal-title col-9 adl-no-paddingLR">
+<span class="adl-floatL"><i class="fa fa-chevron-left link adl-floatL LH2 text-blue"></i> <span class="adl-floatL">Multiple Reports</span></span>
+<div class="owners">
+<label class="adl-marginR">Owners:</label> <span class="iconCircle">J</span> <span class="iconCircle">M</span> <span class="iconCircle">R</span>
+</div>
+</div>
+<span class="adl-modal-icon adl-modal-close" onclick="close_Model();">X</span>
+</div><!--adl-modal-header-->
+
+<div class="adlSet col-10">
+
+<div class="col-10 adl-marginB">
+<div class="col-7 fontSB font14 adl-no-paddingL">Reports</div>
+<div class="col-1 textC adl-no-paddingLR">
+<input class="adl-checkbox " type="checkbox" id="pdfColChk">
+<label for="pdfColChk"></label>
+</div>
+<div class="col-1 textC adl-no-paddingLR">
+<input class="adl-checkbox " type="checkbox" id="exlColChk">
+<label for="exlColChk"></label>
+</div>
+<div class="col-1 textC adl-no-paddingLR">
+<input class="adl-checkbox " type="checkbox" id="wrdColChk">
+<label for="wrdColChk"></label>
+</div>
+</div>
+
+<div class="adlSet adl-marginB adl-scroll overflow-scroll-basic">
+<ul class="adlSet itemList">
+<li class="adlSet">
+<div class="col-7 adl-no-paddingL">
+<input class="adl-checkbox " type="checkbox" id="aaChk">
+<label class="adl-floatL" for="aaChk">
+  <span class="check_text">Asset Allocation(2) <i class="fa fa-angle-down link text-blue"></i>
+  </span>
+</label>
+</div>
+<div class="col-1 textC adl-no-paddingLR">
+<a class="link">
+<i class="fa fa-file-pdf-o"></i>
+</a>
+</div>
+<div class="col-1 textC adl-no-paddingLR">
+<a class="link">
+<i class="fa fa-file-excel-o"></i>
+</a>
+</div>
+<div class="col-1 textC adl-no-paddingLR">
+<a class="link">
+<i class="fa fa-file-word-o"></i>
+</a>
+</div>
+</li>
+<li class="adlSet">
+<div class="col-7 adl-no-paddingL">
+<input class="adl-checkbox " type="checkbox" id="igrthChk">
+<label class="adl-floatL" for="igrthChk">
+  <span class="check_text">Income & Growth(2) <i class="fa fa-angle-down link text-blue"></i>
+  </span>
+</label>
+</div>
+<div class="col-1 textC adl-no-paddingLR">
+<a class="link">
+<i class="fa fa-file-pdf-o"></i>
+</a>
+</div>
+<div class="col-1 textC adl-no-paddingLR">
+<a class="link">
+<i class="fa fa-file-excel-o"></i>
+</a>
+</div>
+<div class="col-1 textC adl-no-paddingLR">
+<a class="link">
+<i class="fa fa-file-word-o"></i>
+</a>
+</div>
+</li>
+<li class="adlSet">
+<div class="col-7 adl-no-paddingL">
+<input class="adl-checkbox " type="checkbox" id="prjctChk">
+<label class="adl-floatL" for="prjctChk">
+  <span class="check_text">Projected Income
+  </span>
+</label>
+</div>
+<div class="col-1 textC adl-no-paddingLR">
+<a class="link">
+<i class="fa fa-file-pdf-o"></i>
+</a>
+</div>
+<div class="col-1 textC adl-no-paddingLR">
+<a class="link">
+<i class="fa fa-file-excel-o"></i>
+</a>
+</div>
+<div class="col-1 textC adl-no-paddingLR">
+<a class="link">
+<i class="fa fa-file-word-o"></i>
+</a>
+</div>
+</li>
+<li class="adlSet">
+<div class="col-7 adl-no-paddingL">
+<input class="adl-checkbox " type="checkbox" id="stpChk">
+<label class="adl-floatL" for="stpChk">
+  <span class="check_text">Short Term Portfolio Returns Report
+  </span>
+</label>
+</div>
+<div class="col-1 textC adl-no-paddingLR">
+<a class="link">
+<i class="fa fa-file-pdf-o"></i>
+</a>
+</div>
+<div class="col-1 textC adl-no-paddingLR">
+<a class="link">
+<i class="fa fa-file-excel-o"></i>
+</a>
+</div>
+<div class="col-1 textC adl-no-paddingLR">
+<a class="link">
+<i class="fa fa-file-word-o"></i>
+</a>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="textR adlSet cell-borderT">
+<span class="errorMsg adlHide">error message</span>
+<button type="button" class="adl-btn bordered btn-sm">Cancel</button>
+<button type="button" class="adl-btn btn-sm">Download Zip (<span>6</span>)</button>
+</div>
+
+</div>
+
+</div><!--adl-modal-content-->
+</div><!--reportsMultiModal-->
+
+
+<div class="adl-modal" id="duplicateModal">
+<div class="adl-modal-content col-4 col-md-5">
+<div class="adl-modal-header">
+<div class="adl-modal-title col-9 adl-no-paddingLR">
+<div class="adl-form-group adl-no-marginTB">
+<input type="text" class="form-control baseBorder font14 fontSB text-grey" value="Asset Allocation Details(copy)" />
+</div>
+</div>
+
+<span class="adl-modal-icon adl-modal-close" onclick="close_Model();">X</span>
+</div><!--adl-modal-header-->
+
+<div class="adlSet col-10">
+
+<div class="col-10 adlSet adl-marginB">
+
+<div class="col-5 fontSB font14 adl-no-paddingL adl-marginB">Set Parameters</div>
+<div class="col-5 fontSB font14 adl-no-paddingR adl-marginB"><span class="adl-paddingL">Current</span></div>
+
+<div class="row adlSet">
+<div class="col-5 font14 adl-no-paddingL">
+<div class="col-10">
+                <div class="adl-form-group col-35 slideLabel adl-select adl-no-paddingL adl-no-margin">
+                  <input class="form-control baseBorder no-border" placeholder="Start" type="text">
+                </div>
+                <div class="col-1 adl-no-paddingLR textC LH2">to</div>
+                <div class="adl-form-group col-35 slideLabel adl-select adl-no-paddingR adl-no-margin">
+                  <input class="form-control baseBorder no-border" placeholder="End" type="text">
+                </div>  
+                <div class="col-2 small">
+                <span class="LH25 text-grey2">1 year</span>
+                </div>
+</div>
+</div>
+<div class="col-5 font14 adl-no-paddingR">
+<div class="col-10 adl-no-paddingR">
+                <div class="adl-form-group col-35 slideLabel adl-select adl-no-paddingL adl-no-margin">
+                  <input class="form-control baseBorder no-border" placeholder="Start" type="text">
+                </div>
+                <div class="col-1 adl-no-paddingLR textC LH2">to</div>
+                <div class="adl-form-group col-35 slideLabel adl-select adl-no-paddingR adl-no-margin">
+                  <input class="form-control baseBorder no-border" placeholder="End" type="text">
+                </div>  
+                <div class="col-2 small">
+                <span class="LH25 text-grey2">1 year</span>
+                </div>      
+</div>
+</div>
+</div><!--row-->
+<div class="row adlSet">
+<div class="col-5 font14 adl-no-paddingL">
+<div class="col-10">
+<span class="iconCircle adl-floatL adl-marginR">3</span>
+<div class="adl-form-group col-35 slideLabel adl-select adl-no-paddingL adl-no-margin">
+                  <select class="form-control baseBorder no-border filled">
+                    <option>3 Entities
+                    </option>
+                  </select>
+</div>
+</div>
+</div>
+<div class="col-5 adl-no-paddingR">
+<div class="col-10 adl-no-paddingR">
+<span class="iconCircle adl-floatL adl-marginR">8</span>
+<div class="adl-form-group col-35 adl-no-paddingL adl-no-margin">
+	<label class="LH25 font12">All Entities</label>
+</div>
+</div>
+</div>
+</div><!--row-->
+
+</div><!--adlSet-->
+
+<div class="col-10 adl-marginTB">
+<input type="checkbox" class="adl-checkbox" id="includeChk" />
+<label for="includeChk"><span class="check_text">Include in exports</span></label>
+</div>
+
+<div class="textR adlSet cell-borderT">
+<span class="errorMsg adlHide">error message</span>
+<button type="button" class="adl-btn bordered btn-sm">Cancel</button>
+<button type="button" class="adl-btn btn-sm">Duplicate</button>
+</div>
+
+</div>
+
+</div><!--adl-modal-content-->
+</div><!--duplicateModal-->
+        
+
+<div class="adl-modal" id="closeTabsModal">
+<div class="adl-modal-content col-25">
+<div class="adl-modal-header">
+<div class="adl-modal-title col-9 adl-no-paddingLR"><span class="adl-floatL">Confirmation</span>
+</div>
+<span class="adl-modal-icon adl-modal-close" onclick="close_Model();">X</span>
+</div><!--adl-modal-header-->
+
+<div class="adlSet col-10">
+
+<div class="adlSet adl-marginB adl-scroll overflow-scroll-basic">
+<div class="textC fontSB font14 adl-padding">Closing 4 open tabs?</div>
+</div>
+
+<div class="textR adlSet cell-borderT">
+<span class="errorMsg adlHide">error message</span>
+<button type="button" class="adl-btn bordered btn-sm">Cancel</button>
+<button type="button" class="adl-btn btn-sm">Continue</button>
+</div>
+
+</div>
+
+</div><!--adl-modal-content-->
+</div><!--closeTabsModal-->
+
+
+
+        
+</div>
+<!--adl-container--> </div>
+<!--adl-wrapper-->
 
 <script>
       $(document).ready(function(){
@@ -820,7 +1234,7 @@
         });
 		//expand right section
 		$('#expandBtn').click(function(){
-			$(this).toggleClass('fa-minus-square-o fa-plus-square-o')
+			$(this).toggleClass('fa-bars fa-chevron-right')
 			$('.adl-container.reports').toggleClass('expand');
 		});
 		//left nav list select
@@ -828,7 +1242,12 @@
 			$(this).parent().toggleClass('selected');
 		});
 
-        });
+//titleNames
+$('.adl-container.reports article .titleNames').click(function(){
+	$(this).siblings().removeClass('selected');
+	$(this).addClass('selected');
+});
+        
 
 //overview quickSearch
   $(".quickSearchValue .fa.fa-search").click(function(){
@@ -852,7 +1271,6 @@ $(".toggleOverview .hide").click(function(){
     $(this).siblings(".show").removeClass("adlHide");
     $(".ovSummary").slideUp();
 });
-
 $(".toggleOverview .show").click(function(){
     $(this).addClass("adlHide");
     $(this).siblings(".hide").removeClass("adlHide");
@@ -902,7 +1320,61 @@ $('.infoAdd').click(function(){
 	$('.infoList').toggleClass('active');
 	$('.adl-container.reports').toggleClass('adl-fade');
 });
-      
+
+//choose cols
+$('.itemList li label').click(function(){
+	$(this).parents('li').toggleClass('selected')
+});
+//multiple reports
+$('#reportsMultiModal a.link').click(function(){
+	$(this).toggleClass('selected')
+});
+//edit innerSectionNav
+$('#innerSectionNavEdit').click(function(){
+	$(this).hide();
+	$(this).siblings('#innerSectionNavCancel').show();
+	$(this).siblings('#innerSectionNavDone').show();
+	$(this).parents('.innerSectionNav').addClass('editable');
+});
+$('#innerSectionNavDone').click(function(){
+	$(this).hide();
+	$(this).siblings('#innerSectionNavCancel').hide();
+	$(this).siblings('#innerSectionNavEdit').show();
+	$(this).parents('.innerSectionNav').removeClass('editable');
+});
+$('#innerSectionNavCancel').click(function(){
+	$(this).hide();
+	$(this).siblings('#innerSectionNavDone').hide();
+	$(this).siblings('#innerSectionNavEdit').show();
+	$(this).parents('.innerSectionNav').removeClass('editable');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});      
     </script>
   </body>
 </html>

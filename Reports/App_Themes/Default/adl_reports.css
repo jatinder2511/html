@@ -54,24 +54,45 @@ article, #artcile2{
 	text-align:center
 }
 
+.adl-container.reports .form-control.baseBorder.no-border{
+	padding-left:0
+}
+
 header{
 	height:40px
 }
 .reportsSrch{
 	background-color: #F4F8F9;
 	margin: 0;
-    padding: 5px 10px;
+    padding: 5px 5px 5px 10px;
 	border-right: 1px solid #eee;
 }
 .reportsSrch .link i{
-	float: right;
-    margin: 5px 0 0;
-    font-size: 20px;
-}
-.reportsSrch .fa-align-justify{
-	transform: scaleX(0.4);
-	margin-left: -3px;
 	font-size: 14px;
+    width: 25px;
+    height: 24px;
+    float: left;
+    line-height: 25px;
+}
+.adl-container.reports .reportsSrch .expandLink{
+	display: inline-block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    background-color: #41a3ea;
+    color: #fff;
+	margin-top: 2px;
+	border-radius:4px;
+}
+.adl-container.reports .reportsSrch .expandLink:hover{
+	box-shadow:inset 2px 2px 5px rgba(0,0,0,0.3)
+}
+
+
+.reportsSrch .fa-align-justify{
+    transform: scaleX(0.6);
+    margin-left: -6px;
+    font-size: 14px;
 }
 .reportsSrch .font16{
 	margin-top:6px
@@ -79,31 +100,60 @@ header{
 .reportsSrch .form-control{
 	padding-right:25px
 }
+.reportsSrch .form-control + .icon-right{
+	right:4px
+}
+
 .adl-container.reports main aside, .adl-container.reports main article{
 	height:calc(100vh - 40px)
 }
+
+.adl-container.reports article .title{
+	border-bottom:none;
+	padding:0;
+	margin:0;
+}
+
+.adl-container.reports #header article .title{
+    display: flex;
+    flex: auto;
+}
+
 .adl-container.reports article .titleNames{
-	font-size:15px;
-	float:left;
-	padding:9px;
-	border-top:3px solid transparent;
-	position:relative
+	font-size: 15px;
+    float: left;
+    padding: 9px;
+    border-top: 3px solid transparent;
+	border-right: 1px solid #eee;
+    position: relative;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+	position: relative;
 }
 .adl-container.reports article .titleNames:hover{
 	color:#41a3ea;
 	border-top:3px solid #41a3ea;
-	cursor:pointer
+	cursor:pointer;
+	overflow:visible;
 }
 .adl-container.reports article .titleNames > span.link{
-	display:none
+	display:none;
+	    position: absolute;
+    right: 5px;
 }
 .adl-container.reports article .titleNames.selected{
 	font-weight:bold;
 	border-top:3px solid #41a3ea;	
 	background-color:#fff;
+	padding: 9px 20px 9px 9px;
 }
+
 .adl-container.reports article .titleNames.selected > span.link{
 	display:inline-block
+}
+.adl-container.reports article .titleNames:hover .adl-menu{
+	white-space:initial
 }
 .adl-container.reports article .titleNames .adl-menu{
 	top:8px;
@@ -126,16 +176,55 @@ header{
 .adl-container.reports article .titleNames.selected .adl-menu .menu-list ul li + li{
 	border-top:1px solid #f6f6f6
 }
-.adl-container.reports article .titleNames.selected .link:hover + .adl-menu, .adl-container.reports article .titleNames.selected .link + .adl-menu:hover{
+.adl-container.reports article .titleNames.selected .link:hover + .adl-menu, .adl-container.reports article .titleNames.selected .link + .adl-menu:hover,
+.adl-container.reports article .innerSectionNav .moreTabs:hover .adl-menu, .adl-container.reports article .innerSectionNav .moreTabs .adl-menu:hover{
 	display:block
 }
-
-
-.adl-container.reports article .title{
-	border-bottom:none;
-	padding:0;
-	margin:0
+.adl-container.reports article .innerSectionNav .moreTabs span{
+	padding: 2px 5px;
+    background-color: #eee;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px #ccc;
+    font-weight: 500;
+    margin: 2px 0 0 10px;
+    float: left;
 }
+.adl-container.reports article .innerSectionNav .moreTabs span:hover{
+	cursor:pointer;
+	color:#41a3ea;
+	box-shadow:none
+}
+.adl-container.reports article .innerSectionNav .moreTabs .adl-menu{
+	top:25px
+}
+.adl-container.reports article .innerSectionNav .moreTabs .adl-menu .menu-list ul li + li{	
+	border-top:1px solid #f6f6f6
+}
+.adl-container.reports article .innerSectionNav .moreTabs .adl-menu .menu-list ul li{
+	position:relative
+}
+.adl-container.reports article .innerSectionNav .moreTabs .adl-menu .menu-list ul li .iconCircle{
+	background: #fff;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    line-height: 15px;
+    font-size: 11px;
+    text-align: center;
+	position:absolute;
+	right:5px;
+	top:1px;
+	display:none;
+	box-shadow:none
+}
+.adl-container.reports article .innerSectionNav.editable .moreTabs .adl-menu .menu-list ul li:hover .iconCircle{
+	display:block
+}
+.adl-container.reports article .innerSectionNav.editable .moreTabs .adl-menu .menu-list ul li:hover .iconCircle:hover{
+	background-color:red;
+	color:#fff
+}
+
 #reportsNav{
 	background-color:#F4F8F9;
 	border-top:1px solid #eee;
@@ -204,6 +293,7 @@ header{
 	font-size:15px;
 	font-weight:500;
 	padding:5px 10px;
+	float:left;
 	border-bottom:1px solid #ddd
 }
 .reportsWrap .tabLink + .tabLink{
@@ -240,6 +330,13 @@ header{
 }
 .reportsWrap .header .showhide{
 	margin:0 5px;
+}
+
+
+.adl-container.reports .navList li ul li .navListLabel{
+	float: right;
+    font-size: 9px;
+    color: #999;
 }
 
 
@@ -323,6 +420,15 @@ header{
 	width:100%;
 	left:0
 }
+
+.adl-container.reports.expand #header aside{
+	margin-left:-240px
+}
+.adl-container.reports.expand #header article{
+	width:calc(100% - 40px);
+	left:40px
+}
+
 
 .toggleOverview:hover{
 	color: #666 !important;
@@ -431,6 +537,7 @@ background-color: #ebf5fe;
 	position: absolute;
     top: 6px;
     right: 10px;
+	color:#ddd
 }
 /*end*/
 .graphSection .graphValues{
@@ -563,12 +670,135 @@ margin-top: 3px;
 	display:block
 }
 
+.adl-container.reports .tableSection .big.col-10 .link + .adl-menu{
+	left: 0;
+    top: 15px;
+	right:auto
+}
 .adl-container.reports .tableSection .big.col-10 .link:hover + .adl-menu, .adl-container.reports .tableSection .big.col-10 .link + .adl-menu:hover{
 	display:block
 }
+.adl-container.reports .adl-menu{
+	z-index:99;
+}
 
+.itemList li{
+	padding:10px
+}
+.itemList li + li{
+	border-top:1px solid #eee
+}
+.itemList li.selected{
+	background-color:#F4F8F9
+}
 
+#columnsModal .adl-modal-header .adl-select, #reportsModal .adl-modal-header .adl-select{
+	width:130px
+}
 
+i.link.LH2{
+	line-height:2!important
+}
+
+#reportsMultiModal .itemList li a.link{
+	color:#92d1ff;
+	font-size:18px
+}
+#reportsMultiModal .itemList li a.link.selected{
+	color:#41a3ea
+}
+
+#reportsMultiModal .adl-modal-title .owners{
+	float:right;
+	font-size:12px;
+	line-height: 1.5;
+	margin-top: 5px;
+}
+#reportsMultiModal .adl-modal-title .owners .iconCircle{
+	width:16px;
+	height:16px;
+	font-size:11px;
+	padding:0;
+	line-height:16px;
+	color:#41a3ea
+}
+#reportsMultiModal .adl-modal-title .owners .iconCircle + .iconCircle{
+	margin-right:5px;
+}
+#reportsMultiModal li .fa-angle-down{
+	font-size:16px;
+	margin-left:10px;
+    float: right;
+    margin-top: 1px;
+}
+
+.reportsWrap .innerSectionNav .link{
+    font-weight: 500;
+    color: #41a3ea;
+    margin: 5px 0 0 15px;
+    float: left;
+}
+.reportsWrap .innerSectionNav .link:hover{
+	text-decoration:underline
+}
+.reportsWrap .innerSectionNav .iconCircle{
+	display:none
+}
+.reportsWrap .innerSectionNav.editable .iconCircle{
+    width: 16px;
+    height: 16px;
+    line-height: 18px;
+    font-size: 12px;
+    margin-left: 5px;
+    border: none;
+    color: red;
+    text-align: center;
+    padding: 0;
+	display:block
+}
+.reportsWrap .innerSectionNav.editable .iconCircle:hover{
+	background-color:red;
+	cursor:pointer;
+	color:#fff;
+	font-size: 11px;
+	line-height: 17px;
+}
+.reportsWrap .innerSectionNav.editable .tabLink + .tabLink:hover{
+	cursor:move
+}
+#innerSectionNavDone, #innerSectionNavCancel{
+	display:none
+}
+.reportsWrap .innerSectionNav.editable #innerSectionNavDone, .reportsWrap .innerSectionNav.editable #innerSectionNavCancel{
+	display:inline-block
+}
+
+.innerSectionNav .newEntity{
+	margin-top:5px;
+	display:none
+}
+.innerSectionNav.editable .newEntity{
+	display:inline-block
+}
+
+#duplicateModal .row > .col-5:first-child{
+	background-color: #F4F8F9;
+	border-bottom: 1px solid #eee;
+}
+#duplicateModal .iconCircle{
+    background-color: #41a3ea;
+    width: 18px;
+    height: 18px;
+    color: #fff;
+    border: none;
+    font-size: 12px;
+    line-height: 14px;
+	margin-top:5px;
+	text-align:center
+}
+#duplicateModal .row .col-5 + .col-5 .iconCircle{
+	transform:rotate(90deg);
+}
 
 
 

@@ -40,8 +40,8 @@
                 <span class="icon-right input-icon-search">
                 </span>
               </div>
-              <span class="link col-1 adl-no-paddingR">
-                <i class="fa fa-minus-square-o" id="expandBtn"></i>
+              <span class="link col-1 adl-no-paddingLR expandLink">
+                <i class="fa fa-bars" id="expandBtn"></i>
               </span>
             </div>
             <!--reportsSrch-->
@@ -109,19 +109,13 @@
                   </span>
                 </div>
                 <ul>
-                  <li>
-                    <input class="adl-checkbox" type="checkbox" id="option1a">
-                    <label onclick="location.href='asset_summary.html';"  for="option1a">
-                      <span class="check_text">Summary
-                      </span>
-                    </label>
-                  </li>
                   <li>          
                     <input class="adl-checkbox" type="checkbox" id="option1b">
                     <label onclick="location.href='asset_details.html';" for="option1b">
-                      <span class="check_text">Details
+                      <span class="check_text">Details                      
                       </span>
                     </label>
+                    <span class="navListLabel">1 Duplicated</span>
                   </li>
                 </ul>
               </li>
@@ -173,20 +167,6 @@
                     <input class="adl-checkbox" type="checkbox" id="option4b">
                     <label for="option4b">
                       <span class="check_text">Since Inception
-                      </span>
-                    </label>
-                  </li>
-                  <li>
-                    <input class="adl-checkbox" type="checkbox" id="option4c">
-                    <label for="option4c">
-                      <span class="check_text">XIRR
-                      </span>
-                    </label>
-                  </li>
-                  <li>
-                    <input class="adl-checkbox" type="checkbox" id="option4d">
-                    <label for="option4d">
-                      <span class="check_text">Since inception + XIRR
                       </span>
                     </label>
                   </li>
@@ -1087,9 +1067,9 @@
         })
 		//expand right section
 		$('#expandBtn').click(function(){
-			$(this).toggleClass('fa-minus-square-o fa-plus-square-o')
+			$(this).toggleClass('fa-bars fa-chevron-right')
 			$('.adl-container.reports').toggleClass('expand');
-		})
+		});
 		//left nav list select
 		$('#reportsNav li ul li label').click(function(){
 			$(this).parent().toggleClass('selected');
